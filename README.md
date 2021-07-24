@@ -18,4 +18,16 @@ Github homepage
 - [Github pages](https://pages.github.com/)   
 
 Colab      
-- [10 tricks for a better Google Colab experience](https://towardsdatascience.com/10-tips-for-a-better-google-colab-experience-33f8fe721b82#708a)
+- [10 tricks for a better Google Colab experience](https://towardsdatascience.com/10-tips-for-a-better-google-colab-experience-33f8fe721b82#708a)   
+
+Repository   
+[bitbucket](https://bitbucket.org/)   
+
+Programming Question and Answer
+- [백준](https://www.acmicpc.net/)   
+- [rosalind](http://rosalind.info/problems/locations/)   
+- [careercup](https://www.careercup.com/)   
+
+Python
+- [fullstackpython](https://www.fullstackpython.com/)
+
