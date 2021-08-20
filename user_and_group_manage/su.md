@@ -31,7 +31,10 @@ wheel:x:10:root,jihun
 ```
 
 # sudo 권환 부여하기 : visudo (application)
-reference: https://peemangit.tistory.com/180
+reference: 
+- https://peemangit.tistory.com/180
+- https://askubuntu.com/questions/246455/how-to-give-nopasswd-access-to-multiple-commands-via-sudoers
+- https://www.redhat.com/sysadmin/using-sudo-delegate
 
 ```
 User_Alias ASSISTANT_MANAGER = assistant_manager, swl409, youngchang
