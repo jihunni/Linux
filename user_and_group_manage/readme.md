@@ -3,6 +3,9 @@
 # run quota tool with expert mode
 [root@dlp ~]# xfs_quota -x /home
 ```
+> -x : expert mode  
+> /home : directory
+
 
 ```
 # show current status
@@ -55,6 +58,22 @@ xfs_quota> report -h -u
 User quota on /home (/dev/sdb1)
                         Blocks
 User ID      Used   Soft   Hard Warn/Grace
+---------- ---------------------------------
+root            0      0      0  00 [------]
+cent          16K     9G    10G  00 [------]
+```
+> -h: human readable
+> -u : user
+> -g : group
+
+
+```
+# possible to set on non-interactive mode
+[root@dlp ~]# xfs_quota -x -c 'limit -g bsoft=9g bhard=10g cent' /home
+[root@dlp ~]# xfs_quota -x -c 'report -h -g' /home
+Group quota on /home (/dev/sdb1)
+                        Blocks
+Group ID     Used   Soft   Hard Warn/Grace
 ---------- ---------------------------------
 root            0      0      0  00 [------]
 cent          16K     9G    10G  00 [------]
