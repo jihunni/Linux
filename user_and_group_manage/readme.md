@@ -9,7 +9,7 @@
   - 사용자 계정을 생성할 때 시스템 운영 정책에 따라 사용자 게정의 홈 디렉토리에 공통으로 배포해야 할 파일
   - /etc/skel 디렉터리에 파일을 만들어 놓으면 사용자 계정 생성 시에 자동으로 복사된다.
 
-## 명령
+## 명령 `CentOS7`
 ```
 useradd -m -d /home/[username/userID] -u [UID] -g [GID] -s [shell] [username]
 ```
