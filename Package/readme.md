@@ -6,35 +6,35 @@
 
 1) 패키지 설치:
 yum install package  
-Example:  
+Example: 
 yum install httpd  
 2) 패키지 삭제:  
 yum remove package  
-Example:  
+Example: 
 yum remove httpd  
 3) 패키지 업데이트:  
 yum update package  
-Example:  
+Example: 
 yum update httpd  
 4) 패키지 검색:  
 yum search package  
-Example:  
+Example: 
 yum search httpd  
 5) 패키지 정보:  
 yum info package  
-Example:  
+Example: 
 yum info httpd  
 6) 특정단어가 포함 된 패키지 리스트:  
 yum list term  
-Example:  
+Example: 
 yum list httpd  
 7) 특정 파일을 제공한 패키지 검색:  
 yum whatprovides filename  
-Example:  
+Example: 
 yum whatprovides httpd.conf  
 8) 커널 패키지에 설치된 모든 패키지를 업데이트:  
 yum -y update  
-Example:  
+Example: 
 yum -y update  
 
 reference : https://access.redhat.com/ko/solutions/82093
