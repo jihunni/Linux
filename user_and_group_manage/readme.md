@@ -1,12 +1,13 @@
 # 사용자 계정 관련 파일 및 명령
 ## 사용자 계정 관련 파일
-- /etc/passwd
-  로그인ID:x:UID:GID:설명:home directory:shell
-- /etc/shade
+- /etc/passwd: 로그인ID:x:UID:GID:설명:home directory:shell
+- /etc/shade: 로그인ID:암호:최종 변경일:MIN:MAX:Warning:Inactive:expire:flag
 - /etc/login.defs
-- /etc/group
-- /etc/gshadow
+- /etc/group: 그룹이름:x:GID:그룹멤버
+- /etc/gshadow: 그룹이름:그룹암호:관리자:그룹멤버
 - /etc/skel
+  - 사용자 계정을 생성할 때 시스템 운영 정책에 따라 사용자 게정의 홈 디렉토리에 공통으로 배포해야 할 파일
+  - /etc/skel 디렉터리에 파일을 만들어 놓으면 사용자 계정 생성 시에 자동으로 복사된다.
 
 ## 명령
 ```
