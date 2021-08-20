@@ -9,7 +9,7 @@
   - 사용자 계정을 생성할 때 시스템 운영 정책에 따라 사용자 게정의 홈 디렉토리에 공통으로 배포해야 할 파일
   - /etc/skel 디렉터리에 파일을 만들어 놓으면 사용자 계정 생성 시에 자동으로 복사된다.
 
-## 명령 `CentOS7`
+## 명령 
 ```
 useradd -m -d /home/[username/userID] -u [UID] -g [GID] -s [shell] [username]
 ```
@@ -33,7 +33,7 @@ passwd -g [GroupName]
 usermod -u [UID] -o -g [GID] -G [GID] -d [directory] -s [shell] -c [description] -f [inactive date] -e [expire date]
 ```
 
-# Disk Quota
+# `CentOS7` Disk Quota
 ```
 # run quota tool with expert mode
 [root@dlp ~]# xfs_quota -x /home
