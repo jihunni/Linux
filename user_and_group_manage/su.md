@@ -45,3 +45,4 @@ Cmnd_Alias SOFTWARE = /usr/bin/yum
 
 ASSISTANT_MANAGER       ALL=SOFTWARE, USER_MANAGE
 ```
+The directory of command should be specified. The directory of command can be searched by `which command`   (e.g. which useradd)
