@@ -33,3 +33,15 @@ wheel:x:10:root,jihun
 # sudo 권환 부여하기 : visudo (application)
 reference: https://peemangit.tistory.com/180
 
+```
+User_Alias ASSISTANT_MANAGER = assistant_manager, swl409, youngchang
+
+## User Management
+Cmnd_Alias USER_MANAGE = /sbin/useradd, /sbin/usermod, /sbin/passwd ,/usr/sbin/xfs_quota
+
+## Installation and management of software
+#Cmnd_Alias SOFTWARE = /bin/rpm, /usr/bin/up2date, /usr/bin/yum
+Cmnd_Alias SOFTWARE = /usr/bin/yum
+
+ASSISTANT_MANAGER       ALL=SOFTWARE, USER_MANAGE
+```
