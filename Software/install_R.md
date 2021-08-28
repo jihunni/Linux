@@ -27,5 +27,20 @@ install.packages("tidyverse")
 ```
 # Installing RStudio and RStudio Server
 
+# 버전관리
+https://blog.naver.com/PostView.nhn?blogId=cylife3556&logNo=221970778812&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView
+## here package
+```
+library(here)
+#> here() starts at /home/travis/build/r-lib/here
+here::here()
+#> [1] "/home/travis/build/r-lib/here"
+here::here("DESCRIPTION")
+#> [1] "/home/travis/build/r-lib/here/DESCRIPTION"
+here::here("R", "here.R")
+#> [1] "/home/travis/build/r-lib/here/R/here.R"
+```
+
+
 # Reference
 - https://blog.zenggyu.com/en/post/2018-01-29/installing-r-r-packages-e-g-tidyverse-and-rstudio-on-ubuntu-linux/
