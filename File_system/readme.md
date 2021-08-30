@@ -22,3 +22,43 @@ Answer
 Comment
 - check `man hier`   
 - Consider that File system for server uses partision. Each dictory may use different physical disk. For example, `/bin/` and `/usr/local/bin` could use different disk.
+
+# Samba
+Prepare an environment to install Samba
+```
+$ yum update –y
+$ yum clean all
+$ yum install –y epel-release
+$ yum update –y
+```
+
+setting file : /etc/samba/smb.conf
+
+```
+# samba 설치
+yum -y install samba
+
+# samba 서비스 실행
+systemctl start smb
+systemctl enable smb
+
+# samba 계정 등록
+useradd smbuser
+passwd smbuser
+smbpasswd -a smbuserq
+
+# 공유 폴더 생성 및 권한 설정
+mkdir /share
+mkdir /share/data
+chown -R smbuser.root /share
+```
+> smbpasswd -a : 
+>            This option specifies that the username following should be added to the local smbpasswd file, with the new password typed (type <Enter> for
+           the old password). This option is ignored if the username following already exists in the smbpasswd file and it is treated like a regular
+           change password command. Note that the default passdb backends require the user to already exist in the system password file (usually
+           /etc/passwd), else the request to add the user will fail.        
+          This option is only available when running smbpasswd as root.
+  
+## reference: 
+  - https://blog.naver.com/ncloud24/221499582757
+  - https://nirsa.tistory.com/195
