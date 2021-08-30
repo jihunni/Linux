@@ -27,7 +27,23 @@ install.packages("tidyverse")
 ```
 # Installing RStudio and RStudio Server
 
-# 버전관리
+## rstudio server
+```
+# systemctl status rstudio-server.service
+● rstudio-server.service - RStudio Server
+   Loaded: loaded (/usr/lib/systemd/system/rstudio-server.service; enabled; vendor preset: disabled)
+   Active: active (running) since 월 2021-08-30 14:34:52 KST; 3min 40s ago
+  Process: 62493 ExecStart=/usr/lib/rstudio-server/bin/rserver (code=exited, status=0/SUCCESS)
+ Main PID: 62494 (rserver)
+    Tasks: 3
+   Memory: 2.3M
+   CGroup: /system.slice/rstudio-server.service
+           └─62494 /usr/lib/rstudio-server/bin/rserver
+
+# systemctl restart rstudio-server.service
+```
+
+## 버전관리
 https://blog.naver.com/PostView.nhn?blogId=cylife3556&logNo=221970778812&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView
 ## here package
 ```
