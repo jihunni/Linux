@@ -9,7 +9,7 @@
   $ star
   
   ```
-- foldseek   
+- foldseek [github](https://github.com/steineggerlab/foldseek)   
   software directory : /opt/alpha/foldseek/bin   
   module directory : /opt/Modules/modulefiles/foldseek/alpha_20210724   
   ```
