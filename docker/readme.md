@@ -1,7 +1,7 @@
 # virtual machine and docker
 
 
-# install
+## install
 ```
  $ sudo apt-get update
  $ sudo apt-get install \
@@ -15,6 +15,20 @@
 install docker automatically
 ```
 curl -fsSL https://get.docker.com/ | sudo sh
+```
+## install (CentOS)
+https://docs.docker.com/engine/install/centos/
+
+## docker execution and service
+```
+# 부팅시에 실행하도록 systemctl에 등록
+systemctl enable docker.service
+
+# docker 실행
+systemctl start docker.service
+
+# systemctl의 docker status 확인
+systemctl status docker.service
 ```
 
 # basic
@@ -73,7 +87,11 @@ Server: Docker Engine - Community
 docker -v
 ```
 ```
+# download container
 docker pull {image_name}:{tag}
+
+# execute container
+docker run -i -t 
 ```
 
 ```
