@@ -29,6 +29,9 @@ install.packages("tidyverse")
 
 ## rstudio server
 ```
+# yum list | grep rstudio
+rstudio-server.x86_64                       1.4.1717-1                 @/rstudio-server-rhel-1.4.1717-x86_64
+
 # systemctl status rstudio-server.service
 ● rstudio-server.service - RStudio Server
    Loaded: loaded (/usr/lib/systemd/system/rstudio-server.service; enabled; vendor preset: disabled)
@@ -42,6 +45,8 @@ install.packages("tidyverse")
 
 # systemctl restart rstudio-server.service
 ```
+
+check firewall port
 
 ## 버전관리
 https://blog.naver.com/PostView.nhn?blogId=cylife3556&logNo=221970778812&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView
