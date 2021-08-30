@@ -55,12 +55,17 @@ firewall-cmd --list-service
 firewall-cmd --add-service=http
 ```
 
+To add new port
 ```
 #check port
 firewall-cmd --list-port 
 
 #add new port
 firewall-cmd --add-port=8787/tcp
+firewall-cmd --permanent --add-port=8787/tcp
+
+#reload
+firewall-cmd --reload
 ```
 
 # reference
