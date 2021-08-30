@@ -11,15 +11,21 @@ firewall-cmd --state
 
 #reload
 firewall-cmd --reload
+```
 
+```
 #Print zone
 firewall-cmd --get-zones
 firewall-cmd --get-default-zone
+
+#print currently activated zone
 firewall-cmd --get-active-zones
 
 firewall-cmd --list-service
 firewall-cmd --add-service=http
+```
 
+```
 #check port
 firewall-cmd --list-port 
 
