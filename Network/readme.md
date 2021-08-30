@@ -28,6 +28,7 @@ firewalld 를 처음에 사용할 때 이 때문에 혼란을 겪고 정책 설�
 ```
 systemctl enable firewalld
 systemctl start firewalld
+systemctl stop firewalld
 systemctl status firewalld
 ```
 
