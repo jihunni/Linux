@@ -1,3 +1,4 @@
+# Private Repository
 ```
 #Generate SSH key
 $ ssh-keygen
@@ -29,5 +30,29 @@ $ cat /home/jihun/.ssh/id_rsa.pub
 # private key
 $ cat /home/jihun/.ssh/id_rsa
 
+Insert public key into Github account setting
+![image](https://user-images.githubusercontent.com/48517782/131660953-1ca4d37a-9d86-4fc4-a90b-c392581e6e6a.png)
+
 ```
 
+# Git 
+```
+git fetch
+git pull
+
+git config --global user.email "~~@~~.com"
+git config --global user.name "깃허브이름"
+
+git add . > 전체파일 스테이징
+git add (파일명) > 파일명 스테이징
+git commit -m "msg" > 메시지와 커밋
+git commit -am "msg" > 스테이징과 커밋을 메시지와 동시에!
+git commit --amend > 메시지 수정
+git push origin master > 원격저장소로 올리기
+
+
+```
+
+# Reference
+- https://snwo.tistory.com/169
+- [Git] fatal: Authentication failed | https://eehoeskrap.tistory.com/319 : 
