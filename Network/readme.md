@@ -1,3 +1,10 @@
+Ref: https://it-serial.tistory.com/7
+```
+netstat -anp
+vi /etc/sysconfig/network-scripts/ifcfg-eth1 
+ping [ip_address]
+```
+
 # firewall (CentOS7) : https://www.server-world.info/en/note?os=CentOS_7&p=firewalld
 
 ## Intro to filewall
