@@ -1,5 +1,6 @@
 Ref: https://it-serial.tistory.com/7
 ```
+ifconfig
 netstat -anp
 vi /etc/sysconfig/network-scripts/ifcfg-eth1 
 ping [ip_address]
