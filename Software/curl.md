@@ -16,3 +16,4 @@ $ curl "https://example_url/[000001-000188].m4s" -o "#1.m4s"
 
 # reference 
 - https://hackinglife.tistory.com/182
+- https://kibua20.tistory.com/148
