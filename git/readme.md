@@ -54,7 +54,7 @@ git remote remove origin
 
 ```
 git fetch
-git pull
+git pull origin master
 
 git add . #전체파일 스테이징
 git add (파일명) #파일명 스테이징
