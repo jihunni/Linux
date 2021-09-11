@@ -30,10 +30,10 @@
   $ module load foldseek
   $ foldseek [command]
   ```
-- SRA_toolkit | [NCBI homepage](https://github.com/ncbi/sra-tools/wiki/02.-Installing-SRA-Toolkit)
-  software directory : /opt/SRA_toolkiet
-  module directory : /opt/Modules/modulefiles/SRA_toolkiet
-  readme directory : /opt/SRA_toolkit/2.11.1-centos_linux64/README.md
+- SRA_toolkit | [NCBI homepage](https://github.com/ncbi/sra-tools/wiki/02.-Installing-SRA-Toolkit)  
+  software directory : /opt/SRA_toolkiet    
+  module directory : /opt/Modules/modulefiles/SRA_toolkiet  
+  readme directory : /opt/SRA_toolkit/2.11.1-centos_linux64/README.md  
   ```
   $ module av
   $ module load SRA_toolkit
