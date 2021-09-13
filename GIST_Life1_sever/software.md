@@ -31,33 +31,32 @@ bindkey -k k3 select 2
 ![image](https://user-images.githubusercontent.com/48517782/133099985-9a5297cb-6162-48c4-a796-8dd03a9ecfde.png)
 
 ### Screen 진입과 탈출
-screen 진입
-screen : 일반적인 진입
-screen -S [세션이름] : screen세션 이름을 지정하여 실행
-screen -r [세션이름] : 실행중인(Detached) screen 세션으로 재 진입시 실행하는 명령어, screen세션이 하나만 실행중일 경우 세션이름을 입력하지 않아도 진입이 된다.
-screen -x [세션이름] : 실행중인(Attached) screen 세션으로 재 진입시 실행하는 명령어, screen세션이 하나만 실행중일 경우 세션이름을 입력하지 않아도 진입이 된다.
+screen 진입  
+screen : 일반적인 진입  
+screen -S [세션이름] : screen세션 이름을 지정하여 실행  
+screen -r [세션이름] : 실행중인(Detached) screen 세션으로 재 진입시 실행하는 명령어, screen세션이 하나만 실행중일 경우 세션이름을 입력하지 않아도 진입이 된다.  
+screen -x [세션이름] : 실행중인(Attached) screen 세션으로 재 진입시 실행하는 명령어, screen세션이 하나만 실행중일 경우 세션이름을 입력하지 않아도 진입이 된다.  
 
-screen 탈출 screen을 종료 시키기 위해서는 모든 터미널을 종료(exit)하면 된다. screen 세션을 유지한 상태에서 나오기를 원한다면 Ctrl + a, d를 입력하면 된다.
+screen 탈출 screen을 종료 시키기 위해서는 모든 터미널을 종료(exit)하면 된다. screen 세션을 유지한 상태에서 나오기를 원한다면 Ctrl + a, d를 입력하면 된다.  
 
 ### screen 명령어
-Screen에서의 명령은 Ctrl + a 와 다른 키의 조합으로 이루어진다. 먼저 Ctrl + a를 누른 후 조합키를 누르면 된다. 동시에 누르는 것이 아니고 순차적으로 눌러야 한다.
+Screen에서의 명령은 Ctrl + a 와 다른 키의 조합으로 이루어진다. 먼저 Ctrl + a를 누른 후 조합키를 누르면 된다. 동시에 누르는 것이 아니고 순차적으로 눌러야 한다.  
 
-Ctrl+a, c : 새창 띄우기
+Ctrl+a, c : 새창 띄우기  
+Ctrl+a, a : 바로 전 창으로  
+Ctrl+a, n : 다음 창으로  
+Ctrl+a, p: 이전 창으로  
+Ctrl+a, 스페이스 : 다음 창으로  
+Ctrl+a, 백스페이스 : 이전 창으로  
 
-Ctrl+a, a : 바로 전 창으로
-Ctrl+a, n : 다음 창으로
-Ctrl+a, p: 이전 창으로
-Ctrl+a, 스페이스 : 다음 창으로
-Ctrl+a, 백스페이스 : 이전 창으로
+Ctrl+a, 0 : 0번째 창으로  
+Ctrl+a, 1 : 1번째 창으로    
+Ctrl+a, 9 : 10번째 창으로  
 
-Ctrl+a, 0 : 0번째 창으로
-Ctrl+a, 1 : 1번째 창으로
-Ctrl+a, 9 : 10번째 창으로
+Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)  
 
-Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
-
-- reference :
-  - http://www.incodom.kr/Linux/%EA%B8%B0%EB%B3%B8%EB%AA%85%EB%A0%B9%EC%96%B4/screen
+### reference
+- http://www.incodom.kr/Linux/%EA%B8%B0%EB%B3%B8%EB%AA%85%EB%A0%B9%EC%96%B4/screen
 
 # software for bioinformaitcs
 
