@@ -30,13 +30,14 @@ bindkey -k k3 select 2
 ![image](https://user-images.githubusercontent.com/48517782/133099985-9a5297cb-6162-48c4-a796-8dd03a9ecfde.png)
 
 ## Screen 진입과 탈출
-screen 진입
-screen : 일반적인 진입
-screen -S [세션이름] : screen세션 이름을 지정하여 실행
-screen -r [세션이름] : 실행중인(Detached) screen 세션으로 재 진입시 실행하는 명령어, screen세션이 하나만 실행중일 경우 세션이름을 입력하지 않아도 진입이 된다.
-screen -x [세션이름] : 실행중인(Attached) screen 세션으로 재 진입시 실행하는 명령어, screen세션이 하나만 실행중일 경우 세션이름을 입력하지 않아도 진입이 된다.
+screen 진입  
+screen : 일반적인 진입  
+screen -S [세션이름] : screen세션 이름을 지정하여 실행  
+screen -r [세션이름] : 실행중인(Detached) screen 세션으로 재 진입시 실행하는 명령어, screen세션이 하나만 실행중일 경우 세션이름을 입력하지 않아도 진입이 된다.  
+screen -x [세션이름] : 실행중인(Attached) screen 세션으로 재 진입시 실행하는 명령어, screen세션이 하나만 실행중일 경우 세션이름을 입력하지 않아도 진입이 된다.  
 
-screen 탈출 screen을 종료 시키기 위해서는 모든 터미널을 종료(exit)하면 된다. screen 세션을 유지한 상태에서 나오기를 원한다면 Ctrl + a, d를 입력하면 된다.
+screen 탈출 screen을 종료 시키기 위해서는 모든 터미널을 종료(exit)하면 된다. 
+screen 세션을 유지한 상태에서 나오기를 원한다면 Ctrl + a, d를 입력하면 된다.  
 
 ## screen 명령어
 Screen에서의 명령은 Ctrl + a 와 다른 키의 조합으로 이루어진다. 먼저 Ctrl + a를 누른 후 조합키를 누르면 된다. 동시에 누르는 것이 아니고 순차적으로 눌러야 한다.
