@@ -18,5 +18,14 @@
 
 ```
 
+# login error
+```
+# remove the R login session info with error
+rm -rf /home/gyuho/.local/*
+
+# copy new login session info
+cp -r /home/assistant_manager/.local/*  /home/gyuho/.local/
+```
+
 # reference
 https://onesixx.com/resuming-r-session/
