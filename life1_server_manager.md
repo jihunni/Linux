@@ -10,3 +10,14 @@ firewall-cmd --get-active-zones
 TMOUT = 10800
 ```
 - reference : https://ostechnix.com/auto-logout-inactive-users-period-time-linux/
+
+
+```
+# linux
+find /dir -iname *filename*
+
+# R
+Sys.getenv()
+Sys.setenv()
+.libPaths
+```
