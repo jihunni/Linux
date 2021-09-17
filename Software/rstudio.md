@@ -25,6 +25,9 @@ rm -rf /home/gyuho/.local/*
 
 # copy new login session info
 cp -r /home/assistant_manager/.local/*  /home/gyuho/.local/
+
+# change ownership from root to user
+chown gyuho .local
 ```
 
 # reference
