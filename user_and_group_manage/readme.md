@@ -114,5 +114,17 @@ root            0      0      0  00 [------]
 cent          16K     9G    10G  00 [------]
 ```
 
-# Reference
+Reference
 - https://www.server-world.info/en/note?os=CentOS_7&p=quota
+
+
+# session timeout
+
+```
+vi /etc/profile.d/timeout.sh
+
+TIMEOUT=10800 #unit : sec
+export TMOUT
+```
+reference
+- https://kk-7790.tistory.com/68
