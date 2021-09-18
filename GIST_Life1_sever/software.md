@@ -99,3 +99,22 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
   $ module load SRA_toolkit
   $ fastq-dump [command]
   ```
+- FastQC
+  software directory : /opt/FastQC/0.11.9/  
+  moduel directory : /opt/Modules/modulefiles/FastQC/0.11.9/  
+  
+  1. Enable X11 forwarding by writing option `-X`
+    ```
+    ssh id@xx.xxxx.xx.x -X
+    ```
+  
+  2. module load FastQC
+    ```
+    $ module load FastQC
+    ```
+  
+  3. execute Fastqc
+    ```
+    $ fastqc
+    ```
+  
