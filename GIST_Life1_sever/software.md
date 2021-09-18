@@ -126,5 +126,5 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
 
   ```
   $ module load BWA-MEM2
-  $ bwa-mem [command]
+  $ bwa-mem2 [command]
   ```
