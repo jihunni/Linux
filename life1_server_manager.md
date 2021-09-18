@@ -21,3 +21,5 @@ Sys.getenv()
 Sys.setenv()
 .libPaths
 ```
+
+xhost 사용
