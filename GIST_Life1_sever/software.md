@@ -118,3 +118,13 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
     $ fastqc
     ```
   
+- BWA-MEM2
+  sequence alignment program with high speed
+  software directory : /opt/BWA-MEM2/2.2.1/
+  moduel directory : /opt/Modules/modulefiles/BWA-MEM2/2.2.1/ 
+  readme directory : /opt/Modules/modulefiles/BWA-MEM2/2.2.1/README.md
+
+  ```
+  $ module load BWA-MEM2
+  $ bwa-mem [command]
+  ```
