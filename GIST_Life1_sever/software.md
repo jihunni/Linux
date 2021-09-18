@@ -128,3 +128,8 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
   $ module load BWA-MEM2
   $ bwa-mem2 [command]
   ```
+- Trimmomatic | [homepage](http://www.usadellab.org/cms/?page=trimmomatic)
+  ```
+  $ module load trimmomatic
+  $ java -jar trimmomatic-0.39.jar [command]
+  ```
