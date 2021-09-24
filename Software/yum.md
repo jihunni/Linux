@@ -38,3 +38,28 @@ Example:
 yum -y update  
 
 reference : https://access.redhat.com/ko/solutions/82093
+
+query information from Yum repositories
+```
+# general
+> repoquery -l [package_name]
+
+# example
+> repoquery -l postgresql.x86_64
+usr/bin/clusterdb
+/usr/bin/createdb
+/usr/bin/createlang
+/usr/bin/createuser
+/usr/bin/dropdb
+/usr/bin/droplang
+/usr/bin/dropuser
+/usr/bin/pg_config
+/usr/bin/pg_dump
+/usr/bin/pg_dumpall
+/usr/bin/pg_restore
+/usr/bin/psql
+/usr/bin/reindexdb
+/usr/bin/vacuumdb
+/usr/lib64/pgsql
+
+```
