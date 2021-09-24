@@ -22,6 +22,11 @@ reference:
 - https://quiz12.tistory.com/99
 
 
+# remote connection
+https://docs.bitnami.com/virtual-machine/infrastructure/postgresql/administration/connect-remotely/
+```
+```
+
 # 21. Database Roles
 PostgreSQL manages database access permissions using the concept of roles. A role can be thought of
 as either a database user, or a group of database users, depending on how the role is set up. Roles can
