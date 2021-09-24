@@ -133,3 +133,6 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
   $ module load trimmomatic
   $ java -jar trimmomatic-0.39.jar [command]
   ```
+
+# database system
+## PostgreSQL (version 13)
