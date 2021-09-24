@@ -1,3 +1,27 @@
+# install PostgreSQL12 on Centos7
+```
+/usr/pgsql-9.6/bin/postgresql96-setup initdb
+```
+
+PostgreSQL 관리자 암호 설정
+```
+$ sudo su postgres
+$ psql -c " 'StrongDBPassword'암호로 사용자 postgres 변경" ALTER ROLE
+```
+
+```
+$ psql -U <dbuser> -h <serverip> -p 5432 <dbname> 
+```
+
+원격 데이터베이스 연결 활성화 (선택 사항)
+```
+vi /var/lib/pgsql/13/data/pg_hba.conf
+```
+reference: 
+- https://browndwarf.tistory.com/1
+- https://quiz12.tistory.com/99
+
+
 # 21. Database Roles
 PostgreSQL manages database access permissions using the concept of roles. A role can be thought of
 as either a database user, or a group of database users, depending on how the role is set up. Roles can
