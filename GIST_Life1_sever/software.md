@@ -73,6 +73,17 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
   Type "help", "copyright", "credits" or "license" for more information
   ```
   When you use Python, you sholud check whether python is derived from Anaconda. 
+- R
+  version : 3.6.0
+  Library directory : /opt/R_shared_library/3.6.0
+  ```
+  $ module av
+  $ module load R
+  $ R
+  > .libPaths()
+  "/opt/R_shared_library/3.6.0" "/usr/lib64/R/library" "/usr/share/R/library"
+  ```
+
 - star   
   software directory : /opt/  
   module directory : /opt/Modules/modulefiles/  
