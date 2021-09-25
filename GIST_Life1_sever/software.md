@@ -58,6 +58,10 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
 ### reference
 - http://www.incodom.kr/Linux/%EA%B8%B0%EB%B3%B8%EB%AA%85%EB%A0%B9%EC%96%B4/screen
 
+## Moudle environment
+
+## slum
+
 # software for bioinformaitcs
 
 - Python
