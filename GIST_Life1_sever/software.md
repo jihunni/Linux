@@ -159,5 +159,7 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
   ```
   java -jar /opt/HMMRATAC/1.2.10/HMMRATAC_V1.2.10_exe.jar [command]
   ```
+ - THE ENCODE BLACK LIST
+   directory : /opt/The_ENCODE_Blacklist/20210922
 # database system
 ## PostgreSQL (version 13)
