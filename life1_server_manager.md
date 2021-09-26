@@ -22,4 +22,6 @@ Sys.setenv()
 .libPaths
 ```
 
-xhost 사용
+# future 
+- notification after job : https://superuser.com/questions/345447/how-can-i-trigger-a-notification-when-a-job-process-ends
+- xhost 사용
