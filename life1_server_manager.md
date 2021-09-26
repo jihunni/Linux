@@ -23,5 +23,7 @@ Sys.setenv()
 ```
 
 # future 
-- notification after job : https://superuser.com/questions/345447/how-can-i-trigger-a-notification-when-a-job-process-ends
+- notification after job :
+  -  https://superuser.com/questions/345447/how-can-i-trigger-a-notification-when-a-job-process-ends
+  - https://github.com/arlowhite/process-watcher
 - xhost 사용
