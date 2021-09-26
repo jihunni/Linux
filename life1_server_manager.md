@@ -27,3 +27,10 @@ Sys.setenv()
   -  https://superuser.com/questions/345447/how-can-i-trigger-a-notification-when-a-job-process-ends
   - https://github.com/arlowhite/process-watcher
 - xhost 사용
+
+# MEME
+```
+make
+make install
+./configure --prefix=/opt/MEME_Suite/5.4.1_2/ --enable-build-libxml2 --enable-build-libxslt
+```
