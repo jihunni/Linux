@@ -154,6 +154,10 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
   $ module load trimmomatic
   $ java -jar trimmomatic-0.39.jar [command]
   ```
-
+- HMMRATAC | [paper](https://academic.oup.com/nar/article/47/16/e91/5519166), [github](https://github.com/LiuLabUB/HMMRATAC)
+  directory : /opt/HMMRATAC/1.2.10
+  ```
+  java -jar /opt/HMMRATAC/1.2.10/HMMRATAC_V1.2.4_exe.jar [command]
+  ```
 # database system
 ## PostgreSQL (version 13)
