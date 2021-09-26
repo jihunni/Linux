@@ -159,7 +159,17 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
   ```
   java -jar /opt/HMMRATAC/1.2.10/HMMRATAC_V1.2.10_exe.jar [command]
   ```
- - THE ENCODE BLACK LIST
-   directory : /opt/The_ENCODE_Blacklist/20210922
+ - THE ENCODE BLACK LIST  
+   directory : /opt/The_ENCODE_Blacklist/20210922  
+   black list : /opt/The_ENCODE_Blacklist/20210922/lists
+   ```
+   $ ls
+    Blacklist_v1           dm6-blacklist.v2.bed       metadata
+    ce10-blacklist.v2.bed  hg19-blacklist-README.pdf  mm10-blacklist.v2.bed
+    ce11-blacklist.v2.bed  hg19-blacklist.v2.bed
+    dm3-blacklist.v2.bed   hg38-blacklist.v2.bed
+
+   ```
+   
 # database system
 ## PostgreSQL (version 13)
