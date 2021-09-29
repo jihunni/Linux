@@ -96,9 +96,9 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
 -MATLAB (2021b)
  ```
  $ matlab
- ![image](https://user-images.githubusercontent.com/48517782/135204312-d90c8bd9-68ea-49a6-9702-743d4364f07d.png)
-
+ MATLAB is selecting SOFTWARE OPENGL rendering.
  ```
+ ![image](https://user-images.githubusercontent.com/48517782/135204312-d90c8bd9-68ea-49a6-9702-743d4364f07d.png)
 
 # software for bioinformaitcs
 - star   
