@@ -96,11 +96,12 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
 
 - MATLAB (2021b) 
  ```
+ $ module load matlab
  $ matlab
  MATLAB is selecting SOFTWARE OPENGL rendering.
  ```
  ![image](https://user-images.githubusercontent.com/48517782/135204312-d90c8bd9-68ea-49a6-9702-743d4364f07d.png)
-
+ > If you execute `$ module load matlab`, then the paths for `Gurobi Optimizer` are automatically set up. Check by `$ env`
 # software for bioinformaitcs
 - star   
   software directory : /opt/  
