@@ -62,7 +62,7 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
 
 ## slum
 
-# software for bioinformaitcs
+# Programminfg Language and IDE
 
 - Python
   software directory : 
@@ -93,7 +93,14 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
     - ggplot2
    installed libraries (bioconductor) : [bioconductor list](https://bioconductor.org/packages/3.13/BiocViews.html#___Software)
     - TxDb.Hsapiens.UCSC.hg38.knownGene
+-MATLAB (2021b)
+ ```
+ $ matlab
+ ![image](https://user-images.githubusercontent.com/48517782/135204312-d90c8bd9-68ea-49a6-9702-743d4364f07d.png)
 
+ ```
+
+# software for bioinformaitcs
 - star   
   software directory : /opt/  
   module directory : /opt/Modules/modulefiles/  
