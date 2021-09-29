@@ -93,7 +93,8 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
     - ggplot2
    installed libraries (bioconductor) : [bioconductor list](https://bioconductor.org/packages/3.13/BiocViews.html#___Software)
     - TxDb.Hsapiens.UCSC.hg38.knownGene
--MATLAB (2021b)
+
+- MATLAB (2021b) 
  ```
  $ matlab
  MATLAB is selecting SOFTWARE OPENGL rendering.
