@@ -36,7 +36,7 @@ screen -S [세션이름] : screen세션 이름을 지정하여 실행
 screen -r [세션이름] : 실행중인(Detached) screen 세션으로 재 진입시 실행하는 명령어, screen세션이 하나만 실행중일 경우 세션이름을 입력하지 않아도 진입이 된다.  
 screen -x [세션이름] : 실행중인(Attached) screen 세션으로 재 진입시 실행하는 명령어, screen세션이 하나만 실행중일 경우 세션이름을 입력하지 않아도 진입이 된다.  
 
-screen 탈출 screen을 종료 시키기 위해서는 모든 터미널을 종료(exit)하면 된다. 
+screen 탈출 screen을 종료 시키기 위해서는 모든 터미널을 종료(exit)하면 된다. 또는 `$ screen -X -S [session # you want to kill] quit`
 screen 세션을 유지한 상태에서 나오기를 원한다면 Ctrl + a, d를 입력하면 된다.  
 
 ## screen 명령어
