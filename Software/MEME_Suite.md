@@ -60,55 +60,54 @@ file directory : INSTALL
 ```
 
 ```
-
         ========================
         Configuration parameters
         ========================
 
   Install path:               /opt/MEME_Suite/5.4.1
-  Install UID:
+  Install UID:                
   Version:                    5.4.1
   C compiler:                 gcc
   C compiler flags:           -std=gnu89 -fno-common -Wall -Wno-unused -DUNIX -D__USE_FIXED_PROTOTYPES__   -O3
   Linker:                     /usr/bin/ld -m elf_x86_64
-  Special Libs:               -lz -lm
+  Special Libs:               -lz -lm 
   MPICC:                      /opt/OpenMPI/4.1.1//bin/mpicc
   MPIRUN:                     /opt/OpenMPI/4.1.1//bin/mpirun
   MPI_CMD:                    /opt/OpenMPI/4.1.1//bin/mpirun -np
   MPIINC:                     -DMPI -I/opt/OpenMPI/4.1.1//include
   MPILIBDIR:                  /opt/OpenMPI/4.1.1//lib
-  MPIFLAGS:                   -DPARALLEL
+  MPIFLAGS:                   -DPARALLEL 
   MPI_NPROCS:                 1
   OPAL URL:                   no
-  OPAL DEPLOY DIRECTORY:
+  OPAL DEPLOY DIRECTORY:      
   BUILD LIBXML2:              yes
   LIBXML2 compiler flags:     -I${top_srcdir}/src/libxml2/include
   LIBXML2 libs:               ${top_builddir}/src/libxml2/libxml2.la
   BUILD LIBXSLT:              yes
   LIBXSLT compiler flags:     -I${top_srcdir}/src/
   LIBXSLT libs:               ${top_builddir}/src/libxslt/libxslt.la
-  SOURCE URL:                 https://meme-suite.org
+  SOURCE URL:		      https://meme-suite.org
   WEBSITE URL:                https://meme-suite.org/meme
-  ALTERNATE WEBSITE URL:
-  PREVIOUS VERSION URL:
-  PREVIOUS VERSION:
+  ALTERNATE WEBSITE URL:      
+  PREVIOUS VERSION URL:       
+  PREVIOUS VERSION:           
   NOTICES URL:                ./notices.txt
   NEWS URL:                   ./news.txt
-  WEBSITE CONTACT:
+  WEBSITE CONTACT:            
   DEVELOPER CONTACT:          meme-suite@uw.edu
   GO-SERVER URL:              http://amigo.geneontology.org/amigo/term/GO_TERM_ID
   MEME DB:                    ${datarootdir}/${PACKAGE_NAME}-5.4.1/db
   MEME LOGS:                  ${localstatedir}/${PACKAGE_NAME}-5.4.1/LOGS
-  MEME TEMP FILES:
+  MEME TEMP FILES:            
   PERL:                       /usr/bin/perl
   PYTHON:                     /usr/bin/python
   PYTHON VERSiON:             2.7
-  CONVERT:
+  CONVERT:                    
   GHOSTSCRIPT:                /usr/bin/gs
-  QUOTA:
+  QUOTA:                      
   EXPIRY:                     4
-  DRMAA QUEUE:
-  DRMAA QUEUE SHORT:
+  DRMAA QUEUE:                
+  DRMAA QUEUE SHORT:          
   MAXTIME:                    14400
   MAXTIME SHORT:              300
   MAXMEMORY:                  4
@@ -127,7 +126,6 @@ file directory : INSTALL
 
   This can often be done by editing the file named .profile to add
   the following line:
-        export PATH=/opt/MEME_Suite/5.4.1/bin:/opt/MEME_Suite/5.4.1/libexec/meme-5.4.1:$PATH
-
+	export PATH=/opt/MEME_Suite/5.4.1/bin:/opt/MEME_Suite/5.4.1/libexec/meme-5.4.1:$PATH
 
 ```
