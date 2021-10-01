@@ -40,6 +40,13 @@ fi
 reference : 
 - https://devhints.io/bash
 
+# save the output of a function into a variable
+```
+variable_name=$(command [option ...] arg1 arg2 ...)
+```
+reference : https://www.tecmint.com/assign-linux-command-output-to-variable/
+
+
 # file search
 ```
 # search files that does not contain '_bak' on current directory
