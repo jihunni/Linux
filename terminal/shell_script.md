@@ -86,3 +86,8 @@ for f in $(ls *_*_forward_paired.fastq); do
 done
 
 ```
+
+## merge fastq
+```
+cat file*.fastq > bigfile.fastq
+```
