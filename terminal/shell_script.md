@@ -19,6 +19,9 @@ abcdef ghijk
 ```
 > warning! no space between comma
 
+reference : 
+- https://wiki.bash-hackers.org/syntax/expansion/brace
+- 
 ## if else
 ```
 if [command]
