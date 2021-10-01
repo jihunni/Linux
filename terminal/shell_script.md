@@ -40,6 +40,12 @@ fi
 reference : 
 - https://devhints.io/bash
 
+# file search
+```
+# search files that does not contain '_bak' on current directory
+find . -maxdepth 1 -mindepth 1 ! -name '*_bak'
+```
+
 # create folder
 ```
 output_directory='ex1234'
