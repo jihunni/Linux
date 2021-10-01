@@ -76,3 +76,13 @@ for file_name in $(ls *.fastq); do
 done
 
 ```
+
+file name w/o extension
+```
+for f in $(ls *_*_forward_paired.fastq); do
+        #remove '_forward_paired.fastq'
+        echo ${f%_*_forward_paired.fastq} ;
+
+done
+
+```
