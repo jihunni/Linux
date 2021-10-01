@@ -68,3 +68,11 @@ else
 
 fi
 ```
+
+# file iteration
+```
+for file_name in $(ls *.fastq); do
+        echo ${file_name} ;
+done
+
+```
