@@ -45,6 +45,8 @@ reference :
 # search files that does not contain '_bak' on current directory
 find . -maxdepth 1 -mindepth 1 ! -name '*_bak'
 ```
+reference: https://stackoverflow.com/questions/11043878/linux-search-file-based-on-file-name-pattern
+
 
 # create folder
 ```
