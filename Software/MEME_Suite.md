@@ -34,7 +34,10 @@ reference : https://meme-suite.org/meme/doc/install.html?man_type=web#parallel
    shell# cpan HTML::TreeBuilder
    
    ```
-
+- zlib
+  ```
+  yum install -y zlib
+  ```
 - MPI
 
 ## install MEME Suite
