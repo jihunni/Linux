@@ -1,10 +1,43 @@
-# MEME Suite
+# To install MEME Suite
 
-# Prerequisite software
+## Prerequisite software
 reference : https://meme-suite.org/meme/doc/install.html?man_type=web#parallel
-MPI
 
-# install
+- Perl
+   Once Perl is installed run the script dependencies.pl in the scripts directory of the MEME Suite installation files.
+   ```
+   shell# cd scripts
+   shell# perl dependencies.pl
+
+   Checking Required Perl Modules:
+   HTML::Template missing.
+   HTML::TreeBuilder missing.
+   JSON missing.
+   Sys::Info missing.
+
+   Checking Optional Modules:
+   Log::Log4perl missing. Used for logging and debugging by developers.
+   Math::CDF missing. Only required for fasta-enriched-center script (which is not called by the web scripts).
+   XML::Compile::SOAP11 missing. Used for downloading sequence databases from RSAT.
+   On Ubuntu, you may first need to run 'sudo apt-get install libxml2-dev'
+   XML::Compile::WSDL11 missing. Used for downloading sequence databases from RSAT
+   XML::Compile::Transport::SOAPHTTP missing. Used for downloading sequence databases from RSAT
+   ```
+   
+   Then install all requirement by using
+   ```
+   #general
+   shell# cpan [list]
+   
+   #running code
+   shell# cpan HTML::Template
+   shell# cpan HTML::TreeBuilder
+   
+   ```
+
+- MPI
+
+## install MEME Suite
 file directory : INSTALL
 ```
 1) Type the following commands and then follow the instructions
