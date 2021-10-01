@@ -38,6 +38,10 @@ reference : https://meme-suite.org/meme/doc/install.html?man_type=web#parallel
   ```
   yum install -y zlib
   ```
+- ghostscript
+  ```
+  yum install ghostscript
+  ```
 - MPI
 
 ## install MEME Suite
