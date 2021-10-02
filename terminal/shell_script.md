@@ -77,6 +77,23 @@ done
 
 ```
 
+```
+#check whether it works
+ls ./{01_ENCSR496PPU,02_ENCSR600ZHS,03_ENCSR491VXJ,04_ENCSR970UNF,05_ENCSR355SGJ}/
+
+chmod 755 ./{01_ENCSR496PPU,02_ENCSR600ZHS,03_ENCSR491VXJ,04_ENCSR970UNF,05_ENCSR355SGJ}/bwa-mem2.sh
+#./{01_ENCSR496PPU,02_ENCSR600ZHS,03_ENCSR491VXJ,04_ENCSR970UNF,05_ENCSR355SGJ}/bwa-mem2.sh
+
+for directory in {01_ENCSR496PPU,02_ENCSR600ZHS,03_ENCSR491VXJ,04_ENCSR970UNF,05_ENCSR355SGJ}
+do
+        PWD=/home/jihun/data/ENCODE/${directory}
+        echo $PWD
+        export PWD="/home/jihun/data/ENCODE/${directory}"
+        $PWD/bwa-mem2.sh
+done
+~     
+```
+
 file name w/o extension
 ```
 for f in $(ls *_*_forward_paired.fastq); do
