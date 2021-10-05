@@ -77,6 +77,10 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
   Type "help", "copyright", "credits" or "license" for more information
   ```
   When you use Python, you sholud check whether python is derived from Anaconda. 
+  
+  software list:
+  - Pyfasta
+  
 - R
   version : 3.6.0
   Library directory : /opt/R_shared_library/3.6.0
