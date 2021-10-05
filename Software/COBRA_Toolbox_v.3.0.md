@@ -6,6 +6,7 @@ model = readCbModel(fileName);
 ```
 > `readCbModel` checks the model for consistency with COBRA Toolbox and automatically performs necessary conversion for mdels.  
 > The readCbModel function has a second optional input that specifies the file type being loaded. In the above example the file type does not need to be specified since the input default is a 'Matlab' file type. To load file types other than a MAT-file, specificy the file type for input as: ‘SBML’, ‘SimPheny’, ‘SimPhenyPlus’, ‘SimPhenyText’, or 'Excel’.   
+> `.mat` file might contain information not present in the corresponding `SBML` output
 > The loading of a MAT-file, even of some large models, can take only seconds, whereas large SBML files can take a few minutes to load. 
 ```
 # call the readCbModel function without a fileName to get a dialog box. 
