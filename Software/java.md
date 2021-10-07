@@ -12,3 +12,9 @@ export PATH=${JAVA_HOME}/bin:$PATH
 shell# source apps-bin-path.sh 
 
 ```
+
+# install Cytoscape
+```
+sudo sh Cytoscape_3_6_1_unix.sh
+$ Cytoscape &
+```
