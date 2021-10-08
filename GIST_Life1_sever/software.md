@@ -183,6 +183,11 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
     dm3-blacklist.v2.bed   hg38-blacklist.v2.bed
 
    ```
-   
+  - Cytoscape 
+   You need to connect SSH with `-X` or `-Y`  option (graphic interface option)
+   ```
+    $ ssh -X ID@IP
+    $ Cytoscape &
+   ```
 # database system
 ## PostgreSQL (version 13)
