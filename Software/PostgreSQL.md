@@ -1,6 +1,7 @@
 # install PostgreSQL12 on Centos7
 ```
 /usr/pgsql-9.6/bin/postgresql96-setup initdb
+/var/lib/pgsql/13/data
 ```
 
 PostgreSQL 관리자 암호 설정
@@ -9,9 +10,7 @@ $ sudo su postgres
 $ psql -c " 'StrongDBPassword'암호로 사용자 postgres 변경" ALTER ROLE
 ```
 
-```
-$ psql -U <dbuser> -h <serverip> -p 5432 <dbname> 
-```
+
 
 원격 데이터베이스 연결 활성화 (선택 사항)
 ```
@@ -30,6 +29,17 @@ https://docs.bitnami.com/virtual-machine/infrastructure/postgresql/administratio
 ```
 # check systemctl
 systemctl status postgresql-13
+```
+
+## FATAL: Peer authentication failed for user
+Ref:
+- https://bono915.tistory.com/entry/Postgresql-FATAL-Peer-authentication-failed-for-user-%EC%98%A4%EB%A5%98
+- https://stackoverflow.com/questions/18664074/getting-error-peer-authentication-failed-for-user-postgres-when-trying-to-ge
+
+# Postgres
+```
+$ psql -U <dbuser> -h <serverip> -p 5432 <dbname> 
+$ psql -U [role_name] -W [DB_name]
 ```
 
 ```
