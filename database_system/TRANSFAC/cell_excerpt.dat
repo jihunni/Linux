@@ -1,0 +1,81 @@
+VV  TRANSFAC CELL TABLE, Release 2009.2 - licensed - 2009-06-30, (C) Biobase GmbH
+XX
+//
+AC  2304
+XX
+DT  22.06.2004 (created); abd.
+DT  22.06.2004 (updated); abd.
+CO  Copyright (C), Biobase GmbH.
+XX
+SO  renal cortex
+XX
+CD  Kidney renal cortex isolated from mice fed with low inorganic phosphate diet
+XX
+BS  R15203; MOUSE$SLC34A1_01.
+XX
+//
+AC  2991
+XX
+DT  29.04.2006 (created); ech.
+DT  10.05.2006 (updated); ech.
+CO  Copyright (C), Biobase GmbH.
+XX
+SO  rec(mammalian-HEK293)
+XX
+OS  mammalian species
+XX
+CD  recombinant expression: mammalian factor has been expressed in HEK 293 cells (HEK = human embryonic kidney)
+XX
+BS  R08477; AS$CEBP_25.
+BS  R19657; MOUSE$PGD_01.
+BS  R19723; MOUSE$PCX_01.
+BS  R19766; MOUSE$LHCGR_01.
+BS  R21612; HS$TCL1A_01.
+BS  R22532; HS$NQO1_03.
+BS  R23088; MOUSE$BGLAP1_01.
+BS  R23185; MOUSE$ADIPOQ_05.
+BS  R23237; AS$ATF3_01.
+BS  R23238; MOUSE$ADIPOQ_08.
+BS  R23529; HS$CYP2A13_01.
+BS  R23751; AS$PAX6_48.
+BS  R23816; MOUSE$COMP_01.
+BS  R23825; HS$RB1_09.
+BS  R24144; HS$RETN_01.
+BS  R24182; HS$RETN_02.
+BS  R26634; MOUSE$KIT_02.
+BS  R26848; HS$FOXE1_01.
+BS  R27122; MOUSE$PTGS2_17.
+BS  R27286; HS$SNAP25_02.
+BS  R27291; HS$SNAP25_03.
+BS  R27292; HS$SNAP25_04.
+BS  R27293; HS$SNAP25_05.
+BS  R27294; HS$SNAP25_06.
+XX
+//
+AC  6352
+XX
+DT  30.04.2009 (created); pch.
+DT  30.04.2009 (updated); pch.
+CO  Copyright (C), Biobase GmbH.
+XX
+SO  HSC+Curcumin
+XX
+CD  HSC treated with curcumin
+XX
+BS  R23224; AS$SMAD_01.
+BS  R27486; HS$PPARG_09.
+XX
+//
+AC  6353
+XX
+DT  30.04.2009 (created); pch.
+DT  30.04.2009 (updated); pch.
+CO  Copyright (C), Biobase GmbH.
+XX
+SO  Rec(mammalian-HSC)
+XX
+CD  Recombinant mammalian factor expressed in HSC
+XX
+BS  R27486; HS$PPARG_09.
+XX
+//

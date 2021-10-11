@@ -1,0 +1,212 @@
+VV  TRANSFAC GENE TABLE, Release 2009.2 - licensed - 2009-06-30, (C) Biobase GmbH
+XX
+//
+AC  G000175
+XX
+ID  HS$ALOX5
+XX
+DT  14.06.1995 (created); dbo.
+DT  28.04.2009 (updated); djp.
+CO  Copyright (C), Biobase GmbH.
+XX
+SD  ALOX5
+XX
+DE  arachidonate 5-lipoxygenase
+XX
+SY  5-LO; 5-LOX; 5LPG; ALOX5; arachidonate 5-lipoxygenase; LOG5; MGC163204.
+XX
+OS  human, Homo sapiens
+OC  eukaryota; animalia; metazoa; chordata; vertebrata; tetrapoda; mammalia; eutheria; primates
+XX
+CH  10q11.2
+XX
+BC  6.1.4.6
+XX
+RG  Positively regulated by Sp1 and Egr-1 [1].
+XX
+BS     -1521    -1510   R20188; HS$ALOX5_02; Binding factors: RORalpha1 <T01527>, RORbeta <T09564>.
+BS     -1521    -1510   R20190; HS$ALOX5_03; Binding factors: T3R-alpha <T08501>.
+BS     -1521    -1510   R20191; HS$ALOX5_04; Binding factors: COUP-TF1 <T08505>.
+BS      -212      -88   R02845; HS$ALOX5_01.
+BS      -184     -141   R24619; HS$ALOX5_05; Binding factors: sp1 <T08484>.
+BS      -184     -141   R24621; HS$ALOX5_06; Binding factors: Egr-1 <T10531>.
+BS      -117     -109   R24624; HS$ALOX5_07; Binding factors: sp1 <T08484>.
+XX
+BR  FR0012534; downstream; Species: human, Homo sapiens.
+BR  FR0037876; downstream; Species: human, Homo sapiens.
+BR  FR0037877; downstream; Species: human, Homo sapiens.
+BR  FR0125204; downstream; Species: human, Homo sapiens.
+BR  FR0125207; downstream; Species: human, Homo sapiens.
+BR  FR0127112; downstream; Species: human, Homo sapiens.
+BR  FR0135625; downstream; Species: human, Homo sapiens.
+BR  FR0153897; downstream; Species: human, Homo sapiens.
+XX
+DR  BKL: HumanPSD: ALOX5; Human.
+DR  TRANSPATH: G000175.
+DR  EMBL: AL731567.
+DR  ENSEMBL: ENSG00000012779.
+DR  AFFYMETRIX: Affymetrix: 204445_s_at.
+DR  AFFYMETRIX: Affymetrix: 204446_s_at.
+DR  AFFYMETRIX: Affymetrix: 213952_s_at.
+DR  AFFYMETRIX: Affymetrix: 214366_s_at.
+DR  AFFYMETRIX: Affymetrix: 307_at.
+DR  AFFYMETRIX: Affymetrix: 33153_at.
+DR  AFFYMETRIX: Affymetrix: 88825_at.
+DR  AFFYMETRIX: Affymetrix: g4502056_3p_a_at.
+DR  AFFYMETRIX: Affymetrix: Hs.89499.0.A1_3p_a_at.
+DR  AFFYMETRIX: Affymetrix: Hs.89499.1.A1_3p_at.
+DR  AFFYMETRIX: Affymetrix: Hs.89499.2.S1_3p_a_at.
+DR  AFFYMETRIX: Affymetrix: J03600_at.
+DR  AFFYMETRIX: Affymetrix: RC_H51574_s_at.
+DR  EMBL: AB208946; AB208946.
+DR  EMBL: AL731567; AL731567.
+DR  EMBL: J03571; HSLOX5A.
+DR  EMBL: J03600; HSLOX5.
+DR  EMBL: J04520; HSLIPOX.
+DR  EMBL: M38191; HSLIPO5.
+DR  ENTREZGENE: 240.
+DR  OMIM: 152390.
+DR  OMIM: 600807.
+DR  HGNC: ALOX5.
+DR  REFSEQ: NM_000698.
+DR  REFSEQ: NP_000689.
+DR  REFSEQ: XM_001127464.
+DR  REFSEQ: XP_001127464.
+DR  REFSEQ: XP_942388.
+DR  UNIGENE: Hs.89499.
+DR  BRENDA: 1.13.11.34; Human.
+DR  TRANSPRO: HSA_5936_1.
+DR  TRANSPRO: HSA_5936_2.
+XX
+RN  [1]; RE0053241.
+RX  PUBMED: 9698605.
+RA  Silverman E. S., Du J., De Sanctis G. T., Radmark O., Samuelsson B., Drazen J. M., Collins T.
+RT  Egr-1 and Sp1 interact functionally with the 5-lipoxygenase promoter and its naturally occurring mutants.
+RL  Am. J. Respir. Cell Mol. Biol. 19:316-323 (1998).
+RN  [2]; RE0026298.
+RX  PUBMED: 8702678.
+RA  Schrader M., Danielsson C., Wiesenberg I., Carlberg C.
+RT  Identification of natural monomeric response elements of the nuclear receptor RZR/ROR. They also bind COUP-TF homodimers.
+RL  J. Biol. Chem. 271:19732-6 (1996).
+RN  [3]; RE0012067.
+RX  PUBMED: 7706239.
+RA  Steinhilber D. D., Brungs M., Werz O., Wiesenberg I., Danielsson C., Kahlen J.-P., Nayeri S., Schraeder M., Carlberg C.
+RT  The nuclear receptor for melatonin represses 5-lipoxygenase gene expression in human B lymphocytes
+RL  J. Biol. Chem. 270:7037-7040 (1995).
+RN  [4]; RE0002504.
+RX  PUBMED: 2251250.
+RA  Hoshiko S., Radmark O., Samuelsson B.
+RT  Characterization of the human 5-lipoxygenase gene promoter
+RL  Proc. Natl. Acad. Sci. USA 87:9073-9077 (1990).
+XX
+//
+AC  G000176
+AS  MO000022620
+XX
+ID  HS$IFI6
+XX
+DT  14.06.1995 (created); dbo.
+DT  09.04.2009 (updated); djp.
+CO  Copyright (C), Biobase GmbH.
+XX
+SD  IFI6
+XX
+DE  interferon, alpha-inducible protein 6
+XX
+SY  6-16; FAM14C; G1P3; IFI-6-16; IFI6; IFI616; interferon, alpha-inducible protein (clone IFI-6-16); interferon, alpha-inducible protein 6.
+XX
+OS  human, Homo sapiens
+OC  eukaryota; animalia; metazoa; chordata; vertebrata; tetrapoda; mammalia; eutheria; primates
+XX
+CH  1p35
+XX
+BC  6.1.7.2
+XX
+BS      -127      -89   R00001; HS$IFI6_01; Binding factors: ISGF-3 <T00428>.
+BS      -113      -96   R00002; HS$IFI6_02; Binding factors: IRF-8 <T09384>.
+XX
+BR  FR0005515; upstream; Species: human, Homo sapiens.
+BR  FR0114426; upstream; Species: human, Homo sapiens.
+BR  FR0114427; upstream; Species: human, Homo sapiens.
+BR  FR0114428; upstream; Species: human, Homo sapiens.
+BR  FR0114429; upstream; Species: human, Homo sapiens.
+BR  FR0139408; upstream; Species: human, Homo sapiens.
+BR  FR0139409; upstream; Species: human, Homo sapiens.
+BR  FR0144383; upstream; Species: human, Homo sapiens.
+BR  FR0153497; upstream; Species: human, Homo sapiens.
+XX
+DR  BKL: HumanPSD: G1P3; Human.
+DR  TRANSPATH: G000176.
+DR  EMBL: Y00828; HSIFNIN6.
+DR  ENSEMBL: ENSG00000126709.
+DR  AFFYMETRIX: Affymetrix: 1358_s_at.
+DR  AFFYMETRIX: Affymetrix: 204415_at.
+DR  AFFYMETRIX: Affymetrix: 224533_s_at.
+DR  AFFYMETRIX: Affymetrix: 33832_at.
+DR  AFFYMETRIX: Affymetrix: g13259549_3p_at.
+DR  AFFYMETRIX: Affymetrix: g339424_3p_a_at.
+DR  AFFYMETRIX: Affymetrix: U22970_rna1_s_at.
+DR  EMBL: A25965; A25965.
+DR  EMBL: AF430686; AF430686.
+DR  EMBL: AJ426287; HSA426287.
+DR  EMBL: AK024814; AK024814.
+DR  EMBL: AL445490; AL445490.
+DR  EMBL: BC011601; BC011601.
+DR  EMBL: BC015603; BC015603.
+DR  EMBL: BC024289; BC024289.
+DR  EMBL: BN000257; HSA000257.
+DR  EMBL: BT006850; BT006850.
+DR  EMBL: U22970; U22970.
+DR  EMBL: X02492; HSIFNIN3.
+DR  ENTREZGENE: 2537.
+DR  OMIM: 147572.
+DR  HGNC: IFI6.
+DR  REFSEQ: NM_002038.
+DR  REFSEQ: NM_022872.
+DR  REFSEQ: NM_022873.
+DR  REFSEQ: NP_002029.
+DR  REFSEQ: NP_075010.
+DR  REFSEQ: NP_075011.
+DR  UNIGENE: Hs.510635.
+DR  UNIGENE: Hs.511731.
+DR  UNIGENE: Hs.523847.
+DR  TRRD: 00270.
+DR  TRANSPRO: HSA_1699.
+XX
+RN  [1]; RE0002135.
+RX  PUBMED: 1707163.
+RA  Roy Ch., Lebleu B.
+RT  DNA protein interactions at the interferon-responsive promoter elements: potential for a H-DNA conformation
+RL  Nucleic Acids Res. 19:517 (1991).
+RN  [2]; RE0001119.
+RX  PUBMED: 2243138.
+RA  Seong D. C., Sims S., Johnson E., Howard O. M. Z., Reiter B., Hester J., Talpaz M., Kantarjian H., Deisseroth A.
+RT  A phosphatase activity present in peripheral blood myeloid cells of chromic myelogenous leukemia patients but not normal individuals alters nuclear protein binding to transcriptional enhancers of interferon-inducible genes
+RL  J. Clin. Invest. 86:1664-1670 (1990).
+RN  [3]; RE0002092.
+RX  PUBMED: 2123539.
+RA  Imam A. M. A., Ackrill A. M., Dale T. C., Kerr I. M., Stark G. R.
+RT  Transcription factors induced by interferons alpha and gamma
+RL  Nucleic Acids Res. 18:6573-6580 (1990).
+RN  [4]; RE0002531.
+RX  PUBMED: 2111015.
+RA  Driggers P. H., Ennist D. L., Gleason S. L., Mak W.-H., Marks M. S., Levi B.-Z., Flanagan J. R., Appella E., Ozato K.
+RT  An interferon gamma-regulated protein that binds the interferon-inducible enhancer element of major histocompatibility complex class I genes
+RL  Proc. Natl. Acad. Sci. USA 87:3743-3747 (1990).
+RN  [5]; RE0000307.
+RX  PUBMED: 2721502.
+RA  Dale T. C., Rosen J. M., Guille M. J., Lewin A. R., Porter A. G. C., Kerr I. M., Stark G. R.
+RT  Overlapping sites for constitutive and induced DNA binding factors involved in interferon-stimulated transcription
+RL  EMBO J. 8:831-839 (1989).
+RN  [6]; RE0002261.
+RX  PUBMED: 2919169.
+RA  Dale T. C., Imam A. M., Kerr I. M., Stark G. R.
+RT  Rapid activation by interferon alpha of a latent DNA-binding protein present in the cytoplasm of untreated cells.
+RL  Proc. Natl. Acad. Sci. USA 86:1203-1207 (1989).
+RN  [7]; RE0000306.
+RX  PUBMED: 3359997.
+RA  Porter A. C. G., Chernajowski Y., Dale T. C., Gilbert C. S., Stark G. R., Kerr I. M.
+RT  Interferon response element of the human gene 6-16
+RL  EMBO J. 7:85-92 (1988).
+XX
+//

@@ -1,0 +1,120 @@
+VV  TRANSFAC REFERENCE TABLE, Release 2009.2 - licensed - 2009-06-30, (C) Biobase GmbH
+XX
+//
+AC  RE0060094
+RX  PUBMED: 19366697.
+RA  Kim T. H., Kim H., Park J. M., Im S. S., Bae J. S., Kim M. Y., Yoon H. G., Cha J. Y., Kim K. S., Ahn Y. H.
+RT  Interrelationship between LXR{alpha}, SREBP-1c, PPAR{gamma} and SHP in the transcriptional regulation of glucokinase gene expression in liver.
+RL  J. Biol. Chem. : (2009).
+GE  TRANSFAC: G000743; GCK; rat, Rattus norvegicus.
+GE  TRANSFAC: G006966; SLC2A4; human, Homo sapiens.
+BS  TRANSFAC: R27460; GCK (glucokinase); rat, Rattus norvegicus.
+BS  TRANSFAC: R27461; SLC2A4 (solute carrier family 2 (facilitated glucose transporter), member 4); human, Homo sapiens.
+XX
+//
+AC  RE0062718
+RX  PUBMED: 19352026.
+RA  Nishizawa-Yokoi A., Yoshida E., Yabuta Y., Shigeoka S.
+RT  Analysis of the regulation of target genes by an Arabidopsis heat shock transcription factor, HsfA2.
+RL  Biosci. Biotechnol. Biochem. 73:890-895 (2009).
+FA  TRANSFAC: T10745; HSFA2; thale cress, Arabidopsis thaliana.
+XX
+//
+AC  RE0056181
+RX  PUBMED: 19340308.
+RA  Sudhakar C., Nagabhushana A., Jain N., Swarup G.
+RT  NF-kappaB mediates tumor necrosis factor alpha-induced expression of optineurin, a negative regulator of NF-kappaB.
+RL  PLoS ONE 4:e5114 (2009).
+GE  TRANSFAC: G028501; OPTN; human, Homo sapiens.
+BS  TRANSFAC: R27453; OPTN (tumor necrosis factor alpha-inducible cellular protein containing leucine zipper domains); human, Homo sapiens.
+XX
+//
+AC  RE0056174
+RX  PUBMED: 19339503.
+RA  Yakir E., Hilman D., Kron I., Hassidim M., Melamed-Book N., Green R. M.
+RT  Post-translational regulation of CIRCADIAN CLOCK ASSOCIATED 1 (CCA1) in the circadian oscillator of Arabidopsis thaliana.
+RL  Plant Physiol. : (2009).
+FA  TRANSFAC: T02860; CCA1; thale cress, Arabidopsis thaliana.
+FA  TRANSFAC: T02870; LHY; thale cress, Arabidopsis thaliana.
+FA  TRANSFAC: T08583; CCA1; thale cress, Arabidopsis thaliana.
+FA  TRANSFAC: T08584; LHY; thale cress, Arabidopsis thaliana.
+XX
+//
+AC  RE0056028
+RX  PUBMED: 19321441.
+RA  Feng H., Cheng T., Steer J. H., Joyce D. A., Pavlos N. J., Leong C., Kular J., Liu J., Feng X., Zheng M. H., Xu J.
+RT  MEF2 and MITF cooperate with NFATC1 to transactivate the V-ATPase D2 promoter during rankl-induced osteoclastogenesis.
+RL  J. Biol. Chem. : (2009).
+GE  TRANSFAC: G043708; Atp6v0d2; mouse, Mus musculus.
+BS  TRANSFAC: R27156; Atp6v0d2 (ATPase, H+ transporting, lysosomal V0 subunit D2); mouse, Mus musculus.
+BS  TRANSFAC: R27157; Atp6v0d2 (ATPase, H+ transporting, lysosomal V0 subunit D2); mouse, Mus musculus.
+BS  TRANSFAC: R27159; Atp6v0d2 (ATPase, H+ transporting, lysosomal V0 subunit D2); mouse, Mus musculus.
+BS  TRANSFAC: R27161; Atp6v0d2 (ATPase, H+ transporting, lysosomal V0 subunit D2); mouse, Mus musculus.
+BS  TRANSFAC: R27387; Atp6v0d2 (ATPase, H+ transporting, lysosomal V0 subunit D2); mouse, Mus musculus.
+BS  TRANSFAC: R27388; Atp6v0d2 (ATPase, H+ transporting, lysosomal V0 subunit D2); mouse, Mus musculus.
+BS  TRANSFAC: R27390; Atp6v0d2 (ATPase, H+ transporting, lysosomal V0 subunit D2); mouse, Mus musculus.
+XX
+//
+AC  RE0056016
+RX  PUBMED: 19304666.
+RA  Yu H. T., Yu M., Li C. Y., Zhan Y. Q., Xu W. X., Li Y. H., Li W., Wang Z. D., Ge C. H., Yang X. M.
+RT  Specific expression and regulation of the hepassocin in liver and down-regulation of HNF1alpha 's correlation with decreased levels of hepassocin in human hepatocellular carcinoma.
+RL  J. Biol. Chem. : (2009).
+GE  TRANSFAC: G031972; FGL1; human, Homo sapiens.
+BS  TRANSFAC: R27148; FGL1 (fibrinogen-like 1); human, Homo sapiens.
+XX
+//
+AC  RE0056038
+RX  PUBMED: 19282476.
+RA  Vallania F., Schiavone D., Dewilde S., Pupo E., Garbay S., Calogero R., Pontoglio M., Provero P., Poli V.
+RT  Genome-wide discovery of functional transcription factor binding sites by comparative genomics: The case of Stat3.
+RL  Proc. Natl. Acad. Sci. USA : (2009).
+GE  TRANSFAC: G000505; Egr-1; mouse, Mus musculus.
+GE  TRANSFAC: G001071; ICAM1; human, Homo sapiens.
+GE  TRANSFAC: G004782; Hmga2; mouse, Mus musculus.
+GE  TRANSFAC: G005174; Socs3; mouse, Mus musculus.
+GE  TRANSFAC: G021588; GADD45B; mouse, Mus musculus.
+GE  TRANSFAC: G044847; Dusp1; mouse, Mus musculus.
+BS  TRANSFAC: R07556; artificial sequence.
+BS  TRANSFAC: R11779; artificial sequence.
+BS  TRANSFAC: R17088; Socs3 (suppressor of cytokine signaling 3); mouse, Mus musculus.
+BS  TRANSFAC: R25860; Artificial sequence.
+BS  TRANSFAC: R25957; ICAM1 (intercellular adhesion molecule 1); human, Homo sapiens.
+BS  TRANSFAC: R27180; GADD45B (growth arrest and DNA-damage-inducible 45 beta); mouse, Mus musculus.
+BS  TRANSFAC: R27181; GADD45B (growth arrest and DNA-damage-inducible 45 beta); mouse, Mus musculus.
+BS  TRANSFAC: R27182; Hmga2 (high mobility group AT-hook 2); mouse, Mus musculus.
+BS  TRANSFAC: R27183; Dusp1 (dual specificity phosphatase 1); mouse, Mus musculus.
+BS  TRANSFAC: R27184; Dusp1 (dual specificity phosphatase 1); mouse, Mus musculus.
+BS  TRANSFAC: R27185; Egr-1 (early growth response factor 1); mouse, Mus musculus.
+BS  TRANSFAC: R27391; artificial sequence.
+XX
+//
+AC  RE0055861
+RX  PUBMED: 19279197.
+RA  Ma Q., Dai X., Xu Y., Guo J., Liu Y., Chen N., Xiao J., Zhang D., Xu Z., Zhang X., Chong K.
+RT  Enhanced tolerance to chilling stress in OsMYB3R-2 transgenic rice is mediated by alteration in cell cycle and ectopic expression of stress genes.
+RL  Plant Physiol. : (2009).
+FA  TRANSFAC: T15728; MYB3R-2; rice, Oryza sativa (japonica cultivar-group).
+GE  TRANSFAC: G058759; CycB1; rice, Oryza sativa (japonica cultivar-group).
+BS  TRANSFAC: R26946; Cyclin B1; rice, Oryza sativa (japonica cultivar-group).
+XX
+//
+AC  RE0055880
+RX  PUBMED: 19279013.
+RA  Qiu Z., Dyer K. D., Xie Z., Radinger M., Rosenberg H. F.
+RT  Gata transcription factors regulate the expression of the human eosinophil-derived neurotoxin (RNAS 2) gene.
+RL  J. Biol. Chem. : (2009).
+GE  TRANSFAC: G007090; RNASE2; human, Homo sapiens.
+BS  TRANSFAC: R26950; RNASE2 (ribonuclease, RNase A family, 2 (liver, eosinophil-derived neurotoxin)); human, Homo sapiens.
+BS  TRANSFAC: R26951; RNASE2 (ribonuclease, RNase A family, 2 (liver, eosinophil-derived neurotoxin)); human, Homo sapiens.
+XX
+//
+AC  RE0056139
+RX  PUBMED: 19278969.
+RA  Felli N., Pedini F., Romania P., Biffoni M., Morsilli O., Castelli G., Santoro S., Chicarella S., Sorrentino A., Peschle C., Marziali G.
+RT  MicroRNA 223-dependent expression of LMO2 regulates normal erythropoiesis.
+RL  Haematologica. 94:479-486 (2009).
+GE  TRANSFAC: G004692; LMO2; human, Homo sapiens.
+BS  TRANSFAC: R27273; LMO2 (LIM domain only 2 (rhombotin-like 1)); human, Homo sapiens.
+XX
+//

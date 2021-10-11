@@ -1,0 +1,493 @@
+VV  TRANSFAC FACTOR TABLE, Release 2009.2 - licensed - 2009-06-30, (C) Biobase GmbH
+XX
+//
+AC  T00032
+XX
+ID  T00032
+XX
+DT  15.10.1992 (created); ewi.
+DT  25.02.2009 (updated); mka.
+CO  Copyright (C), Biobase GmbH.
+XX
+FA  AP-1
+XX
+SY  (Jun)2; Activating Protein 1; AP1; Fos/Jun; PEA1; PEA1 (mouse).
+XX
+OS  mouse, Mus musculus
+OC  eukaryota; animalia; metazoa; chordata; vertebrata; tetrapoda; mammalia; eutheria; rodentia; myomorpha; muridae; murinae
+XX
+CL  C0008; bZIP.
+XX
+SF  composed of two subunits: two Jun-peptides or one Jun- <T00131> and one Fos-peptide <T00122> (or relatives);
+XX
+FF  DNA binding activity of AP-1 is induced by ERK [11];
+FF  AP-1 contributes to the Signal transduction pathway involved in disease resistance [11];
+FF  AP-1 level decreases in murine mammary epithelial cells upon differentiation induced by dexamethasone or prolactin [9];
+XX
+IN  T00111; c-Ets-1; mouse, Mus musculus.
+XX
+MX  M00517; V$AP1_01.
+MX  M00199; V$AP1_C.
+MX  M00173; V$AP1_Q2.
+MX  M00924; V$AP1_Q2_01.
+MX  M00188; V$AP1_Q4.
+MX  M00926; V$AP1_Q4_01.
+MX  M00174; V$AP1_Q6.
+MX  M00925; V$AP1_Q6_01.
+MX  M00172; V$AP1FJ_Q2.
+XX
+BS  R02120; AP1$CONS; Quality: 1.
+BS  R03540; AS$AP1_05; Quality: 5.
+BS  R20747; AS$AP1_11; Quality: 5.
+BS  R20934; AS$AP1_13; Quality: 5.
+BS  R22731; AS$AP1_15; Quality: 5.
+BS  R22753; AS$AP1_16; Quality: 5.
+BS  R24479; AS$AP1_26; Quality: 5.
+BS  R24899; AS$AP1_30; Quality: 5.
+BS  R25252; AS$AP1_34; Quality: 3.
+BS  R04116; AS$VMAF_02; Quality: 4.
+BS  R03445; HS$ALDOA_01; Quality: 5; ALDOA, G000189; human, Homo sapiens.
+BS  R23069; HS$CYP11A1_11; Quality: 4; CYP11A1, G008989; human, Homo sapiens.
+BS  R23071; HS$CYP11A1_13; Quality: 4; CYP11A1, G008989; human, Homo sapiens.
+BS  R20982; HS$F3_06; Quality: 5; F3, G031956; human, Homo sapiens.
+BS  R00468; HS$FOS_11; Quality: 4; FOS, G000218; human, Homo sapiens.
+BS  R02887; HS$HBA1_07; Quality: 4; HBA1, G000195; human, Homo sapiens.
+BS  R00934; HS$IL2_05; Quality: 1; IL2, G000312; human, Homo sapiens.
+BS  R25018; HS$IL6_16; Quality: 3; IL6, G000316; human, Homo sapiens.
+BS  R01037; HS$MT2A_08; Quality: 2; MT-IIA, G000337; human, Homo sapiens.
+BS  R01249; HS$PBGD_03; Quality: 4; HMBS, G000359; human, Homo sapiens.
+BS  R25250; HS$TNF_28; Quality: 3; TNF, G000400; human, Homo sapiens.
+BS  R01564; HS$VIMEN_01; Quality: 4; VIM, G000416; human, Homo sapiens.
+BS  R02674; MOUSE$A1ANTR_08; Quality: 4; Serpina1a, G000472; mouse, Mus musculus.
+BS  R02676; MOUSE$A1ANTR_10; Quality: 4; Serpina1a, G000472; mouse, Mus musculus.
+BS  R14971; MOUSE$CDK5_01; Quality: 1; Cdk5, G006937; mouse, Mus musculus.
+BS  R01736; MOUSE$CMYB_02; Quality: 5; c-myb, G000488; mouse, Mus musculus.
+BS  R08192; MOUSE$EKLF_01; Quality: 4; EKLF, G001081; mouse, Mus musculus.
+BS  R00133; MOUSE$FABP4_01; Quality: 2; Fabp4, G000478; mouse, Mus musculus.
+BS  R18416; MOUSE$GCLM_01; Quality: 4; GCLM, G021435; mouse, Mus musculus.
+BS  R14970; MOUSE$GRIA2_01; Quality: 3; GRIA2, G006168; mouse, Mus musculus.
+BS  R15125; MOUSE$GZMB_01; Quality: 3; GZMB, G009631; mouse, Mus musculus.
+BS  R14620; MOUSE$HMOX1_06; Quality: 4; Hmox1, G005033; mouse, Mus musculus.
+BS  R14603; MOUSE$HMOX1_07; Quality: 4; Hmox1, G005033; mouse, Mus musculus.
+BS  R14477; MOUSE$IL12P40_03; Quality: 3; Il12b, G002345; mouse, Mus musculus.
+BS  R02952; MOUSE$IL2_04; Quality: 3; Il2, G000533; mouse, Mus musculus.
+BS  R02953; MOUSE$IL2_05; Quality: 4; Il2, G000533; mouse, Mus musculus.
+BS  R05036; MOUSE$IL2_09; Quality: 3; Il2, G000533; mouse, Mus musculus.
+BS  R05050; MOUSE$IL2_11; Quality: 3; Il2, G000533; mouse, Mus musculus.
+BS  R05052; MOUSE$IL2_13; Quality: 3; Il2, G000533; mouse, Mus musculus.
+BS  R26660; MOUSE$IL2_23; Quality: 5; Il2, G000533; mouse, Mus musculus.
+BS  R05079; MOUSE$IL4_03; Quality: 1; IL-4, G000534; mouse, Mus musculus.
+BS  R05098; MOUSE$IL5_03; Quality: 1; IL-5, G000535; mouse, Mus musculus.
+BS  R01050; MOUSE$M1H2DD_01; Quality: 1; H-2Dd, G000560; mouse, Mus musculus.
+BS  R01052; MOUSE$M1H2DD_03; Quality: 1; H-2Dd, G000560; mouse, Mus musculus.
+BS  R01062; MOUSE$M1H2KB_10; Quality: 2; H-2Kb, G000561; mouse, Mus musculus.
+BS  R16700; MOUSE$MDM2_05; Quality: 4; Mdm2, G001212; mouse, Mus musculus.
+BS  R17198; MOUSE$MET_03; Quality: 3; Met, G002867; mouse, Mus musculus.
+BS  R08476; MOUSE$MYOD1_03; Quality: 3; MyoD1, G000576; mouse, Mus musculus.
+BS  R01287; MOUSE$PLF_03; Quality: 4; PLF, G000588; mouse, Mus musculus.
+BS  R02340; MOUSE$SCC_01; Quality: 4; SCC, G000600; mouse, Mus musculus.
+BS  R13173; MOUSE$SPB_01; Quality: 3; SP-B, G004934; mouse, Mus musculus.
+BS  R13176; MOUSE$SPB_02; Quality: 3; SP-B, G004934; mouse, Mus musculus.
+BS  R03300; MOUSE$TIMP1_01; Quality: 1; TIMP-1, G000616; mouse, Mus musculus.
+BS  R20827; MOUSE$TIMP3_01; Quality: 3; TIMP3, G006815; mouse, Mus musculus.
+BS  R20828; MOUSE$TIMP3_02; Quality: 4; TIMP3, G006815; mouse, Mus musculus.
+BS  R20830; MOUSE$TIMP3_04; Quality: 4; TIMP3, G006815; mouse, Mus musculus.
+BS  R14663; MOUSE$TNFSF6_03; Quality: 3; Fasl, G004128; mouse, Mus musculus.
+BS  R16979; MOUSE$WEE1_01; Quality: 3; WEE1, G006877; mouse, Mus musculus.
+BS  R01220; PA$PY_02; Quality: 4; Py, G000650; Py, polyoma virus.
+BS  R01225; PA$PY_07; Quality: 4; Py, G000650; Py, polyoma virus.
+BS  R08470; RAT$FOSL1_01; Quality: 1; Fosl1, G001545; rat, Rattus norvegicus.
+BS  R08472; RAT$FOSL1_02; Quality: 1; Fosl1, G001545; rat, Rattus norvegicus.
+BS  R08473; RAT$FOSL1_03; Quality: 1; Fosl1, G001545; rat, Rattus norvegicus.
+XX
+DR  TRANSPATH: MO000024658.
+DR  TRANSCOMPEL: C00086.
+DR  TRANSCOMPEL: C00105.
+DR  TRANSCOMPEL: C00149.
+DR  TRANSCOMPEL: C00150.
+DR  TRANSCOMPEL: C00151.
+DR  TRANSCOMPEL: C00157.
+DR  TRANSCOMPEL: C00159.
+DR  TRANSCOMPEL: C00161.
+DR  TRANSCOMPEL: C00237.
+DR  TRANSCOMPEL: C00238.
+DR  TRANSCOMPEL: C00251.
+DR  TRANSCOMPEL: C00264.
+DR  TRANSCOMPEL: C00316.
+DR  TRANSCOMPEL: C00354.
+XX
+RN  [1]; RE0000394.
+RX  PUBMED: 3038517.
+RA  Piette J., Yaniv M.
+RT  Two different factors bind to the alpha-domain of the polyoma virus enhancer, one of which also interacts with the SV40 and c-fos enhancers
+RL  EMBO J. 6:1331-1337 (1987).
+RN  [2]; RE0001018.
+RX  PUBMED: 1849903.
+RA  Campbell C. E., Flenniken A. M., Skup D., Williams B. R. G.
+RT  Identification of a serum- and phorbol ester-responsive element in the murine tissue inhibitor of metalloproteinase gene
+RL  J. Biol. Chem. 266:7199-7206 (1991).
+RN  [3]; RE0001819.
+RX  PUBMED: 3037385.
+RA  Kryszke M.-H., Piette J., Yaniv M.
+RT  Induction of a factor that binds to the polyoma virus A enhancer on differentiation of embryonal carcinoma cells
+RL  Nature 328:254-256 (1987).
+RN  [4]; RE0002008.
+RX  PUBMED: 2922288.
+RA  Rittling S. R., Coutinho L., Amram T., Kolbe M.
+RT  Ap-1/jun binding sites mediate serum inducibility of the human vimentin promoter
+RL  Nucleic Acids Res. 17:1619 (1989).
+RN  [5]; RE0002020.
+RX  PUBMED: 2911469.
+RA  Mignotte V., Wall L., deBoer E., Grosveld F., Romeo P.-H.
+RT  Two tissue-specific factors bind to the erythroid promoter of the human porphobilinogen deaminase gene
+RL  Nucleic Acids Res. 17:37-54 (1989).
+RN  [6]; RE0002339.
+RX  PUBMED: 2842750.
+RA  Martin M. E., Piette J., Yaniv M., Tang W.-J., Folk W. R.
+RT  Activator of the polyomavirus enhancer by a murine activator protein 1 (AP1) homolog and two contiguous proteins
+RL  Proc. Natl. Acad. Sci. USA 85:5839-5843 (1988).
+RN  [7]; RE0002408.
+RX  PUBMED: 2453058.
+RA  Piette J., Hirai S.-I., Yaniv M.
+RT  Constitutive synthesis of activator protein 1 transcription factor after viral transformation of mouse fibroblasts
+RL  Proc. Natl. Acad. Sci. USA 85:3401-3405 (1988).
+RN  [8]; RE0002621.
+RX  PUBMED: 3125612.
+RA  Korber B., Mermod N., Hood L., Stroynowski I.
+RT  Regulation of Gene Expression by Interferons: Control of H-2 Promoter Responses
+RL  Science 239:1302-1306 (1988).
+RN  [9]; RE0003004.
+RX  PUBMED: 1508191.
+RA  Jehn B., Costello E., Marti A., Keon N., Deane R., Li F., Friis R. R., Burri P. H., Martin F., Jaggi R.
+RT  Overexpression of Mos, Ras, Src, and Fos inhibits mouse mammary epithelial cell differentiation
+RL  Mol. Cell. Biol. 12:3890- 3902 (1992).
+RN  [10]; RE0013315.
+RX  PUBMED: 8557686.
+RA  Logan S. K., Garabedian M. J., Campbell C. E., Werb Z.
+RT  Synergistic transcriptional activation of the tissue inhibitor of metalloproteinases-1 promoter via functional interaction of AP-1 and Ets-1 transcription factors
+RL  J. Biol. Chem. 271:774-782 (1996).
+RN  [11]; RE0053111.
+RX  PUBMED: 12438359.
+RA  Ghosh S., Bhattacharyya S., Sirkar M., Sa G. S., Das T., Majumdar D., Roy S., Majumdar S.
+RT  Leishmania donovani suppresses activated protein 1 and NF-kappaB activation in host macrophages via ceramide generation: involvement of extracellular signal-regulated kinase.
+RL  Infect. Immun. 70:6828-6838 (2002).
+XX
+//
+AC  T00033
+XX
+ID  T00033
+XX
+DT  25.01.1993 (created); hse.
+DT  02.03.2009 (updated); spi.
+CO  Copyright (C), Biobase GmbH.
+XX
+FA  AP-2alpha
+XX
+SY  activator protein 2; AP-2 alpha; AP-2A; AP-2alpha.
+XX
+OS  mouse, Mus musculus
+OC  eukaryota; animalia; metazoa; chordata; vertebrata; tetrapoda; mammalia; eutheria; rodentia; myomorpha; muridae; murinae
+XX
+GE  G004734; Tcfap2a.
+XX
+CL  C0032; bHSH; 1.6.1.0.1.1.
+XX
+TY  basic.
+XX
+HP  T10025; AP-2alpha(m).
+XX
+SZ  437 AA; 48.0 kDa (cDNA) (calc.), 50 kDa (SDS)
+XX
+SQ  MLWKLTDNIKYEDCEDRHDGTSNGTARLPQLGTVGQSPYTSAPPLSHTPNADFQPPYFPP
+SQ  PYQPIYPQSQDPYSHVNDPYSLNPLHAQPQPQHPGWPGQRQSQESGLLHTHRGLPHQLSG
+SQ  LDPRRDYRRHEDLLHGPHALGSGLGDLPIHSLPHAIEDVPHVEDPGINIPDQTVIKKGPV
+SQ  SLSKSNSNAVSAIPINKDNLFGGVVNPNEVFCSVPGRLSLLSSTSKYKVTVAEVQRRLSP
+SQ  PECLNASLLGGVLRRAKSKNGGRSLREKLDKIGLNLPAGRRKAANVTLLTSLVEGEAVHL
+SQ  ARDFGYVCETEFPAKAVAEFLNRQHSDPNEQVARKNMLLATKQICKEFTDLLAQDRSPLG
+SQ  NSRPNPILEPGIQSCLTHFNLISHGFGSPAVCAAVTALQNYLTEALKAMDKMYLSNNPNS
+SQ  HTDNSAKSSDKEEKHRK
+XX
+SC  SwissProt #P34056
+XX
+FT        1     15   replaced by 1-9 in isoform 3, by 1-44 in isoform 4 [4].
+FT       16    160   missing in isoform 2 [4].
+FT       38     97   proline-rich region (18/60).
+FT      207    414   PF03299; Transcription factor AP-2.
+FT      280    410   putative helix-span-helix motif.
+FT      390    390   missing in [1].
+XX
+SF  at least four splice variants differing in their N-termini [4];
+XX
+CP  expression in placenta and in embryo, neural crest cells and their derivatives [10].
+EX  Hypothalamus primordium,,,Theiler Stage 21; none; RNA-in situ hybridization (non-radioactive); RNA (undefined);  [8].
+EX  brain,,,Theiler Stage 24; very high; RT-PCR; total RNA;  [6].
+EX  brain,,,Theiler Stage 27; medium; RT-PCR; total RNA;  [6].
+EX  brain,,,adult; none; RT-PCR; total RNA;  [3].
+EX  brain,,,neonate (during the first month after birth); high; RT-PCR; total RNA;  [6].
+EX  central canal,,,Theiler Stage 22; medium; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  central canal,,,Theiler Stage 24; medium; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  central nervous system,,,P0 (immediately after birth, postnatal development); detectable; RNA-in situ hybridization (non-radioactive); RNA (undefined);  [8].
+EX  cerebellum,,,P0 (immediately after birth, postnatal development); detectable; RNA-in situ hybridization (non-radioactive); RNA (undefined);  [8].
+EX  cerebellum,,,Theiler Stage 22; medium; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  cerebellum,,,Theiler Stage 24; medium; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  cerebral cortex,,,P0 (immediately after birth, postnatal development); none; RNA-in situ hybridization (non-radioactive); RNA (undefined);  [8].
+EX  cerebral cortex,,,Theiler Stage 21; none; RNA-in situ hybridization (non-radioactive); RNA (undefined);  [8].
+EX  cerebrum,,,adult; none; RT-PCR; total RNA;  [3].
+EX  cornea,,,Theiler Stage 22; high; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  cornea,,,Theiler Stage 24; high; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  corpus striatum,,,P0 (immediately after birth, postnatal development); none; RNA-in situ hybridization (non-radioactive); RNA (undefined);  [8].
+EX  cranial sensory ganglion,,,P0 (immediately after birth, postnatal development); none; RNA-in situ hybridization (non-radioactive); RNA (undefined);  [8].
+EX  cranial sensory ganglion,,,Theiler Stage 21; detectable; RNA-in situ hybridization (non-radioactive); RNA (undefined);  [8].
+EX  dorsal root ganglion,,,Theiler Stage 22; low; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  dorsal root ganglion,,,Theiler Stage 24; low; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  ear,,,P0 (immediately after birth, postnatal development); none; RNA-in situ hybridization (non-radioactive); RNA (undefined);  [8].
+EX  ear,,,Theiler Stage 21; detectable; RNA-in situ hybridization (non-radioactive); RNA (undefined);  [8].
+EX  epithelium of olfactory region of nasal cavity,,,P0 (immediately after birth, postnatal development); none; RNA-in situ hybridization (non-radioactive); RNA (undefined);  [8].
+EX  epithelium of olfactory region of nasal cavity,,,Theiler Stage 21; none; RNA-in situ hybridization (non-radioactive); RNA (undefined);  [8].
+EX  eye and related structures (right and left),,,Theiler Stage 22; low; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  eye and related structures (right and left),,,Theiler Stage 24; low; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  eye and related structures (right and left),,,adult; high; RT-PCR; total RNA;  [3].
+EX  first pharyngeal pouch,,,Theiler Stage 22; none; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  first pharyngeal pouch,,,Theiler Stage 24; none; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  fourth ventricle,,,Theiler Stage 22; low; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  fourth ventricle,,,Theiler Stage 24; low; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  future corpus striatum,,,Theiler Stage 21; none; RNA-in situ hybridization (non-radioactive); RNA (undefined);  [8].
+EX  grey substance of spinal cord,,,Theiler Stage 22; medium; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  grey substance of spinal cord,,,Theiler Stage 24; medium; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  hair follicle,,,Theiler Stage 22; medium; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  hair follicle,,,Theiler Stage 24; medium; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  heart,,,Theiler Stage 22; none; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  heart,,,Theiler Stage 24; none; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  heart,,,Theiler Stage 24; very low; RT-PCR; total RNA;  [6].
+EX  heart,,,Theiler Stage 27; very low; RT-PCR; total RNA;  [6].
+EX  heart,,,neonate (during the first month after birth); very low; RT-PCR; total RNA;  [6].
+EX  hypothalamus,,,P0 (immediately after birth, postnatal development); none; RNA-in situ hybridization (non-radioactive); RNA (undefined);  [8].
+EX  inferior ganglion of vagus,,,Theiler Stage 22; low; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  inferior ganglion of vagus,,,Theiler Stage 24; low; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  kidney (right and left),,,Theiler Stage 22; medium; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  kidney (right and left),,,Theiler Stage 24; high; RT-PCR; total RNA;  [6].
+EX  kidney (right and left),,,Theiler Stage 24; medium; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  kidney (right and left),,,Theiler Stage 27; high; RT-PCR; total RNA;  [6].
+EX  kidney (right and left),,,adult; medium; RT-PCR; total RNA;  [3].
+EX  kidney (right and left),,,neonate (during the first month after birth); very high; RT-PCR; total RNA;  [6].
+EX  large intestine,,,adult; none; RT-PCR; total RNA;  [3].
+EX  liver,,,Theiler Stage 22; none; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  liver,,,Theiler Stage 24; none; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  liver,,,adult; none; RT-PCR; total RNA;  [3].
+EX  lung,,,adult; none; RT-PCR; total RNA;  [3].
+EX  mesencephalon,,,P0 (immediately after birth, postnatal development); detectable; RNA-in situ hybridization (non-radioactive); RNA (undefined);  [8].
+EX  mesencephalon,,,Theiler Stage 21; detectable; RNA-in situ hybridization (non-radioactive); RNA (undefined);  [8].
+EX  mesencephalon,,,Theiler Stage 22; low; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  mesencephalon,,,Theiler Stage 24; low; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  mouse, Mus musculus,,,Theiler Stage 15; detectable; RNA-in situ hybridization (non-radioactive); RNA (undefined);  [3].
+EX  mouse, Mus musculus,,,Theiler Stage 15; low; RT-PCR; RNA (undefined);  [3].
+EX  mouse, Mus musculus,,,Theiler Stage 19; detectable; Northern blot; mRNA (poly-A);  [3].
+EX  mouse, Mus musculus,,,Theiler Stage 19; very high; RT-PCR; RNA (undefined);  [3].
+EX  mouse, Mus musculus,,,Theiler Stage 22; detectable; Northern blot; mRNA (poly-A);  [3].
+EX  mouse, Mus musculus,,,Theiler Stage 22; very high; RT-PCR; RNA (undefined);  [3].
+EX  mouse, Mus musculus,,,Theiler Stage 23; detectable; Northern blot; mRNA (poly-A);  [3].
+EX  mouse, Mus musculus,,,Theiler Stage 23; very high; RT-PCR; RNA (undefined);  [3].
+EX  mouse, Mus musculus,,,Theiler Stage 24; detectable; Northern blot; mRNA (poly-A);  [3].
+EX  mouse, Mus musculus,,,Theiler Stage 24; very high; RT-PCR; RNA (undefined);  [3].
+EX  mouse, Mus musculus,,,Theiler Stage 26; detectable; Northern blot; mRNA (poly-A);  [3].
+EX  mouse, Mus musculus,,,Theiler Stage 26; very high; RT-PCR; RNA (undefined);  [3].
+EX  mouse, Mus musculus,,,Theiler Stage 27; detectable; Northern blot; mRNA (poly-A);  [3].
+EX  mouse, Mus musculus,,,Theiler Stage 27; very high; RT-PCR; RNA (undefined);  [3].
+EX  muscles,,,adult; low; RT-PCR; total RNA;  [3].
+EX  myelencephalon,,,Theiler Stage 22; low; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  myelencephalon,,,Theiler Stage 24; low; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  nasal cavity,,,Theiler Stage 22; detectable; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  nasal cavity,,,Theiler Stage 24; low; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  nephric vesicles,,,Theiler Stage 22; medium; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  nephric vesicles,,,Theiler Stage 24; medium; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  olfactory epithelium,,,Theiler Stage 22; low; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  olfactory epithelium,,,Theiler Stage 24; low; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  pons,,,Theiler Stage 22; low; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  pons,,,Theiler Stage 24; low; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  prevertebral ganglia,,,Theiler Stage 22; low; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  prevertebral ganglia,,,Theiler Stage 24; low; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  prosencephalon,,,Theiler Stage 22; none; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  prosencephalon,,,Theiler Stage 24; none; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  prostate gland,,,adult; medium; RT-PCR; total RNA;  [3].
+EX  renal medulla,,,Theiler Stage 22; none; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  renal medulla,,,Theiler Stage 24; none; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  renal tubules,,,Theiler Stage 22; medium; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  renal tubules,,,Theiler Stage 24; medium; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  retina,,,P0 (immediately after birth, postnatal development); detectable; RNA-in situ hybridization (non-radioactive); RNA (undefined);  [8].
+EX  retina,,,Theiler Stage 21; detectable; RNA-in situ hybridization (non-radioactive); RNA (undefined);  [8].
+EX  rhombencephalon,,,P0 (immediately after birth, postnatal development); detectable; RNA-in situ hybridization (non-radioactive); RNA (undefined);  [8].
+EX  rhombencephalon,,,Theiler Stage 21; detectable; RNA-in situ hybridization (non-radioactive); RNA (undefined);  [8].
+EX  rhombencephalon,,,Theiler Stage 22; low; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  rhombencephalon,,,Theiler Stage 24; low; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  skin,,,Theiler Stage 22; medium; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  skin,,,Theiler Stage 24; medium; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  skin,,,adult; very high; RT-PCR; total RNA;  [3].
+EX  small intestine,,,adult; none; RT-PCR; total RNA;  [3].
+EX  spinal cord,,,P0 (immediately after birth, postnatal development); detectable; RNA-in situ hybridization (non-radioactive); RNA (undefined);  [8].
+EX  spinal cord,,,Theiler Stage 21; detectable; RNA-in situ hybridization (non-radioactive); RNA (undefined);  [8].
+EX  spinal cord,,,Theiler Stage 22; medium; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  spinal cord,,,Theiler Stage 24; medium; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  spleen,,,Theiler Stage 22; none; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  spleen,,,Theiler Stage 24; none; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  spleen,,,adult; none; RT-PCR; total RNA;  [3].
+EX  subventricular zone of the MGE (medial ganglionic eminence),,,P0 (immediately after birth, postnatal development); none; RNA-in situ hybridization (non-radioactive); RNA (undefined);  [8].
+EX  subventricular zone of the MGE (medial ganglionic eminence),,,Theiler Stage 21; none; RNA-in situ hybridization (non-radioactive); RNA (undefined);  [8].
+EX  sympathetic part of autonomic division of nervous system,,,Theiler Stage 22; none; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  sympathetic part of autonomic division of nervous system,,,Theiler Stage 24; none; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  thalamus,,,P0 (immediately after birth, postnatal development); detectable; RNA-in situ hybridization (non-radioactive); RNA (undefined);  [8].
+EX  thalamus,,,Theiler Stage 21; detectable; RNA-in situ hybridization (non-radioactive); RNA (undefined);  [8].
+EX  thymus,,,adult; medium; RT-PCR; total RNA;  [3].
+EX  tongue,,,Theiler Stage 22; none; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  tongue,,,Theiler Stage 24; none; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  whisker pad,,,Theiler Stage 22; high; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+EX  whisker pad,,,Theiler Stage 24; high; RNA-in situ hybridization (not further specified); RNA (undefined);  [3].
+XX
+FF  may be involved in regulating development of PNS, face, limbs, skin, kidney [1];
+FF  for expression pattern in teeth, see [5];
+FF  moderate autoactivator of AP-2alpha [6];
+FF  both AP-2alpha and AP-2gamma <T02470> can transactivate estrogen receptor alpha promoter which explains the correlation between AP-2 activity and estrogen receptor (ER) expression in breast cancer [7];
+FF  Ap-2delta <T06431>exhibited greater DNA sequence preference than did Ap-2alpha under in vitro conditions [9];
+FF  strong binding to site <R16374>;
+XX
+IN  T02469; AP-2beta; mouse, Mus musculus.
+XX
+CX  T06469; AP-2alpha(m):AP-2delta(m).
+XX
+MX  M00800; V$AP2_Q3.
+MX  M00189; V$AP2_Q6.
+MX  M00915; V$AP2_Q6_01.
+MX  M00469; V$AP2ALPHA_01.
+XX
+BS  R02121; AP2$CONS_01; Quality: 1.
+BS  R05065; AP2$CONS_02; Quality: 1.
+BS  R16375; AS$AP2DELTA_01; Quality: 2.
+BS  R16374; HS$MT2A_17; Quality: 1; MT-IIA, G000337; human, Homo sapiens.
+BS  R10745; HS$TFAP2A_01; Quality: 1; TFAP2A, G002615; human, Homo sapiens.
+BS  R08502; MMTV$MMTV_48; Quality: 3; MMTV, G000455; MMTV, mouse mammary tumor virus.
+BS  R01054; MOUSE$M1H2KB_02; Quality: 1; H-2Kb, G000561; mouse, Mus musculus.
+XX
+DR  TRANSPATH: MO000046020.
+DR  BKL: HumanPSD: Tcfap2a; Mouse.
+DR  EMBL: X57012; MMAP2.
+DR  EMBL: X74216; MMTAAP2.
+DR  SWISSPROT: P34056; AP2_MOUSE.
+DR  PIR: A38593; A38593.
+XX
+RN  [1]; RE0000664.
+RX  PUBMED: 1989904.
+RA  Mitchell P. J., Timmons P. M., Hebert J. M., Rigby P. W., Tjian R.
+RT  Transcription factor AP-2 is expressed in neural creast cell lineages during mouse embryogenesis
+RL  Genes Dev. 5:105-119 (1991).
+RN  [2]; RE0006796.
+RX  PUBMED: 8233835.
+RA  Moser M., Pscherer A., Bauer R., Imhof A., Seegers S., Kerscher M., Buettner R.
+RT  The complete murine cDNA of the transcription factor AP-2
+RL  Nucleic Acids Res. 21:4844-4844 (1993).
+RN  [3]; RE0006896.
+RX  PUBMED: 7555706.
+RA  Moser M., Imhof A., Pscherer A., Bauer R., Amselgruber W., Sinowatz F., Schule R., Buettner R.
+RT  Cloning and characterization of a second AP-2 transcription factor: AP-2 beta
+RL  Development 121:2779-2788 (1995).
+RN  [4]; RE0006898.
+RX  PUBMED: 7750631.
+RA  Meier P., Koedood M., Philipp J., Fontana A., Mitchell P. J.
+RT  Alternative mRNAs encode multiple isoforms of transcription factor AP-2 during murine embryogenesis
+RL  Dev. Biol. 169:1-14 (1995).
+RN  [5]; RE0014808.
+RA  Pekkanen M., Nieminen P., Sahlberg C., Aberg T., Thesleff I.
+RT  Gene expression in tooth (WWW database); URL: http://bite-it.helsinki.fi/AP2.htm
+RL  Internet : (1996).
+RN  [6]; RE0016804.
+RX  PUBMED: 9858544.
+RA  Imhof A., Schuierer M., Werner O., Moser M., Roth C., Bauer R., Buettner R.
+RT  Transcriptional regulation of the AP-2alpha promoter by BTEB-1 and AP-2rep, a novel wt-1/egr-related zinc finger repressor
+RL  Mol. Cell. Biol. 19:194-204 (1999).
+RN  [7]; RE0016805.
+RX  PUBMED: 10497269.
+RA  McPherson L. A., Weigel R. J.
+RT  AP2alpha and AP2gamma: a comparison of binding site specificity and trans-activation of the estrogen receptor promoter and single site promoter constructs
+RL  Nucleic Acids Res. 27:4040-4049 (1999).
+RN  [8]; RE0025447.
+RX  PUBMED: 15618518.
+RA  Gray P. A., Fu H., Luo P., Zhao Q., Yu J., Ferrari A., Tenzen T., Yuk D. I., Tsung E. F., Cai Z., Alberta J. A., Cheng L. P., Liu Y., Stenman J. M., Valerius M. T., Billings N., Kim H. A., Greenberg M. E., McMahon A. P., Rowitch D. H., Stiles C. D., Ma Q.
+RT  Mouse brain organization revealed through direct genome-scale TF expression analysis.
+RL  Science 306:2255-2257 (2004).
+RN  [9]; RE0025452.
+RX  PUBMED: 11522791.
+RA  Zhao F., Satoda M., Licht J. D., Hayashizaki Y., Gelb B. D.
+RT  Cloning and characterization of a novel mouse AP-2 transcription factor, AP-2delta, with unique DNA binding and transactivation properties.
+RL  J. Biol. Chem. 276:40755-40760 (2001).
+RN  [10]; RE0026934.
+RX  PUBMED: 9765260.
+RA  Shi D., Kellems R. E.
+RT  Transcription factor AP-2gamma regulates murine adenosine deaminase gene expression during placental development.
+RL  J. Biol. Chem. 273:27331-8 (1998).
+XX
+//
+AC  T02672
+XX
+ID  T02672
+XX
+DT  25.02.1999 (created); ewi.
+DT  12.02.2009 (updated); lcl.
+CO  Copyright (C), Biobase GmbH.
+XX
+FA  GBF1
+XX
+SY  SGBF-1.
+XX
+OS  soybean, Glycine max
+OC  eukaryota; viridiplantae; embryobionta; magnoliophyta; magnoliopsida; rosidae; fabales; fabaceae
+XX
+CL  C0008; bZIP.
+XX
+SZ  341 AA; 36.5 kDa (cDNA) (calc.).
+XX
+SQ  MGTGEESTAKVPKPSSTSSIQIPLAPSYPDWSSSMQAYYAPGATPPAFFASNIASPTPHS
+SQ  YMWGSQHPLIPPYSTPVPYPAIYPPGNVYAHPSMAMTLSTTQNGTEFVGKGSDGKDRVSA
+SQ  KSSKAVSANNGSKAGNNGKASSGPRNDGTSTSAESGSEGSSDASDENTNQQESATNKKGS
+SQ  FDQMLVDGANARNNSVSIIPQPGNPAVSMSPTSLNIGMNLWNASPAGDEAAKMRQNQSSG
+SQ  AVTPPTIMGREVALGEHWIQDERELKKQKRKQSNRESARRSRLRKQAECEELQKRVESLG
+SQ  SENQTLREELQRVSEECKKLTSENDSIQGRVRTIVWTRSSC
+XX
+SC  SPTREMBL #Q43449
+XX
+FT        1    172   PF07777; G-box binding protein MFMR.
+FT        5    341   PF00478; IMP dehydrogenase / GMP reductase domain.
+FT       12     92   proline-rich region (19/81).
+FT      262    326   PF00170; bZIP transcription factor.
+FT      262    326   SM00338; brlzneu.
+FT      264    327   PS50217; BZIP.
+FT      266    285   basic region.
+FT      269    285   putative nuclear localization signal.
+FT      292    334   leucine zipper (L3VLII).
+XX
+IN  T02969; STF1; soybean, Glycine max.
+XX
+MX  M00441; P$GBF_Q2.
+XX
+BS  R08660; AS$GBF1_02; Quality: 2.
+BS  R24277; AS$HY5_02; Quality: 2.
+BS  R24278; AS$HY5_03; Quality: 2.
+BS  R24279; AS$HY5_04; Quality: 2.
+BS  R24280; AS$HY5_05; Quality: 2.
+BS  R24281; AS$HY5_06; Quality: 2.
+BS  R08659; AT$COR15A_02; Quality: 2; COR15A, G002240; thale cress, Arabidopsis thaliana.
+BS  R13435; PARS$CHS_05; Quality: 2; CHS, G000658; parsley, Petroselinum crispum (P. hortense).
+BS  R08658; SOYBN$AUX28_01; Quality: 2; AUX28, G001641; soybean, Glycine max.
+XX
+DR  EMBL: L01447.
+DR  SWISSPROT: Q43449.
+XX
+RN  [1]; RE0013384.
+RX  PUBMED: 7670504.
+RA  Hong J. C., Cheong Y. H., Nagao R. T., Bahk J. D., Key J. L., Cho M. J.
+RT  Isolation of two soybean G-box binding factors which interact with a G-box sequence of an auxin-responsive gene
+RL  Plant J. 8:199-211 (1995).
+RN  [2]; RE0018022.
+RX  PUBMED: 11208017.
+RA  Kim J. C., Lee S. H., Cheong Y. H., Yoo C. M., Lee S. I., Chun H. J., Yun D. J., Hong J. C., Lee S. Y., Lim C. O., Cho M. J.
+RT  A novel cold-inducible zinc finger protein from soybean, SCOF-1, enhances cold tolerance in transgenic plants.
+RL  Plant J. 25:247-259 (2001).
+XX
+//

@@ -1,0 +1,322 @@
+
+//
+AC  FR000000084
+XX
+AS  FR0000084
+XX
+ID  FR000000084
+XX
+DT  09.10.2013 (created); mkl.
+DT  09.10.2013 (updated); mkl
+CO  Copyright (C), Biobase GmbH
+XX
+DE  Gene: G018404, SMIM11; distance: 59091 (upstream, forward)
+DE  Gene: G034094, CLIC6; distance: 201684 (downstream, forward)
+DE  Gene: G005434, RCAN1; distance: 46185 (upstream, reverse)
+DE  Gene: G018451, ATP5O; distance: 551720 (downstream, reverse)
+DE  Gene: G018465, KCNE1; distance: 20267 (overlapping, reverse)
+XX
+OS  human, Homo sapiens
+OC  eukaryota; animalia; metazoa; chordata; vertebrata; tetrapoda; mammalia; eutheria; primates
+XX
+SC  Build HSA_Feb2009 (GRCh37; hg19): chr21:35839255..35840003 (FORWARD)
+XX
+PR  PM000499964; KCNE1; 35830901..35841901 (REVERSE)
+XX
+BF  T00140; c-Myc-isoform1; Species: human, Homo sapiens
+MM  TFBS ChIP (C-MYC-ISOFORM1 (Jurkat)); ChIP-on-high-density oligonucleotide chr array; Cellular source: 0123, Jurkat [35139] [35138]
+XX
+RN  [35139]; RE35139.
+RX  PUBMED: 11988577
+RA  Kapranov P., Cawley S. E., Drenkow J., Bekiranov S., Strausberg R. L., Fodor S. P., Gingeras T. R.
+RT  Large-scale transcriptional activity in chromosomes 21 and 22.
+RL  Science 296:916-919 (2002).
+RN  [35138]; RE35138.
+RX  PUBMED: 14980218
+RA  Cawley S., Bekiranov S., Ng H. H., Kapranov P., Sekinger E. A., Kampa D., Piccolboni A., Sementchenko V., Cheng J., Williams A. J., Wheeler R., Wong B., Drenkow J., Yamanaka M., Patel S., Brubaker S., Tammana H., Helt G., Struhl K., Gingeras T. R.
+RT  Unbiased mapping of transcription factor binding sites along human chromosomes 21 and 22 points to widespread regulation of noncoding RNAs.
+RL  Cell 116:499-509 (2004).
+//
+AC  FR000191207
+XX
+AS  FR0191207
+XX
+ID  FR000191207
+XX
+DT  09.10.2013 (created); mkl.
+DT  09.10.2013 (updated); mkl
+CO  Copyright (C), Biobase GmbH
+XX
+DE  Gene: G005366, RAD23B; distance: 100557 (upstream, forward)
+DE  Gene: G047365, ACTL7A; distance: 1429055 (downstream, forward)
+DE  Gene: G004519, KLF4; distance: 52101 (upstream, reverse)
+DE  Gene: G008911, ABCA1; distance: 2505030 (downstream, reverse)
+XX
+OS  human, Homo sapiens
+OC  eukaryota; animalia; metazoa; chordata; vertebrata; tetrapoda; mammalia; eutheria; primates
+XX
+SC  Build HSA_Feb2009 (GRCh37; hg19): chr9:110195032..110195547 (FORWARD)
+XX
+PR  PM000444311;; 110194890..110205890 (REVERSE)
+XX
+BF  T02512; HNF-3alpha; Species: human, Homo sapiens
+MM  TFBS ChIP (HNF-3ALPHA (MCF-7)); ChIP-Seq; Cellular source: 1653, MCF-7 [62865]
+XX
+PS  Matrix: M01012 (V$HNF3_Q6_01); 110195358..110195375; CSS: 0.988; MSS: 0.962
+XX
+RN  [62865]; RE62865.
+RX  PUBMED: 18798982
+RA  Zhang Y., Liu T., Meyer C. A., Eeckhoute J., Johnson D. S., Bernstein B. E., Nussbaum C., Myers R. M., Brown M., Li W., Liu X. S.
+RT  Model-based analysis of ChIP-Seq (MACS).
+RL  Genome Biol. 9:R137 (2008).
+//
+AC  FR000217489
+XX
+AS  FR0217489
+XX
+ID  FR000217489
+XX
+DT  09.10.2013 (created); mkl.
+DT  09.10.2013 (updated); mkl
+CO  Copyright (C), Biobase GmbH
+XX
+DE  Gene: G059795, MIOS; distance: 323899 (upstream, forward)
+DE  Gene: G035641, GLCCI1; distance: 35966 (downstream, forward)
+DE  Gene: G032081, ICA1; distance: 180355 (upstream, reverse)
+DE  Gene: G032403, RPA3; distance: 214453 (downstream, reverse)
+XX
+OS  human, Homo sapiens
+OC  eukaryota; animalia; metazoa; chordata; vertebrata; tetrapoda; mammalia; eutheria; primates
+XX
+SC  Build HSA_Feb2009 (GRCh37; hg19): chr7:7972459..7972690 (FORWARD)
+XX
+BF  T06124; REST; Species: human, Homo sapiens
+MM  TFBS ChIP (REST (Jurkat)); ChIP-Seq; Cellular source: 0123, Jurkat [62885]
+XX
+PS  Matrix: M01028 (V$NRSF_Q4); 7972653..7972671; CSS: 0.495; MSS: 0.616
+XX
+RN  [62885]; RE62885.
+RX  PUBMED: 19160518
+RA  Valouev A., Johnson D. S., Sundquist A., Medina C., Anton E., Batzoglou S., Myers R. M., Sidow A.
+RT  Genome-wide analysis of transcription factor binding sites based on ChIP-Seq data.
+RL  Nat. Methods 5:829-834 (2008).
+//
+AC  FR000254415
+XX
+AS  FR0254415
+XX
+ID  FR000254415
+XX
+DT  09.10.2013 (created); mkl.
+DT  09.10.2013 (updated); mkl
+CO  Copyright (C), Biobase GmbH
+XX
+DE  Gene: G019777, WTAP; distance: 5733 (upstream, forward)
+DE  Gene: G020281, MRPL18; distance: 26751 (downstream, forward)
+DE  Gene: G006800, TCP1; distance: 16446 (upstream, reverse)
+DE  Gene: G049575, TAGAP; distance: 717909 (downstream, reverse)
+DE  Gene: G031701, ACAT2; distance: 1724 (overlapping, forward)
+XX
+OS  human, Homo sapiens
+OC  eukaryota; animalia; metazoa; chordata; vertebrata; tetrapoda; mammalia; eutheria; primates
+XX
+SC  Build HSA_Feb2009 (GRCh37; hg19): chr6:160183084..160184092 (FORWARD)
+XX
+PR  PM000454977; ACAT2; 160173518..160184518 (FORWARD)
+PR  PM000461778; SOD2; 160182462..160193462 (REVERSE)
+XX
+BF  T04759; STAT1; Species: human, Homo sapiens
+MM  TFBS ChIP (STAT1 (HeLa S3 + IFN-gamma)); ChIP-Seq; Cellular source: 6471, HeLa S3 + IFN-gamma [52078]
+XX
+PS  Matrix: M00224 (V$STAT1_01); 160184095..160184115; CSS: 0.912; MSS: 0.797
+XX
+RN  [52078]; RE52078.
+RX  PUBMED: 17558387
+RA  Robertson G., Hirst M., Bainbridge M., Bilenky M., Zhao Y., Zeng T., Euskirchen G., Bernier B., Varhol R., Delaney A., Thiessen N., Griffith O. L., He A., Marra M., Snyder M., Jones S.
+RT  Genome-wide profiles of STAT1 DNA association using chromatin immunoprecipitation and massively parallel sequencing.
+RL  Nat. Methods 4:651-657 (2007).
+//
+AC  FR004421817
+XX
+AS  FR4424300
+XX
+ID  FR004421817
+XX
+DT  09.10.2013 (created); mkl.
+DT  09.10.2013 (updated); mkl
+CO  Copyright (C), Biobase GmbH
+XX
+DE  Gene: G019747, FADS2; distance: 18059 (upstream, forward)
+DE  Gene: G009826, BEST1; distance: 64327 (downstream, forward)
+DE  Gene: G046762, RAB3IL1; distance: 11888 (upstream, reverse)
+DE  Gene: G032137, FADS1; distance: 56176 (downstream, reverse)
+DE  Gene: G019207, FADS3; distance: 6557 (overlapping, reverse)
+XX
+OS  human, Homo sapiens
+OC  eukaryota; animalia; metazoa; chordata; vertebrata; tetrapoda; mammalia; eutheria; primates
+XX
+SC  Build HSA_Feb2009 (GRCh37; hg19): chr11:61652886..61652965 (FORWARD)
+XX
+PR  PM000490652; FADS3; 61646748..61657748 (REVERSE)
+XX
+BF   ;  ; Species:
+MM  DNaseI HS (DNaseI HS (GM12891)); DNase I-Seq; Cellular source: 10584, GM12891 [73699]
+XX
+PS  Matrix: M01113 (V$CACD_01); 61652788..61652795; CSS: 1.000; MSS: 1.000
+PS  Matrix: M00920 (V$E2F_Q6_01); 61652875..61652886; CSS: 0.957; MSS: 0.932
+PS  Matrix: M00808 (V$PAX_Q6); 61652985..61652995; CSS: 0.740; MSS: 0.841
+PS  Matrix: M01019 (V$TBX5_01); 61653008..61653019; CSS: 1.000; MSS: 0.993
+XX
+RN  [73699]; RE73699.
+RT  Open Chromatin by DNaseI HS from ENCODE/OpenChrom(Duke University); URL: http://genome.ucsc.edu/cgi-bin/hgTrackUi?hgt_tSearch=Search&g=wgEncodeOpenChromDnase
+RL  Internet.
+//
+AC  FR004422763
+XX
+AS  FR4425246
+XX
+ID  FR004422763
+XX
+DT  09.10.2013 (created); mkl.
+DT  09.10.2013 (updated); mkl
+CO  Copyright (C), Biobase GmbH
+XX
+DE  Gene: G031767, BBS1; distance: 58898 (upstream, forward)
+DE  Gene: G033135, RBM14; distance: 22909 (downstream, forward)
+DE  Gene: G035236, RBM4B; distance: 72473 (upstream, reverse)
+DE  Gene: G032763, CTSF; distance: 24832 (downstream, reverse)
+DE  Gene: G048188, CCDC87; distance: 590 (overlapping, reverse)
+XX
+OS  human, Homo sapiens
+OC  eukaryota; animalia; metazoa; chordata; vertebrata; tetrapoda; mammalia; eutheria; primates
+XX
+SC  Build HSA_Feb2009 (GRCh37; hg19): chr11:66359997..66361143 (FORWARD)
+XX
+PR  PM000444499; CCS; 66350623..66361623 (FORWARD)
+PR  PM000444500; CCS; 66357705..66368705 (FORWARD)
+PR  PM000452573; CCDC87; 66359554..66370554 (REVERSE)
+XX
+BF   ;  ; Species:
+MM  DNaseI HS (DNaseI HS (GM12891)); DNase I-Seq; Cellular source: 10584, GM12891 [73699]
+XX
+PS  Matrix: M00778 (V$AHR_Q5); 66360606..66360616; CSS: 1.000; MSS: 1.000
+PS  Matrix: M01082 (V$BRCA_01); 66360867..66360874; CSS: 0.997; MSS: 0.996
+PS  Matrix: M00947 (V$CP2_02); 66360674..66360688; CSS: 1.000; MSS: 0.929
+PS  Matrix: M01034 (V$EBOX_Q6_01); 66360301..66360310; CSS: 0.998; MSS: 0.994
+PS  Matrix: M00222 (V$HAND1E47_01); 66361014..66361029; CSS: 1.000; MSS: 0.951
+PS  Matrix: M00797 (V$HIF1_Q3); 66360123..66360136; CSS: 1.000; MSS: 0.987
+PS  Matrix: M00277 (V$LMO2COM_01); 66360083..66360094; CSS: 1.000; MSS: 0.997
+PS  Matrix: M01100 (V$LRF_Q2); 66360474..66360482; CSS: 1.000; MSS: 0.995
+PS  Matrix: M00285 (V$TCF11_01); 66360220..66360232; CSS: 1.000; MSS: 0.999
+PS  Matrix: M00794 (V$TTF1_Q6); 66360862..66360873; CSS: 0.993; MSS: 0.983
+PS  Matrix: M00966 (V$DR3_Q4); 66360524..66360544; CSS: 0.894; MSS: 0.844
+PS  Matrix: M00965 (V$DR4_Q2); 66360961..66360977; CSS: 1.000; MSS: 0.865
+PS  Matrix: M00518 (V$PPARA_02); 66360020..66360038; CSS: 0.823; MSS: 0.867
+PS  Matrix: M00515 (V$PPARG_02); 66360216..66360238; CSS: 1.000; MSS: 0.705
+PS  Matrix: M00444 (V$VDR_Q3); 66360998..66361012; CSS: 0.991; MSS: 0.915
+PS  Matrix: M00033 (V$P300_01); 66360259..66360272; CSS: 1.000; MSS: 0.984
+PS  Matrix: M00327 (V$PAX3_B); 66360826..66360846; CSS: 0.868; MSS: 0.828
+PS  Matrix: M01132 (V$SF1_Q6_01); 66360229..66360237; CSS: 1.000; MSS: 1.000
+PS  Matrix: M01109 (V$SZF11_01); 66360906..66360920; CSS: 0.896; MSS: 0.885
+PS  Matrix: M00114 (V$TAXCREB_01); 66360586..66360600; CSS: 1.000; MSS: 0.906
+PS  Matrix: M00333 (V$ZF5_B); 66360612..66360624; CSS: 0.919; MSS: 0.884
+PS  Matrix: M00449 (V$ZIC2_01); 66360713..66360721; CSS: 1.000; MSS: 0.963
+PS  Matrix: M00085 (V$ZID_01); 66360476..66360488; CSS: 1.000; MSS: 0.957
+PS  Matrix: M00665 (V$SP3_Q3); 66361224..66361237; CSS: 1.000; MSS: 0.902
+XX
+RN  [73699]; RE73699.
+RT  Open Chromatin by DNaseI HS from ENCODE/OpenChrom(Duke University); URL: http://genome.ucsc.edu/cgi-bin/hgTrackUi?hgt_tSearch=Search&g=wgEncodeOpenChromDnase
+RL  Internet.
+//
+AC  FR004423611
+XX
+AS  FR4426094
+XX
+ID  FR004423611
+XX
+DT  09.10.2013 (created); mkl.
+DT  09.10.2013 (updated); mkl
+CO  Copyright (C), Biobase GmbH
+XX
+DE  Gene: G001154, CCND1; distance: 338768 (upstream, forward)
+DE  Gene: G048167, ANO1; distance: 116398 (downstream, forward)
+DE  Gene: G018287, SHANK2; distance: 505951 (upstream, reverse)
+DE  Gene: G006063, FGF3; distance: 174302 (downstream, reverse)
+XX
+OS  human, Homo sapiens
+OC  eukaryota; animalia; metazoa; chordata; vertebrata; tetrapoda; mammalia; eutheria; primates
+XX
+SC  Build HSA_Feb2009 (GRCh37; hg19): chr11:69808011..69808093 (FORWARD)
+XX
+BF   ;  ; Species:
+MM  DNaseI HS (DNaseI HS (GM12891)); DNase I-Seq; Cellular source: 10584, GM12891 [73699]
+XX
+PS  Matrix: M00947 (V$CP2_02); 69808055..69808069; CSS: 0.957; MSS: 0.931
+PS  Matrix: M00327 (V$PAX3_B); 69807950..69807970; CSS: 1.000; MSS: 0.831
+XX
+RN  [73699]; RE73699.
+RT  Open Chromatin by DNaseI HS from ENCODE/OpenChrom(Duke University); URL: http://genome.ucsc.edu/cgi-bin/hgTrackUi?hgt_tSearch=Search&g=wgEncodeOpenChromDnase
+RL  Internet.
+//
+AC  FR012239730
+XX
+ID  FR012239730
+XX
+DT  09.10.2013 (created); mkl.
+DT  09.10.2013 (updated); mkl
+CO  Copyright (C), Biobase GmbH
+XX
+DE  Gene: G051725, LRTM2; distance: 79842 (upstream, forward)
+DE  Gene: G025027, CACNA1C; distance: 54041 (downstream, forward)
+DE  Gene: G036207, DCP1B; distance: 29460 (upstream, reverse)
+DE  Gene: G094774, MIR3649; distance: 256365 (downstream, reverse)
+DE  Gene: G049427, CACNA2D4; distance: 2091 (overlapping, reverse)
+XX
+OS  human, Homo sapiens
+OC  eukaryota; animalia; metazoa; chordata; vertebrata; tetrapoda; mammalia; eutheria; primates
+XX
+SC  Build HSA_Feb2009 (GRCh37; hg19): chr12:2025761..2025910 (FORWARD)
+XX
+BF   ;  ; Species:
+MM  DNaseI HS (DNaseI HS (GM06990)); digital DNase I genomic footprinting; Cellular source: 10637, GM06990 [73779]
+XX
+PS  Matrix: M00222 (V$HAND1E47_01); 2025862..2025877; CSS: 1.000; MSS: 0.940
+PS  Matrix: M00203 (V$GATA_C); 2025769..2025779; CSS: 1.000; MSS: 0.987
+PS  Matrix: M00794 (V$TTF1_Q6); 2025751..2025762; CSS: 1.000; MSS: 0.986
+PS  Matrix: M00033 (V$P300_01); 2025994..2026007; CSS: 1.000; MSS: 0.975
+PS  Matrix: M00446 (V$SPZ1_01); 2025713..2025727; CSS: 0.998; MSS: 0.968
+PS  Matrix: M01168 (V$SREBP_Q6); 2025868..2025882; CSS: 1.000; MSS: 0.991
+PS  Matrix: M00449 (V$ZIC2_01); 2025714..2025722; CSS: 0.841; MSS: 0.892
+PS  Matrix: M00947 (V$CP2_02); 2025896..2025910; CSS: 0.941; MSS: 0.931
+PS  Matrix: M00327 (V$PAX3_B); 2025674..2025694; CSS: 1.000; MSS: 0.832
+XX
+RN  [73779]; RE73779.
+RT  DNaseI Digital Genomic Footprinting from ENCODE/University of Washington; URL: http://genome.ucsc.edu/cgi-bin/hgTrackUi?hgt_tSearch=Search&g=wgEncodeUwDgf
+RL  Internet.
+//
+AC  FR045739464
+XX
+ID  FR045739464
+XX
+DT  09.10.2013 (created); mkl.
+DT  09.10.2013 (updated); mkl
+CO  Copyright (C), Biobase GmbH
+XX
+DE  Gene: G090854, AT3G44590; distance: 21171 (upstream, forward)
+DE  Gene: G081591, AT3G44620; distance: 7427 (downstream, forward)
+DE  Gene: G052368, AT3G44610; distance: 2027 (upstream, reverse)
+XX
+OS  thale cress, Arabidopsis thaliana
+OC  eukaryota; viridiplantae; embryobionta; magnoliophyta; magnoliopsida; dilleniidae; capparales; brassicaceae
+XX
+SC  Build ATH_May2011 (TAIR10): chr3:16186101..16186401 (FORWARD)
+XX
+BF   ;  ; Species:
+MM  DNA methylation (DNA methylation (CG)); ChIP-Seq; Cellular source: 12965, endosperm [67975]
+XX
+RN  [67975]; RE67975.
+RX  PUBMED: 19520962
+RA  Hsieh T. F., Ibarra C. A., Silva P., Zemach A., Eshed-Williams L., Fischer R. L., Zilberman D.
+RT  Genome-wide demethylation of Arabidopsis endosperm.
+RL  Science 324:1451-1454 (2009).
+//

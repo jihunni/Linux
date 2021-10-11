@@ -1,0 +1,84 @@
+VV  TRANSCompel EVIDENCE TABLE, Release 2009.2 - licensed - 2009-06-26, (C)
+VV  Biobase GmbH
+XX
+//
+AC  ev01508
+XX
+DT  14.02.2007 (created); pra.
+DT  14.02.2007 (updated); pra.
+CO  Copyright (C), Biobase GmbH.
+XX
+CE  C00456; ZIP$NFY_003.
+XX
+EX  Transient co-transfections.
+CN  Functional synergism between factors.
+XX
+CT  3099; LS8.
+XX
+IN  in01773; -70 to -63.
+XX
+FA  C/EBPalpha; recombinant; mouse, Mus musculus.
+XX
+FF  activator.
+XX
+DR  TRANSFAC: T08464; C/EBPalpha.
+XX
+IN  in01774; -58 to -54.
+XX
+FA  NF-Y; recombinant; Mammalia.
+XX
+FD  heteromeric CCAAT factors.
+XX
+FF  activator.
+XX
+FC  Ubiquitously expressed heterodimeric CCAAT-binding protein. Abundance of
+FC  NF-Y is decreased in the erythroid cells in the course of organism
+FC  development.
+XX
+DR  TRANSFAC: T08701; NF-Y.
+XX
+RN  [1]
+RX  PUBMED; 16595692.
+RA  Xu Y., Zhou Y. L., Luo W., Zhu Q. S., Levy D., MacDougald O. A., Snead M. l.
+RT  NF-Y and CCAAT/enhancer-binding protein alpha synergistically activate the
+RT  mouse amelogenin gene.
+RL  J. Biol. Chem. 281:16090-16098 (2006).
+XX
+//
+AC  ev01509
+XX
+DT  14.02.2007 (created); pra.
+DT  14.02.2007 (updated); pra.
+CO  Copyright (C), Biobase GmbH.
+XX
+CE  C00456; ZIP$NFY_003.
+XX
+EX  In vivo cross-linking between factors.
+CN  Direct factor-factor interactions in the absence of DNA.
+XX
+CT  3099; LS8.
+XX
+IN  in01775; -70 to -63.
+XX
+FA  C/EBPalpha; recombinant; mouse, Mus musculus.
+XX
+FF  activator.
+XX
+DR  TRANSFAC: T08464; C/EBPalpha.
+XX
+IN  in01776; -58 to -54.
+XX
+FA  NF-YA; recombinant; Mammalia.
+XX
+FF  activator.
+XX
+DR  TRANSFAC: T08563; NF-YA.
+XX
+RN  [1]
+RX  PUBMED; 16595692.
+RA  Xu Y., Zhou Y. L., Luo W., Zhu Q. S., Levy D., MacDougald O. A., Snead M. l.
+RT  NF-Y and CCAAT/enhancer-binding protein alpha synergistically activate the
+RT  mouse amelogenin gene.
+RL  J. Biol. Chem. 281:16090-16098 (2006).
+XX
+//

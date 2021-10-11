@@ -1,0 +1,107 @@
+VV  TRANSCompel COMPEL TABLE, Release 2009.2 - licensed - 2009-06-26, (C)
+VV  Biobase GmbH
+XX
+//
+AC  C00447
+XX
+ID  HLH$C4_003
+XX
+DT  20.01.2007 (created); pra.
+DT  15.02.2007 (updated); oke.
+CO  Copyright (C), Biobase GmbH.
+XX
+GE  G000204; APOA2; apolipoprotein A-II; human, Homo sapiens.
+XX
+SQ  AGTCCTGTCACCTG
+XX
+PS  -73 to -40
+XX
+DR  EMBL: X04898; HSAPOA2; 1109.
+XX
+NO  2
+BS  -67 to -55; T3R-beta:RXR-alpha; s00788.
+BS  -61 to -54; USF2a; s00789.
+XX
+TY  synergism
+XX
+CL  inducible/constitutive; T3 response.
+XX
+CG  Ebox/T3R.
+XX
+CC  Functional interaction between ubiquitous factor USF2a, which appears to be
+CC  the predominant bHLH/ZIP factor in liver nuclear extract, and
+CC  RXRalpha:T3Rbeta heterodimers bound to overlapping site enhances
+CC  transcription in response to thyroid hormone. USF site is located within
+CC  DR1, a binding site for T3R:RXR heterodimers.
+XX
+EV  ev01475
+EX  Transient co-transfections
+CN  Functional synergism between factors
+CT  3524; HepG2 + T3.
+XX
+EV  ev01476
+EX  Transient co-transfections
+CN  Functional synergism between factors
+CT  3525; HEK-293 + T3.
+XX
+RN  [1]
+RX  PUBMED; 12959642.
+RA  Hatzivassiliou E., Koukos G., Ribeiro A., Zannis V., Kardassis D.
+RT  Functional specificity of two hormone response elements present on the
+RT  human apoA-II promoter that bind retinoid X receptor alpha/thyroid receptor
+RT  beta heterodimers for retinoids and thyroids: synergistic interactions
+RT  between thyroid receptor beta and upstream stimulatory factor 2a.
+RL  Biochem. J. 376:423-431 (2003).
+XX
+//
+AC  C00449
+XX
+ID  ZIP$HOM_007
+XX
+DT  04.02.2007 (created); apk.
+DT  15.02.2007 (updated); oke.
+CO  Copyright (C), Biobase GmbH.
+XX
+GE  G013777; Foxf1a; forkhead box F1a; mouse, Mus musculus.
+XX
+SQ  AATTATCAATAAACTAGT
+XX
+PS  4760 to 4777
+XX
+DR  EMBL:; AC127554; 12616.
+XX
+NO  2
+BS  4760 to 4777; HNF6; s00793.
+BS  4762 to 4777; CRP2; s00792.
+XX
+TY  synergism
+XX
+CL  tissue-restricted/tissue-restricted; mesenchymal cells of embryonic tissues.
+XX
+CG  CEBP/HNF6.
+XX
+CC  The transcription factors HNF-6 and C/EBP beta are coexpressed in the
+CC  mesenchyme of trachea and in the proximal airways of 15.5 and 18.5 dpc
+CC  mouse embryos. Cooperation between these two factors is essential for
+CC  tissue-specific regulation of Foxf1a gene in gut-derived organs of
+CC  developing mice.
+XX
+EV  ev01484
+EX  Transient co-transfections
+CN  Functional synergism between factors
+CT  0932; U2-OS.
+XX
+EV  ev01485
+EX  Co-transfection experiment combined with site-directed mutagenesis
+CN  Both intact sites as well as both factors are essential for synergism
+CT  0932; U2-OS.
+XX
+RN  [1]
+RX  PUBMED; 16144835.
+RA  Kim I. M., Zhou Y., Ramakrishna S., Hughes D. E., Solway J., Costa R. H.,
+RA  Kalinichenko V. V.
+RT  Functional characterization of evolutionarily conserved DNA regions in
+RT  forkhead box f1 gene locus.
+RL  J. Biol. Chem. 280:37908-37916 (2005).
+XX
+//

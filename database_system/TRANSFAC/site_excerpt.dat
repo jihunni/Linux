@@ -1,0 +1,381 @@
+VV  TRANSFAC SITE TABLE, Release 2009.2 - licensed - 2009-06-30, (C) Biobase GmbH
+XX
+//
+AC  R00001
+XX
+ID  HS$IFI6_01
+XX
+DT  20.06.1990 (created); ewi.
+DT  09.04.2009 (updated); djp.
+CO  Copyright (C), Biobase GmbH.
+XX
+TY  DNA
+XX
+DE  IFI6 (interferon, alpha-inducible protein 6); Gene: G000176.
+XX
+OS  human, Homo sapiens
+OC  eukaryota; animalia; metazoa; chordata; vertebrata; tetrapoda; mammalia; eutheria; primates
+XX
+SQ  gGGAAAaTGAAACT.
+XX
+EL  ISRE
+XX
+SF  -127
+ST  -89
+XX
+BF  T00428; ISGF-3; Quality: 6; Species: human, Homo sapiens.
+XX
+MX  M00972; V$IRF_Q6_01
+XX
+SO  0038; Bristol 8B+IFN-alpha.
+SO  0061; Daudi.
+SO  0101; HeLa + IFN-alpha.
+SO  0108; HFF.
+SO  0380; Daudi + CML.
+XX
+MM  copper/phenanthroline footprinting
+MM  ethylation interference
+MM  gel retardation
+MM  methylation interference
+MM  methylation protection
+XX
+CC  human foreskin fibroblasts (HFF) after induction with IFN-alpha
+XX
+DR  EMBL: Y00828; HSIFNIN6 (492:505).
+DR  EPD: EP27009; HS_INI2.
+DR  TRANSPRO: HSA_1699.
+XX
+RN  [1]; RE0002135.
+RX  PUBMED: 1707163.
+RA  Roy Ch., Lebleu B.
+RT  DNA protein interactions at the interferon-responsive promoter elements: potential for a H-DNA conformation
+RL  Nucleic Acids Res. 19:517 (1991).
+RN  [2]; RE0001119.
+RX  PUBMED: 2243138.
+RA  Seong D. C., Sims S., Johnson E., Howard O. M. Z., Reiter B., Hester J., Talpaz M., Kantarjian H., Deisseroth A.
+RT  A phosphatase activity present in peripheral blood myeloid cells of chromic myelogenous leukemia patients but not normal individuals alters nuclear protein binding to transcriptional enhancers of interferon-inducible genes
+RL  J. Clin. Invest. 86:1664-1670 (1990).
+RN  [3]; RE0002092.
+RX  PUBMED: 2123539.
+RA  Imam A. M. A., Ackrill A. M., Dale T. C., Kerr I. M., Stark G. R.
+RT  Transcription factors induced by interferons alpha and gamma
+RL  Nucleic Acids Res. 18:6573-6580 (1990).
+RN  [4]; RE0000307.
+RX  PUBMED: 2721502.
+RA  Dale T. C., Rosen J. M., Guille M. J., Lewin A. R., Porter A. G. C., Kerr I. M., Stark G. R.
+RT  Overlapping sites for constitutive and induced DNA binding factors involved in interferon-stimulated transcription
+RL  EMBO J. 8:831-839 (1989).
+RN  [5]; RE0002261.
+RX  PUBMED: 2919169.
+RA  Dale T. C., Imam A. M., Kerr I. M., Stark G. R.
+RT  Rapid activation by interferon alpha of a latent DNA-binding protein present in the cytoplasm of untreated cells.
+RL  Proc. Natl. Acad. Sci. USA 86:1203-1207 (1989).
+RN  [6]; RE0000306.
+RX  PUBMED: 3359997.
+RA  Porter A. C. G., Chernajowski Y., Dale T. C., Gilbert C. S., Stark G. R., Kerr I. M.
+RT  Interferon response element of the human gene 6-16
+RL  EMBO J. 7:85-92 (1988).
+XX
+//
+AC  R00002
+XX
+ID  HS$IFI6_02
+XX
+DT  20.06.1990 (created); ewi.
+DT  09.04.2009 (updated); djp.
+CO  Copyright (C), Biobase GmbH.
+XX
+TY  DNA
+XX
+DE  IFI6 (interferon, alpha-inducible protein 6); Gene: G000176.
+XX
+OS  human, Homo sapiens
+OC  eukaryota; animalia; metazoa; chordata; vertebrata; tetrapoda; mammalia; eutheria; primates
+XX
+SQ  GGGGAAAATGAAACTGCA.
+XX
+EL  ISRE
+XX
+SF  -113
+ST  -96
+XX
+BF  T09384; IRF-8; Quality: 2; Species: mouse, Mus musculus.
+XX
+MX  M00699; V$ICSBP_Q6
+MX  M00772; V$IRF_Q6
+XX
+SO  0303; rec(mouse-E.coli).
+XX
+MM  Southwestern blotting / filter binding
+XX
+DR  EMBL: Y00828; HSIFNIN6 (491:508).
+DR  EPD: EP27009; HS_INI2.
+DR  TRANSPRO: HSA_1699.
+XX
+RN  [1]; RE0002531.
+RX  PUBMED: 2111015.
+RA  Driggers P. H., Ennist D. L., Gleason S. L., Mak W.-H., Marks M. S., Levi B.-Z., Flanagan J. R., Appella E., Ozato K.
+RT  An interferon gamma-regulated protein that binds the interferon-inducible enhancer element of major histocompatibility complex class I genes
+RL  Proc. Natl. Acad. Sci. USA 87:3743-3747 (1990).
+XX
+//
+AC  R00003
+XX
+ID  HS$IFITM1_01
+XX
+DT  20.06.1990 (created); ewi.
+DT  27.08.2007 (updated); sri.
+CO  Copyright (C), Biobase GmbH.
+XX
+TY  DNA
+XX
+DE  IFITM1 (interferon induced transmembrane protein 1 (9-27)); Gene: G000179.
+XX
+OS  human, Homo sapiens
+OC  eukaryota; animalia; metazoa; chordata; vertebrata; tetrapoda; mammalia; eutheria; primates
+XX
+SQ  AGGAAATAGAAACT.
+XX
+EL  ISRE
+XX
+SF  -185
+ST  -147
+XX
+BF  T00965; G factor; Quality: 6; Species: human, Homo sapiens.
+BF  T00428; ISGF-3; Quality: 6; Species: human, Homo sapiens.
+BF  T00966; M factor; Quality: 6; Species: human, Homo sapiens.
+XX
+MX  M00972; V$IRF_Q6_01
+XX
+SO  0038; Bristol 8B+IFN-alpha.
+SO  0061; Daudi.
+SO  0101; HeLa + IFN-alpha.
+SO  0108; HFF.
+SO  0114; HT-1080.
+SO  0380; Daudi + CML.
+SO  0417; HT1080+IFN-gamma + HT12S+IFN-alpha.
+XX
+MM  copper/phenanthroline footprinting
+MM  direct gel shift
+XX
+CC  human foreskin fibroblasts (HFF) after induction with IFN-alpha; G factor induced in HT1080 cells by IFN-gamma, E and M factor by IFN-alpha
+XX
+DR  EMBL: J04164; HS927A (144:157).
+DR  TRANSPRO: HSA_8109.
+XX
+RN  [1]; RE0002173.
+RX  PUBMED: 1832217.
+RA  Ackrill A. M., Foster G. R., Laxton C. D., Flavell D. M., Stark G. R., Kerr I. M.
+RT  Inhibition of the cellular response to interferons by products of the adenovirus type 5 E1A oncogene
+RL  Nucleic Acids Res. 19:4387-4393 (1991).
+RN  [2]; RE0002471.
+RX  PUBMED: 1707174.
+RA  Foster G. R., Ackrill A. M., Goldin R. D., Kerr I. M., Thomas H. C., Stark G. R.
+RT  Expression of the terminal protein region of hepatitis B virus inhibits cellular responses to interferons alpha and gamma and double-stranded RNA
+RL  Proc. Natl. Acad. Sci. USA 88:2888-2892 (1991).
+RN  [3]; RE0001119.
+RX  PUBMED: 2243138.
+RA  Seong D. C., Sims S., Johnson E., Howard O. M. Z., Reiter B., Hester J., Talpaz M., Kantarjian H., Deisseroth A.
+RT  A phosphatase activity present in peripheral blood myeloid cells of chromic myelogenous leukemia patients but not normal individuals alters nuclear protein binding to transcriptional enhancers of interferon-inducible genes
+RL  J. Clin. Invest. 86:1664-1670 (1990).
+RN  [4]; RE0002092.
+RX  PUBMED: 2123539.
+RA  Imam A. M. A., Ackrill A. M., Dale T. C., Kerr I. M., Stark G. R.
+RT  Transcription factors induced by interferons alpha and gamma
+RL  Nucleic Acids Res. 18:6573-6580 (1990).
+RN  [5]; RE0002261.
+RX  PUBMED: 2919169.
+RA  Dale T. C., Imam A. M., Kerr I. M., Stark G. R.
+RT  Rapid activation by interferon alpha of a latent DNA-binding protein present in the cytoplasm of untreated cells.
+RL  Proc. Natl. Acad. Sci. USA 86:1203-1207 (1989).
+XX
+//
+AC  R00004
+XX
+ID  AD2$IVA2_01
+XX
+DT  20.06.1990 (created); ewi.
+DT  17.10.2001 (updated); vma.
+CO  Copyright (C), Biobase GmbH.
+XX
+TY  DNA
+XX
+DE  IVa2 promoter; Gene: G000009.
+XX
+OS  adenovirus type 2
+OC  viridae; ds-DNA nonenveloped viruses; adenoviridae
+XX
+SQ  ACCCCTCCCACTT.
+XX
+EL  PPE
+XX
+SF  -50
+ST  -36
+XX
+BF  T00759; sp1; Quality: 4; Species: human, Homo sapiens.
+XX
+MX  M00932; V$SP1_Q4_01
+MX  M00931; V$SP1_Q6_01
+XX
+SO  0100; HeLa.
+XX
+MM  competitive DNAse I footprint
+MM  direct gel shift
+MM  DNase I footprinting
+XX
+CC  element identical in adenovirus type 5 and 2, both are proven experimentally
+XX
+DR  EMBL: J01917; HACG (-5878:-5866).
+DR  EMBL: X02996; AD5001 (-5888:-5876).
+XX
+RN  [1]; RE0003058.
+RX  PUBMED: 1588975.
+RA  Kasai Y., Chen H., Flint S. J.
+RT  Anatomy of an unusual RNA polymerase II promoter containing a downstream TATA element
+RL  Mol. Cell. Biol. 12:2884-2897 (1992).
+RN  [2]; RE0000584.
+RX  PUBMED: 2026271.
+RA  Tamura T.-A., Mikoshiba K.
+RT  Role of a GC-rich motif in transcription regulation of the adenovirus type 2 IVa2 promoter which lacks typical TATA-box element
+RL  FEBS Lett. 282:87-90 (1991).
+RN  [3]; RE0001207.
+RX  PUBMED: 3380088.
+RA  Albrecht G., Devaux B., Kedinger C.
+RT  Genomic Footprinting Detects Factors Bound to Major Late and IVa2 Promoters in Adenovirus-Infected HeLa Cells
+RL  Mol. Cell. Biol. 8:1534-1539 (1988).
+XX
+//
+AC  R00005
+XX
+ID  HS$SLC3A2_01
+XX
+DT  20.06.1990 (created); ewi.
+DT  06.04.2009 (updated); jag.
+CO  Copyright (C), Biobase GmbH.
+XX
+TY  DNA
+XX
+DE  SLC3A2 (solute carrier family 3 (activators of dibasic and neutral amino acid transport), member 2); Gene: G000174.
+XX
+OS  human, Homo sapiens
+OC  eukaryota; animalia; metazoa; chordata; vertebrata; tetrapoda; mammalia; eutheria; primates
+XX
+SQ  CTCCTTTCTTTGAAG.
+XX
+BF  T00569; NF-4FA; Quality: 6; Species: human, Homo sapiens.
+XX
+SO  0123; Jurkat.
+XX
+MM  DNase I footprinting
+MM  gel retardation
+XX
+DR  EMBL: M21898; HS4F2HG1 (1808:1822).
+XX
+RN  [1]; RE0001199.
+RX  PUBMED: 2761540.
+RA  Karpinski B. A., Yang L.-H., Cacheris P., Morle G. D., Leiden J. M.
+RT  The First Intron of the 4F2 Heavy-Chain Gene Contains a Transcriptional Enhancer Element That Binds Multiple Nuclear Proteins
+RL  Mol. Cell. Biol. 9:2588-2597 (1989).
+XX
+//
+AC  R00006
+XX
+ID  HS$SLC3A2_02
+XX
+DT  20.06.1990 (created); ewi.
+DT  06.04.2009 (updated); jag.
+CO  Copyright (C), Biobase GmbH.
+XX
+TY  DNA
+XX
+DE  SLC3A2 (solute carrier family 3 (activators of dibasic and neutral amino acid transport), member 2); Gene: G000174.
+XX
+OS  human, Homo sapiens
+OC  eukaryota; animalia; metazoa; chordata; vertebrata; tetrapoda; mammalia; eutheria; primates
+XX
+SQ  CTCCGTCACGAGGGTGG.
+XX
+BF  T00571; NF-4FC; Quality: 6; Species: human, Homo sapiens.
+XX
+SO  0123; Jurkat.
+XX
+MM  DNase I footprinting
+MM  gel retardation
+XX
+DR  EMBL: M21898; HS4F2HG1 (1842:1858).
+XX
+RN  [1]; RE0001199.
+RX  PUBMED: 2761540.
+RA  Karpinski B. A., Yang L.-H., Cacheris P., Morle G. D., Leiden J. M.
+RT  The First Intron of the 4F2 Heavy-Chain Gene Contains a Transcriptional Enhancer Element That Binds Multiple Nuclear Proteins
+RL  Mol. Cell. Biol. 9:2588-2597 (1989).
+XX
+//
+AC  R00007
+XX
+ID  HS$SLC3A2_03
+XX
+DT  20.06.1990 (created); ewi.
+DT  06.04.2009 (updated); jag.
+CO  Copyright (C), Biobase GmbH.
+XX
+TY  DNA
+XX
+DE  SLC3A2 (solute carrier family 3 (activators of dibasic and neutral amino acid transport), member 2); Gene: G000174.
+XX
+OS  human, Homo sapiens
+OC  eukaryota; animalia; metazoa; chordata; vertebrata; tetrapoda; mammalia; eutheria; primates
+XX
+SQ  GTGACTCA.
+XX
+BF  T00133; c-Jun; Quality: 6; Species: human, Homo sapiens.
+XX
+MX  M00925; V$AP1_Q6_01
+XX
+SO  0123; Jurkat.
+XX
+MM  DNase I footprinting
+MM  gel retardation
+XX
+DR  EMBL: M21898; HS4F2HG1 (1859:1866).
+XX
+RN  [1]; RE0001199.
+RX  PUBMED: 2761540.
+RA  Karpinski B. A., Yang L.-H., Cacheris P., Morle G. D., Leiden J. M.
+RT  The First Intron of the 4F2 Heavy-Chain Gene Contains a Transcriptional Enhancer Element That Binds Multiple Nuclear Proteins
+RL  Mol. Cell. Biol. 9:2588-2597 (1989).
+XX
+//
+AC  R00008
+XX
+ID  HS$SLC3A2_04
+XX
+DT  20.06.1990 (created); ewi.
+DT  06.04.2009 (updated); jag.
+CO  Copyright (C), Biobase GmbH.
+XX
+TY  DNA
+XX
+DE  SLC3A2 (solute carrier family 3 (activators of dibasic and neutral amino acid transport), member 2); Gene: G000174.
+XX
+OS  human, Homo sapiens
+OC  eukaryota; animalia; metazoa; chordata; vertebrata; tetrapoda; mammalia; eutheria; primates
+XX
+SQ  AGAAGCCAGTTGCAACCGGTTTCTG.
+XX
+BF  T00570; NF-4FB; Quality: 6; Species: human, Homo sapiens.
+XX
+SO  0123; Jurkat.
+XX
+MM  DNase I footprinting
+MM  gel retardation
+XX
+DR  EMBL: M21898; HS4F2HG1 (1890:1914).
+XX
+RN  [1]; RE0001199.
+RX  PUBMED: 2761540.
+RA  Karpinski B. A., Yang L.-H., Cacheris P., Morle G. D., Leiden J. M.
+RT  The First Intron of the 4F2 Heavy-Chain Gene Contains a Transcriptional Enhancer Element That Binds Multiple Nuclear Proteins
+RL  Mol. Cell. Biol. 9:2588-2597 (1989).
+XX
+//
