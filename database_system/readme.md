@@ -31,7 +31,11 @@ create a role
 # CREATE ROLE role_name;
 
 ```
-
+change password
+```
+postgres=# ALTER USER postgres PASSWORD 'myPassword';
+ALTER ROLE
+```
 # 21. Database Roles
 PostgreSQL manages database access permissions using the concept of roles. A role can be thought of
 as either a database user, or a group of database users, depending on how the role is set up. Roles can
