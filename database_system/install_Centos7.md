@@ -35,7 +35,9 @@ systemctl status postgresql-13
 Ref:
 - https://bono915.tistory.com/entry/Postgresql-FATAL-Peer-authentication-failed-for-user-%EC%98%A4%EB%A5%98
 - https://stackoverflow.com/questions/18664074/getting-error-peer-authentication-failed-for-user-postgres-when-trying-to-ge
-
+```
+ vi /var/lib/pgsql/13/data/pg_hba.conf
+```
 # Postgres
 ```
 $ psql -U <dbuser> -h <serverip> -p 5432 <dbname> 
