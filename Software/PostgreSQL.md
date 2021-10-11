@@ -1,6 +1,6 @@
 # install PostgreSQL12 on Centos7
 ```
-/usr/pgsql-9.6/bin/postgresql96-setup initdb
+/usr/pgsql-13/bin/postgresql96-setup initdb
 /var/lib/pgsql/13/data
 ```
 
@@ -53,8 +53,6 @@ Ref : https://www.pgadmin.org/download/pgadmin-4-rpm/
 # PostgreSQL Administration
 Ref : [https://www.postgresqltutorial.com/postgresql-administration/](https://www.postgresqltutorial.com/postgresql-administration/)
 
-## database roles
-Ref : https://www.postgresqltutorial.com/postgresql-roles/  
 ```
 # to setup the repository for this set of builds 
 rpm -i https://ftp.postgresql.org/pub/pgadmin/pgadmin4/yum/pgadmin4-redhat-repo-2-1.noarch.rpm
@@ -69,8 +67,12 @@ sudo yum install pgadmin4-desktop
 sudo yum install pgadmin4-web
 
 # run the web setup script to configure the system to run in web mode:
-sudo /usr/pgadmin4/bin/setup-web.sh
+sudo /usr/pgsql-13/bin/setup-web.sh
 ```
+
+## database roles
+Ref : https://www.postgresqltutorial.com/postgresql-roles/  
+
 
 query all roles in database system
 ```
