@@ -74,3 +74,6 @@ sudo /usr/pgsql-13/bin/setup-web.sh
 # run pgadmin4 in web
 xdg-open http://127.0.0.1/pgadmin4
 ```
+
+Ref (ubuntu) : 
+- https://www.tecmint.com/install-postgresql-and-pgadmin-in-ubuntu/
