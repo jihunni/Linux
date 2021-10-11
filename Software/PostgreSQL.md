@@ -37,13 +37,30 @@ systemctl status postgresql-13
 bash$ psql
 psql#
 ```
+# Install pgAdmin 4
+Ref : https://www.pgadmin.org/download/pgadmin-4-rpm/
 
 # PostgreSQL Administration
 Ref : [https://www.postgresqltutorial.com/postgresql-administration/](https://www.postgresqltutorial.com/postgresql-administration/)
 
 ## database roles
 Ref : https://www.postgresqltutorial.com/postgresql-roles/  
+```
+# to setup the repository for this set of builds 
+rpm -i https://ftp.postgresql.org/pub/pgadmin/pgadmin4/yum/pgadmin4-redhat-repo-2-1.noarch.rpm
 
+# Install for both desktop and web modes.
+sudo yum install pgadmin4
+
+# Install for desktop mode only.
+sudo yum install pgadmin4-desktop
+
+# Install for web mode only.
+sudo yum install pgadmin4-web
+
+# run the web setup script to configure the system to run in web mode:
+sudo /usr/pgadmin4/bin/setup-web.sh
+```
 
 query all roles in database system
 ```
