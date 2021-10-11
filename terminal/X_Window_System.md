@@ -1,3 +1,8 @@
+# open browser
+```
+$ xdg-open http://example.com
+``
+# error
 ```
 /usr/bin/xauth:  error in locking authority file /home/jihun/.Xauthority
 ```
