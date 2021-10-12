@@ -1,3 +1,8 @@
+# login pgAdmin4
+```
+xdg-open http://127.0.0.1/pgadmin4
+```
+
 # database roles
 Ref : https://www.postgresqltutorial.com/postgresql-roles/  
 
