@@ -78,9 +78,34 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
   ```
   When you use Python, you sholud check whether python is derived from Anaconda. 
   
+  - Jupyter notebook
+    ```
+    $ jupyter-notebook
+    [I 15:05:31.980 NotebookApp] Writing notebook server cookie secret to /home/jihun/.local/share/jupyter/runtime/notebook_cookie_secret
+    [I 2021-10-13 15:05:32.384 LabApp] JupyterLab extension loaded from /opt/anaconda3/2021.05/lib/python3.8/site-packages/jupyterlab
+    [I 2021-10-13 15:05:32.384 LabApp] JupyterLab application directory is /opt/anaconda3/2021.05/share/jupyter/lab
+    [I 15:05:32.390 NotebookApp] Serving notebooks from local directory: /home/jihun
+    [I 15:05:32.390 NotebookApp] Jupyter Notebook 6.3.0 is running at:
+    [I 15:05:32.390 NotebookApp] http://localhost:8888/?token=2921873a5039386d0e8eda948810ad5f2518293076a265fa
+    [I 15:05:32.390 NotebookApp]  or http://127.0.0.1:8888/?token=2921873a5039386d0e8eda948810ad5f2518293076a265fa
+    [I 15:05:32.390 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+    [C 15:05:32.480 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/jihun/.local/share/jupyter/runtime/nbserver-231795-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=2921873a5039386d0e8eda948810ad5f2518293076a265fa
+     or http://127.0.0.1:8888/?token=2921873a5039386d0e8eda948810ad5f2518293076a265fa
+    START /usr/bin/firefox "/home/jihun/.local/share/jupyter/runtime/nbserver-231795-open.html"
+    Failed to open connection to "session" message bus: Using X11 for dbus-daemon autolaunch was disabled at compile time, set your DBUS_SESSION_BUS_ADDRESS instead
+    Running without a11y support!
+
+    ```
+  
   software list:
   - Pyfasta
-  
+  - psycopg2
+    
 - R
   version : 3.6.0
   Library directory : /opt/R_shared_library/3.6.0
