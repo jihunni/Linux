@@ -64,7 +64,7 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
 
 # Programminfg Language and IDE
 
-- Python
+- Python (Anaconda3)
   software directory : 
   module directiroy : 
   
@@ -77,7 +77,15 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
   Type "help", "copyright", "credits" or "license" for more information
   ```
   When you use Python, you sholud check whether python is derived from Anaconda. 
-  
+  - build virtual environment
+    ```
+    conda info --envs
+    conda init [shell_Name]
+    conda create --name [env_name] --clone base
+    conda activate [env_name]
+    
+    
+    ```
   - Jupyter notebook
     ```
     $ jupyter-notebook
