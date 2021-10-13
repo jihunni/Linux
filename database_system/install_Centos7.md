@@ -54,6 +54,12 @@ psql#
 # Install pgAdmin 4
 Ref : https://www.pgadmin.org/download/pgadmin-4-rpm/
 
+
+# To install python library `psycopg2`
+```
+yum install libpq
+```
+
 # PostgreSQL Administration
 Ref : [https://www.postgresqltutorial.com/postgresql-administration/](https://www.postgresqltutorial.com/postgresql-administration/)
 
