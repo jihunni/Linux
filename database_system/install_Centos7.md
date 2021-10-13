@@ -57,8 +57,10 @@ Ref : https://www.pgadmin.org/download/pgadmin-4-rpm/
 
 # To install python library `psycopg2`
 ```
-yum install libpq
+yum install -y python3-devel.x86_64
+yum install  postgresql-devel
 ```
+`libpq` is `postgresql_devel` on CentOS7
 
 # PostgreSQL Administration
 Ref : [https://www.postgresqltutorial.com/postgresql-administration/](https://www.postgresqltutorial.com/postgresql-administration/)
