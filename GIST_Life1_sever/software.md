@@ -133,6 +133,7 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
 
 - MATLAB (2021b) 
  ```
+ $ ssh -X ID@IP
  $ module load matlab
  $ matlab
  MATLAB is selecting SOFTWARE OPENGL rendering.
