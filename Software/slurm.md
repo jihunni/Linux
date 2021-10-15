@@ -98,14 +98,15 @@ Basic, Single-Threaded Job
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=jihun@gm.gist.ac.kr
 #
-#SBATCH --ntasks=1
+#SBATCH --ntasks=8
 #SBATCH --time=01:30:00
 #SBATCH --output=slurm_result.txt
-#SBATCH -o slurm-%j.o
-#SBATCH -e %x.e%j.e
-pwd; hostname; date
+#SBATCH -o %x.o%j
+#SBATCH -e %x.e%j
 
-echo "Date              = $(date)"
+# stdout : basic info
+echo "SLURM running info"
+echo "Start Time        = $(date)"
 echo "Hostname          = $(hostname -s)"
 echo "Working Directory = $(pwd)"
 echo ""
@@ -116,9 +117,7 @@ echo "Number of Cores/Task Allocated = $SLURM_CPUS_PER_TASK"
 module purge
 module load MEME_Suite/5.4.1
 
-~/data/motif/
-
-date
+~/data/motif/fimo.sh
 ```
 
 ```
