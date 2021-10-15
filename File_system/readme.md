@@ -23,19 +23,7 @@ Comment
 - check `man hier`   
 - Consider that File system for server uses partision. Each dictory may use different physical disk. For example, `/bin/` and `/usr/local/bin` could use different disk.
 
-# md5sum
-```
-$ md5sum [filename]
-```
 
-running code
-```
-# md5sum *.gz
-```
-
-
-reference: 
-- https://bio-info.tistory.com/47
 # Samba
 Prepare an environment to install Samba
 ```
