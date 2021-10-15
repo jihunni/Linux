@@ -87,7 +87,7 @@ video :
 
 # How to use slurm?
 Ref : https://help.rc.ufl.edu/doc/Sample_SLURM_Scripts
-
+Ref : https://repository.kisti.re.kr/bitstream/10580/6542/1/2014-147%20Slurm%20%EA%B4%80%EB%A6%AC%EC%9E%90%20%EC%9D%B4%EC%9A%A9%EC%9E%90%20%EA%B0%80%EC%9D%B4%EB%93%9C.pdf
 Basic, Single-Threaded Job
 ```
 #!/bin/bash
@@ -130,3 +130,12 @@ $ squeue
                  7     debug fimo_one    jihun  R       0:03      1 life1
 ```
 
+# Administration
+```
+# less /var/log/slurmd.log
+[2021-10-15T21:23:53.181] _run_prolog: run job script took usec=4
+[2021-10-15T21:23:53.182] _run_prolog: prolog with lock for job 7 ran for 0 seconds
+[2021-10-15T21:23:53.182] Launching batch job 7 for UID 1003
+[2021-10-15T21:23:53.208] [7.batch] task/cgroup: /slurm/uid_1003/job_7: alloc=0MB mem.limit=514401MB memsw.limit=514401MB
+[2021-10-15T21:23:53.214] [7.batch] task/cgroup: /slurm/uid_1003/job_7/step_batch: alloc=0MB mem.limit=514401MB memsw.limit=514401MB
+```
