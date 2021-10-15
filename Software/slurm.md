@@ -130,6 +130,42 @@ $ squeue
                  7     debug fimo_one    jihun  R       0:03      1 life1
 ```
 
+slurm stdout contains the output from `slurm.sh`. slurm stderr contains the output from the inner program.  
+slurm-7.o
+```
+2021. 10. 15. (금) 21:23:53 KST
+Date              = 2021. 10. 15. (금) 21:23:53 KST
+Hostname          = life1
+Working Directory = /home/jihun/data/motif
+
+Number of Nodes Allocated      = 1
+Number of Tasks Allocated      = 1
+Number of Cores/Task Allocated = 
+finish
+2021. 10. 15. (금) 21:47:06 KST
+```
+
+less fimo_oneExample.e7.e 
+```
+Using motif +V_MYOD_01 of width 12.
+Using motif -V_MYOD_01 of width 12.
+Warning: Reached max stored scores (100000).
+Motif matches with p-value >= 5.3e-05 have been dropped to reclaim memory.
+Warning: Reached max stored scores (100000).
+Motif matches with p-value >= 2.6e-05 have been dropped to reclaim memory.
+Warning: Reached max stored scores (100000).
+Motif matches with p-value >= 1.2e-05 have been dropped to reclaim memory.
+Warning: Reached max stored scores (100000).
+Motif matches with p-value >= 5.6e-06 have been dropped to reclaim memory.
+Computing q-values.
+# Computing q-values.
+#   Estimating pi_0 from a uniformly sampled set of 10000 p-values.
+#   Estimating pi_0.
+# Minimal pi_zero = 0.996754
+#   Estimated pi_0=0.999296
+```
+
+
 # Administration
 ```
 # less /var/log/slurmd.log
