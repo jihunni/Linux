@@ -84,3 +84,41 @@ sbatch: Submitted batch job [jobID]
 ```
 video : 
 - https://www.youtube.com/watch?v=8N8gb4BSu_4
+
+# How to use slurm?
+```
+$ sbatch fimo_slurm.sh 
+Submitted batch job 6
+```
+
+```
+#!/bin/bash
+#
+#SBATCH --job-name=fimo_oneExample
+#
+#SBATCH --account=jihun
+#SBATCH --mail-type=END,FAIL
+#SBATCH --mail-user=jihun@gm.gist.ac.kr
+#
+#SBATCH --ntasks=1
+#SBATCH --time=01:30:00
+#SBATCH --output=slurm_result.txt
+#SBATCH -o slurm-%j.o
+#SBATCH -e %x.e%j.e
+pwd; hostname; date
+
+echo "Date              = $(date)"
+echo "Hostname          = $(hostname -s)"
+echo "Working Directory = $(pwd)"
+echo ""
+echo "Number of Nodes Allocated      = $SLURM_JOB_NUM_NODES"
+echo "Number of Tasks Allocated      = $SLURM_NTASKS"
+echo "Number of Cores/Task Allocated = $SLURM_CPUS_PER_TASK"
+
+module purge
+module load MEME_Suite/5.4.1
+
+~/data/motif/
+
+date
+```
