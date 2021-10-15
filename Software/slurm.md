@@ -174,3 +174,32 @@ Computing q-values.
 [2021-10-15T21:23:53.208] [7.batch] task/cgroup: /slurm/uid_1003/job_7: alloc=0MB mem.limit=514401MB memsw.limit=514401MB
 [2021-10-15T21:23:53.214] [7.batch] task/cgroup: /slurm/uid_1003/job_7/step_batch: alloc=0MB mem.limit=514401MB memsw.limit=514401MB
 ```
+```
+# scontrol show node
+NodeName=life1 Arch=x86_64 CoresPerSocket=8 
+   CPUAlloc=8 CPUTot=16 CPULoad=0.98
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=(null)
+   NodeAddr=life1 NodeHostName=life1 Version=19.05.8
+   OS=Linux 3.10.0-1160.el7.x86_64 #1 SMP Mon Oct 19 16:18:59 UTC 2020 
+   RealMemory=514401 AllocMem=0 FreeMem=173801 Sockets=2 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=debug 
+   BootTime=2021-06-16T16:23:36 SlurmdStartTime=2021-06-16T16:23:53
+   CfgTRES=cpu=16,mem=514401M,billing=16
+   AllocTRES=cpu=8
+   CapWatts=n/a
+   CurrentWatts=0 AveWatts=0
+   ExtSensorsJoules=n/s ExtSensorsWatts=0 ExtSensorsTemp=n/s
+
+# squeue -o"%.7i %.9P %.8j %.8u %.2t %.10M %.6D %C"
+  JOBID PARTITION     NAME     USER ST       TIME  NODES CPUS
+      8     debug fimo_one    jihun  R      21:38      1 8
+
+# sinfo --Node --long
+Fri Oct 15 22:22:24 2021
+NODELIST   NODES PARTITION       STATE CPUS    S:C:T MEMORY TMP_DISK WEIGHT AVAIL_FE REASON              
+life1          1    debug*       mixed   16    2:8:1 514401        0      1   (null) none                
+
+```
