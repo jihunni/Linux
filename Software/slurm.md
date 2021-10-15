@@ -72,7 +72,7 @@ DATADIR
 module purge # to clean up environment (delete all loaded environment)
 module load [module_name]
 
-srun hostname
+srun hostnamehttps://stackoverflow.com/questions/51139711/hpc-cluster-select-the-number-of-cpus-and-threads-in-slurm-sbatch
 srun sleep 60
 ```
 only in slrum
@@ -86,8 +86,10 @@ video :
 - https://www.youtube.com/watch?v=8N8gb4BSu_4
 
 # How to use slurm?
-Ref : https://help.rc.ufl.edu/doc/Sample_SLURM_Scripts
-Ref : https://repository.kisti.re.kr/bitstream/10580/6542/1/2014-147%20Slurm%20%EA%B4%80%EB%A6%AC%EC%9E%90%20%EC%9D%B4%EC%9A%A9%EC%9E%90%20%EA%B0%80%EC%9D%B4%EB%93%9C.pdf
+Ref : https://help.rc.ufl.edu/doc/Sample_SLURM_Scripts  
+Ref : https://repository.kisti.re.kr/bitstream/10580/6542/1/2014-147%20Slurm%20%EA%B4%80%EB%A6%AC%EC%9E%90%20%EC%9D%B4%EC%9A%A9%EC%9E%90%20%EA%B0%80%EC%9D%B4%EB%93%9C.pdf  
+Ref (ntask vs cpu-per-task) : https://stackoverflow.com/questions/51139711/hpc-cluster-select-the-number-of-cpus-and-threads-in-slurm-sbatch  
+
 Basic, Single-Threaded Job
 ```
 #!/bin/bash
@@ -98,7 +100,8 @@ Basic, Single-Threaded Job
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=jihun@gm.gist.ac.kr
 #
-#SBATCH --ntasks=8
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=8
 #SBATCH --time=01:30:00
 #SBATCH --output=slurm_result.txt
 #SBATCH -o %x.o%j
@@ -183,7 +186,7 @@ NodeName=life1 Arch=x86_64 CoresPerSocket=8
    Gres=(null)
    NodeAddr=life1 NodeHostName=life1 Version=19.05.8
    OS=Linux 3.10.0-1160.el7.x86_64 #1 SMP Mon Oct 19 16:18:59 UTC 2020 
-   RealMemory=514401 AllocMem=0 FreeMem=173801 Sockets=2 Boards=1
+   R#SBATCH ealMemory=514401 AllocMem=0 FreeMem=173801 Sockets=2 Boards=1
    State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
    Partitions=debug 
    BootTime=2021-06-16T16:23:36 SlurmdStartTime=2021-06-16T16:23:53
