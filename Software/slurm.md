@@ -86,11 +86,9 @@ video :
 - https://www.youtube.com/watch?v=8N8gb4BSu_4
 
 # How to use slurm?
-```
-$ sbatch fimo_slurm.sh 
-Submitted batch job 6
-```
+Ref : https://help.rc.ufl.edu/doc/Sample_SLURM_Scripts
 
+Basic, Single-Threaded Job
 ```
 #!/bin/bash
 #
@@ -122,3 +120,13 @@ module load MEME_Suite/5.4.1
 
 date
 ```
+
+```
+$ sbatch fimo_slurm.sh 
+Submitted batch job 6
+
+$ squeue
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+                 7     debug fimo_one    jihun  R       0:03      1 life1
+```
+
