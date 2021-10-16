@@ -11,7 +11,7 @@ yum install screen
 # Debian 계열(Ubuntu 등..)
 apt-get install screen
 ```
-
+GDC_data_transfer_tool/1.6.1
 ### 추가 환경 설정
 아래와 같이 설정 파일을 추가해주면 Screen 사용 시 좀 더 편해집니다. 적용하시는 것을 추천합니다. 각 가상 터미널의 창 구분도 되고 시계도 표시되는 등 더 보기 편해집니다.
 vi ~/.screenrc
@@ -140,7 +140,16 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
  ```
  ![image](https://user-images.githubusercontent.com/48517782/135204312-d90c8bd9-68ea-49a6-9702-743d4364f07d.png)
  > If you execute `$ module load matlab`, then the paths for `Gurobi Optimizer` are automatically set up. Check by `$ env`
-# software for bioinformaitcs
+# software for database
+- GDC_data_transfer_tool
+  software directory : /opt/GDC_data_transfer_tool/1.6.1/
+  ```
+  $ module av
+  $ module load GDC_data_transfer_tool/1.6.1
+  $ gdc-client [command]
+  ```
+
+# software for bioinformaitcs analysis
 - star   
   software directory : /opt/  
   module directory : /opt/Modules/modulefiles/  
