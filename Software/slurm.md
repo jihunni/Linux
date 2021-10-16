@@ -20,6 +20,10 @@ smap
 squeue -u jihun
 
 sbatch
+> option :  
+> - %A_%a.out", "%A" is replaced by the job ID and 
+> - "%a" is replaced by the array index.
+> "%j" is replaced by the job ID
 surn --pty bash #to access head node
 exit # to exit the head node
 
