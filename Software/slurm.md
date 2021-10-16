@@ -106,7 +106,8 @@ Basic, Single-Threaded Job
 #
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
-#SBATCH --time=01:30:00
+#SBATCH --time=01:30:00 
+              # maximum time for each subtask
 #SBATCH --output=slurm_result.txt
 #SBATCH -o %x.o%j
 #SBATCH -e %x.e%j
