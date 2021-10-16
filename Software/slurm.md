@@ -311,6 +311,54 @@ NODELIST   NODES PARTITION       STATE CPUS    S:C:T MEMORY TMP_DISK WEIGHT AVAI
 life1          1    debug*       mixed   16    2:8:1 514401        0      1   (null) none                
 
 ```
+## slurm DB
+DB configuration : /etc/slurm/slurmdbd.conf
+```
+AuthType=auth/munge
+AuthInfo=/var/run/munge/munge.socket.2
+
+DbdAddr=localhost
+DbdHost=localhost
+SlurmUser=slurm
+DebugLevel=4
+LogFile=/var/log/slurm/slurmdbd.log
+PidFile=/var/run/slurmdbd.pid
+
+# Database info
+StorageType=accounting_storage/mysql
+StorageHost=localhost
+StoragePass=1234
+StorageUser=slurm
+StorageLoc=slurm_acct_db
+```
+
+```
+# mysql
+MariaDB [(none)]> use slurm_acct_db;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MariaDB [slurm_acct_db]> show tables;
++-------------------------+
+| Tables_in_slurm_acct_db |
++-------------------------+
+| acct_coord_table        |
+| acct_table              |
+| clus_res_table          |
+| cluster_table           |
+| convert_version_table   |
+| federation_table        |
+| qos_table               |
+| res_table               |
+| table_defs_table        |
+| tres_table              |
+| txn_table               |
+| user_table              |
++-------------------------+
+
+MariaDB [slurm_acct_db]> SHOW TABLE STATUS IN slurm_acct_db;
+```
 
 ## Trouble shooting
 
