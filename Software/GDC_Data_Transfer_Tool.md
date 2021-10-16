@@ -14,7 +14,7 @@ gdc_manifest.txt (example)
 7e36519d-a8ce-4434-8543-bc3cdf339163    fa1500d1-8290-4f30-8ab8-5d712fdde1f1_atacseq_gdc_realn.bam      16e8dcceb8908961981ffe704a383aca        18155553882     validated
 ```
 
-gdc_download_script.sh
+gdc_download_script.sh (slurm script)
 ```
 #!/bin/bash
 #
