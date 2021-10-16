@@ -125,6 +125,13 @@ either of one
 #
 #SBATCH --acount=[userID]
 #
+#SBATCH --mail-user=[email_address]
+#SBATCH --mail-type=BEGIN
+#SBATCH --mail-type=END
+#SBATCH --mail-type=FAIL
+#SBATCH --mail-type=REQUEUE
+#SBATCH --mail-type=ALL
+#
 #SBATCH -N [# Node to compute]
 #SBATCH -n [# Total number of process]
 #SBATCH --ntasks= [# total number of prcess] (in case of array, per each one sub-script)
@@ -182,6 +189,9 @@ sbatch: Submitted batch job [jobID]
 #SBATCH --job-name=slurm_array_example
 #
 #SBATCH --account=jihun
+#
+#SBATCH --mail-user=jihun@gm.gist.ac.kr
+#SBATCH --mail-type=ALL
 #
 #SBATCH --ntasks=1
 #SBATCH --array=0-2
