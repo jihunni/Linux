@@ -271,6 +271,9 @@ Computing q-values.
 
 
 # Administration
+slurm configuration : /etc/slurm/
+
+
 ```
 # less /var/log/slurmd.log
 [2021-10-15T21:23:53.181] _run_prolog: run job script took usec=4
