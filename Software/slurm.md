@@ -10,6 +10,12 @@ PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
 debug*       up   infinite      1   idle life1
 
 $ sinfo -N -l
+
+$ squeue
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+             194_0     debug slurm_ar    jihun  R      25:03      1 life1
+             194_1     debug slurm_ar    jihun  R      25:03      1 life1
+             194_2     debug slurm_ar    jihun  R      25:03      1 life1
 ```
 
 
@@ -111,27 +117,27 @@ submit.sh
 ```
 #!/bin/bash
 either of one
-#SBATCH --job-name=test
-#SBATCH -J test
+#SBATCH --job-name=[job_name]
+#SBATCH -J [job_name]
 작업 수행할 partition을 지정 (either of one)
 #SBATCH -p debug 
 #SBATCH --partition=debug
 #
-#SBATCH --acount=jihun
+#SBATCH --acount=[userID]
 #
-#SBATCH -N 3 # 총 필요한 컴퓨팅 노드 수
-#SBATCH -n 12 #  작업 수행에 필요한 총 프로세스 수
+#SBATCH -N [# Node to compute]
+#SBATCH -n [# Total number of process]
+#SBATCH --ntasks= [# total number of prcess] (in case of array, per each one sub-script)
 >> Total process usage (in case of array, per each one sub-script) = 12
 >> The number of process in a node = 12 / 3 = 4
 #
-#SBATCH --ntasks=1 # 총 필요한 프로세스 수 (in case of array, per each one sub-script)
-#SBATCH --mem-per-cpu=200
-#SBATCH --mem-per-cpu=4G
+#SBATCH --mem-per-cpu=[2000]
+#SBATCH --mem-per-cpu=[2G]
 #
-#SBATCH --time=01:30:00
-#SBATCH -t 01:30:00
+#SBATCH --time=[hh:mm:ss]
+#SBATCH -t [hh:tt:ss]
 #
-#SBATCH --output=res.txt
+#SBATCH --output=[output_filename]
 #SBATCH -o slurm-%j # stdout filename(.o)
 #SBATCH -e %x.e%j #stderr filename(.e)
 #SBATCH --gres=gpu:2 #GPU를 사용하기 위한 옵션
