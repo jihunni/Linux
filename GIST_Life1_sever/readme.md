@@ -7,7 +7,7 @@
   - priority:
     1. system administration
     2. slurm
-    3. general program
-       warning! a general program that interrupts slurm would be killed by system mamger without any notification beforehand.
+    3. general program  
+       **warning!** a general program that interrupts slurm would be killed by system mamger without any notification beforehand.
 
 Contact : Jihun Jeung (jihun@gm.gist.ac.kr)
