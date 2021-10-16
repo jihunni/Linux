@@ -211,3 +211,20 @@ NODELIST   NODES PARTITION       STATE CPUS    S:C:T MEMORY TMP_DISK WEIGHT AVAI
 life1          1    debug*       mixed   16    2:8:1 514401        0      1   (null) none                
 
 ```
+
+## Trouble shooting
+
+check status
+```
+scontrol show node life1
+```
+
+node 중 drain 상태가 뜨는 경우 idle 상태로 전환시키기
+```
+scontrol update nodename=node10 state=resume
+```
+or
+```
+scontrol update nodename=node10 state=idle
+```
+Ref: http://egloos.zum.com/phdjin/v/2245474
