@@ -191,7 +191,7 @@ sbatch: Submitted batch job [jobID]
 #SBATCH --account=jihun
 #
 #SBATCH --mail-user=jihun@gm.gist.ac.kr
-#SBATCH --mail-type=ALL
+#SBATCH --mail-type=BEGIN,FAIL,END
 #
 #SBATCH --ntasks=1
 #SBATCH --array=0-2
