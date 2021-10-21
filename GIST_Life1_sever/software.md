@@ -205,6 +205,15 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
   $ module load BWA-MEM2
   $ bwa-mem2 [command]
   ```
+- kalisto
+  heuristic sequence alignment
+  software directory : /opt/kallisto/2021.10.18/
+  moduel directory : /opt/Modules/modulefiles/kallisto
+  readme directory : 
+  ```
+  $ module load kalisto
+  $ kalisto [command]
+  ```
 - Trimmomatic | [homepage](http://www.usadellab.org/cms/?page=trimmomatic)
   ```
   $ module load trimmomatic
