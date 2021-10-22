@@ -14,9 +14,9 @@
   - GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_reads.gct
   - GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_tpm.gct
 - TRANSFAC
-- HPA
+- HPA  
   HPA (Human Protein Atlas) | [download_page](https://www.proteinatlas.org/about/download)
-  - 20.1
+  - 20.1  
     Human Protein Atlas version 20.1
     - normal_tissue.tsv
     - rna_cancer_sample.tsv
