@@ -2,7 +2,18 @@
 - ref_genome
   - Homo_sapiens.GRCh38.104.gtf
   - Homo_sapiens.GRCh38.dna.primary_assembly.fa
+  
+  Index by BWA-MEM2:
+  - Homo_sapiens.GRCh38.dna.primary_assembly.fa.0123
+  - Homo_sapiens.GRCh38.dna.primary_assembly.fa.amb
+  - Homo_sapiens.GRCh38.dna.primary_assembly.fa.ann
+  - Homo_sapiens.GRCh38.dna.primary_assembly.fa.bwt.2bit.64
+  - Homo_sapiens.GRCh38.dna.primary_assembly.fa.bwt.8bit.32
+  - Homo_sapiens.GRCh38.dna.primary_assembly.fa.pac
 - GTEx | [homeplage](https://gtexportal.org/home/datasets)
   - GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_reads.gct
-  -  GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_tpm.gct
+  - GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_tpm.gct
 - TRANSFAC
+- HPA (Human Protein Atlas) | [download_page](https://www.proteinatlas.org/about/download)
+  - normal_tissue.tsv
+  - rna_cancer_sample.tsv
