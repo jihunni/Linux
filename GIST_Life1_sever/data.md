@@ -24,3 +24,8 @@
 - UCSC_Xena
   - Pan-Cancer_PANCAN [download_page](https://xenabrowser.net/datapages/?cohort=TCGA%20Pan-Cancer%20(PANCAN)&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443)
     - tcga_RSEM_gene_tpm.tsv
+    Processed data (by Jihun Jeung, 2021.10.23) :   
+    - TCGA_PanCan_geneExpression_tissue_median_tpm_INFO.txt
+    - TCGA_PanCan_geneExpression_tissue_median_tpm_INFO.rda
+    - TCGA_PanCan_geneExpression_tissue_median_tpm.txt
+    - TCGA_PanCan_geneExpression_tissue_median_tpm.rda
