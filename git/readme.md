@@ -68,6 +68,19 @@ git push origin master
 git push origin main
 ```
 
+remove large files which is impossible to upload on git
+ref: https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github
+```
+To remove the file, enter git rm --cached: (Stage our giant file for removal, but leave it on disk)
+$ git rm --cached giant_file
+
+Commit this change using --amend -CHEAD:
+$ git commit --amend -CHEAD
+# Amend the previous commit with your change
+# Simply making a new commit won't work, as you need
+# to remove the file from the unpushed history as well
+```
+
 # Reference
 - https://snwo.tistory.com/169
 - [Git] fatal: Authentication failed | https://eehoeskrap.tistory.com/319 : 
