@@ -69,6 +69,7 @@ git push origin main
 ```
 
 remove large files which is impossible to upload on git
+Method 1
 ref: https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github
 ```
 To remove the file, enter git rm --cached: (Stage our giant file for removal, but leave it on disk)
@@ -81,6 +82,11 @@ $ git commit --amend -CHEAD
 # to remove the file from the unpushed history as well
 ```
 
+Method 2
+Ref : https://rtyley.github.io/bfg-repo-cleaner/
+```
+ava -jar /home/jihun/bfg-1.14.0.jar --strip-blobs-bigger-than 100M ~/'metabolism_evolution_project(2021.09)'/.git
+```
 # Reference
 - https://snwo.tistory.com/169
 - [Git] fatal: Authentication failed | https://eehoeskrap.tistory.com/319 : 
