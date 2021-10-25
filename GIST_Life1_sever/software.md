@@ -245,7 +245,12 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
   - bedops
     ```
     $ module load bedops/2.4.40
-    $ [command]
+    $ bedmap [command]
+    ```
+  - bowtie2
+    ```
+    $ module load bowtie2
+    $ bowtie2 [command]
     ```
 # database system
 ## PostgreSQL (version 13)
