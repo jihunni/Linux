@@ -241,5 +241,11 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
     $ ssh -X ID@IP
     $ Cytoscape &
    ```
+   
+  - bedops
+    ```
+    $ module load bedops/2.4.40
+    $ [command]
+    ```
 # database system
 ## PostgreSQL (version 13)
