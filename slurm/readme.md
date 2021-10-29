@@ -25,8 +25,9 @@ $ sacct
 ------------ ---------- ---------- ---------- ---------- ---------- --------
 
 ```
-smap
-squeue -u jihun
+smap  
+squeue -u jihun  
+scamcel
 
 ## run slurm
 sbatch
