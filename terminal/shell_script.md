@@ -142,6 +142,8 @@ IN=$file_name_list
 arrIN=(${IN// / })
 file_name=${arrIN[0]}
 ```
+substring ref : https://wiki.kldp.org/HOWTO/html/Adv-Bash-Scr-HOWTO/string-manipulation.html  
+
 ## merge fastq
 ```
 cat file*.fastq > bigfile.fastq
