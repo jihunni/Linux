@@ -93,10 +93,35 @@ do
 done
 ~     
 ```
+iterate subdirectory:  
+https://stackoverflow.com/questions/14352290/listing-only-directories-using-ls-in-bash
+```
+ls */
+ls -d */
+```
+
+substring :  
+https://wiki.kldp.org/HOWTO/html/Adv-Bash-Scr-HOWTO/string-manipulation.html
+```
+${string%%substring}
+$string의 뒷 부분에서부터 가장 길게 일치하는 $substring을 삭제.
+
+stringZ=abcABC123ABCabc
+#                    ||
+#        |------------|
+
+echo ${stringZ%b*c}      # abcABC123ABCa
+# $stringZ의 뒷 부분부터 계산해서 'b'와 'c' 사이에서 가장 짧게 일치하는 부분을 삭제.
+
+echo ${stringZ%%b*c}     # a
+# $stringZ의 뒷 부분부터 계산해서 'b'와 'c' 사이에서 가장 길게 일치하는 부분을 삭제.
+
+```
+
 
 file name w/o extension
 ```
-for f in $(ls *_*_forward_paired.fastq); do
+for f in $(ls *_*_fohttps://wiki.kldp.org/HOWTO/html/Adv-Bash-Scr-HOWTO/string-manipulation.htmlrward_paired.fastq); do
         #remove '_forward_paired.fastq'
         echo ${f%_*_forward_paired.fastq} ;
 
