@@ -6,6 +6,9 @@ echo ${string_1}
 
 string_2='ghijk'
 echo ${string_2}
+
+For list,
+echo ${list[0]}
 ```
 > warning! no space bewteen equality
 
@@ -129,6 +132,16 @@ done
 
 ```
 
+
+list file name
+```
+file_name_list=$(ls data/*.bam)
+
+#similarly, for loop
+IN=$file_name_list
+arrIN=(${IN// / })
+file_name=${arrIN[0]}
+```
 ## merge fastq
 ```
 cat file*.fastq > bigfile.fastq
