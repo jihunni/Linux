@@ -16,7 +16,7 @@
 #SBATCH --ntasks=1
 #SBATCH --array=0-40
 #SBATCH --cpus-per-task=1
-#SBATCH --mem 4G
+#SBATCH --mem 30GG
 #SBATCH --time=48:00:00
 #SBATCH --output=slurm_result_%j.txt
 #SBATCH -o %x_%A.o%j
