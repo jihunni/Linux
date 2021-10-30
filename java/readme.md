@@ -20,3 +20,7 @@ Ref: https://developer111.tistory.com/33
 	> -Xmxn : Specifies the maximum size, in bytes, of the memory allocation pool. This value must a multiple of 1024 greater than 2 MB. Append the letter k or K to indicate kilobytes, or m or M to indicate megabytes. The default value is chosen at runtime based on system configuration.
 	> For server deployments, -Xms and -Xmx are often set to the same value. See Garbage Collector Ergonomics at http://docs.oracle.com/javase/7/docs/technotes/guides/vm/gc-ergonomics.html
 	> Examples:`-Xmx83886080`, `Xmx81920k`, `Xmx80m`
+
+# Monitoring Tool
+- VisualVM
+	Ref: https://visualvm.github.io/  
