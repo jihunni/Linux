@@ -13,6 +13,7 @@ Ref: https://developer111.tistory.com/33
 	`xception in thread "main" java.lang.OutOfMemoryError: Java heap space`  
 	Ref : https://docs.oracle.com/javase/7/docs/technotes/tools/windows/java.html#nonstandard  
 	Ref : https://alvinalexander.com/blog/post/java/java-xmx-xms-memory-heap-size-control/  
+	Ref : https://www.kdata.or.kr/info/info_04_view.html?field=&keyword=&type=techreport&page=18&dbnum=183834&mode=detail&type=techreport   
 	위의 에러는 heap 영역의 공간이 부족해져서 생긴 오류입니다. 힙 영역의 공간을 늘려주면 해결할 수 있는 부분입니다. 저 또한 메모리가 부족해서 오류가 자주 발생하였지만 일단 중요한거 서버의 메모리가 확보되어있어야 합니다.  
 	  
 	**--solution--**
