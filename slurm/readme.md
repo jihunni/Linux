@@ -27,7 +27,26 @@ $ sacct
 ```
 smap  
 squeue -u jihun  
-scamcel
+
+scancel   
+Ref: https://slurm.schedmd.com/job_array.html
+```
+# Cancel array ID 1 to 3 from job array 20
+$ scancel 20_[1-3]
+
+# Cancel array ID 4 and 5 from job array 20
+$ scancel 20_4 20_5
+
+# Cancel all elements from job array 20
+$ scancel 20
+
+# Cancel the current job or job array element (if job array)
+if [[-z $SLURM_ARRAY_JOB_ID]]; then
+  scancel $SLURM_JOB_ID
+else
+  scancel ${SLURM_ARRAY_JOB_ID}_${SLURM_ARRAY_TASK_ID}
+fi
+```
 
 ## run slurm
 sbatch
