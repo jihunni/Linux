@@ -48,6 +48,26 @@ else
 fi
 ```
 
+check PID
+```
+$ scontrol listpids
+PID      JOBID    STEPID LOCALID GLOBALID
+166396   580      batch  0       0       
+166461   580      batch  -       -       
+166433   582      batch  0       0       
+166510   582      batch  -       -       
+166477   584      batch  0       0       
+166536   584      batch  -       -       
+166519   586      batch  0       0       
+166583   586      batch  -       -       
+81036    599      batch  0       0       
+81047    599      batch  -       -       
+7098     592      batch  0       0       
+7109     592      batch  -       -       
+26688    593      batch  0       0       
+26699    593      batch  -       -       
+```
+
 ## run slurm
 sbatch
 > option :  
