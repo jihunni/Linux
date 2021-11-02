@@ -27,3 +27,9 @@ sum [filename]
 ```
 ref:
 - https://stackoverflow.com/questions/14569281/checksum-and-md5-not-the-same-thing
+
+# GPU - NVIDIA
+GPU memory release : check PID and kill the PID
+```
+nvidia-smi
+```
