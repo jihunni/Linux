@@ -144,6 +144,36 @@ file_name=${arrIN[0]}
 ```
 substring ref : https://wiki.kldp.org/HOWTO/html/Adv-Bash-Scr-HOWTO/string-manipulation.html  
 
+
+```
+## parameters
+input_directory="${PWD}/12_ENCSR548QCP"
+input_output_array=("ENCFF138HKP.fastq.gz ENCFF565VHZ.fastq.gz NCLB246GTQ") #(input1 input2 output_Name)
+triming_seq="/opt/trimmomatic/0.39/adapters/NexteraPE-PE.fa"
+output_directory="$PWD/01_ENCSR496PPU/skewer"
+
+# run program
+echo $input_directory
+for list_array in "${input_output_array[@]}" 
+do
+	IFS=' ' read -r -a list <<< "$list_array"
+		# split string with deliminator ' ' and save in an array
+		# "abc def gqqq" --> list[0], list[1], list[2]
+	#list=$(echo ${list_array} | tr " " "\n")
+
+	#echo "list0"
+	#echo ${list[0]}
+	#echo "list1"
+	#echo ${list[1]}
+	#echo "list2"
+	#echo ${list[2]}
+	input1=${list[0]}
+	input2=${list[1]}
+	output_filename=${list[2]}
+		
+	/program -x ${triming_seq} -o ${output_directory}/${output_filename} $input_directory/${input1} $input_directory/${input2}
+```
+
 ## merge fastq
 ```
 cat file*.fastq > bigfile.fastq
