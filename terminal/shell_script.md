@@ -11,6 +11,8 @@ For list,
 echo ${list[0]}
 ```
 > warning! no space bewteen equality
+## array
+ref : http://blog.redjini.com/282
 
 ## Brace expression
 ```
