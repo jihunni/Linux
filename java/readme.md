@@ -25,6 +25,9 @@ Ref: https://developer111.tistory.com/33
 	> java -Xmx30G -jar [jar_file]
 	> ```
 
+# Memory monitoring
+- Java jstat로 메모리 모니터링 : [link1](https://5dol.tistory.com/182)  [link2](https://greatkim91.tistory.com/74)
+
 # Monitoring Tool
 - VisualVM
 	Ref: https://visualvm.github.io/  
