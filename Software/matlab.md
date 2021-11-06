@@ -1,5 +1,5 @@
 # install matlab and environment setting
-## ionstall matlab
+## install matlab
 ```
 # start license mamger
 /opt/matlab/R2021b_license/etc/glnxa64/lmgrd -c /opt/matlab/R2021b_license/etc/license.dat -l /var/tmp/lm_TMW.log
@@ -48,6 +48,16 @@ prepend-path    LD_LIBRARY_PATH ${GUROBI_HOME}/lib
 #module use /usr/share/modules/versions
 
 
+
+
+```
+
+# restart license manager 
+Ref : https://kr.mathworks.com/matlabcentral/answers/102968-how-do-i-start-or-stop-the-network-license-manager
+```
+cd /usr/local/MATLAB/R2019a/etc/glnxa64
+lmgrd -c <PATH_TO_LICENSE_FILE> -l <PATH_TO_LOG_FILE>
+
 ```
 
 # COBRA toolkit
@@ -55,5 +65,7 @@ prepend-path    LD_LIBRARY_PATH ${GUROBI_HOME}/lib
 >> initCobraToolbox(false)
 ```
 ```
+
+
 
 
