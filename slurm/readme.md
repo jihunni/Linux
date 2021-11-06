@@ -310,6 +310,13 @@ Computing q-values.
 ```
 
 
+## update
+ref: https://stackoverflow.com/questions/28413418/adding-time-to-a-running-slurm-job  
+Use the scontrol command to modify a job  
+```
+scontrol update jobid=<job_id> TimeLimit=<new_timelimit>
+```
+
 # Administration
 slurm configuration : /etc/slurm/
 
