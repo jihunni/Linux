@@ -55,8 +55,99 @@ prepend-path    LD_LIBRARY_PATH ${GUROBI_HOME}/lib
 # restart license manager 
 Ref : https://kr.mathworks.com/matlabcentral/answers/102968-how-do-i-start-or-stop-the-network-license-manager
 ```
-cd /usr/local/MATLAB/R2019a/etc/glnxa64
-lmgrd -c <PATH_TO_LICENSE_FILE> -l <PATH_TO_LOG_FILE>
+Shell# cd /usr/local/MATLAB/R2019a/etc/glnxa64
+Shell# lmgrd -c <PATH_TO_LICENSE_FILE> -l <PATH_TO_LOG_FILE>
+
+./lmgrd -c ../license.dat 
+21:53:14 (lmgrd) -----------------------------------------------
+21:53:14 (lmgrd)   Please Note:
+21:53:14 (lmgrd) 
+21:53:14 (lmgrd)   This log is intended for debug purposes only.
+21:53:14 (lmgrd)   In order to capture accurate license
+21:53:14 (lmgrd)   usage data into an organized repository,
+21:53:14 (lmgrd)   please enable report logging. Use Flexera's
+21:53:14 (lmgrd)   software license administration  solution,
+21:53:14 (lmgrd)   FlexNet Manager, to  readily gain visibility
+21:53:14 (lmgrd)   into license usage data and to create
+21:53:14 (lmgrd)   insightful reports on critical information like
+21:53:14 (lmgrd)   license availability and usage. FlexNet Manager
+21:53:14 (lmgrd)   can be fully automated to run these reports on
+21:53:14 (lmgrd)   schedule and can be used to track license
+21:53:14 (lmgrd)   servers and usage across a heterogeneous
+21:53:14 (lmgrd)   network of servers including Windows NT, Linux
+21:53:14 (lmgrd)   and UNIX.
+21:53:14 (lmgrd) 
+21:53:14 (lmgrd) -----------------------------------------------
+21:53:14 (lmgrd) 
+21:53:14 (lmgrd) 
+21:53:14 (lmgrd) Server's System Date and Time: Sat Nov 06 2021 21:53:14 KST
+21:53:14 (lmgrd) SLOG: Summary LOG statistics is enabled.
+21:53:14 (lmgrd) The license server manager (lmgrd) running as root:
+21:53:14 (lmgrd) 	This is a potential security problem
+21:53:14 (lmgrd) 	and is not recommended.
+[root@life1 glnxa64]# 21:53:14 (lmgrd) FlexNet Licensing (v11.16.2.1 build 244538 x64_lsb) started on life1 (linux) (11/6/2021)
+21:53:14 (lmgrd) Copyright (c) 1988-2018 Flexera. All Rights Reserved.
+21:53:14 (lmgrd) World Wide Web:  http://www.flexerasoftware.com
+21:53:14 (lmgrd) License file(s): ../license.dat
+21:53:14 (lmgrd) lmgrd tcp-port 27000
+21:53:14 (lmgrd) (@lmgrd-SLOG@) ===============================================
+21:53:14 (lmgrd) (@lmgrd-SLOG@) === LMGRD ===
+21:53:14 (lmgrd) (@lmgrd-SLOG@) Start-Date: Sat Nov 06 2021 21:53:14 KST
+21:53:14 (lmgrd) (@lmgrd-SLOG@) PID: 10859
+21:53:14 (lmgrd) (@lmgrd-SLOG@) LMGRD Version: v11.16.2.1 build 244538 x64_lsb ( build 244538 (ipv6))
+21:53:14 (lmgrd) (@lmgrd-SLOG@) 
+21:53:14 (lmgrd) (@lmgrd-SLOG@) === Network Info ===
+21:53:14 (lmgrd) (@lmgrd-SLOG@) Listening port: 27000
+21:53:14 (lmgrd) (@lmgrd-SLOG@) 
+21:53:14 (lmgrd) (@lmgrd-SLOG@) === Startup Info ===
+21:53:14 (lmgrd) (@lmgrd-SLOG@) Server Configuration: Single Server
+21:53:14 (lmgrd) (@lmgrd-SLOG@) Command-line options used at LS startup: -c ../license.dat 
+21:53:14 (lmgrd) (@lmgrd-SLOG@) License file(s) used:  ../license.dat
+21:53:14 (lmgrd) (@lmgrd-SLOG@) ===============================================
+21:53:14 (lmgrd) Starting vendor daemons ... 
+21:53:14 (lmgrd) Started MLM (internet tcp_port 42249 pid 10861)
+21:53:14 (MLM) FlexNet Licensing version v11.16.2.1 build 244538 x64_lsb
+21:53:14 (MLM) SLOG: Summary LOG statistics is enabled.
+21:53:14 (MLM) SLOG: FNPLS-INTERNAL-CKPT1
+21:53:14 (MLM) SLOG: VM Status: 0
+21:53:14 (MLM) SLOG: FNPLS-INTERNAL-CKPT5
+21:53:14 (MLM) SLOG: TPM Status: 0
+21:53:14 (MLM) SLOG: FNPLS-INTERNAL-CKPT6
+21:53:14 (MLM) Server started on life1 for:	MATLAB		
+21:53:14 (MLM) Bioinformatics_Toolbox Statistics_Toolbox 
+21:53:14 (MLM) EXTERNAL FILTERS are OFF
+21:53:14 (lmgrd) MLM using TCP-port 42249
+21:53:14 (MLM) License verification completed successfully.
+21:53:14 (MLM) SLOG: Statistics Log Frequency is 240 minute(s).
+21:53:14 (MLM) SLOG: TS update poll interval is 600 seconds.
+21:53:14 (MLM) SLOG: Activation borrow reclaim percentage is 0.
+21:53:14 (MLM) (@MLM-SLOG@) ===============================================
+21:53:14 (MLM) (@MLM-SLOG@) === Vendor Daemon ===
+21:53:14 (MLM) (@MLM-SLOG@) Vendor daemon: MLM
+21:53:14 (MLM) (@MLM-SLOG@) Start-Date: Sat Nov 06 2021 21:53:14 KST
+21:53:14 (MLM) (@MLM-SLOG@) PID: 10861
+21:53:14 (MLM) (@MLM-SLOG@) VD Version: v11.16.2.1 build 244538 x64_lsb ( build 244538 (ipv6))
+21:53:14 (MLM) (@MLM-SLOG@) 
+21:53:14 (MLM) (@MLM-SLOG@) === Startup/Restart Info ===
+21:53:14 (MLM) (@MLM-SLOG@) Options file used: None
+21:53:14 (MLM) (@MLM-SLOG@) Is vendor daemon a CVD: No
+21:53:14 (MLM) (@MLM-SLOG@) Is FlexNet Licensing Service installed and compatible: No
+21:53:14 (MLM) (@MLM-SLOG@) FlexNet Licensing Service Version: -NA-
+21:53:14 (MLM) (@MLM-SLOG@) Is TS accessed: No
+21:53:14 (MLM) (@MLM-SLOG@) TS access time: -NA-
+21:53:14 (MLM) (@MLM-SLOG@) Number of VD restarts since LS startup: 0
+21:53:14 (MLM) (@MLM-SLOG@) 
+21:53:14 (MLM) (@MLM-SLOG@) === Network Info ===
+21:53:14 (MLM) (@MLM-SLOG@) Listening port: 42249
+21:53:14 (MLM) (@MLM-SLOG@) Daemon select timeout (in seconds): 1
+21:53:14 (MLM) (@MLM-SLOG@) 
+21:53:14 (MLM) (@MLM-SLOG@) === Host Info ===
+21:53:14 (MLM) (@MLM-SLOG@) Host used in license file: life1
+21:53:14 (MLM) (@MLM-SLOG@) HostID node-locked in license file: 2cea7f9647c1 
+21:53:14 (MLM) (@MLM-SLOG@) HostID of the License Server: "2cea7f9647c1 2cea7f9647c0"
+21:53:14 (MLM) (@MLM-SLOG@) Running on Hypervisor: Not determined - treat as Physical
+21:53:14 (MLM) (@MLM-SLOG@) ===============================================
+21:54:01 (MLM) TCP_NODELAY NOT enabled
 
 ```
 
