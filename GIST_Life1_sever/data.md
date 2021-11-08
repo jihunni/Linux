@@ -13,10 +13,9 @@
 - GTEx | [homeplage](https://gtexportal.org/home/datasets)
   - GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_reads.gct
   - GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_tpm.gct
-- TRANSFAC
-   Processed data (by Jihun Jeung, 2021.11.08) :
-  - fimo_transfac_hg38_human_6175.tsv : TRANSFAC human 6,715 motif data mapped on hg38 by FIMO (MEME Suite)
-- 
+- TRANSFAC  
+   Processed data (by Jihun Jeung, 2021.11.08) :  
+  - fimo_transfac_hg38_human_6175.tsv : TRANSFAC human 6,715 motif data mapped on hg38 by FIMO (MEME Suite)  
 - HPA  
   HPA (Human Protein Atlas) | [download_page](https://www.proteinatlas.org/about/download)
   - 20.1  
