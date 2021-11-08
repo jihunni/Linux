@@ -180,6 +180,25 @@ do
 ```
 
 ## merge fastq
+Ref : https://shlee1990.tistory.com/585 : `cat` 명령어   
+Ref: https://do-study.tistory.com/75 : `cat` arguemnt처리  
 ```
+# merge all of contents
+cat file1 file2 file3
 cat file*.fastq > bigfile.fastq
+ls [파일명패턴] | xargs cat > [결과파일명]
 ```
+
+```
+sed -n `1p` filename
+sed -n `1,3p` filename
+sed -n `3,$p` filename
+
+```
+> -n : to print only the desired part  
+> p : 'print'   
+> comma determine the range of print
+> 1.3 : 1~3
+> 3,$ : 3~end of the line
+> 
+
