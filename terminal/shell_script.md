@@ -189,6 +189,7 @@ cat file*.fastq > bigfile.fastq
 ls [파일명패턴] | xargs cat > [결과파일명]
 ```
 
+Ref : https://jhnyang.tistory.com/287 : `sed` 명령어
 ```
 sed -n `1p` filename
 sed -n `1,3p` filename
