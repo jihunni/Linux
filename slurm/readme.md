@@ -225,6 +225,12 @@ sbatch: Submitted batch job [jobID]
 ## example
 ```
 #!/bin/bash
+
+##############################
+# Run HMMRATAC
+# input : $PWD/data/sample.bam, $PWD/data/sample.bami (filtered and sorted)
+# output : $PWD/HMMRATAC/prefix_{something}
+##############################
 #
 #SBATCH --job-name=slurm_array_example
 #
