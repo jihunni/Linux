@@ -9,7 +9,15 @@
   - Homo_sapiens.GRCh38.dna.primary_assembly.fa.ann
   - Homo_sapiens.GRCh38.dna.primary_assembly.fa.bwt.2bit.64
   - Homo_sapiens.GRCh38.dna.primary_assembly.fa.bwt.8bit.32
-  - Homo_sapiens.GRCh38.dna.primary_assembly.fa.pac
+  - Homo_sapiens.GRCh38.dna.primary_assembly.fa.pac  
+  
+  Index by Bowtie2
+  - Homo_sapiens.GRCh38_bowtie2.1.bt2
+  - Homo_sapiens.GRCh38_bowtie2.2.bt2
+  - Homo_sapiens.GRCh38_bowtie2.3.bt2
+  - Homo_sapiens.GRCh38_bowtie2.4.bt2
+  - Homo_sapiens.GRCh38_bowtie2.rev.1.bt2
+  - Homo_sapiens.GRCh38_bowtie2.rev.2.bt2
 - GTEx | [homeplage](https://gtexportal.org/home/datasets)
   - GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_reads.gct
   - GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_tpm.gct
