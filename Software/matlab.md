@@ -54,11 +54,16 @@ prepend-path    LD_LIBRARY_PATH ${GUROBI_HOME}/lib
 
 # restart license manager 
 Ref : https://kr.mathworks.com/matlabcentral/answers/102968-how-do-i-start-or-stop-the-network-license-manager
+General code
 ```
 Shell# cd /usr/local/MATLAB/R2019a/etc/glnxa64
 Shell# lmgrd -c <PATH_TO_LICENSE_FILE> -l <PATH_TO_LOG_FILE>
+```
 
-./lmgrd -c ../license.dat 
+running code
+```
+Shell# cd /opt/matlab/R2021b_license/etc/glnxa64/
+Shell# ./lmgrd -c ../license.dat 
 21:53:14 (lmgrd) -----------------------------------------------
 21:53:14 (lmgrd)   Please Note:
 21:53:14 (lmgrd) 
