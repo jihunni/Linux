@@ -55,7 +55,35 @@ Ref : https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=native
   chr1	10024	10039	.	84.1	-	fimo	nucleotide_motif	.	Name=V_TRF1_01_1-;Alias=TRF1;ID=V_TRF1_01-TRF1-23-1;pvalue=3.86e-09;qvalue=0.0124;sequence=TTAGGGTTAGGGTTA;
   ```
 
+  merge_fimo_result.sorted.bed
+  ```
+  chr1	10000	10012	.	48.6	-	fimo	nucleotide_motif	.		Name=V_ZNF23_02_1-	Name	V_ZNF23_02_1-	Alias=ZNF23	ID=V_ZNF23_02-ZNF23-4540-1	pvalue=1.38e-05	qvalue=1	sequence=GGGTTAGGGTTA
+chr1	10000	10015	.	84.1	-	fimo	nucleotide_motif	.		Name=V_TRF1_01_1-	Name	V_TRF1_01_1-	Alias=TRF1	ID=V_TRF1_01-TRF1-19-1	pvalue=3.86e-09	qvalue=0.0124	sequence=TTAGGGTTAGGGTTA
+chr1	10006	10018	.	48.6	-	fimo	nucleotide_motif	.		Name=V_ZNF23_02_1-	Name	V_ZNF23_02_1-	Alias=ZNF23	ID=V_ZNF23_02-ZNF23-4541-1	pvalue=1.38e-05	qvalue=1	sequence=GGGTTAGGGTTA
+chr1	10006	10021	.	84.1	-	fimo	nucleotide_motif	.		Name=V_TRF1_01_1-	Name	V_TRF1_01_1-	Alias=TRF1	ID=V_TRF1_01-TRF1-20-1	pvalue=3.86e-09	qvalue=0.0124	sequence=TTAGGGTTAGGGTTA
+chr1	10012	10024	.	48.6	-	fimo	nucleotide_motif	.		Name=V_ZNF23_02_1-	Name	V_ZNF23_02_1-	Alias=ZNF23	ID=V_ZNF23_02-ZNF23-4542-1	pvalue=1.38e-05	qvalue=1	sequence=GGGTTAGGGTTA
+chr1	10012	10027	.	84.1	-	fimo	nucleotide_motif	.		Name=V_TRF1_01_1-	Name	V_TRF1_01_1-	Alias=TRF1	ID=V_TRF1_01-TRF1-21-1	pvalue=3.86e-09	qvalue=0.0124	sequence=TTAGGGTTAGGGTTA
+chr1	10018	10030	.	48.6	-	fimo	nucleotide_motif	.		Name=V_ZNF23_02_1-	Name	V_ZNF23_02_1-	Alias=ZNF23	ID=V_ZNF23_02-ZNF23-4543-1	pvalue=1.38e-05	qvalue=1	sequence=GGGTTAGGGTTA
+chr1	10018	10033	.	84.1	-	fimo	nucleotide_motif	.		Name=V_TRF1_01_1-	Name	V_TRF1_01_1-	Alias=TRF1	ID=V_TRF1_01-TRF1-22-1	pvalue=3.86e-09	qvalue=0.0124	sequence=TTAGGGTTAGGGTTA
+chr1	10024	10036	.	48.6	-	fimo	nucleotide_motif	.		Name=V_ZNF23_02_1-	Name	V_ZNF23_02_1-	Alias=ZNF23	ID=V_ZNF23_02-ZNF23-4544-1	pvalue=1.38e-05	qvalue=1	sequence=GGGTTAGGGTTA
+chr1	10024	10039	.	84.1	-	fimo	nucleotide_motif	.		Name=V_TRF1_01_1-	Name	V_TRF1_01_1-	Alias=TRF1	ID=V_TRF1_01-TRF1-23-1	pvalue=3.86e-09	qvalue=0.0124	sequence=TTAGGGTTAGGGTTA
+  ```
+  
+  
   running code for FIMO output gff --> bed --> sorted bed --> awk
   ```
   awk -F '\t' '{OFS="," ; split($10,a,";"); split(a[1], a1, "=") ; split(a[2], a2, "=") ; split(a[3], a3, "="); split(a[4], a4, "="); split(a[5], a5, "="); split(a[6], a6, "="); print "chr"$1 "\t"  $2 "\t"  $3 "\t"  $4 "\t"  $5 "\t"  $6 "\t"  $7 "\t"  $8 "\t" $9 "\t"  a[0] "\t"  a[1] "\t"  a1[2] "\t" a2[2] "\t" a3[2] "\t" a4[2] "\t" a5[2] "\t" a6[2]}' merge_fimo_result.sorted.bed > merge_fimo_result_chr.sorted.bed
+  ```
+  merge_fimo_result_chr.sorted.bed
+  ```
+  chr1	10000	10012	.	48.6	-	fimo	nucleotide_motif	.		Name=V_ZNF23_02_1-	V_ZNF23_02_1-	ZNF23	V_ZNF23_02-ZNF23-4540-1	1.38e-05	1	GGGTTAGGGTTA
+chr1	10000	10015	.	84.1	-	fimo	nucleotide_motif	.		Name=V_TRF1_01_1-	V_TRF1_01_1-	TRF1	V_TRF1_01-TRF1-19-1	3.86e-09	0.0124	TTAGGGTTAGGGTTA
+chr1	10006	10018	.	48.6	-	fimo	nucleotide_motif	.		Name=V_ZNF23_02_1-	V_ZNF23_02_1-	ZNF23	V_ZNF23_02-ZNF23-4541-1	1.38e-05	1	GGGTTAGGGTTA
+chr1	10006	10021	.	84.1	-	fimo	nucleotide_motif	.		Name=V_TRF1_01_1-	V_TRF1_01_1-	TRF1	V_TRF1_01-TRF1-20-1	3.86e-09	0.0124	TTAGGGTTAGGGTTA
+chr1	10012	10024	.	48.6	-	fimo	nucleotide_motif	.		Name=V_ZNF23_02_1-	V_ZNF23_02_1-	ZNF23	V_ZNF23_02-ZNF23-4542-1	1.38e-05	1	GGGTTAGGGTTA
+chr1	10012	10027	.	84.1	-	fimo	nucleotide_motif	.		Name=V_TRF1_01_1-	V_TRF1_01_1-	TRF1	V_TRF1_01-TRF1-21-1	3.86e-09	0.0124	TTAGGGTTAGGGTTA
+chr1	10018	10030	.	48.6	-	fimo	nucleotide_motif	.		Name=V_ZNF23_02_1-	V_ZNF23_02_1-	ZNF23	V_ZNF23_02-ZNF23-4543-1	1.38e-05	1	GGGTTAGGGTTA
+chr1	10018	10033	.	84.1	-	fimo	nucleotide_motif	.		Name=V_TRF1_01_1-	V_TRF1_01_1-	TRF1	V_TRF1_01-TRF1-22-1	3.86e-09	0.0124	TTAGGGTTAGGGTTA
+chr1	10024	10036	.	48.6	-	fimo	nucleotide_motif	.		Name=V_ZNF23_02_1-	V_ZNF23_02_1-	ZNF23	V_ZNF23_02-ZNF23-4544-1	1.38e-05	1	GGGTTAGGGTTA
+chr1	10024	10039	.	84.1	-	fimo	nucleotide_motif	.		Name=V_TRF1_01_1-	V_TRF1_01_1-	TRF1	V_TRF1_01-TRF1-23-1	3.86e-09	0.0124	TTAGGGTTAGGGTTA
   ```
