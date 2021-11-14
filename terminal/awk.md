@@ -1,8 +1,8 @@
 # awk
 Ref : https://recipes4dev.tistory.com/171
 
-- add a specific string 'chr' to 1st column
-  merge_fimo_result.sorted.bed
+- add a specific string 'chr' to 1st column  
+  merge_fimo_result.sorted.bed  
   ```
   $ tail merge_fimo_result.sorted.bed
   Y	56887805	56887817	.	59.8	-	fimo	nucleotide_motif	.	Name=V_IPF1_05_Y-;Alias=ipf1;ID=V_IPF1_05-ipf1-443-Y;pvalue=1.04e-06;qvalue=0.176;sequence=AATCATTAAAAA;
