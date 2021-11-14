@@ -1,5 +1,6 @@
 # awk
 Ref : https://recipes4dev.tistory.com/171
+Ref : https://stackoverflow.com/questions/5374239/tab-separated-values-in-awk
 
 - add a specific string 'chr' to 1st column  
   merge_fimo_result.sorted.bed  
