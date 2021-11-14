@@ -24,7 +24,7 @@ Ref : https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=native
   
   
   ```
-- add a specific string 'chr' to 1st column  
+- FIMO(Old) : add a specific string 'chr' to 1st column  
   merge_fimo_result.sorted.bed  
   ```
   $ tail merge_fimo_result.sorted.bed
@@ -86,4 +86,28 @@ Ref : https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=native
   chr1	10018	10033	.	84.1	-	fimo	nucleotide_motif	.		Name=V_TRF1_01_1-	V_TRF1_01_1-	TRF1	V_TRF1_01-TRF1-22-1	3.86e-09	0.0124	TTAGGGTTAGGGTTA
   chr1	10024	10036	.	48.6	-	fimo	nucleotide_motif	.		Name=V_ZNF23_02_1-	V_ZNF23_02_1-	ZNF23	V_ZNF23_02-ZNF23-4544-1	1.38e-05	1	GGGTTAGGGTTA
   chr1	10024	10039	.	84.1	-	fimo	nucleotide_motif	.		Name=V_TRF1_01_1-	V_TRF1_01_1-	TRF1	V_TRF1_01-TRF1-23-1	3.86e-09	0.0124	TTAGGGTTAGGGTTA
+  ```
+- FIMO (new) :   Fimo tsv --> Fimo bed
+  Fimo.tsv
+  ```
+    d        motif_alt_id    sequence_name   start   stop    strand  score   p-value q-value matched_sequence
+  V_AP4_01        AP-4    1       155294767       155294784       +       25.4309 7.38e-12        0.0435  AGAGCCAGCTGCGGTCAG
+  V_P53_01        p53     1       181135142       181135161       +       32.8776 2.47e-11        0.0728  AGGCATGCCCGGGCATGTCT
+  V_P53_01        p53     1       181135142       181135161       -       32.8776 2.47e-11        0.0728  AGACATGCCCGGGCATGCCT
+  V_MYOGNF1_01    myogenin_/_NF-1 15      80033659        80033687        +       29.8807 3.47e-11        0.205   TGCCTCTCTAATCTGGCACCCTGCCAGCC
+  V_YY1_02        YY1     8       72404808        72404827        -       24.789  4.09e-11        0.00691 TCTCGGCCATCTTGGCTCCT
+  V_YY1_02        YY1     1       17054010        17054029        +       24.6147 5.18e-11        0.00691 CCGCCGCCATCTTGGCTCCT
+  ```
+  
+  Fimo.bed
+  ```
+  $ awk '{OFS="\t" ; print "chr"$3,$4,$5,$1,$8,$6,$10,$2,$7,$9}' fimo_transfac_hg38_human_6175.tsv > fimo_transfac_hg38_human_6175.bed
+  
+ chr1	155294767	155294784	V_AP4_01	7.38e-12	+	AGAGCCAGCTGCGGTCAG	AP-4	25.4309	0.0435
+  chr1	181135142	181135161	V_P53_01	2.47e-11	+	AGGCATGCCCGGGCATGTCT	p53	32.8776	0.0728
+  chr1	181135142	181135161	V_P53_01	2.47e-11	-	AGACATGCCCGGGCATGCCT	p53	32.8776	0.0728
+  chr15	80033659	80033687	V_MYOGNF1_01	3.47e-11	+	TGCCTCTCTAATCTGGCACCCTGCCAGCC	myogenin_/_NF-1	29.8807	0.205
+  chr8	72404808	72404827	V_YY1_02	4.09e-11	-	TCTCGGCCATCTTGGCTCCT	YY1	24.789	0.00691
+  chr1	17054010	17054029	V_YY1_02	5.18e-11	+	CCGCCGCCATCTTGGCTCCT	YY1	24.6147	0.00691
+
   ```
