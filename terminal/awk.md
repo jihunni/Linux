@@ -72,7 +72,7 @@ Ref : https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=native
   
   running code for FIMO output gff --> bed --> sorted bed --> awk
   ```
-  awk -F '\t' '{OFS="," ; split($10,a,";"); split(a[1], a1, "=") ; split(a[2], a2, "=") ; split(a[3], a3, "="); split(a[4], a4, "="); split(a[5], a5, "="); split(a[6], a6, "="); print "chr"$1 "\t"  $2 "\t"  $3 "\t"  $4 "\t"  $5 "\t"  $6 "\t"  $7 "\t"  $8 "\t" $9 "\t"  a[0] "\t"  a[1] "\t"  a1[2] "\t" a2[2] "\t" a3[2] "\t" a4[2] "\t" a5[2] "\t" a6[2]}' merge_fimo_result.sorted.bed > merge_fimo_result_chr.sorted.bed
+  awk -F '\t' '{OFS="\t" ; split($10,a,";"); split(a[1], a1, "=") ; split(a[2], a2, "=") ; split(a[3], a3, "="); split(a3[2], b3, "-"); split(a[4], a4, "="); split(a[5], a5, "="); split(a[6], a6, "="); print "chr"$1,$2,$3,$4,$5,$6,$7, $8, $9,a2[2],b3[1],a4[2],a5[2],a6[2]}' fimo_example.bed
   ```
   merge_fimo_result_chr.sorted.bed
   ```
