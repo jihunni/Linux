@@ -257,6 +257,13 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
 		$ module load igv/2.11.3
 		$ igv.sh
 		```
-	-  
+	- IDR
+		github : https://github.com/kundajelab/idr
+		```
+		$ module load anacona3
+		$ /opt/IDR/idr-2.0.4.2/idr [command]
+		$ /opt/IDR/idr-2.0.4.2/idr -h
+		```
+	- 
 # database system
 ## PostgreSQL (version 13)
