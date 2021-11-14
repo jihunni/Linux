@@ -252,5 +252,11 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
     $ module load bowtie2
     $ bowtie2 [command]
     ```
+	- IGV
+		```
+		$ module load igv/2.11.3
+		$ igv.sh
+		```
+	-  
 # database system
 ## PostgreSQL (version 13)
