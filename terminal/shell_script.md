@@ -124,6 +124,9 @@ echo ${stringZ%b*c}      # abcABC123ABCa
 echo ${stringZ%%b*c}     # a
 # $stringZ의 뒷 부분부터 계산해서 'b'와 'c' 사이에서 가장 길게 일치하는 부분을 삭제.
 
+
+# remove file extension
+file_name=${file_name%.*m} #remove '.bam' on file_name
 ```
 
 
