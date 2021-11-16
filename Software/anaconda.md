@@ -53,3 +53,16 @@ Then, Try `source conda activate example_env`
 Ref:
 - https://hamonikr.org/board_bFBk25/78585
 - https://willbesoon.tistory.com/119
+
+# install bioconda
+```
+# Anaconda Prompt
+pip install package-name
+
+# general in shell
+conda install [package-name]
+
+# example
+conda install -c bioconda pyfasta
+```
+
