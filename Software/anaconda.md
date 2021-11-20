@@ -28,6 +28,19 @@ conda update --all #
 pip install [library_name]
 ```
 
+# install library
+Ref: https://gentlesark.tistory.com/29
+- Jupyter notebook
+- Jupyter Lab
+	```
+	install jupter lab
+	$ conda install -c conda-forge jupyterlab
+	$ pip install jupyterlab
+	
+	execute jupyter lab
+	$ jupyter lab
+	```
+
 # Trouble shooting
 ```
 $ conda activate example_env
