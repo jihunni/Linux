@@ -31,5 +31,10 @@ ref:
 # GPU - NVIDIA
 GPU memory release : check PID and kill the PID
 ```
-nvidia-smi
+$ lshw -C video
+$ lspci | grep VGA
+
+$ nvidia-smi
+# nvidia-smi --query | fgrep 'Product Name'
+    Product Name                          : NVIDIA GeForce RTX 3090
 ```
