@@ -76,7 +76,9 @@ Then, Try `source conda activate example_env`
 Ref:
 - https://hamonikr.org/board_bFBk25/78585
 - https://willbesoon.tistory.com/119
-
+# install library
+- pytorch : https://pytorch.org/get-started/locally/  
+- tensorflow : https://docs.anaconda.com/anaconda/install/multi-user/  
 # install bioconda
 ```
 # Anaconda Prompt
