@@ -40,10 +40,13 @@ pip install [library_name]
 # install library
 Ref: https://gentlesark.tistory.com/29
 - Jupyter notebook
+	```
+	$ pip install notebook
+	```
 - Jupyter Lab
 	```
 	install jupter lab
-	$ conda install -c conda-forge jupyterlab
+	$ conda install -c conda-forge jupyterlab --> may not work
 	$ pip install jupyterlab
 	
 	execute jupyter lab
