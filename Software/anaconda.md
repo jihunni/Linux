@@ -70,6 +70,7 @@ See 'conda init --help' for more information and options.
 
 IMPORTANT: You may need to close and restart your shell after running 'conda init'.
 ```
+Then, Try 'conda init bash' with sudo
 Then, Try `source conda activate example_env`
 
 Ref:
