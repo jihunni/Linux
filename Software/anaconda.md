@@ -79,6 +79,11 @@ Ref:
 # install library
 - pytorch : https://pytorch.org/get-started/locally/  
 - tensorflow : https://docs.anaconda.com/anaconda/install/multi-user/  
+	```
+	conda create -n tf-gpu tensorflow-gpu
+	conda activate tf-gpu
+	```
+- 
 # install bioconda
 ```
 # Anaconda Prompt
