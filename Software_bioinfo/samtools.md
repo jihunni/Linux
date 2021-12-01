@@ -17,6 +17,23 @@ Ref : http://quinlanlab.org/tutorials/samtools/samtools.html
   ```
   samtools fastq -@ 14 -1 ${input_file}_1.fastq.gz -2 ${input_file}_2.fastq.gz -0 ${input_file}_null.fastq.gz -s ${input_file}_null.fastq.gz -n ${input_file}.sam
   ```
+  
+  ```
+  # to convert pre-aligned sam file into pair-end fastq file
+
+  # load module
+  module load samtools
+
+  for input_file in $(ls ${PWD}/data/*.bam)
+  do
+    #input_file='/home/jihun/data/ENCODE/12_ENCSR548QCP/skewer/NCLB246GTQ-trimmed_filter.sam'
+    input_file=${input_file%.*m} #remove '.bam' on file_name
+    echo $input_file	
+
+    samtools fastq -@ 14 -1 ${input_file}_1.fastq.gz -2 ${input_file}_2.fastq.gz -0 ${input_file}_null.fastq.gz -s ${input_file}_null.fastq.gz -n ${input_file}.sam
+    echo 'done'
+  done
+  ```
 - filter
   Ref : http://www.htslib.org/doc/samtools-view.html  
   ```
