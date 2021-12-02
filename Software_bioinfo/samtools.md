@@ -48,4 +48,25 @@ Ref : http://quinlanlab.org/tutorials/samtools/samtools.html
   ```
   samtools sort sample.bam -o sample.sorted.bam
   ```
+- flag stat
+  ```
+  $ samtools flagstat -@ 30  0b069d38-db2f-4d3d-99aa-0533e7e77b19_atacseq_gdc_realn.bam
+  168163105 + 0 in total (QC-passed reads + QC-failed reads)
+  160368412 + 0 primary
+  0 + 0 secondary
+  7794693 + 0 supplementary
+  30427677 + 0 duplicates
+  30427677 + 0 primary duplicates
+  168013928 + 0 mapped (99.91% : N/A)
+  160219235 + 0 primary mapped (99.91% : N/A)
+  160368412 + 0 paired in sequencing
+  80184206 + 0 read1
+  80184206 + 0 read2
+  156223290 + 0 properly paired (97.42% : N/A)
+  160087388 + 0 with itself and mate mapped
+  131847 + 0 singletons (0.08% : N/A)
+  3075804 + 0 with mate mapped to a different chr
+  1183736 + 0 with mate mapped to a different chr (mapQ>=5)
+
+  ````
 - 
