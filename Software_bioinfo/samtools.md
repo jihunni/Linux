@@ -49,6 +49,7 @@ Ref : http://quinlanlab.org/tutorials/samtools/samtools.html
   samtools sort sample.bam -o sample.sorted.bam
   ```
 - flag stat
+  Ref : flag (https://hhj6212.github.io/biology/tech/2021/06/13/samtools-flagstat.html) 
   ```
   $ samtools flagstat -@ 30  0b069d38-db2f-4d3d-99aa-0533e7e77b19_atacseq_gdc_realn.bam
   168163105 + 0 in total (QC-passed reads + QC-failed reads)
