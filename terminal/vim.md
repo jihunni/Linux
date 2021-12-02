@@ -1,3 +1,16 @@
+# search
+ref : https://overcode.tistory.com/entry/vi-%EC%97%90%EC%84%9C-%EB%AC%B8%EC%9E%90%EC%97%B4-%EA%B2%80%EC%83%89
+general code
+```
+:/string
+```
+
+running code
+```
+/찾을문자열
+```
+
+
 # substitution
 ```
 :%s/[원래문자열]/[바꿀문자열]/[옵션]
