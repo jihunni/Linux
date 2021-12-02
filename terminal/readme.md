@@ -38,3 +38,8 @@ $ nvidia-smi
 # nvidia-smi --query | fgrep 'Product Name'
     Product Name                          : NVIDIA GeForce RTX 3090
 ```
+
+# shutdown
+```
+shutdown -h now
+```
