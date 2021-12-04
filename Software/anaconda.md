@@ -37,7 +37,7 @@ pip install [library_name]
 > —name pytorch : Jupyter 내부적으로 쓰이는 kernel의 이름을 지정합니다. 같은 이름을 쓰면 덮어쓰기가 됩니다.  
 > --display-name "PyTorch" : Jupyter Notebook 위에서 사용자에게 보이는 kernel의 이름을 정합니다. 내부적으로 쓰이는 이름과 상관없이 띄어쓰기 등 특수문자도 포함하여 자유롭게 지을 수 있습니다.  
 
-# install library
+# install basic library
 Ref: https://gentlesark.tistory.com/29
 - Jupyter notebook
 	```
@@ -93,15 +93,19 @@ Ref:
 	pip install torch-geometric
 	```
 - 
-# install bioconda
+# install library
+Ref : https://docs.conda.io/projects/conda/en/latest/commands/install.html
 ```
 # Anaconda Prompt
 pip install package-name
 
 # general in shell
-conda install [package-name]
+conda install -c [channel] -n [environment_name] [package-name]
 
 # example
 conda install -c bioconda pyfasta
 ```
-
+install with conda-forge
+```
+conda install --channel=conda-forge physics-tenpy
+```
