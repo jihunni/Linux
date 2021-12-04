@@ -62,6 +62,10 @@ find . -maxdepth 1 -mindepth 1 ! -name '*_bak'
 ```
 reference: https://stackoverflow.com/questions/11043878/linux-search-file-based-on-file-name-pattern
 
+count the number of files
+	```
+	ls | wc -l
+	```
 
 # create folder
 ```
