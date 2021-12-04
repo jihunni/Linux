@@ -104,6 +104,7 @@ conda install -c [channel] -n [environment_name] [package-name]
 
 # example
 conda install -c bioconda pyfasta
+conda install -n pytorch -c conda-forge rdkit
 ```
 install with conda-forge
 ```
