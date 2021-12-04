@@ -79,21 +79,10 @@ Then, Try `source conda activate example_env`
 Ref:
 - https://hamonikr.org/board_bFBk25/78585
 - https://willbesoon.tistory.com/119
-# install library
-- pytorch : https://pytorch.org/get-started/locally/  
-- tensorflow : https://docs.anaconda.com/anaconda/install/multi-user/  
-	```
-	conda create -n tf-gpu tensorflow-gpu
-	conda activate tf-gpu
-	```
-- pytorch_geometric : 
-	```
-	pip install torch-scatter -f https://data.pyg.org/whl/torch-1.10.0+cu113.html
-	pip install torch-sparse -f https://data.pyg.org/whl/torch-1.10.0+cu113.html
-	pip install torch-geometric
-	```
-- 
-# install library
+
+
+
+# install library in conda env
 Ref : https://docs.conda.io/projects/conda/en/latest/commands/install.html
 ```
 # Anaconda Prompt
@@ -110,3 +99,25 @@ install with conda-forge
 ```
 conda install --channel=conda-forge physics-tenpy
 ```
+
+# install library
+- pytorch : https://pytorch.org/get-started/locally/  
+- tensorflow : https://docs.anaconda.com/anaconda/install/multi-user/  
+	```
+	conda create -n tf-gpu tensorflow-gpu
+	conda activate tf-gpu
+	```
+- pytorch_geometric : 
+	```
+	pip install torch-scatter -f https://data.pyg.org/whl/torch-1.10.0+cu113.html
+	pip install torch-sparse -f https://data.pyg.org/whl/torch-1.10.0+cu113.html
+	pip install torch-geometric
+	```
+- pytorch, pytorch_geometric, rdkit
+	rdkit env collide with pytorch env. 
+	```
+	In pytorch and pytorch_geometric env,
+	# conda install -c conda-forge mamba
+	# mamba install -c conda-forge rdkit
+	```
+- 
