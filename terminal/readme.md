@@ -40,6 +40,8 @@ $ nvidia-smi
 ```
 
 # shutdown
+Ref: https://nan1004au.tistory.com/entry/%EB%A6%AC%EB%88%85%EC%8A%A4-%EC%98%88%EC%A0%95%EB%90%9C-%EC%8B%9C%EA%B0%84%EC%97%90-%EC%A2%85%EB%A3%8C%EC%8B%9C%ED%82%A4%EA%B8%B0
 ```
 shutdown -h now
+shutdown -h +210 # after 210 minuite, system shut downs
 ```
