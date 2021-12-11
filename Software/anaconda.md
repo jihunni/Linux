@@ -102,7 +102,25 @@ conda install --channel=conda-forge physics-tenpy
 ```
 
 # install library
-- pytorch : https://pytorch.org/get-started/locally/  
+- pytorch : https://pytorch.org/get-started/locally/ 
+ ```
+	 import torch
+
+	torch.cuda.is_available()
+	>>> True
+
+	torch.cuda.current_device()
+	>>> 0
+
+	torch.cuda.device(0)
+	>>> <torch.cuda.device at 0x7efce0b03be0>
+
+	torch.cuda.device_count()
+	>>> 1
+
+	torch.cuda.get_device_name(0)
+	>>> 'GeForce GTX 950M'
+ ```
 - tensorflow : https://docs.anaconda.com/anaconda/install/multi-user/  
 	```
 	conda create -n tf-gpu tensorflow-gpu
