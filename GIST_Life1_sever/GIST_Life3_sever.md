@@ -21,6 +21,7 @@ jupyter-lab (OR jupter lab, OR jupyter-notebook, OR jupyter notebook)
 
 # To access Tensorboard,
 tensorboard --logdir=runs
+  # http://localhost:6006/ 
 
 # In jupyter notebook consol,
 import rdkit
