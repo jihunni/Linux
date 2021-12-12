@@ -101,7 +101,7 @@ install with conda-forge
 conda install --channel=conda-forge physics-tenpy
 ```
 
-# install library
+# ML/DL library
 - pytorch : https://pytorch.org/get-started/locally/ 
  ```
 	 import torch
@@ -139,4 +139,9 @@ conda install --channel=conda-forge physics-tenpy
 	# conda install -c conda-forge mamba
 	# mamba install -c conda-forge rdkit
 	```
-- 
+- tensorboard
+	```
+	pip install tensorboard
+	```
+	
+	```
