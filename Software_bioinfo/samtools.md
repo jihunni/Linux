@@ -70,4 +70,9 @@ Ref : http://quinlanlab.org/tutorials/samtools/samtools.html
   1183736 + 0 with mate mapped to a different chr (mapQ>=5)
 
   ````
+- to merge multipe bam files into a single bam files
+  ref : http://www.htslib.org/doc/samtools-merge.html
+  ```
+  samtools merge merged.bam *.bam
+  ```
 - 
