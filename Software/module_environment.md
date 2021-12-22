@@ -35,3 +35,6 @@
 	#module use /usr/share/modules/versions
 
 	```
+
+# centos7
+path : /usr/share/Modules/init
