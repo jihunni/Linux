@@ -41,6 +41,16 @@
   export R_HOME=/opt/R/4.1.2
   export RSTUDIO_WHICH_R=/opt/R/4.1.2/bin/R
   ```
+
+  R version change for Rstudio (Open Source Edition)
+  ```
+  # vi /etc/rstudio/rserver.conf
+    rsession-which-r=/opt/R/4.1.2/bin/R
+  
+  Close all session in Rstudio sever
+  
+  # systemctl restart rstudio-server.service
+  ```
 # Rstudio
 ## systemctl
 ```
