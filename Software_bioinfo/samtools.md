@@ -73,6 +73,7 @@ Ref : http://quinlanlab.org/tutorials/samtools/samtools.html
 - to merge multipe bam files into a single bam files
   ref : http://www.htslib.org/doc/samtools-merge.html
   ```
+  samtools merge merged.bam in.1.bam in.2.bam
   samtools merge merged.bam *.bam
   ```
 - 
