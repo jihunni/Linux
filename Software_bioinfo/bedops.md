@@ -19,7 +19,20 @@
           > common.bed
       ```
 # bedmap
--
+- to map map.bed file on transfac_motif.bed file
+  general code
+  ```
+  bedmap --echo --skip-unmapped transfac_motif.bed map.bed > map_annotated.bed
+  ```
+  > --echo : to print each line from <ref-file (transfac_motif.bed) >
+  > --skip-unmapped : remove the unmapped line (blank line)  
+  
+  running code
+  ```
+  bedmap --echo --skip-unmapped /home/jihun/data/motif/merge_fimo_result_chr.bed summits_difference_TCGA_ENCODE.bed > summits_difference_TCGA_ENCODE_transfac.bed
+  ```
+  
+  It does not work!
   ```
   # load module
   module load bedops
