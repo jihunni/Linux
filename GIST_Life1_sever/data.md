@@ -23,7 +23,9 @@
   - GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_tpm.gct
 - TRANSFAC  
    Processed data (by Jihun Jeung, 2021.11.08) :  
-  - fimo_transfac_hg38_human_6175.tsv : TRANSFAC human 6,715 motif data mapped on hg38 by FIMO (MEME Suite)  
+  - fimo_transfac_hg38_human_6175.tsv  : TRANSFAC human 6,715 motif data mapped on hg38 by FIMO (MEME Suite)  [it is likely to have error. please check the file]
+  - fimo_transfac_hg38_human_6175.sorted.bed : TRANSFAC human 6,715 motif data mapped on hg38 by FIMO (MEME Suite) without 'chr'
+  - fimo_transfac_hg38_human_6175.sorted_chr.bed : : TRANSFAC human 6,715 motif data mapped on hg38 by FIMO (MEME Suite) with 'chr'
 - HPA  
   HPA (Human Protein Atlas) | [download_page](https://www.proteinatlas.org/about/download)
   - 20.1  
