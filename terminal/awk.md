@@ -42,6 +42,10 @@ Ref : https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=native
   
   running code
   ```
+  $ awk '{print "chr"$0}' merge_fimo_result.bed > merge_fimo_result_chr.bed
+  ```
+  
+  ```
   $ awk -F ';' '{ FS="\t "} {print "chr"$1 $2 $3 $4 $5 $6 $7 $8 $9 $10 $11}' merge_fimo_result.bed > merge_fimo_result_chr.bed
   chr1	10000	10012	.	48.6	-	fimo	nucleotide_motif	.	Name=V_ZNF23_02_1-Alias=ZNF23ID=V_ZNF23_02-ZNF23-4540-1pvalue=1.38e-05qvalue=1sequence=GGGTTAGGGTTA
   chr1	10000	10015	.	84.1	-	fimo	nucleotide_motif	.	Name=V_TRF1_01_1-;Alias=TRF1;ID=V_TRF1_01-TRF1-19-1;pvalue=3.86e-09;qvalue=0.0124;sequence=TTAGGGTTAGGGTTA;
