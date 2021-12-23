@@ -229,3 +229,8 @@ sed -n `3,$p` filename
 > 3,$ : 3~end of the line
 > 
 
+# to measure performance
+```
+echo "Start Time        = $(date)"
+echo "End Time        = $(date)"
+```
