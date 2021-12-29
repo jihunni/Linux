@@ -42,3 +42,7 @@
     - TCGA_PanCan_geneExpression_tissue_median_tpm_INFO.rda
     - TCGA_PanCan_geneExpression_tissue_median_tpm.txt
     - TCGA_PanCan_geneExpression_tissue_median_tpm.rda
+  - GDC TCGA COAD [download page](https://xenabrowser.net/datapages/?cohort=GDC%20TCGA%20Colon%20Cancer%20(COAD)&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443)
+    - TCGA-COAD.GDC_phenotype.tsv.gz
+    - TCGA-COAD.htseq_counts.tsv.gz
+    - TCGA-COAD.survival.tsv
