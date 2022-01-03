@@ -1,4 +1,8 @@
 # bedops
+  - add 'chr' on chromosome name
+    ```
+    awk '{print "chr"$0}' input.bed > output_with_chr.bed
+    ```
   - to merge multiple bed files into a single bed file
     ```
     cat *.bed > merged.bed
