@@ -3,6 +3,10 @@
     ```
     cat *.bed > merged.bed
     ```
+  - to merge multiplbe ed files into a single tsv format with calculating scores
+    ```
+    cat *.bed | sort-bed -  | bedmap --count --echo --sum --delim '\t' - > merge.bed  
+    ```
   - sorting
     Ref : https://bedops.readthedocs.io/en/latest/content/reference/file-management/sorting/sort-bed.html
     ```
