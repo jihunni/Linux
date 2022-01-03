@@ -7,7 +7,7 @@
     ```
     cat *.bed > merged.bed
     ```
-  - to merge multiplbe ed files into a single tsv format with calculating scores
+  - to merge multiplbe bed files into a single tsv format with calculating scores
     ```
     cat *.bed | sort-bed -  | bedmap --count --echo --sum --delim '\t' - > merge.bed  
     ```
@@ -26,6 +26,13 @@
           | cut -f2- \
           > common.bed
       ```
+  - difference : the genomic regions found within the first (reference) input file, excluding regions in all other input files:
+    Ref : https://bedops.readthedocs.io/en/latest/content/reference/set-operations/bedops.html  
+    ![image](https://user-images.githubusercontent.com/48517782/147903426-483738af-dfb8-49ac-8a4f-a01ed90d61c1.png)  
+    ```
+    $ bedops --difference First.bed Second.bed > Result.bed
+    ```
+  - 
 # bedmap
 - to map map.bed file on transfac_motif.bed file
   general code
