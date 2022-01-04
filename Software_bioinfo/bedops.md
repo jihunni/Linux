@@ -3,7 +3,7 @@
     ```
     awk '{print "chr"$0}' input.bed > output_with_chr.bed
     ```
-  - to count the number of lines (the number of peaks)
+  - to count the number of lines (the number of peaks, the library size)
     ```
     for file_name in $(ls HMMRATAC_slurm_4_summit_process_500/*)
     do
