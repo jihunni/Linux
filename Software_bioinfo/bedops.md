@@ -1,7 +1,14 @@
-# bedops
+# ATACseq and bedops
   - add 'chr' on chromosome name
     ```
     awk '{print "chr"$0}' input.bed > output_with_chr.bed
+    ```
+  - to count the number of lines (the number of peaks)
+    ```
+    for file_name in $(ls HMMRATAC_slurm_4_summit_process_500/*)
+    do
+            cat $file_name | wc -l
+    done
     ```
   - to merge multiple bed files into a single bed file
     ```
