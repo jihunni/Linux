@@ -44,29 +44,26 @@
 - to map map.bed file on transfac_motif.bed file
   general code
   ```
-  bedmap --echo --skip-unmapped transfac_motif.bed map.bed > map_annotated.bed
+  bedmap --echo --skip-unmapped map.bed transfac_motif.bed > map_annotated.bed
   ```
   > --echo : to print each line from <ref-file (transfac_motif.bed) >
   > --skip-unmapped : remove the unmapped line (blank line)  
+  > reference : map.bed 
+  > motif : transfac_motif.bed
   
   running code
   ```
-  bedmap --echo --skip-unmapped /home/jihun/data/motif/merge_fimo_result_chr.bed summits_difference_TCGA_ENCODE.bed > summits_difference_TCGA_ENCODE_transfac.bed
+ bedmap --echo --echo-map-id --skip-unmapped TCGA-COAD_merge_process.sorted.bed fimo_transfac_hg38_human_6175.sorted_chr_bedops_padj0.05.bed > TCGA-COAD_merge_process_transfac_padj0.05.bed
+
   ```
-  
-  It does not work!
   ```
-  # load module
+  # load modules
   module load bedops
 
-  #input
-  reference_file='reference_bedmap_motifs_2.bed'
-  data_file='reference_bedmap_map_2.bed'
-  #data_file='/home/jihun/data/TCGA-COAD_ATAC/HMMRATAC_slurm_2/eedca752-bfb9-4a73-a800-613aa1f5fe27_atacseq_gdc_realn_summits.sorted.bed'
+  # run the comparison with TRANSFAC
+  echo "Start Time        = $(date)"
 
-  #output
-  output_file='bedmap_example.bed'
-  # --echo-map flag gathers overlapping mapped elements for every reference elements
-  bedmap --echo  --mean ${reference_file} ${data_file} > $output_file
-  #bedmap --chrom chr21 --skip-unmapped --echo-map ${reference_file} ${data_file} > example_out.bed
+  bedmap --echo --echo-map-id --skip-unmapped TCGA-COAD_merge_process.sorted.bed fimo_transfac_hg38_human_6175.sorted_chr_bedops_padj0.05.bed > TCGA-COAD_merge_process_transfac_padj0.05.bed
+
+  echo "End Time        = $(date)"
   ```
