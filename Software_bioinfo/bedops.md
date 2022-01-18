@@ -53,8 +53,7 @@
   
   running code
   ```
- bedmap --echo --echo-map-id --skip-unmapped TCGA-COAD_merge_process.sorted.bed fimo_transfac_hg38_human_6175.sorted_chr_bedops_padj0.05.bed > TCGA-COAD_merge_process_transfac_padj0.05.bed
-
+   bedmap --echo --echo-map-id --skip-unmapped TCGA-COAD_merge_process.sorted.bed fimo_transfac_hg38_human_6175.sorted_chr_bedops_padj0.05.bed > TCGA-COAD_merge_process_transfac_padj0.05.bed
   ```
   ```
   # load modules
