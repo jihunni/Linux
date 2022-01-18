@@ -19,11 +19,9 @@ Ref : https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=native
     -f 옵션이 사용되지 않은 경우, awk가 실행할 awk program 코드 지정.
   ARGUMENT
     입력 파일 지정 또는 variable 값 지정.
-
-
-  
-  
   ```
+  
+# FIMO
 - FIMO(Old) : add a specific string 'chr' to 1st column  
   merge_fimo_result.sorted.bed  
   ```
@@ -116,7 +114,7 @@ Ref : https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=native
 
   ```
   
-  FIMO in `bedops` format
+  ## FIMO in `bedops` format
   ```
   awk '{split($10,a,";"); split(a[1],a1,"="); split(a[2],a2,"="); split(a[3],a3,"=");split(a[5],a5,"="); split(a[6],a6,"="); print $1,'\t',$2,'\t',$3,substr(a1[2],1,length(a1[2])-1),'\t',a5[2],'\t',$6,'\t',a6[2]}' transfac_ex.tsv
   ```
@@ -138,4 +136,9 @@ Ref : https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=native
   chr1  10042  10054 V_ZNF23_02_1  1  -  GGGTTAGGGTTA
   chr1  10042  10057 V_TRF1_01_1  0.0124  -  TTAGGGTTAGGGTTA
 
+  ```
+  
+  select only padj < 0.05
+  ```
+  awk '$5 < 0.05 {print}' fimo_transfac_hg38_human_6175.sorted_chr_bedops.bed > fimo_transfac_hg38_human_6175.sorted_chr_bedops_padj0.05.bed
   ```
