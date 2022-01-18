@@ -115,3 +115,27 @@ Ref : https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=native
   chr1	17054010	17054029	V_YY1_02	5.18e-11	+	CCGCCGCCATCTTGGCTCCT	YY1	24.6147	0.00691
 
   ```
+  
+  FIMO in `bedops` format
+  ```
+  awk '{split($10,a,";"); split(a[1],a1,"="); split(a[2],a2,"="); split(a[3],a3,"=");split(a[5],a5,"="); split(a[6],a6,"="); print $1,'\t',$2,'\t',$3,substr(a1[2],1,length(a1[2])-1),'\t',a5[2],'\t',$6,'\t',a6[2]}' transfac_ex.tsv
+  ```
+  ```
+  chr1  10000  10012 V_ZNF23_02_1  1  -  GGGTTAGGGTTA
+  chr1  10000  10015 V_TRF1_01_1  0.0124  -  TTAGGGTTAGGGTTA
+  chr1  10006  10018 V_ZNF23_02_1  1  -  GGGTTAGGGTTA
+  chr1  10006  10021 V_TRF1_01_1  0.0124  -  TTAGGGTTAGGGTTA
+  chr1  10012  10024 V_ZNF23_02_1  1  -  GGGTTAGGGTTA
+  chr1  10012  10027 V_TRF1_01_1  0.0124  -  TTAGGGTTAGGGTTA
+  chr1  10018  10030 V_ZNF23_02_1  1  -  GGGTTAGGGTTA
+  chr1  10018  10033 V_TRF1_01_1  0.0124  -  TTAGGGTTAGGGTTA
+  chr1  10024  10036 V_ZNF23_02_1  1  -  GGGTTAGGGTTA
+  chr1  10024  10039 V_TRF1_01_1  0.0124  -  TTAGGGTTAGGGTTA
+  chr1  10030  10042 V_ZNF23_02_1  1  -  GGGTTAGGGTTA
+  chr1  10030  10045 V_TRF1_01_1  0.0124  -  TTAGGGTTAGGGTTA
+  chr1  10036  10048 V_ZNF23_02_1  1  -  GGGTTAGGGTTA
+  chr1  10036  10051 V_TRF1_01_1  0.0124  -  TTAGGGTTAGGGTTA
+  chr1  10042  10054 V_ZNF23_02_1  1  -  GGGTTAGGGTTA
+  chr1  10042  10057 V_TRF1_01_1  0.0124  -  TTAGGGTTAGGGTTA
+
+  ```
