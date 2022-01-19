@@ -182,7 +182,7 @@ Ctrl+a, d : screen 탈출(screen은 계속 실행중이다.)
   
   1. Enable X11 forwarding by writing option `-X`
     ```
-    ssh id@xx.xxxx.xx.x -X
+    ssh -X id@xx.xxxx.xx.x 
     ```
   
   2. module load FastQC
