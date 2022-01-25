@@ -9,6 +9,7 @@
   $ prodigal [command]
   ```
 - HMMER/3.3.2
+  Reference : https://hmmer-web-docs.readthedocs.io/en/latest/index.html
   Directory : /opt/HMMER/3.3.2/
   ```
   $ module load HMMER/3.3.2
