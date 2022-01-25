@@ -14,4 +14,13 @@
   $ module load HMMER/3.3.2
   $ [command]
   ```
+  
+  example
+  ```
+  $ ls
+  Pfam-A.hmm
+  $ hmmpress Pfam-A.hmm  
+  $ ls
+  Pfam-A.hmm  Pfam-A.hmm.h3f  Pfam-A.hmm.h3i  Pfam-A.hmm.h3m  Pfam-A.hmm.h3p
+  ```
 - 
