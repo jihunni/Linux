@@ -10,4 +10,8 @@
     3. general program  
        **warning!** a general program that interrupts slurm would be killed by system mamger without any notification beforehand.
 
+
+# Welcome to Life Sever 3 Guide
+- [software](https://github.com/jihunni/Linux/blob/master/GIST_Life1_sever/software.md) : a list of avaiable softwares in Life sever and their brief description.
+
 Contact : Jihun Jeung (jihun@gm.gist.ac.kr)
