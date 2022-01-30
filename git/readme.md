@@ -42,6 +42,7 @@ Git 설정
 ```
 git config --global user.email "~~@~~.com"
 git config --global user.name "깃허브이름"
+git config --global init.defaultBranch main
 
 git init
 
