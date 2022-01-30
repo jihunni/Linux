@@ -1,3 +1,9 @@
+# Environment
+- Sourcetree
+- iTerm2
+  - d2codingfont. 
+    https://github.com/naver/d2codingfont. 
+    
 # Private Repository
 ```
 #Generate SSH key
@@ -90,9 +96,20 @@ logs/*.c
 
 # logs 폴더 바로 안, 또는 그 안의 다른 폴더(들) 안의 debug.log
 logs/**/debug.log
-```
+````
 
-##
+## git modification
+```
+$ git diff
+```
+작업	Vi 명령어	상세
+위로 스크롤	k	git log등에서 내역이 길 때 사용
+아래로 스크롤	j	git log등에서 내역이 길 때 사용
+끄기	:q	:가 입력되어 있으므로 q만 눌러도 됨
+
+
+
+## Git basics
 ```
 git fetch
 git pull origin master
@@ -128,6 +145,8 @@ Ref : https://rtyley.github.io/bfg-repo-cleaner/
 ```
 ava -jar /home/jihun/bfg-1.14.0.jar --strip-blobs-bigger-than 100M ~/'metabolism_evolution_project(2021.09)'/.git
 ```
+# Reset and Revert
+
 # Reference
 - https://snwo.tistory.com/169
 - [Git] fatal: Authentication failed | https://eehoeskrap.tistory.com/319 : 
