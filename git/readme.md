@@ -38,7 +38,8 @@ Insert public key into Github account setting
 https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token
 
 # Git 
-Git 설정
+Ref : https://www.youtube.com/watch?v=1I3hMwQU6GU&ab_channel=%EC%96%84%ED%8C%8D%ED%95%9C%EC%BD%94%EB%94%A9%EC%82%AC%EC%A0%84
+## Git 설정
 ```
 git config --global user.email "~~@~~.com"
 git config --global user.name "깃허브이름"
@@ -51,8 +52,47 @@ git remote -v
 git remote remove origin
 
 ```
+## git ignore
+Ref : https://git-scm.com/docs/gitignore
+```
+$ git status
+$ vi .gitignore
+  ~~~
+  file_name_for_ignore
+  ~~~
+```
 
+Git ignore format
+````
+# 이렇게 #를 사용해서 주석
 
+# 모든 file.c
+file.c
+
+# 최상위 폴더의 file.c
+/file.c
+
+# 모든 .c 확장자 파일
+*.c
+
+# .c 확장자지만 무시하지 않을 파일
+!not_ignore_this.c
+
+# logs란 이름의 파일 또는 폴더와 그 내용들
+logs
+
+# logs란 이름의 폴더와 그 내용들
+logs/
+
+# logs 폴더 바로 안의 debug.log와 .c 파일들
+logs/debug.log
+logs/*.c
+
+# logs 폴더 바로 안, 또는 그 안의 다른 폴더(들) 안의 debug.log
+logs/**/debug.log
+```
+
+##
 ```
 git fetch
 git pull origin master
