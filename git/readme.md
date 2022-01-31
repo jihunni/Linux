@@ -145,8 +145,71 @@ Ref : https://rtyley.github.io/bfg-repo-cleaner/
 ```
 ava -jar /home/jihun/bfg-1.14.0.jar --strip-blobs-bigger-than 100M ~/'metabolism_evolution_project(2021.09)'/.git
 ```
-# Reset and Revert
+## Reset and Revert
+```
+git log
+git reset --hard [commit_hash]
+git revert (--no-commit) [commit_hash]
+```
 
+## branch
+```
+git branch # to check a list of branch
+git branch [new_branch_name]
+git switch (-c) [branch_name] 
+  # -c : to create a branch and move
+git branch -d [banch_name] # -d : to delete a branch
+git branch -d [banch_name] # -D : to delete a branch by force
+git branch -m [old_name] [new_name] # to change a branch name
+git log --all --decorate --oneline --graph
+
+```
+
+### merge and rebase
+- merge : 두 브랜치를 한 커밋에 이어붙입니다.
+  - 브랜치 사용내역을 남길 필요가 있을 때 적합한 방식입니다.
+  - 다른 형태의 merge에 대해서도 이후 다루게 될 것입니다.  
+  
+  To merge `branch_A` into `main`
+  ```
+  git switch main
+  git merge [branch_name]
+  git reset --hard [commit_hash] # `merge` is revertible with `reset` 
+  git branch -d [branch_name] # remove an unnecessary branch after merging
+  ```
+  
+  If collision occurs,
+  ```
+  1) 
+  $ git merge --abrort
+  
+
+  2)
+  solve the collision part with >>>>
+  $ git add .
+  $ git commit -m `commit_message`
+  ```
+- rebase : 브랜치를 다른 브랜치에 이어붙입니다.
+  - 한 줄로 깔끔히 정리된 내역을 유지하기 원할 때 적합합니다.
+  - 이미 팀원과 공유된 커밋들에 대해서는 사용하지 않는 것이 좋습니다.
+  
+  To rebase `branch_B` into `main`
+  ```
+  git switch branch_B
+  git rebase main
+  git switch main # move to main
+  git merge branch_B # fast-forward
+  ```
+
+  If cossion occurs,
+  ```
+  1)
+  git rebase --abort
+  
+  2)
+  solve the collision part with >>>>>
+  $ git rebase --continue
+  ```
 # Reference
 - https://snwo.tistory.com/169
 - [Git] fatal: Authentication failed | https://eehoeskrap.tistory.com/319 : 
