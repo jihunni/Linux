@@ -164,52 +164,52 @@
   ```
   java -jar /opt/HMMRATAC/1.2.10/HMMRATAC_V1.2.10_exe.jar [command]
   ```
- - THE ENCODE BLACK LIST  
-   directory : /opt/The_ENCODE_Blacklist/20210922  
-   black list : /opt/The_ENCODE_Blacklist/20210922/lists
-   ```
-   $ ls
-    Blacklist_v1           dm6-blacklist.v2.bed       metadata
-    ce10-blacklist.v2.bed  hg19-blacklist-README.pdf  mm10-blacklist.v2.bed
-    ce11-blacklist.v2.bed  hg19-blacklist.v2.bed
-    dm3-blacklist.v2.bed   hg38-blacklist.v2.bed
+- THE ENCODE BLACK LIST  
+ directory : /opt/The_ENCODE_Blacklist/20210922  
+ black list : /opt/The_ENCODE_Blacklist/20210922/lists
+ ```
+ $ ls
+	Blacklist_v1           dm6-blacklist.v2.bed       metadata
+	ce10-blacklist.v2.bed  hg19-blacklist-README.pdf  mm10-blacklist.v2.bed
+	ce11-blacklist.v2.bed  hg19-blacklist.v2.bed
+	dm3-blacklist.v2.bed   hg38-blacklist.v2.bed
 
-   ```
-  - Cytoscape 
-   You need to connect SSH with `-X` or `-Y`  option (graphic interface option)
-   ```
-    $ ssh -X ID@IP
-    $ Cytoscape &
-   ```
-   
-  - bedops
-    ```
-    $ module load bedops/2.4.40
-    $ bedmap [command]
-    ```
-  - bowtie2
-    ```
-    $ module load bowtie2
-    $ bowtie2 [command]
-    ```
-	- IGV
-		```
-		$ module load igv/2.11.3
-		$ igv.sh
-		```
-	- IDR
-		github : https://github.com/kundajelab/idr
-		```
-		$ module load anacona3
-		$ /opt/IDR/idr-2.0.4.2/idr [command]
-		$ /opt/IDR/idr-2.0.4.2/idr -h
-		```
-	- Mothur 1.47.0
-		Ref : https://mothur.org/
-		```
-		$ module load mothur
-		$ mothur
-		```
+ ```
+- Cytoscape 
+ You need to connect SSH with `-X` or `-Y`  option (graphic interface option)
+ ```
+	$ ssh -X ID@IP
+	$ Cytoscape &
+ ```
+
+- bedops
+	```
+	$ module load bedops/2.4.40
+	$ bedmap [command]
+	```
+- bowtie2
+	```
+	$ module load bowtie2
+	$ bowtie2 [command]
+	```
+- IGV
+	```
+	$ module load igv/2.11.3
+	$ igv.sh
+	```
+- IDR
+	github : https://github.com/kundajelab/idr
+	```
+	$ module load anacona3
+	$ /opt/IDR/idr-2.0.4.2/idr [command]
+	$ /opt/IDR/idr-2.0.4.2/idr -h
+	```
+- Mothur 1.47.0
+	Ref : https://mothur.org/
+	```
+	$ module load mothur
+	$ mothur
+	```
 	- 
 # database system
 ## PostgreSQL (version 13)
