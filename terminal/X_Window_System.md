@@ -1,5 +1,9 @@
 # X11 forwarding
 Ref : https://www.thegeekdiary.com/how-to-enable-x11-forwarding-on-centos-rhel-567/
+# xterm
+```
+$ xterm
+```
 # open browser
 ```
 $ xdg-open http://example.com
