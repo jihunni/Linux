@@ -53,7 +53,10 @@ Ref: https://gentlesark.tistory.com/29
 	execute jupyter lab
 	$ jupyter lab
 	```
-
+	
+	Environmental setting
+	Ref : https://bioinfoblog.tistory.com/13
+	
 # Trouble shooting
 ```
 $ conda activate example_env
