@@ -61,6 +61,7 @@ firewall-cmd --get-active-zones
 
 firewall-cmd --list-service
 firewall-cmd --add-service=http
+firewall-cmd --permanent --zone=public --remove-port=80/tcp
 ```
 
 To add new port
