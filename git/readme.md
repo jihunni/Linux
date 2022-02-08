@@ -21,7 +21,7 @@ The key's randomart image is:
 |   . ++o. o*E .  |
 |    o B= o..++.  |
 |     +.=* +o=o.  |
-|   . ooo++ *.    |
+|   . ooo++ *.    |git clone [REPO_URL] [DIR]
 |    = *+S        |
 |   . B.B .       |
 |  . o *          |
@@ -111,6 +111,8 @@ $ git diff
 
 ## Git basics
 ```
+git clone [REPO_URL] [DIR]
+
 git fetch
 git pull origin master
 
