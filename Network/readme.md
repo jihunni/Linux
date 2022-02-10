@@ -97,3 +97,8 @@ sudo ufw delete deny 22/tcp
 sudo ufw logging on
 sudo ufw logging off
 ```
+
+# trial
+- TCL connection
+  - check the firewall on sever
+  - check the firewall on client
