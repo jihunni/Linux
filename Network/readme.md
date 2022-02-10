@@ -77,3 +77,23 @@ firewall-cmd --permanent --add-port=8787/tcp
 firewall-cmd --reload
 ```
 
+# firewall (Ubuntu)
+Ref : https://webdir.tistory.com/206
+```
+# firewall service
+sudo ufw enable # to activate fiewall
+sudo ufw disable # to inactivate firewall
+sudo ufw status verbose #check UFW status
+
+# Port
+sudo ufw allow 22
+sudo ufw allow 22/tcp
+
+sudo ufw deny 22 # to deny the only specific port
+sudo ufw deny 22/tcp
+sudo ufw delete deny 22/tcp
+
+# logg
+sudo ufw logging on
+sudo ufw logging off
+```
