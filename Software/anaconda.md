@@ -54,9 +54,12 @@ Ref: https://gentlesark.tistory.com/29
 	$ jupyter lab
 	```
 	
-	Environmental setting
-	Ref : https://bioinfoblog.tistory.com/13
-	
+# Environmental setting
+Ref : https://bioinfoblog.tistory.com/13
+```
+vi ~/.jupyter/jupyter_notebook_config.py
+```
+
 # Trouble shooting
 ```
 $ conda activate example_env
