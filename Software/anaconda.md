@@ -58,6 +58,7 @@ Ref: https://gentlesark.tistory.com/29
 Ref : https://bioinfoblog.tistory.com/13
 ```
 vi ~/.jupyter/jupyter_notebook_config.py
+jupyter lab --no-browser
 ```
 
 # Trouble shooting
