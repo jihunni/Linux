@@ -102,3 +102,29 @@ sudo ufw logging off
 - TCL connection
   - check the firewall on sever
   - check the firewall on client
+
+# SSH protocol (ubuntu)
+Ref : https://codechacha.com/ko/ubuntu-install-openssh/  
+
+In sever
+```
+Installation
+$ sudo apt update
+$ sudo apt install openssh-server
+
+To activate the serivce
+$ sudo systemctl status ssh
+$ sudo systemctl enable ssh
+$ sudo systemctl start ssh
+
+Firewall
+$ sudo ufw status
+$ sudo ufw allow ssh
+```
+
+In client  
+```
+$ sudo apt-get install openssh-client
+$ ip a
+$ ssh username@ip_address
+```
