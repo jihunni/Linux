@@ -54,6 +54,12 @@ Ref: https://gentlesark.tistory.com/29
 	$ jupyter lab
 	```
 	
+	To install add-on
+	```
+	# conda install nodejs
+	# conda install npm
+	```
+	
 # Environmental setting
 Ref : https://bioinfoblog.tistory.com/13
 ```
