@@ -14,7 +14,7 @@
 # ML/DL environment
 ```
 # To access RDKit on python environment, run these codes on linux shell
-ssh -X 172.27.31.73
+ssh -X xxx.xx.xx.73
 module load anaconda3
 conda activate pytorch
 jupyter-lab (OR jupter lab, OR jupyter-notebook, OR jupyter notebook)
