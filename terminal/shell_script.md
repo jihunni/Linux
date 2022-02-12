@@ -2,6 +2,29 @@
 # redirection
 - `>`: 명령어 뒤에 나오는 파일에 쓸 때 사용(=write or overwrite)
 - `>>`: 명령어 뒤에 나오는 파일에 추가할 때 사용(=append)
+
+# SheBang
+Ref : https://bcp0109.tistory.com/343  
+
+general  
+```
+#!<interpreter> [optional-arg]
+```
+
+running code (absolute path)  
+```
+#!/bin/sh
+#!/bin/bash
+#!/usr/bin/pwsh
+#!/usr/bin/env python3
+```
+
+running code ()
+```
+#! /usr/bin/env bash
+#! /usr/bin/env python
+```
+
 ## variable
 ```
 string_1='abcdef'
