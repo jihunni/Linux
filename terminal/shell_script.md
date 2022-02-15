@@ -107,9 +107,23 @@ fi
 # file iteration
 iteration with a file list
 ```
+# to change a directory temporarily
+pushd [directory]
+echo 'directory is reset'
+
 for file_name in $(ls *.fastq); do
         echo ${file_name} ;
+	
+	file_name="${file_name##*/}" # to get fileName with extension (to remove path)
+        file_name="${file_name%.*}" # to remove file extenstion
+        echo ${file_name} ;
+
+	
 done
+
+# to recover the directory
+popd
+echo 'directory is reset'
 
 ```
 
