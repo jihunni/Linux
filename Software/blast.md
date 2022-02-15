@@ -15,5 +15,6 @@ makeblastdb -in /home/data/MIBig_2.0/mibig_prot_seqs_2.0.fasta -title "MIBig_2.0
 ```
 # Run
 ```
+blastn -h # manual
 blastn –db nt –query nt.fsa –out results.out  
 ```
