@@ -17,10 +17,10 @@ makeblastdb -in /home/data/MIBig_2.0/mibig_prot_seqs_2.0.fasta -title "MIBig_2.0
 general
 ```
 blastn -h # manual
-blastn –db nt –query nt.fsa -perc_identity [0~100] –out results.out  
+blastn –db nt –query nt.fsa -perc_identity [0~100] -outfmt 6 -out results.out  
 ```
 
 running code
 ```
-blastn -db mibig_2.0.fasta -query GCF_000005845.2_ASM584v2_genomic.fna -perc_identity 1  -out GCF_000005845.2_ASM584v2_genomic.out
+blastn -db mibig_2.0.fasta -query GCF_000005845.2_ASM584v2_genomic.fna -perc_identity 1  -outfmt 6 -out GCF_000005845.2_ASM584v2_genomic.out
 ```
