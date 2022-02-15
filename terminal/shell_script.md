@@ -105,12 +105,25 @@ fi
 ```
 
 # file iteration
+iteration with a file list
 ```
 for file_name in $(ls *.fastq); do
         echo ${file_name} ;
 done
 
 ```
+
+iteration with reading a file contents
+```
+#!/bin/bash
+# download fasta file from a input list
+fileName=/home/data/ref_genome/bacterial_genome/RefSeq_bacterial_FTPpath.txt
+while read p; do
+        echo "$p"
+        wget $p
+done < $fileName
+```
+
 
 ```
 #check whether it works
