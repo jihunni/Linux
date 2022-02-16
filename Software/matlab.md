@@ -14,7 +14,14 @@ Reference :
 
 
 ## install gurobi optimizer
-
+- install Gurobi
+	/opt/gurobi
+- To activate Academic License,
+	- get license key from Homepage
+	- activate the license key
+		```
+		$ /opt/gurobi/gurobi912/linux64/bin/grbgetkey
+		```
 ## Module environment
 ```
 #%Module1.0#####################################################################
