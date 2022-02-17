@@ -37,6 +37,9 @@ For list,
 echo ${list[0]}
 ```
 > warning! no space bewteen equality
+## operator
+ref : https://linuxhint.com/bash_operator_examples/
+
 ## array
 ref : http://blog.redjini.com/282
 
@@ -69,7 +72,10 @@ fi
 ```
 
 reference : 
-- https://devhints.io/bash
+- https://devhints.io/bash. 
+
+case
+ref : https://hbase.tistory.com/23. 
 
 # save the output of a function into a variable
 ```
