@@ -156,5 +156,9 @@ conda install --channel=conda-forge physics-tenpy
 	```
 	pip install tensorboard
 	```
-	
-	```
+
+# Bioinformatics library
+	- biopython
+		```
+		conda install -c conda-forge biopython
+		```
