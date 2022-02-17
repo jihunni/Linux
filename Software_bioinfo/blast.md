@@ -13,6 +13,8 @@ running code
 ```
 makeblastdb -in /home/data/MIBig_2.0/mibig_prot_seqs_2.0.fasta -title "MIBig_2.0" -dbtype nucl  -out mibig_2.0.fasta
 ```
+Note that fasta file and index file sholud be located in same direction.
+
 # Run
 general
 ```
