@@ -75,3 +75,6 @@ Sat Dec 11 11:30:22 2021
 # systemctl restart multi-user.target
 
 ```
+
+## uninstall nvidia-driver
+https://partners-intl.aliyun.com/help/en/doc-detail/163825.htm#concept-wlr-tch-ygb  
