@@ -14,14 +14,16 @@
 # ML/DL environment
 ```
 # To access RDKit on python environment, run these codes on linux shell
-ssh -X xxx.xx.xx.73
-module load anaconda3
-conda activate pytorch
-jupyter-lab (OR jupter lab, OR jupyter-notebook, OR jupyter notebook)
+(local)$ ssh -X xxx.xx.xx.73
+(Life3)$ module load anaconda3
+(Life3)$ conda activate pytorch
+(Life3)$ jupyter-lab --no-browser
 
 # To access Tensorboard,
-tensorboard --logdir=runs
-  # http://localhost:xxxx/ 
+(Life3)$ tensorboard --logdir=runs --port=assigned_port (e.g. 0000)
+(local) allow firewall to tcp protocol 0000 (or different one)
+(local)$ ssh -L 0000:localhost:0000 jihun@xxx.xx.xx.73
+(local) http://localhost:xxxx/ 
 
 # In jupyter notebook consol,
 import rdkit
