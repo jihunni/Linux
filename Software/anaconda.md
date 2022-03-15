@@ -103,8 +103,8 @@ Run bashrc again (it may be updated after the installation of anaconda3)
 . ~/.bashrc
 ```
 Ref:  
-https://askubuntu.com/questions/1143142/conda-init-gives-me-no-action-taken. 
-
+- https://askubuntu.com/questions/1143142/conda-init-gives-me-no-action-taken. 
+- https://stackoverflow.com/questions/65196475/conda-init-doesnt-initialize-shell
 
 # install library in conda env
 Ref : https://docs.conda.io/projects/conda/en/latest/commands/install.html
