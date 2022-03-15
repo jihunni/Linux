@@ -13,3 +13,6 @@ lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL
 ```
 # Package
 - Unattended upgrade : an automatic upgrade system in Ubuntu
+
+# Software update
+Ref : https://jjudrgn.tistory.com/6
