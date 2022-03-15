@@ -57,11 +57,14 @@ Ref : https://jjudrgn.tistory.com/6
   ```
 - environment module
   Ref : https://modules.readthedocs.io/en/stable/INSTALL.html
-  Install `Tcl`
+  
+  1. Install `Tcl`
   ```
   apt-get install tcl-dev
   ```
-- 
+  2. ...
+  3. configuration
+  4. symbolic link : to activate `module` command
 - screen
   https://github.com/jihunni/Linux/blob/305b8e89b5df33ab9d820693285959466713256b/Software/screen.md
 - symbolic link
