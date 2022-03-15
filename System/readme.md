@@ -55,7 +55,13 @@ Ref : https://jjudrgn.tistory.com/6
   ```
   apt-get install gcc make
   ```
-  
+- environment module
+  Ref : https://modules.readthedocs.io/en/stable/INSTALL.html
+  Install `Tcl`
+  ```
+  apt-get install tcl-dev
+  ```
+- 
 - screen
   https://github.com/jihunni/Linux/blob/305b8e89b5df33ab9d820693285959466713256b/Software/screen.md
 - 
