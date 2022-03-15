@@ -162,3 +162,14 @@ conda install --channel=conda-forge physics-tenpy
 		```
 		conda install -c conda-forge biopython
 		```
+
+# distribute conda environment
+Ref : https://www.anaconda.com/blog/moving-conda-environments
+	To distribute environment via Environment.yml
+	```
+	# To produce yml file
+	$ conda env export > conda_environment.yml
+	
+	# To reproduce the conda virtual environment through yml file
+	$ conda env create -f conda_environment.yml
+	```
