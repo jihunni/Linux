@@ -18,6 +18,7 @@ lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL
 Ref : https://jjudrgn.tistory.com/6
 - shell 
   Ref : https://bywords.tistory.com/143
+  Note that `/bin/sh` does not supoort 
 - vim
   Ref : https://gabii.tistory.com/entry/Ubuntu-vim-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EC%84%A4%EC%A0%95
   To install new version vim
