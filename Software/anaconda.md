@@ -174,3 +174,13 @@ Ref : https://www.anaconda.com/blog/moving-conda-environments
 	# To reproduce the conda virtual environment through yml file
 	$ conda env create -f conda_environment.yml
 	```
+
+# trouble shooting
+- When the directory of anaconda is changed and conda is executed, `bash: ./conda: /opt/anaconda/2021.11-Linux-x86_64/bin/python: bad interpreter: No such file or directory` pop up:
+	```
+	# vi conda
+	changes !/ directory
+	
+	```
+	
+- 
