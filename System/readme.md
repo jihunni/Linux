@@ -50,6 +50,11 @@ Ref : https://jjudrgn.tistory.com/6
   filetype indent on    " 파일 종류에 따른 구문 강조
   set mouse=a    " 커서 이동을 마우스로 가능하도록
   ```
+
+- gcc, make
+  ```
+  apt-get install gcc make
+  ```
   
 - screen
   https://github.com/jihunni/Linux/blob/305b8e89b5df33ab9d820693285959466713256b/Software/screen.md
