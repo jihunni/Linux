@@ -5,3 +5,6 @@ To set hostname
 # hostnamectl
 # hostnamectl set-hostname gpu1
 ```
+
+# Package
+- Unattended upgrade : an automatic upgrade system in Ubuntu
