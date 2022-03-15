@@ -165,6 +165,7 @@ conda install --channel=conda-forge physics-tenpy
 
 # distribute conda environment
 Ref : https://www.anaconda.com/blog/moving-conda-environments
+	
 	To distribute environment via Environment.yml
 	```
 	# To produce yml file
