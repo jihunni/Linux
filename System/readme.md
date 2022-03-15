@@ -64,4 +64,17 @@ Ref : https://jjudrgn.tistory.com/6
 - 
 - screen
   https://github.com/jihunni/Linux/blob/305b8e89b5df33ab9d820693285959466713256b/Software/screen.md
+- symbolic link
+  ```
+  심볼릭 링크 조회
+  ls -l /usr/bin/py*
+
+  심볼릭 링크 삭제
+  rm -f /usr/bin/python2.6
+
+  심볼릭 링크 생성
+  ln -s /usr/bin/python2.7 /usr/bin/python
+  ```
+- anaconda3
+  https://github.com/jihunni/Linux/blob/master/Software/anaconda.md
 - 
