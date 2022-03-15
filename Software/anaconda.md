@@ -87,6 +87,8 @@ See 'conda init --help' for more information and options.
 
 IMPORTANT: You may need to close and restart your shell after running 'conda init'.
 ```
+
+Method1:   
 Then, Try 'conda init bash' with sudo
 Then, Try `source conda activate example_env`
 
@@ -94,6 +96,14 @@ Ref:
 - https://hamonikr.org/board_bFBk25/78585
 - https://willbesoon.tistory.com/119
 
+
+Method2 : 
+Run bashrc again (it may be updated after the installation of anaconda3)
+```
+. ~/.bashrc
+```
+Ref:  
+https://askubuntu.com/questions/1143142/conda-init-gives-me-no-action-taken. 
 
 
 # install library in conda env
