@@ -24,6 +24,9 @@ Comment
 - Consider that File system for server uses partision. Each dictory may use different physical disk. For example, `/bin/` and `/usr/local/bin` could use different disk.
 
 
+# mount
+Ref : https://bluexmas.tistory.com/632
+
 # Samba
 Prepare an environment to install Samba
 ```
