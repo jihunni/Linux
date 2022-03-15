@@ -6,5 +6,10 @@ To set hostname
 # hostnamectl set-hostname gpu1
 ```
 
+## disk
+check available disk
+```
+lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL
+```
 # Package
 - Unattended upgrade : an automatic upgrade system in Ubuntu
