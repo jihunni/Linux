@@ -66,3 +66,10 @@ chown -R smbuser.root /share
 ## reference: 
   - https://blog.naver.com/ncloud24/221499582757
   - https://nirsa.tistory.com/195
+           
+# Conpression
+## rar
+- install (ubuntu)
+Ref : https://m.blog.naver.com/chandong83/220868668544
+- usage
+Ref : https://lascrea.tistory.com/144
