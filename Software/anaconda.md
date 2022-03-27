@@ -6,6 +6,7 @@ conda init [shell_Name]
 conda create --name [virtual_env_name] --clone base
 conda env remove -n [virtual_env_name]
 conda remove --name [environment_name] --all
+conda update --all
 source conda activate [env_name]
 ```
 
