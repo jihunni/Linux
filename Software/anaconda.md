@@ -102,6 +102,14 @@ Run bashrc again (it may be updated after the installation of anaconda3)
 ```
 . ~/.bashrc
 ```
+
+If there is no bashrc,
+```
+$ cp /etc/skel/.bashrc ~
+$ chmod 755 .bashrc
+$ vi  ~/.profile
+	> source ~/.bashrc
+```
 Ref:  
 - https://askubuntu.com/questions/1143142/conda-init-gives-me-no-action-taken. 
 - https://stackoverflow.com/questions/65196475/conda-init-doesnt-initialize-shell
