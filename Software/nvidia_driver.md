@@ -75,6 +75,10 @@ Sat Dec 11 11:30:22 2021
 # systemctl restart multi-user.target
 
 ```
+## driver API and runtime API
+ref : https://bo-10000.tistory.com/73
+driver API: GPU driver installer, nvidia-smi
+runtime API: CUDA toolkit installer, nvcc
 
 ## uninstall nvidia-driver
 https://partners-intl.aliyun.com/help/en/doc-detail/163825.htm#concept-wlr-tch-ygb  
