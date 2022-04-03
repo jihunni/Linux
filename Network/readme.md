@@ -128,3 +128,7 @@ $ sudo apt-get install openssh-client
 $ ip a
 $ ssh username@ip_address
 ```
+
+# Trouble shooting
+## Running a Network Path Trace
+Ref : https://player.support.brightcove.com/troubleshooting/running-network-path-trace.html
