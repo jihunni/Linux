@@ -89,6 +89,30 @@
   $ module load GDC_data_transfer_tool/1.6.1
   $ gdc-client [command]
   ```
+- seven-bridges_command_line_interface
+	Ref: https://cgc.sbgenomics.com/data-tools
+	software directory : /opt/seven-bridges_command_line_interface
+	```
+	$ /opt/seven-bridges_command_line_interface/sb [command]
+	```
+		Available Commands:  
+		apps         Manage apps on the Platform.  
+		automations  Manage automations on the Platform.  
+		billing      Obtain information about available billing groups.  
+		configure    Configure credentials to access your project on the Platform.  
+		download     Initiate file download.  
+		exports      Manage exports on the Platform.  
+		files        Manage files on the Platform.  
+		imports      Manage imports on the Platform.  
+		members      Manage project members on the Platform.  
+		projects     Manage projects on the Platform.  
+		tasks        Manage tasks on the Platform.  
+		troubleshoot Creates an archive file that can be sent to Seven Bridges support.  
+		upload       Upload the data securely and efficiently to the Seven Bridges Platform.  
+		version      Display the version of application currently used.  
+		volumes      Manage volumes on the Platform.  
+		whoami       Display information about the current user.  
+
 
 # software for bioinformaitcs analysis
 - star   
