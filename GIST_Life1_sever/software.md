@@ -81,9 +81,9 @@
  ![image](https://user-images.githubusercontent.com/48517782/135204312-d90c8bd9-68ea-49a6-9702-743d4364f07d.png)
  > If you execute `$ module load matlab`, then the paths for `Gurobi Optimizer` are automatically set up. Check by `$ env`
 # software for database
-- GDC_data_transfer_tool
-  Ref: https://docs.gdc.cancer.gov/Data_Transfer_Tool/Users_Guide/Data_Download_and_Upload/
-  software directory : /opt/GDC_data_transfer_tool/1.6.1/
+- GDC_data_transfer_tool  
+  Ref: https://docs.gdc.cancer.gov/Data_Transfer_Tool/Users_Guide/Data_Download_and_Upload/  
+  software directory : /opt/GDC_data_transfer_tool/1.6.1/  
   ```
   $ module av
   $ module load GDC_data_transfer_tool/1.6.1
