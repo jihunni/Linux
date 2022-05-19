@@ -8,3 +8,8 @@
 - Open Babel
   Ref : https://open-babel.readthedocs.io/en/latest/Installation/install.html#install-binaries  
   Source : https://github.com/openbabel/openbabel/releases  
+- smina (centos7)
+  cmake  
+  yum install eigen3-devel  
+  yum install gcc gcc-c++ kernel-devel mak  
+- 
