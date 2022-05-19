@@ -3,6 +3,7 @@
 - [slurm](https://github.com/jihunni/Linux/blob/master/GIST_Life1_sever/slurm.md) : an introduction to use a job scheduler `slurm`
 - [software](https://github.com/jihunni/Linux/blob/master/GIST_Life1_sever/software.md) : a list of avaiable softwares in Life sever and their brief description.
 	- [screen](https://github.com/jihunni/Linux/blob/master/GIST_Life1_sever/screen.md) : a guide to use virtual terminal in Linux with `screen` command
+- [update](https://github.com/jihunni/Linux/blob/master/GIST_Life1_sever/update.md)  : an update note for Life1 server
 # Life1 sever Policy
   - priority:
     1. system administration
