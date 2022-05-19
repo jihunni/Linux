@@ -1,6 +1,7 @@
 # Open Babel 3 Install
-Ref : https://openbabel.org/docs/dev/Installation/install.html
-Requirement : wxWidgets toolkit
+Documentation : https://openbabel.org/docs/dev/Installation/install.html    
+Source : https://github.com/openbabel/openbabel/releases  
+Requirement : cmake, wxWidgets toolkit [link](https://github.com/jihunni/Linux/blob/master/Software_Cheminfo/wxWidgets.md)
 ```
 $ tar zxf openbabel-2.3.1.tar.gz   # (this creates openbabel-2.3.1)
 $ mkdir build
