@@ -9,3 +9,12 @@
   $ module load ADFR_suite
   ```
 - 
+# Anaconda3 Environment
+- vina
+  ```
+  module load anaconda3
+  conda create -c conda-forge -n vina rdkit
+  conda activate vina
+  conda install -c conda-forge numpy openbabel scipy rdkit
+  ```
+- 
