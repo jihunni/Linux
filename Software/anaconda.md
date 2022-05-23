@@ -192,6 +192,14 @@ conda install --channel=conda-forge physics-tenpy
 		conda install -c conda-forge biopython
 		```
 
+# Natural Language Processing library
+	```
+	conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+	conda install -c conda-forge transformers
+	conda install -c anaconda mxnet
+	pip install mxnet gluonnlp pandas tqdm sentencepiece
+	```
+
 # distribute conda environment
 Ref : https://www.anaconda.com/blog/moving-conda-environments
 	
