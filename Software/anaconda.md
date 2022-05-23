@@ -61,12 +61,16 @@ Ref: https://gentlesark.tistory.com/29
 	# conda install npm
 	```
 	
-# Environmental setting
+# Jupyter Environmental setting
 Ref : https://bioinfoblog.tistory.com/13
 ```
 jupyter notebook --generate-config
 vi ~/.jupyter/jupyter_notebook_config.py
 jupyter lab --no-browser
+```
+```
+jupyter server list
+jupyter notebook list
 ```
 
 # Trouble shooting
