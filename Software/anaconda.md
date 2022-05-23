@@ -180,7 +180,12 @@ conda install --channel=conda-forge physics-tenpy
 	```
 	pip install tensorboard
 	```
-
+- slack
+	Ref : https://pypi.org/project/slackclient/
+	```
+	# pip install slackclient
+	```
+- 
 # Bioinformatics library
 	- biopython
 		```
