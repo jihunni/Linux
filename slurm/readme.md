@@ -261,6 +261,14 @@ echo "Number of Cores/Task Allocated = $SLURM_CPUS_PER_TASK"
 # load module
 module purge
 module load MEME_Suite/5.4.1
+module load anaconda3/2021.05
+
+# to activate python environment
+source /opt/anaconda3/2021.05/etc/profile.d/conda.sh
+source activate /opt/anaconda3/2021.05/envs/vina
+export PATH=/opt/anaconda3/2021.05/envs/vina/bin:$PATH # for Pip directory
+
+# export environment variable
 
 # run a program
 ~/data/motif/slurm_array/fimo.sh
