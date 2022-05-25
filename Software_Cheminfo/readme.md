@@ -2,8 +2,12 @@
 - AutoDock
   Ref : https://vina.scripps.edu/manual/#linux
 - AutoDock Vina
-  Ref : https://vina.scripps.edu/manual/
-  Dependency : ADFRSuite
+  Ref : https://vina.scripps.edu/manual  
+  Dependency : ADFRSuite, Meeko  
+  ```
+   # to install Meeko
+   pip install -U numpy openbabel meeko
+  ```
 - MGLTools
   Ref : https://ccsb.scripps.edu/mgltools/downloads/
 - Open Babel
