@@ -3,6 +3,13 @@
   Ref : https://vina.scripps.edu/manual/#linux
 - AutoDock Vina
   Ref : https://vina.scripps.edu/manual  
+  ```
+  $ conda create -n vina python=3
+  $ conda activate vina
+  $ conda config --env --add channels conda-forge
+  $ conda install -c conda-forge numpy swig boost-cpp sphinx sphinx_rtd_theme
+  $ pip install vina
+  ```
   Dependency : ADFRSuite, Meeko  
   ```
    # to install Meeko
