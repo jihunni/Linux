@@ -11,6 +11,7 @@
   $ pip install vina
   ```
   Dependency : ADFRSuite, Meeko  
+  Ref : 
   ```
    # to install Meeko
    pip install -U numpy openbabel meeko
