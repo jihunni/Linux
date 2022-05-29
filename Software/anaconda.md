@@ -138,7 +138,7 @@ install with conda-forge
 conda install --channel=conda-forge physics-tenpy
 ```
 
-# ML/DL library
+## ML/DL library
 - pytorch : https://pytorch.org/get-started/locally/ 
  ```
 	 import torch
@@ -186,13 +186,15 @@ conda install --channel=conda-forge physics-tenpy
 	# pip install slackclient
 	```
 - 
-# Bioinformatics library
+## Bioinformatics library
+	- R studio
+		Ref : https://docs.anaconda.com/anaconda/navigator/tutorials/create-r-environment/
 	- biopython
 		```
 		conda install -c conda-forge biopython
 		```
 
-# Natural Language Processing library
+## Natural Language Processing library
 	```
 	conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
 	conda install -c conda-forge transformers
