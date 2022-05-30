@@ -56,3 +56,15 @@ ref : https://dbrang.tistory.com/749
 # PostgreSQL Python : 
 connect to PostgreSQL Database Severy
 https://www.postgresqltutorial.com/postgresql-python/connect/
+
+conda env
+```
+conda activate postgresql
+python
+```
+
+To connect a database in python
+```
+import psycopg2
+conn = psycopg2.connect(host='localhost',database='database_name',user='userID',password='userPassword')
+```
