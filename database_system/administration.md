@@ -3,8 +3,11 @@ connect to PostgreSQL Database Severy
 https://www.postgresqltutorial.com/postgresql-python/connect/
 
 # psql guide
-Ref: https://dbrang.tistory.com/749
-
+Ref: https://dbrang.tistory.com/749.  
+connect to psql with username role as 'postgres'
+```
+$ psql -d postgres -U postgres
+```
 # MANAGE DATABASES
 ## PostgreSQL Show Databases
 Ref : https://www.postgresqltutorial.com/postgresql-administration/postgresql-show-databases/
