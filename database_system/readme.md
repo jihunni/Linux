@@ -1,8 +1,3 @@
-# login pgAdmin4
-```
-xdg-open http://127.0.0.1/pgadmin4
-```
-
 # PostgreSQL Python : 
 connect to PostgreSQL Database Severy
 https://www.postgresqltutorial.com/postgresql-python/connect/
@@ -10,6 +5,10 @@ https://www.postgresqltutorial.com/postgresql-python/connect/
 # database roles
 Ref : https://www.postgresqltutorial.com/postgresql-roles/  
 
+```
+# su postgres
+# psql
+```
 
 query all roles in database system
 ```
@@ -72,4 +71,9 @@ DROP ROLE name;
 
 ```
 SELECT rolname FROM pg_roles;
+```
+
+# login pgAdmin4
+```
+xdg-open http://127.0.0.1/pgadmin4
 ```
