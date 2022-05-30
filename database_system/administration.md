@@ -2,14 +2,47 @@
 connect to PostgreSQL Database Severy
 https://www.postgresqltutorial.com/postgresql-python/connect/
 
-# PostgreSQL Show Databases
+
+# MANAGE DATABASES
+## PostgreSQL Show Databases
 Ref : https://www.postgresqltutorial.com/postgresql-administration/postgresql-show-databases/
 ```
 postgres=# \l
 postgres=# \l+
 ```
 
-# database roles
+## Crate database
+Ref : https://www.postgresqltutorial.com/postgresql-administration/postgresql-create-database/.    
+
+Syntax
+```
+CREATE DATABASE database_name
+WITH
+   [OWNER =  role_name]
+   [TEMPLATE = template]
+   [ENCODING = encoding]
+   [LC_COLLATE = collate]
+   [LC_CTYPE = ctype]
+   [TABLESPACE = tablespace_name]
+   [ALLOW_CONNECTIONS = true | false]
+   [CONNECTION LIMIT = max_concurrent_connection]
+   [IS_TEMPLATE = true | false ]
+```
+
+Example
+```
+CREATE DATABASE pubchem_vina;
+```
+> Note : Do not forget to put semicolon(;) at the end of command.  
+> Note : SQL takes only smaller letters
+
+
+# MANAGE SCHEMAS
+# MANAGE TABLESPACES
+# ROLES & PRIVILEGES
+
+
+
 Ref : https://www.postgresqltutorial.com/postgresql-roles/  
 
 ```
@@ -80,7 +113,10 @@ DROP ROLE name;
 SELECT rolname FROM pg_roles;
 ```
 
-# login pgAdmin4
+# BACKUP & RESTORE
+
+
+# pgAdmin4
 ```
 xdg-open http://127.0.0.1/pgadmin4
 ```
