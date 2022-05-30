@@ -2,6 +2,8 @@
 connect to PostgreSQL Database Severy
 https://www.postgresqltutorial.com/postgresql-python/connect/
 
+# psql guide
+Ref: https://dbrang.tistory.com/749
 
 # MANAGE DATABASES
 ## PostgreSQL Show Databases
