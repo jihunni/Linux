@@ -1,13 +1,16 @@
-# PostgreSQL Python : 
-connect to PostgreSQL Database Severy
-https://www.postgresqltutorial.com/postgresql-python/connect/
-
 # psql guide
 Ref: https://dbrang.tistory.com/749.  
 connect to psql with username role as 'postgres'
-```
-$ psql -d postgres -U postgres
-```
+- method 1
+   ```
+   $ psql -d postgres -U postgres
+   ```
+- method 2
+   ```
+   # su postgres
+   # psql
+   ```
+
 # MANAGE DATABASES
 ## PostgreSQL Show Databases
 Ref : https://www.postgresqltutorial.com/postgresql-administration/postgresql-show-databases/
@@ -45,50 +48,42 @@ CREATE DATABASE pubchem_vina;
 # MANAGE SCHEMAS
 # MANAGE TABLESPACES
 # ROLES & PRIVILEGES
-
-
-
 Ref : https://www.postgresqltutorial.com/postgresql-roles/  
 
-```
-# su postgres
-# psql
-```
+- query all roles in database system
+   ```
+   # SELECT rolname FROM pg_roles;
+             rolname
+   ---------------------------
+    pg_monitor
+    pg_read_all_settings
+    pg_read_all_stats
+    pg_stat_scan_tables
+    pg_read_server_files
+    pg_write_server_files
+    pg_execute_server_program
+    pg_signal_backend
+    postgres
+    bob
 
-query all roles in database system
-```
-# SELECT rolname FROM pg_roles;
-          rolname
----------------------------
- pg_monitor
- pg_read_all_settings
- pg_read_all_stats
- pg_stat_scan_tables
- pg_read_server_files
- pg_write_server_files
- pg_execute_server_program
- pg_signal_backend
- postgres
- bob
- 
- to list all existing roles in the current PostgreSQL database server.
- # \du
-  Role name |                         Attributes                         | Member of
------------+------------------------------------------------------------+-----------
- postgres  | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
-Code language: Shell Session (shell)
+    to list all existing roles in the current PostgreSQL database server.
+    # \du
+     Role name |                         Attributes                         | Member of
+   -----------+------------------------------------------------------------+-----------
+    postgres  | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
+   Code language: Shell Session (shell)
 
-```
-create a role
-```
-# CREATE ROLE role_name;
+   ```
+- create a role
+   ```
+   # CREATE ROLE role_name;
 
-```
-change password
-```
-postgres=# ALTER USER postgres PASSWORD 'myPassword';
-ALTER ROLE
-```
+   ```
+- change password
+   ```
+   postgres=# ALTER USER postgres PASSWORD 'myPassword';
+   ALTER ROLE
+   ```
 # 21. Database Roles
 PostgreSQL manages database access permissions using the concept of roles. A role can be thought of
 as either a database user, or a group of database users, depending on how the role is set up. Roles can
