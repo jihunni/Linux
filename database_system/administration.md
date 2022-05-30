@@ -2,6 +2,13 @@
 connect to PostgreSQL Database Severy
 https://www.postgresqltutorial.com/postgresql-python/connect/
 
+# PostgreSQL Show Databases
+Ref : https://www.postgresqltutorial.com/postgresql-administration/postgresql-show-databases/
+```
+postgres=# \l
+postgres=# \l+
+```
+
 # database roles
 Ref : https://www.postgresqltutorial.com/postgresql-roles/  
 
