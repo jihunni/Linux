@@ -78,7 +78,6 @@ surn --pty bash #to access head node
 exit # to exit the head node
 
 
-
 ## the others:
 salloc
 sattach
@@ -181,7 +180,7 @@ either of one
 #SBATCH --mem-per-cpu=[2000]
 #SBATCH --mem-per-cpu=[2G]
 #
-#SBATCH --time=[hh:mm:ss]
+#SBATCH --time=[hh:mm:ss] / "UNLIMITED"
 #SBATCH -t [hh:tt:ss]
 #
 #SBATCH --output=[output_filename]
