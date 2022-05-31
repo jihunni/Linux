@@ -3,19 +3,33 @@
   Ref : https://vina.scripps.edu/manual/#linux
 - AutoDock Vina
   Ref : https://vina.scripps.edu/manual  
-  ```
-  $ conda create -n vina python=3
-  $ conda activate vina
-  $ conda config --env --add channels conda-forge
-  $ conda install -c conda-forge numpy swig boost-cpp sphinx sphinx_rtd_theme
-  $ pip install vina
-  ```
-  Dependency : ADFRSuite, Meeko  
-  Ref : 
-  ```
-   # to install Meeko
-   pip install -U numpy openbabel meeko
-  ```
+  - Python library vina
+    ```
+    $ conda create -n vina python=3
+    $ conda activate vina
+    $ conda config --env --add channels conda-forge
+    $ conda install -c conda-forge numpy swig boost-cpp sphinx sphinx_rtd_theme
+    $ pip install vina
+    ```
+  - vina
+    Dependency : ADFRSuite, Meeko  
+    Ref : 
+    - source & Git code
+      ```
+      ```
+      ```
+      set version     1.1.2
+
+      prepend-path    PATH    /opt/autodock_vina/1.1.2/bin
+      prepend-path    PATH    /opt/autodock_vina/AutoDock-Vina-develop/example/autodock_scripts
+
+      ```
+    - 3rd party software
+      ```
+       # to install Meeko
+       pip install -U numpy openbabel meeko
+      ```
+    
 - MGLTools
   Ref : https://ccsb.scripps.edu/mgltools/downloads/
 - Open Babel
