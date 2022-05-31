@@ -1,7 +1,7 @@
 # Overview
 ## command manual
-[command] --help
-[command] --option
+[command] --help. 
+[command] --option. 
 slurm configuration : `/etc/slurm/slurm.conf`
 ## computer status
 ```
