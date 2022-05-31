@@ -35,6 +35,7 @@
       ```
        # to install Meeko
        pip install -U numpy openbabel meeko
+       conda install -c openbabel openbabel
       ```
     
 - MGLTools
