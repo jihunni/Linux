@@ -39,7 +39,12 @@ ref : https://dbrang.tistory.com/749
   binding_affinity  FLOAT(8)
   );
   ```
-- insert
+- alter table
+	```
+	ALTER TABLE pubchem_vina.docking
+		ADD CONSTRAINT unique_id UNIQUE (receptor_ensembl_id, pubchem_compud_cid);
+	```
+- insert instance
   Ref : https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-insert/.  
   syntax
   ```
