@@ -51,6 +51,17 @@ Ref: https://kimdubi.github.io/postgresql/pg_schema/
 CREATE SCHEMA pubchem_vina
     AUTHORIZATION pubchem_vina;
 ```
+```
+CREATE TABLE pubchem_vina.docking
+(
+    receptor_id character varying NOT NULL,
+    ligand_id character varying NOT NULL,
+    binding_energy double precision NOT NULL
+);
+
+ALTER TABLE IF EXISTS pubchem_vina.docking
+    OWNER to pubchem_vina;
+```
 # MANAGE TABLESPACES
 # ROLES & PRIVILEGES
 Ref : https://www.postgresqltutorial.com/postgresql-roles/  
