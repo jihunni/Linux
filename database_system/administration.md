@@ -46,6 +46,11 @@ CREATE DATABASE pubchem_vina;
 
 
 # MANAGE SCHEMAS
+Ref: https://kimdubi.github.io/postgresql/pg_schema/
+```
+CREATE SCHEMA pubchem_vina
+    AUTHORIZATION pubchem_vina;
+```
 # MANAGE TABLESPACES
 # ROLES & PRIVILEGES
 Ref : https://www.postgresqltutorial.com/postgresql-roles/  
