@@ -45,6 +45,17 @@ ref : https://dbrang.tistory.com/749
   INSERT INTO table_name(column1, column2, …)
   VALUES (value1, value2, …);
   ```
+  Ref: https://edudeveloper.tistory.com/131
+  ```
+  def insertDB(schema,table,colum,data):
+    sql = "INSERT INTO {schema}.{table} ({colum}) VALUES ({data}) ;".format(schema=schema,table=table,colum=colum,data=data)
+    print(sql)
+    try:
+        cursor.execute(sql)
+        db_connect.commit()
+    except Exception as e :
+        print(" insert DB  ",e) 
+  ```
   
   example
   ```
