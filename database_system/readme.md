@@ -77,6 +77,11 @@ ref : https://dbrang.tistory.com/749
 connect to PostgreSQL Database Severy
 https://www.postgresqltutorial.com/postgresql-python/connect/
 
+install python library 'psycopg2'
+```
+pip install psycopg2
+```
+
 conda env
 ```
 conda activate postgresql
