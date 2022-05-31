@@ -54,6 +54,12 @@ ref : https://dbrang.tistory.com/749
   ```
   INSERT INTO pubchem_vina.docking (receptor_ensembl_id, pubchem_compud_cid, binding_energy) VALUES (0, 'ENSG00000137513', -6.472) ;
   ```
+- delete
+	remove all tuples in a table
+	```
+	delete from pubchem_vina.docking * ;
+	```
+- 
 - query
 
 # PostgreSQL Python : 
