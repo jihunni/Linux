@@ -179,6 +179,7 @@ either of one
 #
 #SBATCH --mem-per-cpu=[2000]
 #SBATCH --mem-per-cpu=[2G]
+#SBATCH -a / --array=[0-1000]
 #
 #SBATCH --time=[hh:mm:ss] / "UNLIMITED"
 #SBATCH -t [hh:tt:ss]
