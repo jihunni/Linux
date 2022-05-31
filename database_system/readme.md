@@ -8,6 +8,7 @@ ref : https://dbrang.tistory.com/749
   example
   ```
   $ psql -d pubchem_vina -U jihun
+  $ psql -d pubchem_vina -U pubchem_vina
   ```
 - 
 
