@@ -51,6 +51,9 @@ ref : https://dbrang.tistory.com/749
   INSERT INTO links (url, name)
   VALUES('http://www.oreilly.com','O''Reilly Media');
   ```
+  ```
+  INSERT INTO pubchem_vina.docking (receptor_ensembl_id, pubchem_compud_cid, binding_energy) VALUES (0, 'ENSG00000137513', -6.472) ;
+  ```
 - query
 
 # PostgreSQL Python : 
