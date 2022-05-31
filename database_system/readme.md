@@ -82,6 +82,7 @@ ref : https://dbrang.tistory.com/749
 	SELECT * FROM pubchem_vina.docking;
 	SELECT * FROM pubchem_vina.docking ORDER BY binding_energy ASC;
 	SELECT * FROM pubchem_vina.docking ORDER BY binding_energy DESC;
+	SELECT COUNT(pubchem_compud_cid) FROM  pubchem_vina.docking;
 	```
 - 
 
