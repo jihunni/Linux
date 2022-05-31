@@ -73,6 +73,12 @@ ref : https://dbrang.tistory.com/749
 	```
 - 
 - query
+	```
+	SELECT * FROM pubchem_vina.docking;
+	SELECT * FROM pubchem_vina.docking ORDER BY binding_energy ASC;
+	SELECT * FROM pubchem_vina.docking ORDER BY binding_energy DESC;
+	```
+- 
 
 # PostgreSQL Python : 
 connect to PostgreSQL Database Severy
