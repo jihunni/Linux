@@ -24,6 +24,13 @@
       prepend-path    PATH    /opt/autodock_vina/AutoDock-Vina-develop/example/autodock_scripts
 
       ```
+    - To install OpenBabel
+      ref: https://open-babel.readthedocs.io/en/latest/Installation/install.html#install-binaries
+      ```
+      cmake ../ -DCMAKE_INSTALL_PREFIX=/opt/open_babel/3.1.1
+      make -j10
+      make install
+      ```
     - 3rd party software
       ```
        # to install Meeko
