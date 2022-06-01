@@ -24,6 +24,33 @@
       prepend-path    PATH    /opt/autodock_vina/AutoDock-Vina-develop/example/autodock_scripts
 
       ```
+    - To install ADFRsuite
+      code is changed in `/opt/ADFR_suite/ADFRsuite_x86_64Linux_1.0/CCSBpckgs/AutoDockTools/GridParameters.py`   
+      `self.receptor = Read(receptor_filename)[0]` is changed into `self.receptor = receptor_filename`
+      ```
+      def set_receptor4(self, receptor_filename, types=None):
+        #this should set receptor_types
+        ftype = os.path.splitext(receptor_filename)[-1]
+        if ftype!=".pdbqt":
+            print "receptor_filename must be in pdbqt format"
+            return "invalid input"
+        # print("receptor_filename: ", receptor_filename)
+        # print("Read(receptor_filename)[0]: ", Read(receptor_filename)[0])
+        self.receptor = receptor_filename
+        receptor = self.receptor
+        if types is None:
+            types = " ".join(list(set(receptor.allAtoms.autodock_element)))
+        self['receptor_types']['value'] = types
+        basename = os.path.basename(receptor_filename)
+        self.receptor_filename = basename
+        self.receptor_stem = os.path.splitext(basename)[0]
+        if receptor_filename!='':
+            self['receptor']['value'] = basename
+            self['gridfld']['value'] = self.receptor_stem + '.maps.fld'
+            self['elecmap']['value'] = self.receptor_stem + '.e.map'
+            self['dsolvmap']['value'] = self.receptor_stem + '.d.map' 
+      ```
+    
     - To install OpenBabel
       ref: https://open-babel.readthedocs.io/en/latest/Installation/install.html#install-binaries
       ```
