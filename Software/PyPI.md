@@ -3,8 +3,8 @@
 Ref : https://harry24k.github.io/pip/
 
 ## setuptools
-Ref : https://pythonhosted.org/an_example_pypi_project/setuptools.html
-
+Ref : https://pythonhosted.org/an_example_pypi_project/setuptools.html  
+Document : https://packaging.python.org/en/latest/guides/distributing-packages-using-setuptools/  
 
 ```
 import os
@@ -49,4 +49,10 @@ some_root_dir/
 |-- |-- __init__.py
 |-- |-- runall.py
 |-- |-- test0.py
+```
+
+```
+$ pip install wheel && pip install twine
+$ python setup.py bdist_wheel
+$ twine upload dist/packagename-1.0.0.0-py3-none-any.whl
 ```
