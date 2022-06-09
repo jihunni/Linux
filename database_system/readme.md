@@ -106,3 +106,52 @@ To connect a database in python
 import psycopg2
 conn = psycopg2.connect(host='localhost',database='database_name',user='userID',password='userPassword')
 ```
+To insert
+```
+import psycopg2 
+db_connect = psycopg2.connect(host='localhost',database='DB_name',user='user_name',password='user_password')
+cursor=db_connect.cursor()
+
+def insertDB(schema,table,colum,data):
+    sql = "INSERT INTO {schema}.{table} ({colum}) VALUES ({data}) ;".format(schema=schema,table=table,colum=colum,data=data)
+    print(sql)
+    try:
+        cursor.execute(sql)
+        db_connect.commit()
+    except Exception as e :
+        print(" insert DB  ",e) 
+
+insertDB(schema='pubchem_vina',table='docking', colum='receptor_ensembl_id, pubchem_compud_cid, binding_energy', data=f"'{receptor_id}', '{ligand_id}', {binding_energy}")
+
+db_connect.close ()
+```
+To query
+```
+import psycopg2 
+import pandas as pd
+db_connect = psycopg2.connect(host='localhost',database='DB_name',user='user_name',password='user_password')
+cursor=db_connect.cursor()
+
+def queryDB():
+	""" query parts from the parts table """
+	sql = "SELECT binding_energy FROM pubchem_vina.docking ;"
+	print(sql)
+	try:
+		cursor.execute(sql)
+		rows = cursor.fetchall()
+		print("The number of parts: ", cursor.rowcount)
+		cursor.close()
+		return rows
+	except Exception as e :
+		print(" query DB  ",e) 
+	finally:
+		if db_connect is not None:
+		    db_connect.close()
+
+query_result = queryDB() 
+	# a list of tuples
+	# e.g. [(-6.5,), (-4.3,) ]
+query_result = [float(x[0]) for x in query_result]
+query_result = pd.Series(query_result)
+query_result.to_csv('PostgreSQL_query_out.csv', sep=',', na_rep='Na', index=False, header=True)
+```
