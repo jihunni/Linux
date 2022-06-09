@@ -1,5 +1,7 @@
 # install matlab and environment setting
 ## matlab license manger (Life1 server)
+- download the installer in matlab homepage (link : https://kr.mathworks.com/downloads/web_downloads)
+- execute the installer and select the option `install license manger`
 
 
 ## install matlab
