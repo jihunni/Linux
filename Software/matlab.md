@@ -12,6 +12,7 @@ Reference :
 - https://kr.mathworks.com/support/bugreports/581959
 - 
 
+- symbolic link in `/usr/local/bin`
 
 ## install gurobi optimizer
 - install Gurobi
