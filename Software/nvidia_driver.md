@@ -1,9 +1,10 @@
-Ref : https://pstudio411.tistory.com/entry/Ubuntu-2004-Nvidia%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0\
+
 ```
 sudo apt install nvidia-driver-470
 ```
 
 # Life3 sever
+Note that installing nvidia driver is required after the major update on linux kernel
 ## install nvidia driver (3090)
 Ref : https://www.cyberciti.biz/faq/how-to-install-nvidia-driver-on-centos-7-linux/
 
@@ -41,9 +42,11 @@ Stop GUI
 # systemctl isolate multi-user.target
 ```
 
-```
-Install follwoing the insturciton on reference
-```
+
+To install, visit the Nvidia download page [link](https://www.nvidia.com/Download/index.aspx)  
+GeForce - GeForce RTX 30 Series - GeFOrce RTX 3090 - Linux 64-bite  
+Download on `/home/root/Downloads/`
+
 ```
 # Reboot
 ```
