@@ -84,7 +84,13 @@ ref : https://dbrang.tistory.com/749
 	SELECT * FROM pubchem_vina.docking ORDER BY binding_energy DESC;
 	SELECT COUNT(pubchem_compud_cid) FROM  pubchem_vina.docking;
 	```
-- 
+- To export query results in a file  
+	ref : https://linuxconfig.org/saving-an-output-of-postgresql-query-to-a-text-file  
+	```
+	\o /home/jihun/data/query_output.txt
+	EXECUTE QUERY
+	\o
+	```
 
 # PostgreSQL Python : 
 connect to PostgreSQL Database Severy
