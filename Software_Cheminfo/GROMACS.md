@@ -11,6 +11,13 @@ video : https://www.youtube.com/watch?v=kCKYkNygc9I
   apt-get install gromacs
   ```
 
+# Install in MacOS
+Ref: https://bioinformaticsreview.com/20220206/how-to-install-gromacs-on-apple-m1-macos/
+	```
+	% cmake .. -DGMX_BUILD_OWN_FFTW=ON -DREGRESSIONTEST_DOWNLOAD=OFF -DCMAKE_C_COMPILER=gcc -DREGRESSIONTEST_PATH=/Users/jihun/Downloads/software/regressiontests-2022.2
+	% sudo make check
+	```
+
 # basics
 ```
 gmx help (module)
@@ -103,3 +110,4 @@ gmx grompp -f inos.mdp -c water_box.gro -p file.top -o ions.tpr
 ```
 gmx genioin -s ions.tpr -o water_ions.gro -p file.top -pname NA -nname CL -neutral 
 ```
+
