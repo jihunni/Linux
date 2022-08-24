@@ -1,4 +1,4 @@
-# Welcome to Life Sever 3 Guide (TBD)
+# Welcome to Life Server 3 Guide (TBD)
 - [data](https://github.com/jihunni/Linux/blob/master/GIST_Life3_sever/data.md) : a list of available data in Life1 sever and their directory. A file with big volume, such as reference genome, sholud be shared for efficient disk usage.
 - [slurm](https://github.com/jihunni/Linux/blob/master/GIST_Life1_sever/slurm.md) : an introduction to use a job scheduler `slurm`
 - [software](https://github.com/jihunni/Linux/blob/master/GIST_Life3_sever/software.md) : a list of avaiable softwares in Life sever and their brief description.
