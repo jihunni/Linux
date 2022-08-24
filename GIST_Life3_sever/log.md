@@ -1,0 +1,3 @@
+- 2022.08.24
+  -  install `CUDA`
+  -  update `cmake` (2.8.12.2 -> 3.24.1)
