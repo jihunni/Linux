@@ -10,7 +10,12 @@ video : https://www.youtube.com/watch?v=kCKYkNygc9I
   apt-get install libfftw3-dev
   apt-get install gromacs
   ```
-
+- installation w/ GPU
+	```
+	mkdir build
+	cd build
+	cmake .. -DGMX_GPU=CUDA -DGMX_OPENMP=ON -DGMX_BUILD_OWN_FFTW=ON -CUDA_TOOLKIT_ROOT_DIT=/usr/local/cuda -DCMAKE_INSTALL_PREFIX=/opt/gromacs/2022.2/
+	```
 # Install in MacOS
 Ref: https://bioinformaticsreview.com/20220206/how-to-install-gromacs-on-apple-m1-macos/
 	```
