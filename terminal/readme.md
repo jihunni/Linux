@@ -12,7 +12,10 @@ which tcsh
 # basic command
 - top  
 	Ref : https://zzsza.github.io/development/2018/07/18/linux-top/
-
+- check GPU
+	```
+	watch -d -n 0.5 nvidia-smi
+	```
 # greeting
 - /etc/issue : 로그인 전, 콘솔(로컬) 접속시도시 보여줄 메시지파일
 - /etc/issue.net : 원격지에서 접속시도시 보여줄 메시지파일
