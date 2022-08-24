@@ -1,3 +1,14 @@
+# install shell (Ubuntu)
+```
+# 설치 csh , tcsh 
+sudo apt install csh
+sudo apt install tcsh
+
+#확인
+which csh
+which tcsh
+```
+
 # basic command
 - top  
 	Ref : https://zzsza.github.io/development/2018/07/18/linux-top/
