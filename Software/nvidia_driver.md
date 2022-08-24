@@ -85,3 +85,6 @@ ref : https://bo-10000.tistory.com/73
 
 ## uninstall nvidia-driver
 https://partners-intl.aliyun.com/help/en/doc-detail/163825.htm#concept-wlr-tch-ygb  
+
+# CUDA installation (Life3 server)
+Ref : https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=CentOS&target_version=7&target_type=rpm_network
