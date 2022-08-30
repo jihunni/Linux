@@ -5,8 +5,9 @@
 - 2022.08.26
   - yum update 
 - 2022.08.31
-	- gcc update
-		Ref : https://ryotta-205.tistory.com/50 
+	- gcc update  
+		Ref : https://www.softwarecollections.org/en/scls/rhscl/devtoolset-7/  
+		https://ryotta-205.tistory.com/50   
 		```
 		$ sudo yum install centos-release-scl
 		$ sudo yum-config-manager --enable rhel-server-rhscl-7-rpms
