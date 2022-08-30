@@ -88,3 +88,9 @@ https://partners-intl.aliyun.com/help/en/doc-detail/163825.htm#concept-wlr-tch-y
 
 # CUDA installation (Life3 server)
 Ref : https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=CentOS&target_version=7&target_type=rpm_network
+```
+sudo yum-config-manager --add-repo https://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/cuda-rhel7.repo
+sudo yum clean all
+sudo yum -y install nvidia-driver-latest-dkms
+sudo yum -y install cuda
+```
