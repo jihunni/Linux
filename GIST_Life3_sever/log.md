@@ -5,7 +5,7 @@
 - 2022.08.26
   - yum update 
 - 2022.08.31
-	- gcc update  
+	- `gcc` update  
 		Ref : https://www.softwarecollections.org/en/scls/rhscl/devtoolset-7/  
 		https://ryotta-205.tistory.com/50   
 		```
@@ -14,4 +14,7 @@
 		$ sudo yum install devtoolset-8
 		$ scl enable devtoolset-8 bash
 		```
-	- 
+	- install `gromacs`
+		```
+		sudo yum -y install gromacs
+		```
