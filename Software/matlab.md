@@ -170,8 +170,16 @@ Shell# ./lmgrd -c ../license.dat
 ```
 >> initCobraToolbox(false)
 ```
+
+
+## trouble shooting
 ```
+>> MOMA(model, CancerModel)
+OPTIMAL
+Error using solveCobraQP (line 1049)
+[gurobi] Primal optimality condition in solveCobraQP not satisfied, residual = 0.00081452, while feasTol = 1e-06
 
-
-
+Error in MOMA (line 219)
+    QPsolution = solveCobraQP(QPproblem, 'printLevel', verbFlag-1, 'method', 0);
+```
 
