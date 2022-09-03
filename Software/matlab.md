@@ -174,6 +174,64 @@ Shell# ./lmgrd -c ../license.dat
 
 ## trouble shooting
 ```
+RXNID_array =
+
+  20×2 cell array
+
+    {'R_HMR_4485'}    {'up'  }
+    {'R_HMR_2247'}    {'up'  }
+    {'R_HMR_9810'}    {'up'  }
+    {'R_HMR_5288'}    {'up'  }
+    {'R_HMR_9338'}    {'up'  }
+    {'R_HMR_5561'}    {'up'  }
+    {'R_HMR_5324'}    {'up'  }
+    {'R_HMR_4028'}    {'up'  }
+    {'R_HMR_9197'}    {'up'  }
+    {'R_HMR_3928'}    {'up'  }
+    {'R_HMR_4880'}    {'up'  }
+    {'R_HMR_9076'}    {'down'}
+    {'R_HMR_0174'}    {'up'  }
+    {'R_HMR_2309'}    {'up'  }
+    {'R_HMR_5870'}    {'up'  }
+    {'R_HMR_4257'}    {'up'  }
+    {'R_HMR_7024'}    {'up'  }
+    {'R_HMR_3372'}    {'up'  }
+    {'R_HMR_2393'}    {'up'  }
+    {'R_HMR_4122'}    {'up'  }
+
+iteration of random model: 3211 	 timestamp: 1 	 RXNID: HMR_4485 
+RXNID: HMR_4485 	, direction : up 	,up : 1000.000000 	, lb : -1000.000000 
+RXNID: HMR_4485 	, direction : up 	,up : 3000.000000 	, lb : -3000.000000 	 (changed) 
+totalFluxDiff: 0.000000
+iteration of random model: 3211 	 timestamp: 2 	 RXNID: HMR_2247 
+RXNID: HMR_2247 	, direction : up 	,up : 1000.000000 	, lb : 0.000000 
+RXNID: HMR_2247 	, direction : up 	,up : 3000.000000 	, lb : 1.000000 	 (changed) 
+totalFluxDiff: 450.725693
+Warning: Directory already exists. 
+iteration of random model: 3211 	 timestamp: 3 	 RXNID: HMR_9810 
+RXNID: HMR_9810 	, direction : up 	,up : 1000.000000 	, lb : -1000.000000 
+RXNID: HMR_9810 	, direction : up 	,up : 3000.000000 	, lb : -3000.000000 	 (changed) 
+totalFluxDiff: 450.725693
+Warning: Directory already exists. 
+iteration of random model: 3211 	 timestamp: 4 	 RXNID: HMR_5288 
+RXNID: HMR_5288 	, direction : up 	,up : 1000.000000 	, lb : 0.000000 
+RXNID: HMR_5288 	, direction : up 	,up : 3000.000000 	, lb : 1.000000 	 (changed) 
+totalFluxDiff: 4207763.783969
+Warning: Directory already exists. 
+iteration of random model: 3211 	 timestamp: 5 	 RXNID: HMR_9338 
+RXNID: HMR_9338 	, direction : up 	,up : 1000.000000 	, lb : -1000.000000 
+RXNID: HMR_9338 	, direction : up 	,up : 3000.000000 	, lb : -3000.000000 	 (changed) 
+totalFluxDiff: 4207763.783969
+Warning: Directory already exists. 
+iteration of random model: 3211 	 timestamp: 6 	 RXNID: HMR_5561 
+RXNID: HMR_5561 	, direction : up 	,up : 1000.000000 	, lb : -1000.000000 
+RXNID: HMR_5561 	, direction : up 	,up : 3000.000000 	, lb : -3000.000000 	 (changed) 
+totalFluxDiff: 4207763.783970
+Warning: Directory already exists. 
+iteration of random model: 3211 	 timestamp: 7 	 RXNID: HMR_5324 
+RXNID: HMR_5324 	, direction : up 	,up : 1000.000000 	, lb : 0.000000 
+RXNID: HMR_5324 	, direction : up 	,up : 3000.000000 	, lb : 1.000000 	 (changed) 
+
 >> MOMA(model, CancerModel)
 OPTIMAL
 Error using solveCobraQP (line 1049)
