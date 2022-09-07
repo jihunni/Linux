@@ -222,4 +222,14 @@ Ref : https://www.anaconda.com/blog/moving-conda-environments
 	
 	```
 	
-- 
+# recent anaconda env setting
+check list:
+- python version
+- pytorch version and cuda version
+- pytorch geometric version
+- rdkit 
+```
+# conda create --name torch1.11.0_cuda11.3 python=3.9
+# conda install pytorch==1.11.0 torchvision==0.12.0 torchaudio==0.11.0 cudatoolkit=11.3 -c pytorch
+# conda install pyg -c pyg
+```
