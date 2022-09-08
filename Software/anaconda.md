@@ -234,9 +234,16 @@ check list:
 # conda install pyg -c pyg
 ```
 
-Previous version that works well.
+not work
 ```
 # conda create --name torch1.10.0_cuda11.3 python=3.9
 # conda install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 cudatoolkit=11.3 -c pytorch -c conda-forge
+# conda install pyg -c pyg
+```
+
+
+```
+# conda activate torch1.9.0_cuda11.3
+# conda install pytorch==1.9.0 torchvision==0.10.0 torchaudio==0.9.0 cudatoolkit=11.3 -c pytorch -c conda-forge
 # conda install pyg -c pyg
 ```
