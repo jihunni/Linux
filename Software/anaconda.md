@@ -3,7 +3,7 @@ general code
 conda info --envs
 conda env list
 conda init [shell_Name]
-conda create --name [virtual_env_name] --clone base
+conda create --name [virtual_env_name] --clone base python=3.9
 conda env remove -n [virtual_env_name]
 conda remove --name [environment_name] --all
 conda update --all
