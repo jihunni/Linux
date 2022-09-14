@@ -235,6 +235,10 @@
 	$ module load mothur
 	$ mothur
 	```
-	- 
+- cell ranger 7.0.1
+	```
+	$ module load cell_ranger
+	$ cellranger
+	```
 # database system
 ## PostgreSQL (version 13)
