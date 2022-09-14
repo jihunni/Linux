@@ -1,8 +1,6 @@
 # PyPI
 # Distribution
-Ref : https://harry24k.github.io/pip/
-
-## setuptools
+## setuptools : to build a setup file
 Ref : https://pythonhosted.org/an_example_pypi_project/setuptools.html  
 Document : https://packaging.python.org/en/latest/guides/distributing-packages-using-setuptools/  
 
@@ -67,7 +65,8 @@ $ pip install wheel && pip install twine
 $ python setup.py bdist_wheel
 $ twine upload dist/packagename-1.0.0.0-py3-none-any.whl
 ```
-## Distribute
+## Distribute : To upload the package on PyPi
+Ref : https://harry24k.github.io/pip/
 Install
 ```
 pip install wheel
