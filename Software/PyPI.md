@@ -67,3 +67,24 @@ $ pip install wheel && pip install twine
 $ python setup.py bdist_wheel
 $ twine upload dist/packagename-1.0.0.0-py3-none-any.whl
 ```
+## Distribute
+Install
+```
+pip install wheel
+pip install twine
+```
+
+To create the files for distribution
+```
+python setup.py bdist_wheel
+```
+
+To distribute the package on Test.pypi (Warning! Remove the folder `build`, which may collide with the previous version )
+```
+twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+```
+
+To distirbute the package on Pypi
+```
+twine upload dist/*
+```
