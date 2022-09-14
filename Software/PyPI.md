@@ -34,6 +34,17 @@ setup(
         "Topic :: Utilities",
         "License :: OSI Approved :: BSD License",
     ],
+    install_requires = [
+		'argparse',
+		'biopython>=1.79', 
+		'rdkit-pypi==2022.3.2.1',
+		'pandas==1.3.4',
+		'numpy==1.20.3',
+		'appdirs>=1.4.4',
+	],
+    entry_points={
+        'console_scripts': ['bgcfinder = BGCfinder.main:main', 'bgc-download = BGCfinder.download:download']
+    }
 )
 ```
 
