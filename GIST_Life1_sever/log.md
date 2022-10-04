@@ -1,3 +1,6 @@
+- 2022.10.4
+  - install `matlab R2022b`
+  - TO DO : remove an unnecessary path of 'matlab' 
 - 2022.08.26
   - yum update
     Note  `slurm`
