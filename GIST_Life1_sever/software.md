@@ -71,7 +71,7 @@
    installed libraries (bioconductor) : [bioconductor list](https://bioconductor.org/packages/3.13/BiocViews.html#___Software)
     - TxDb.Hsapiens.UCSC.hg38.knownGene
 
-- MATLAB (2021b) 
+- MATLAB (2021b, 2022b) 
  ```
  $ ssh -X ID@IP
  $ module load matlab
