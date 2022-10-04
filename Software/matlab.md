@@ -15,7 +15,7 @@
 - https://kr.mathworks.com/matlabcentral/answers/102968-how-do-i-start-or-stop-the-network-license-manager
 - https://kr.mathworks.com/support/bugreports/581959
 - symbolic link in `/usr/local/bin`
-- install 
+- install with installer - login - select the version - install
 ## install gurobi optimizer
 - install Gurobi
 	/opt/gurobi
