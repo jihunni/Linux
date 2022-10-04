@@ -292,3 +292,10 @@ sed -n `3,$p` filename
 echo "Start Time        = $(date)"
 echo "End Time        = $(date)"
 ```
+
+```
+#!/bin/bash
+StartTime=$(date +%s)
+EndTime=$(date +%s)
+echo "It takes $(($EndTime - $StartTime)) seconds to complete this task."
+```
