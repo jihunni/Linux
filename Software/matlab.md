@@ -5,7 +5,7 @@
 - run the license mamager
 	```
 	# start license mamger
-	/opt/matlab/R2021b_license/etc/glnxa64/lmgrd -c /opt/matlab/R2021b_license/etc/license.dat -l /var/tmp/lm_TMW.log
+	/opt/matlab/R2022b_license/etc/glnxa64/lmgrd -c /opt/matlab/R2022b_license/etc/license.dat -l /var/tmp/lm_TMW.log
 	```
 	> -c : license file directory  
 	> -l : log file  
