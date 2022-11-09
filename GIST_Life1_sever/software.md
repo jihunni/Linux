@@ -239,6 +239,10 @@
 	```
 	$ module load cell_ranger
 	$ cellranger
+- IBM ILOG CPLEX Optimizer
 	```
+	module load cplex_studio/22.1.0	```
+	```
+	
 # database system
 ## PostgreSQL (version 13)
