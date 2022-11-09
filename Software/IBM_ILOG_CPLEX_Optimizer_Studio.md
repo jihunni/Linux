@@ -9,7 +9,8 @@ following command into a terminal :
 python /opt/ibm/ILOG/CPLEX_Studio_Community221/python/setup.py install
 ```
 
-Module ENV   
+Module ENV     
+Ref: https://www.ibm.com/support/pages/entering-your-api-key-and-setting-cplexstudiokey-environment-variable
 ```
 set version     22.1.0
 setenv  CPLEX_STUDIO_DIR221     /opt/ibm/ILOG/CPLEX_Studio_Community221/
