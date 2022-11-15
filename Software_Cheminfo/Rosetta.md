@@ -13,3 +13,10 @@ e.g. $./scons.py -j 20 mode=release bin
 ```
 
 
+# Trial and error
+- error while loading shared libraries: libcppdb.s
+  ```
+  ./score_jd2.linuxgccrelease: error while loading shared libraries: libcppdb.so: cannot open shared object file: No such file or directory
+  ```
+  Ref: https://www.rosettacommons.org/node/10175  
+  Sol : recompile  
