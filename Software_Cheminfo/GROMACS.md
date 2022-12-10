@@ -136,7 +136,7 @@ gmx genioin -s ions.tpr -o water_ions.gro -p file.top -pname NA -nname CL -neutr
 ```
 
 
-Energy minimization
+Energy minimization (EM) : EM ensured that we have a reasonable starting structure, in terms of geometry and solvent orientation.
 `nunu.mdp` file
 ```
 ; minim.mdp - used as input into grompp to generate em.tpr
@@ -158,6 +158,7 @@ pbc             = xyz       ; Periodic Boundary Conditions in all 3 dimensions
 ```
 $ gmx grompp -f minim.mdp -c water_ions.gro -p topol.top -o em.tpr
 $ gmx mdrun -v -deffnm em
+$ gmx energy -f em.edr -o potential.xvg
 ```
 
 Output:   
