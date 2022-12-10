@@ -159,6 +159,13 @@ pbc             = xyz       ; Periodic Boundary Conditions in all 3 dimensions
 $ gmx grompp -f minim.mdp -c water_ions.gro -p topol.top -o em.tpr
 $ gmx mdrun -v -deffnm em
 ```
+
+Output:   
+- em.log: ASCII-text log file of the EM process
+- em.edr: Binary energy file
+- em.trr: Binary full-precision trajectory
+- em.gro: Energy-minimized structure
+
 # Practice
 ```
 # To prepare gro file
