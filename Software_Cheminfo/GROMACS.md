@@ -97,22 +97,87 @@ Output :
 
 
 
-
-To generate a box for simulation
+To generate a box for simulation (`box.gro`)
 ```
 gmx editconf -f file.gro -o box.gro -c -d 1.0 -bt cubic 
 ```
 > -d : distance from cubic box
 
 ```
-gmx solvate -cp box.gro -cs spc216.gro -o water_box.gro -p file.top
+gmx solvate -cp box.gro -cs configuration_of_solvent_from_library.gro -o water_box.gro -p file.top
 ```
 Assemble tpr file
 ```
 gmx grompp -f inos.mdp -c water_box.gro -p file.top -o ions.tpr
 ```
 
+To add ion
+`ions.mdp` file
+```
+; ions.mdp - used as input into grompp to generate ions.tpr
+; Parameters describing what to do, when to stop and what to save
+integrator  = steep         ; Algorithm (steep = steepest descent minimization)
+emtol       = 1000.0        ; Stop minimization when the maximum force < 1000.0 kJ/mol/nm
+emstep      = 0.01          ; Minimization step size
+nsteps      = 50000         ; Maximum number of (minimization) steps to perform
+
+; Parameters describing how to find the neighbors of each atom and how to calculate the interactions
+nstlist         = 1         ; Frequency to update the neighbor list and long range forces
+cutoff-scheme	= Verlet    ; Buffered neighbor searching 
+ns_type         = grid      ; Method to determine neighbor list (simple, grid)
+coulombtype     = cutoff    ; Treatment of long range electrostatic interactions
+rcoulomb        = 1.0       ; Short-range electrostatic cut-off
+rvdw            = 1.0       ; Short-range Van der Waals cut-off
+pbc             = xyz       ; Periodic Boundary Conditions in all 3 dimensions
+```
+
 ```
 gmx genioin -s ions.tpr -o water_ions.gro -p file.top -pname NA -nname CL -neutral 
 ```
 
+
+Energy minimization
+`nunu.mdp` file
+```
+; minim.mdp - used as input into grompp to generate em.tpr
+; Parameters describing what to do, when to stop and what to save
+integrator  = steep         ; Algorithm (steep = steepest descent minimization)
+emtol       = 1000.0        ; Stop minimization when the maximum force < 1000.0 kJ/mol/nm
+emstep      = 0.01          ; Minimization step size
+nsteps      = 50000         ; Maximum number of (minimization) steps to perform
+
+; Parameters describing how to find the neighbors of each atom and how to calculate the interactions
+nstlist         = 1         ; Frequency to update the neighbor list and long range forces
+cutoff-scheme   = Verlet    ; Buffered neighbor searching
+ns_type         = grid      ; Method to determine neighbor list (simple, grid)
+coulombtype     = PME       ; Treatment of long range electrostatic interactions
+rcoulomb        = 1.0       ; Short-range electrostatic cut-off
+rvdw            = 1.0       ; Short-range Van der Waals cut-off
+pbc             = xyz       ; Periodic Boundary Conditions in all 3 dimensions
+```
+```
+$ gmx grompp -f minim.mdp -c water_ions.gro -p topol.top -o em.tpr
+$ gmx mdrun -v -deffnm em
+```
+# Practice
+```
+# To prepare gro file
+$ gmx pdb2gmx -f AF-Q96I59-F1-model_v4.pdb -o AF-Q96I59-F1-model_v4.gro -water tip4p
+
+To create box
+$ gmx editconf -f AF-Q96I59-F1-model_v4.gro -o AF-Q96I59-F1-model_v4_newbox.gro -c -d 1.0 -bt cubic
+
+To add solvate
+$ gmx solvate -cp AF-Q96I59-F1-model_v4_newbox.gro -cs tip4p.gro -o AF-Q96I59-F1-model_v4_solv.gro -p topol.top
+
+To assemble tpr file
+$ gmx grompp -f ions.mdp -c AF-Q96I59-F1-model_v4_solv.gro -p topol.top -o ions.tpr
+
+To generate ion
+$ gmx genion -s ions.tpr -o AF-Q96I59-F1-model_v4_ions.gro -p topol.top -pname NA -nname CL -neutral
+
+For gromacs preprocessor (Energy Minimization)
+$ gmx grompp -f minim.mdp -c AF-Q96I59-F1-model_v4_ions.gro -p topol.top -o em.tpr
+$ gmx mdrun -v -deffnm em
+
+```
