@@ -195,5 +195,7 @@ $ gmx mdrun -v -deffnm em
 step 25: One or more water molecules can not be settled.
 Check for bad contacts and/or reduce the timestep if appropriate.
 
-
+# Equilibration of solvent and ions around the protein
+$ gmx grompp -f nvt.mdp -c em_50000.gro -r em_50000.gro -p topol.top -o nvt.tpr
+$ gmx mdrun -deffnm nvt
 ```
