@@ -169,6 +169,9 @@ Output:
 
 # Practice
 ```
+# To remove water molecules in PDB file
+$ grep -v HOH 1aki.pdb > 1AKI_clean.pdb
+
 # To prepare gro file
 $ gmx pdb2gmx -f AF-Q96I59-F1-model_v4.pdb -o AF-Q96I59-F1-model_v4.gro -water tip4p
 
@@ -187,5 +190,10 @@ $ gmx genion -s ions.tpr -o AF-Q96I59-F1-model_v4_ions.gro -p topol.top -pname N
 For gromacs preprocessor (Energy Minimization)
 $ gmx grompp -f minim.mdp -c AF-Q96I59-F1-model_v4_ions.gro -p topol.top -o em.tpr
 $ gmx mdrun -v -deffnm em
+
+
+step 25: One or more water molecules can not be settled.
+Check for bad contacts and/or reduce the timestep if appropriate.
+
 
 ```
