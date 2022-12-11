@@ -199,3 +199,24 @@ Check for bad contacts and/or reduce the timestep if appropriate.
 $ gmx grompp -f nvt.mdp -c em_50000.gro -r em_50000.gro -p topol.top -o nvt.tpr
 $ gmx mdrun -deffnm nvt
 ```
+```
+Dynamic load balancing report:
+ DLB got disabled because it was unsuitable to use.
+ Average load imbalance: 3.5%.
+ The balanceable part of the MD step is 82%, load imbalance is computed from this.
+ Part of the total run time spent waiting due to load imbalance: 2.9%.
+ Average PME mesh/force load: 0.692
+ Part of the total run time spent waiting due to PP/PME imbalance: 3.9 %
+
+
+               Core t (s)   Wall t (s)        (%)
+       Time:   129218.860     4614.959     2800.0
+                         1h16:54
+                 (ns/day)    (hour/ns)
+Performance:        1.872       12.819
+```
+```
+$ gmx energy -f nvt.edr -o temperature.xvg
+$ gmx grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr
+$ gmx mdrun -deffnm npt
+```
