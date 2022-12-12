@@ -220,4 +220,5 @@ $ gmx energy -f nvt.edr -o temperature.xvg
 $ gmx grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr
 $ gmx mdrun -deffnm npt
 $ gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr
+$ gmx mdrun -deffnm md_0_1
 ```
