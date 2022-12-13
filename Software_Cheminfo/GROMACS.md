@@ -222,3 +222,44 @@ $ gmx mdrun -deffnm npt
 $ gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr
 $ gmx mdrun -deffnm md_0_1
 ```
+```
+GROMACS:      gmx mdrun, version 2021.4-Ubuntu-2021.4-2
+Executable:   /usr/bin/gmx
+Data prefix:  /usr
+Working dir:  /home/jihun/molecular_dynamics/dars2
+Command line:
+  gmx mdrun -deffnm md_0_1
+
+Compiled SIMD: SSE4.1, but for this host/run AVX_512 might be better (see
+log).
+Reading file md_0_1.tpr, VERSION 2021.4-Ubuntu-2021.4-2 (single precision)
+Changing nstlist from 10 to 40, rlist from 1 to 1.098
+
+Using 28 MPI threads
+Using 1 OpenMP thread per tMPI thread
+
+starting mdrun 'ASPARAGINE--TRNA LIGASE, CYTOPLASMIC in water'
+500000 steps,   1000.0 ps.
+
+Writing final coordinates.
+
+
+Dynamic load balancing report:
+ DLB was turned on during the run due to measured imbalance.
+ Average load imbalance: 6.7%.
+ The balanceable part of the MD step is 73%, load imbalance is computed from this.
+ Part of the total run time spent waiting due to load imbalance: 4.9%.
+ Steps where the load balancing was limited by -rdd, -rcon and/or -dds: X 0 % Y 0 % Z 0 %
+ Average PME mesh/force load: 0.677
+ Part of the total run time spent waiting due to PP/PME imbalance: 4.1 %
+
+
+               Core t (s)   Wall t (s)        (%)
+       Time:  1508233.468    53865.481     2800.0
+                         14h57:45
+                 (ns/day)    (hour/ns)
+Performance:        1.604       14.963
+
+GROMACS reminds you: "Your Shopping Techniques are Amazing" (Gogol Bordello)
+
+```
