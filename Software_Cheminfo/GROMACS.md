@@ -263,3 +263,99 @@ Performance:        1.604       14.963
 GROMACS reminds you: "Your Shopping Techniques are Amazing" (Gogol Bordello)
 
 ```
+```
+$ gmx trjconv -s md_0_1.tpr  -f md_0_1.xtc -o md_0_1.noPBC.xtc -pbc mol -center
+             :-) GROMACS - gmx trjconv, 2021.4-Ubuntu-2021.4-2 (-:
+
+                            GROMACS is written by:
+     Andrey Alekseenko              Emile Apol              Rossen Apostolov     
+         Paul Bauer           Herman J.C. Berendsen           Par Bjelkmar       
+       Christian Blau           Viacheslav Bolnykh             Kevin Boyd        
+     Aldert van Buuren           Rudi van Drunen             Anton Feenstra      
+    Gilles Gouaillardet             Alan Gray               Gerrit Groenhof      
+       Anca Hamuraru            Vincent Hindriksen          M. Eric Irrgang      
+      Aleksei Iupinov           Christoph Junghans             Joe Jordan        
+    Dimitrios Karkoulis            Peter Kasson                Jiri Kraus        
+      Carsten Kutzner              Per Larsson              Justin A. Lemkul     
+       Viveca Lindahl            Magnus Lundborg             Erik Marklund       
+        Pascal Merz             Pieter Meulenhoff            Teemu Murtola       
+        Szilard Pall               Sander Pronk              Roland Schulz       
+       Michael Shirts            Alexey Shvetsov             Alfons Sijbers      
+       Peter Tieleman              Jon Vincent              Teemu Virolainen     
+     Christian Wennberg            Maarten Wolf              Artem Zhmurov       
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx trjconv, version 2021.4-Ubuntu-2021.4-2
+Executable:   /usr/bin/gmx
+Data prefix:  /usr
+Working dir:  /home/jihun/molecular_dynamics/dars2
+Command line:
+  gmx trjconv -s md_0_1.tpr -f md_0_1.xtc -o md_0_1.noPBC.xtc -pbc mol -center
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Will write xtc: Compressed trajectory (portable xdr format): xtc
+Reading file md_0_1.tpr, VERSION 2021.4-Ubuntu-2021.4-2 (single precision)
+Reading file md_0_1.tpr, VERSION 2021.4-Ubuntu-2021.4-2 (single precision)
+Select group for centering
+Group     0 (         System) has 974523 elements
+Group     1 (        Protein) has 27117 elements
+Group     2 (      Protein-H) has 13690 elements
+Group     3 (        C-alpha) has  1692 elements
+Group     4 (       Backbone) has  5076 elements
+Group     5 (      MainChain) has  6764 elements
+Group     6 (   MainChain+Cb) has  8336 elements
+Group     7 (    MainChain+H) has  8368 elements
+Group     8 (      SideChain) has 18749 elements
+Group     9 (    SideChain-H) has  6926 elements
+Group    10 (    Prot-Masses) has 27117 elements
+Group    11 (    non-Protein) has 947406 elements
+Group    12 (          Water) has 947364 elements
+Group    13 (            SOL) has 947364 elements
+Group    14 (      non-Water) has 27159 elements
+Group    15 (            Ion) has    42 elements
+Group    16 (             NA) has    42 elements
+Group    17 ( Water_and_ions) has 947406 elements
+Select a group: 1
+Selected 1: 'Protein'
+Select group for output
+Group     0 (         System) has 974523 elements
+Group     1 (        Protein) has 27117 elements
+Group     2 (      Protein-H) has 13690 elements
+Group     3 (        C-alpha) has  1692 elements
+Group     4 (       Backbone) has  5076 elements
+Group     5 (      MainChain) has  6764 elements
+Group     6 (   MainChain+Cb) has  8336 elements
+Group     7 (    MainChain+H) has  8368 elements
+Group     8 (      SideChain) has 18749 elements
+Group     9 (    SideChain-H) has  6926 elements
+Group    10 (    Prot-Masses) has 27117 elements
+Group    11 (    non-Protein) has 947406 elements
+Group    12 (          Water) has 947364 elements
+Group    13 (            SOL) has 947364 elements
+Group    14 (      non-Water) has 27159 elements
+Group    15 (            Ion) has    42 elements
+Group    16 (             NA) has    42 elements
+Group    17 ( Water_and_ions) has 947406 elements
+Select a group: 0
+Selected 0: 'System'
+Reading frame       0 time    0.000   
+Precision of md_0_1.xtc is 0.001 (nm)
+Using output precision of 0.001 (nm)
+Last frame        100 time 1000.000    ->  frame    100 time 1000.000      
+
+
+GROMACS reminds you: "C++ is tricky. You can do everything. You can even make every mistake." (Nicolai Josuttis, CppCon2017)
+
+```
