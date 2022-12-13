@@ -368,3 +368,6 @@ Last frame        100 time 1000.000    ->  frame    100 time 1000.000
 GROMACS reminds you: "C++ is tricky. You can do everything. You can even make every mistake." (Nicolai Josuttis, CppCon2017)
 
 ```
+````
+xmgrace [file_name].xvg
+```
