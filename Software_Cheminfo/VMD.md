@@ -32,3 +32,10 @@ To execute
 ```
 $ /opt/vmd/1.9.3/vmd
 ```
+
+# Analysis
+## Graphics
+Graphics - Representation - selected molecule - select `Rep` -   
+## Trajectory (GROAMCS)
+Ref: https://www.youtube.com/watch?v=PlPYc4jMA4c&ab_channel=KushMehta   
+File -  New molecule - load `gro` file - load `xtc` or `trr` file   
