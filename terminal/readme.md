@@ -59,3 +59,5 @@ Ref: https://nan1004au.tistory.com/entry/%EB%A6%AC%EB%88%85%EC%8A%A4-%EC%98%88%E
 shutdown -h now
 shutdown -h +210 # after 210 minuite, system shut downs
 ```
+## tty1 shell screen
+`Ctrl` + `Alt` + `F1`
