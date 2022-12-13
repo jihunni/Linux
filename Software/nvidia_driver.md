@@ -114,3 +114,7 @@ To install the driver using this installer, run the following command, replacing
 
 Logfile is /var/log/cuda-installer.log
 ```
+```
+nvidia-s,i
+nvcc --version
+```
