@@ -1,3 +1,8 @@
+# Biological problems
+- protein behavior
+- binding site
+- free energy calculation
+- statistics and quantification
 # Install (Ubuntu)
 Ref : https://manual.gromacs.org/current/download.html  
 Install guide : https://manual.gromacs.org/current/install-guide/index.html  
@@ -25,7 +30,7 @@ video : https://www.youtube.com/watch?v=kCKYkNygc9I
 	sudo make install
 	source /usr/local/gromacs/bin/GMXRC
 	```
-# Install in MacOS
+## Install in MacOS
 Ref: https://bioinformaticsreview.com/20220206/how-to-install-gromacs-on-apple-m1-macos/
 	```
 	% cmake .. -DGMX_BUILD_OWN_FFTW=ON -DREGRESSIONTEST_DOWNLOAD=OFF -DCMAKE_C_COMPILER=gcc -DREGRESSIONTEST_PATH=/Users/jihun/Downloads/software/regressiontests-2022.2
@@ -146,7 +151,7 @@ gmx genioin -s ions.tpr -o water_ions.gro -p file.top -pname NA -nname CL -neutr
 ```
 
 
-Energy minimization (EM) : EM ensured that we have a reasonable starting structure, in terms of geometry and solvent orientation.
+## Energy minimization (EM) : EM ensured that we have a reasonable starting structure, in terms of geometry and solvent orientation. The purpose of energy minimization is not to find the global or local minimum, but to escape from the force in high gradient and avoid protein collapse.
 `nunu.mdp` file
 ```
 ; minim.mdp - used as input into grompp to generate em.tpr
