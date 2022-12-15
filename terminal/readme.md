@@ -63,7 +63,7 @@ shutdown -h +210 # after 210 minuite, system shut downs
 `Ctrl` + `Alt` + `F1`
 
 # File transfer
-## FTP - Local
+## FTP -> Local
 ```
 wget -r --user="USER_ID" --password="PASSWORD"  ftp://ftp.example.com/subdirectory/*
 ```
