@@ -27,6 +27,7 @@ passwd [UserName ] #change passwd
 > > '!!' means an account is locked.
 ```
 passwd -g [GroupName]
+passwd -l [AccountID]
 ```
 
 ```
