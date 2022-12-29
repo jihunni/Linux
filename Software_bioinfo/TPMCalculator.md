@@ -2,10 +2,13 @@
 - paper: https://academic.oup.com/bioinformatics/article/35/11/1960/5150437
 - github: https://github.com/ncbi/TPMCalculator
 - conda: https://anaconda.org/bioconda/tpmcalculator
-  Installation
+  
+# Installation
   ```
   conda install -c bioconda tpmcalculator
   ```
+
+# Run
   ```
   ./bin/TPMCalculator -g GTF_file [-d BAM_files_directory|-b BAM_file]
   
@@ -26,3 +29,13 @@
     -e    Extended output. This will include transcript level TPM values. Default: No.
     -a    Print out all features with read counts equal to zero. Default: No.
   ```
+  
+    
+## example
+ ```
+ $ TPMCalculator -g /home/data/ref_genome/Homo_sapiens.GRCh38.108/Homo_sapiens.GRCh38.108.gtf -b  sample_Aligned.sortedByCoord.out.bam -p
+ ```
+ output: 
+ -  sample_Aligned.sortedByCoord.out_genes.uni
+ -  sample_Aligned.sortedByCoord.out_genes.ent
+ -  sample_Aligned.sortedByCoord.out_genes.out
