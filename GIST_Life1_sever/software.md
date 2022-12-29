@@ -170,7 +170,7 @@
   $ module load BWA-MEM2
   $ bwa-mem2 [command]
   ```
-- kalisto  
+- kallisto  
   heuristic sequence alignment  
   software directory : /opt/kallisto/2021.10.18/  
   moduel directory : /opt/Modules/modulefiles/kallisto  
