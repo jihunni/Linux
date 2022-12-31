@@ -1,3 +1,17 @@
+# Bowtie2
+# Build index
+Ref: https://bowtie-bio.sourceforge.net/bowtie2/manual.shtml#the-bowtie2-build-indexer  
+
+general
+```
+bowtie2-build [options]* <reference_in> <bt2_base>
+```
+
+example
+```
+$ bowtie2-build ../Homo_sapiens.GRCh38.dna_sm.toplevel.fa Homo_sapiens.GRCh38.dna_sm.toplevel --threads 8
+```
+
 ```
 [jihun@life3 TCGA-COAD_ATAC]$ ./bowtie_align_process_test.sh
 $PWD/data/0b069d38-db2f-4d3d-99aa-0533e7e77b19_atacseq_gdc_realn
