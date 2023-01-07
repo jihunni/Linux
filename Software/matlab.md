@@ -57,12 +57,22 @@ prepend-path    LD_LIBRARY_PATH ${GUROBI_HOME}/lib
 
 # enable module versioning modulepath
 #module use /usr/share/modules/versions
-
-
-
-
 ```
 
+## MATLAB Engine API for python
+### Install MATLAB Engine API for Python
+Ref: https://kr.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html?lang=en  
+You can install the MATLAB Engine API for Python using (1) the pip command or a (2) Python setup script setup.py.
+```
+python -m pip install matlabengine
+```
+
+### Start MATLAB Engine
+Start Python. Type these commands from the Python prompt to import the MATLAB module and start the engine:
+```
+import matlab.engine
+eng = matlab.engine.start_matlab()
+```
 # restart license manager 
 Ref : https://kr.mathworks.com/matlabcentral/answers/102968-how-do-i-start-or-stop-the-network-license-manager
 General code
