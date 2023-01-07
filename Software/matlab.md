@@ -67,6 +67,23 @@ You can install the MATLAB Engine API for Python using (1) the pip command or a 
 python -m pip install matlabengine
 ```
 
+- Trial and Error
+Ref: https://kr.mathworks.com/matlabcentral/answers/597865-matlab-linking-error-centos-7-r2020b
+	```
+	I've installed MATLAB R2020b on CentOS 7 and get the following error:
+	$ matlab
+	MATLAB is selecting SOFTWARE OPENGL rendering.
+	/Home/matlab/matlab/bin/glnxa64/MATLAB: symbol lookup error: /Home/matlab/matlab/bin/glnxa64/../../sys/os/glnxa64/libstdc++.so.6: undefined symbol: __cxa_thread_atexit_impl
+	$ gcc -v
+	Using built-in specs.
+	COLLECT_GCC=gcc
+	COLLECT_LTO_WRAPPER=/software/libexec/gcc/x86_64-redhat-linux/6.1.1/lto-wrapper
+	Target: x86_64-redhat-linux
+	Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,objc,obj-c++,fortran,go,lto --prefix=/software --mandir=/software/share/man --infodir=/software/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --disable-libgcj --without-isl --enable-libmpx --enable-gnu-indirect-function --with-arch_32=x86-64 --with-arch=nocona --with-tune=core2 --with-multilib-list=m64 --oldincludedir=/software/include --build=x86_64-redhat-linux
+	Thread model: posix
+	gcc version 6.1.1 20160510 (Red Hat 6.1.1-2) (GCC)
+	Which compiler version and dependencies do you need to install to have MATLAB working?
+	```
 ### Start MATLAB Engine
 Start Python. Type these commands from the Python prompt to import the MATLAB module and start the engine:
 ```
