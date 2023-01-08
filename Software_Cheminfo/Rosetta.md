@@ -46,9 +46,11 @@ e.g. $./scons.py -j 20 mode=release bin
   - any constraints applied to the structure
   - annotations from the original PDB.
 - resfile
+  Ref: https://www.rosettacommons.org/docs/latest/rosetta_basics/file_types/resfiles
 
-
-
+## General
+Ref (general run) : https://www.rosettacommons.org/docs/latest/rosetta_basics/running-rosetta-with-options
+Ref (input option): https://new.rosettacommons.org/docs/latest/rosetta_basics/options/input-options
 ## Protein preparation
 - Idealize: The structure was idealized, which sets bond lengths and angles to their ideal values and then minimizes the structure in the presence of coordinate constraints. 
   ```
@@ -59,7 +61,9 @@ e.g. $./scons.py -j 20 mode=release bin
   -no_optH false
   -flip_HNQ
   ```
-- Relax : The idealized structure of TEVp was relaxed (100 iterations) using the default constrained relax script, and position constraints were added to backbone heavy atoms based on the crystal structure. During this relax procedure, Rosetta resfiles were used to incorporate single (or double) mutations. 
+- Relax : The idealized structure of TEVp was relaxed (100 iterations) using the default constrained relax script, and position constraints were added to backbone heavy atoms based on the crystal structure. During this relax procedure, Rosetta resfiles were used to incorporate single (or double) mutations.   
+  Ref (tutorial): https://new.rosettacommons.org/demos/latest/tutorials/Relax_Tutorial/Relax
+  Ref (option description): https://new.rosettacommons.org/docs/latest/full-options-list#1-relax
   ```
   ${path_to_Rosetta}/main/source/bin/relax.linuxgccrelease
   -database ${path_to_Rosetta}/main/database
