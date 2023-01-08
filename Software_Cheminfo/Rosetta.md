@@ -22,6 +22,16 @@ e.g. $./scons.py -j 20 mode=release bin
   Sol : Do not move the directory of Rosetta. Recompile.  
 
 # Rosetta
+## Architecture
+- Code is organized so that libraries and namespaces (Cþþ namespaces provide a mechanism for grouping related class and function names) mirror the directory structure, thus making it easy to find code. Each library corresponds to a top-level namespace. Any subdirectory of a library directory corresponds to a nested namespace.
+- The top-level directory src/ (source) contains:
+  - utility/ : collect common data structures (a 1-indexed container, an owning pointer class, an optimized graph class) and numeric subroutines (vector and matrix classes, random number generators)
+  numeric/, 
+  - core/ : defines structures and supports structure I/O, scoring, packing, and minimization, 
+  - protocols/ : consists of common structural modifications one might wish to make to a structure, and a means to control the distribution of jobs 
+  - devel/
+  - apps/ directory, in which executables with main() functions live; apps is not linked as a library.
+
 ## Protein preparation
 - Idealize: The structure was idealized, which sets bond lengths and angles to their ideal values and then minimizes the structure in the presence of coordinate constraints. 
   ```
