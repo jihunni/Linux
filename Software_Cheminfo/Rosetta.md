@@ -51,6 +51,10 @@ e.g. $./scons.py -j 20 mode=release bin
 ## General
 Ref (general run) : https://www.rosettacommons.org/docs/latest/rosetta_basics/running-rosetta-with-options  
 Ref (input option): https://new.rosettacommons.org/docs/latest/rosetta_basics/options/input-options  
+```
+# To delcare a global variable
+export Variable='contents'
+```
 ## Protein preparation
 - Idealize: The structure was idealized, which sets bond lengths and angles to their ideal values and then minimizes the structure in the presence of coordinate constraints. 
   ```
