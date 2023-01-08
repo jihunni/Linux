@@ -99,9 +99,8 @@ Ref (input option): https://new.rosettacommons.org/docs/latest/rosetta_basics/op
   start
   75 A PIKAA A
   ```
-## Interface scoring: The interfacial energy was computed for all relaxed structures of each variant using the rosetta_scripts
-application with the InterfaceAnalyzerMover. This mover calculates the total interaction energy between
-all residues in chain A (nTEV) with residues in chain B (cTEV). 
+## Interface scoring: 
+The interfacial energy was computed for all relaxed structures of each variant using the rosetta_scripts application with the InterfaceAnalyzerMover. This mover calculates the total interaction energy between all residues in chain A (nTEV) with residues in chain B (cTEV). 
 
 Commands:
 ```
