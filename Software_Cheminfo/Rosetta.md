@@ -64,6 +64,8 @@ Ref (input option): https://new.rosettacommons.org/docs/latest/rosetta_basics/op
 - Relax : The idealized structure of TEVp was relaxed (100 iterations) using the default constrained relax script, and position constraints were added to backbone heavy atoms based on the crystal structure. During this relax procedure, Rosetta resfiles were used to incorporate single (or double) mutations.   
   Ref (tutorial): https://new.rosettacommons.org/demos/latest/tutorials/Relax_Tutorial/Relax  
   Ref (option description): https://new.rosettacommons.org/docs/latest/full-options-list#1-relax  
+  
+  Commands:
   ```
   ${path_to_Rosetta}/main/source/bin/relax.linuxgccrelease
   -database ${path_to_Rosetta}/main/database
@@ -78,3 +80,51 @@ Ref (input option): https://new.rosettacommons.org/docs/latest/rosetta_basics/op
   -packing:resfile ${mutant}.resfile
   -relax:respect_resfile 
   ```
+  
+  always_constrained_relax.script:
+  ```
+  repeat 5
+  ramp_repack_min 0.02 0.01 1.0
+  ramp_repack_min 0.250 0.01 1.0
+  ramp_repack_min 0.550 0.01 1.0
+  ramp_repack_min 1 0.00001 1.0
+  accept_to_best
+  endrepeat
+  ```
+  
+  example ${mutant}.resfile:
+  ```
+  AUTO
+  NATAA
+  start
+  75 A PIKAA A
+  ```
+## Interface scoring: The interfacial energy was computed for all relaxed structures of each variant using the rosetta_scripts
+application with the InterfaceAnalyzerMover. This mover calculates the total interaction energy between
+all residues in chain A (nTEV) with residues in chain B (cTEV). 
+
+Commands:
+```
+${path_to_Rosetta}/main/source/bin/rosetta_scripts.linuxgccrelease
+-database ${path_to_Rosetta}/main/database 
+-parser:protocol interface_score.script
+-file:s ${mutant}.pdb
+```
+interface_score.script
+```
+<ROSETTASCRIPTS>
+<TASKOPERATIONS>
+</TASKOPERATIONS>
+<SCOREFXNS>
+</SCOREFXNS>
+<FILTERS>
+</FILTERS>
+<MOVERS>
+<InterfaceAnalyzerMover name="score_int" pack_separated="false" pack_input="false"
+packstat="false" interface_sc="true" ligandchain="B"/>
+</MOVERS>
+<PROTOCOLS>
+<Add mover_name="score_int"/>
+</PROTOCOLS>
+</ROSETTASCRIPTS>
+```
