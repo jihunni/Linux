@@ -31,6 +31,23 @@ e.g. $./scons.py -j 20 mode=release bin
   - protocols/ : consists of common structural modifications one might wish to make to a structure, and a means to control the distribution of jobs 
   - devel/
   - apps/ directory, in which executables with main() functions live; apps is not linked as a library.
+## Data type
+- PDB
+- silent
+  ```
+  # silent to PDB
+  /main/source/bin/extract_pdbs.default.linuxgccrelease -in:file:silent fold_silent.out -out:pdb –in:file:tags s_000001
+  ```
+- Pose : Rosetta's internal representation of a protein structure
+  Contains: 
+  - the atoms in the structure and the chemical connectivity 
+  - how Rosetta interconverts internal/Cartesian coordinates (the FoldTree) 
+  - the current energies 
+  - any constraints applied to the structure
+  - annotations from the original PDB.
+- resfile
+
+
 
 ## Protein preparation
 - Idealize: The structure was idealized, which sets bond lengths and angles to their ideal values and then minimizes the structure in the presence of coordinate constraints. 
