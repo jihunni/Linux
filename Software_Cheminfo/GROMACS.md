@@ -112,7 +112,9 @@ Output :
   typeB, chargeB, massB: Used for free energy perturbation (not discussed here)
 
 - The posre.itp file contains information used to restrain the positions of heavy atoms (more on this later).
-
+- Trial and Error:
+	- the input structure to pdb2gmx has hydrogen atoms whose naming differs from that given in the .rtp file of the force field.
+		Ref: https://www.researchgate.net/post/How-can-I-rectify-the-following-GROMACS-error-Fatal-error-Atom-HB3-in-residue-SER-3-was-not-found-in-rtp-entry-SER-with-8-atoms-while-sorting-atoms   
 
 
 To generate a box for simulation (`box.gro`)
