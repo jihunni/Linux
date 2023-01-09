@@ -238,6 +238,8 @@ Output:
 	```
 	$ gmx grompp -f nvt.mdp -c em_50000.gro -r em_50000.gro -p topol.top -o nvt.tpr
 	$ gmx mdrun -deffnm nvt
+	$ gmx energy -f nvt.edr -o temperature.xvg
+	$ xmgrace potential.xvg
 	```
 - NPT equilibrium
 	npt.mdp
@@ -289,9 +291,12 @@ Output:
 	```
 	
 	```
-	$ gmx energy -f nvt.edr -o temperature.xvg
 	$ gmx grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr
+			> -t (time check point): the checkpoint file from the NVT equilibration, containing all the necessary state variables to continue our simulation.
+			> -c (coordinate file): the final output of the NVT simulation 
 	$ gmx mdrun -deffnm npt -nb gpu
+	$ gmx energy -f npt.edr -o pressure.xvg
+	$ xmgrace pressure.xvg
 	```
 ## Production MD
 md.mdp
