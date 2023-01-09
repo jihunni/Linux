@@ -95,6 +95,9 @@ sudo yum -y install nvidia-driver-latest-dkms
 sudo yum -y install cuda
 ```
 # CUDA installation (GPU1 workstation)
+Ref : https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=CentOS&target_version=7&target_type=rpm_network
+- Trial and Error : it is required to kill all jobs in GPU (`nvidia-smi`)
+- Success
 ```
 ===========
 = Summary =
@@ -117,4 +120,22 @@ Logfile is /var/log/cuda-installer.log
 ```
 nvidia-s,i
 nvcc --version
+```
+# CUDA installation (GPU2 workstation)
+```
+===========
+= Summary =
+===========
+
+Driver:   Installed
+Toolkit:  Installed in /usr/local/cuda-12.0/
+
+Please make sure that
+ -   PATH includes /usr/local/cuda-12.0/bin
+ -   LD_LIBRARY_PATH includes /usr/local/cuda-12.0/lib64, or, add /usr/local/cuda-12.0/lib64 to /etc/ld.so.conf and run ldconfig as root
+
+To uninstall the CUDA Toolkit, run cuda-uninstaller in /usr/local/cuda-12.0/bin
+To uninstall the NVIDIA Driver, run nvidia-uninstall
+Logfile is /var/log/cuda-installer.log
+
 ```
