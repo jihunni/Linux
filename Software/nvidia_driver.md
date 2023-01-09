@@ -142,3 +142,13 @@ To uninstall the NVIDIA Driver, run nvidia-uninstall
 Logfile is /var/log/cuda-installer.log
 
 ```
+# Uninstallation
+Ref: https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html  
+To uninstall the CUDA Toolkit, run the uninstallation script provided in the bin directory of the toolkit. By default, it is located in `/usr/local/cuda-12.0/bin`:
+```
+sudo /usr/local/cuda-12.0/bin/cuda-uninstaller
+```
+To uninstall the NVIDIA Driver, run nvidia-uninstall:
+```
+sudo /usr/bin/nvidia-uninstall
+```
