@@ -33,6 +33,39 @@ video : https://www.youtube.com/watch?v=kCKYkNygc9I
 	sudo make install
 	source /usr/local/gromacs/bin/GMXRC
 	```
+## Install in Centos7
+Ref: https://sites.google.com/site/rangsiman1993/comp-chem/program-install/install-gromacs-4
+- installing fftw-3.3.6
+	```
+	wget ftp://ftp.fftw.org/pub/fftw/fftw-3.3.6-pl2.tar.gz
+	tar xzf fftw-3.3.6-pl2.tar.gz
+	chown root:root -R fftw-3.3.6-pl2
+	cd fftw-3.3.6-pl2
+	## creating single- and double-precision versions ###
+	./configure --enable-threads --enable-float --prefix=/usr/local/fftw-3.3.6-pl2
+	make
+	make install
+	make distclean
+	./configure --enable-threads --prefix=/usr/local/fftw-3.3.6-pl2
+	make
+	make install
+	```
+- install `Gromacs`
+	```
+	wget ftp://ftp.gromacs.org/pub/gromacs/gromacs-4.5.3.tar.gz
+	tar xzf gromacs-4.5.3.tar.gz
+	chown root:root -R gromacs-4.5.3
+	cd gromacs-4.5.3
+	## Compiling Gromacs
+	./configure --prefix=/usr/local/bin --enable-mpi LDFLAGS=-L/usr/local/fftw-3.3.6-pl2/lib \
+	CPPFLAGS=-I/usr/local/fftw-3.3.6-pl2/include
+	make
+	make &> log
+	make mdrun
+	make install
+	make install-mdrun
+	make links
+	```
 ## Install in MacOS
 Ref: https://bioinformaticsreview.com/20220206/how-to-install-gromacs-on-apple-m1-macos/
 	```
