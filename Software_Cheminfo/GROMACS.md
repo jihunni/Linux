@@ -385,6 +385,32 @@ gen_vel                 = no        ; Velocity generation is off
 	$ gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr
 	$ gmx mdrun -deffnm md_0_1 -nb gpu
 ```
+- thread control
+Ref: https://manual.gromacs.org/documentation/current/user-guide/mdrun-performance.html
+```
+Reading file md_0_1.tpr, VERSION 2022.4 (single precision)
+Changing nstlist from 10 to 80, rlist from 1 to 1.147
+
+On host gpu1 2 GPUs selected for this run.
+Mapping of GPU IDs to the 4 GPU tasks in the 4 ranks on this node:
+  PP:0,PP:0,PP:1,PP:1
+PP tasks will do (non-perturbed) short-ranged and most bonded interactions on the GPU
+PP task will update and constrain coordinates on the CPU
+Using 4 MPI threads
+Using 6 OpenMP threads per tMPI thread
+
+```
+1 GPU selected for this run.
+Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:
+  PP:0,PME:0
+PP tasks will do (non-perturbed) short-ranged interactions on the GPU
+PP task will update and constrain coordinates on the CPU
+PME tasks will do all aspects on the GPU
+Using 1 MPI thread
+Using 24 OpenMP threads
+```
+
+```
 # Practice
 ```
 # To remove water molecules in PDB file
