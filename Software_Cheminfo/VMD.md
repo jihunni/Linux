@@ -39,3 +39,10 @@ Graphics - Representation - selected molecule - select `Rep` -
 ## Trajectory (GROAMCS)
 Ref: https://www.youtube.com/watch?v=PlPYc4jMA4c&ab_channel=KushMehta   
 File -  New molecule - load `gro` file - load `xtc` or `trr` file   
+
+# Tcl command
+- add molecule
+  ```
+  mol new {molecular_dynamics/relax/AF-F1-model_v4.pdb} type {pdb} first 0 last -1 step 1 waitfor 1
+  ```
+- 
