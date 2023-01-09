@@ -41,6 +41,7 @@ Ref: https://www.youtube.com/watch?v=PlPYc4jMA4c&ab_channel=KushMehta
 File -  New molecule - load `gro` file - load `xtc` or `trr` file   
 
 # Tcl command
+Ref: https://www.ks.uiuc.edu/Research/vmd/vmd-1.8.3/ug/node198.html
 Ref: http://chopra-modules.science.purdue.edu/class/chm579/spring2019/public/pages/VMD_tutorial/main.html
 - add molecule
   ```
