@@ -123,6 +123,9 @@ nvcc --version
 ```
 # CUDA installation (GPU2 workstation)
 ```
+sudo apt install nvidia-cuda-toolkit
+```
+```
 ===========
 = Summary =
 ===========
