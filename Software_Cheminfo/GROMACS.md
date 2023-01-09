@@ -40,7 +40,7 @@ Ref: https://bioinformaticsreview.com/20220206/how-to-install-gromacs-on-apple-m
 	% sudo make check
 	```
 
-# basics
+# Basics
 ```
 gmx help (module)
 gmx (module) -h
@@ -122,7 +122,7 @@ To generate a box for simulation (`box.gro`)
 gmx editconf -f file.gro -o box.gro -c -d 1.0 -bt cubic 
 ```
 > -d : distance from cubic box
-
+> -  the box size does not significantly affect the mobility of protein atoms on a relatively short trajectory, while the effect of the precipitant concentration on this trajectory is noticeable. (Ref: Kordonskaya, Y.V., Timofeev, V.I., Dyakova, Y.A. et al. Effect of the Simulation Box Size and Precipitant Concentration on the Behavior of Tetragonal Lysozyme Dimer. Crystallogr. Rep. 66, 525–528 (2021). https://doi.org/10.1134/S106377452103010X)
 ```
 gmx solvate -cp box.gro -cs configuration_of_solvent_from_library.gro -o water_box.gro -p file.top
 ```
@@ -179,6 +179,7 @@ pbc             = xyz       ; Periodic Boundary Conditions in all 3 dimensions
 $ gmx grompp -f minim.mdp -c water_ions.gro -p topol.top -o em.tpr
 $ gmx mdrun -v -deffnm em
 $ gmx energy -f em.edr -o potential.xvg
+$ xmgrace potential.xvg
 ```
 
 Output:   
@@ -187,6 +188,165 @@ Output:
 - em.trr: Binary full-precision trajectory
 - em.gro: Energy-minimized structure
 
+### Equilibration
+- NVT equilibrium
+	nvt.mdp
+	```
+	title                   = OPLS Lysozyme NVT equilibration 
+	define                  = -DPOSRES  ; position restrain the protein
+	; Run parameters
+	integrator              = md        ; leap-frog integrator
+	nsteps                  = 50000     ; 2 * 50000 = 100 ps
+	dt                      = 0.002     ; 2 fs
+	; Output control
+	nstxout                 = 500       ; save coordinates every 1.0 ps
+	nstvout                 = 500       ; save velocities every 1.0 ps
+	nstenergy               = 500       ; save energies every 1.0 ps
+	nstlog                  = 500       ; update log file every 1.0 ps
+	; Bond parameters
+	continuation            = no        ; first dynamics run
+	constraint_algorithm    = lincs     ; holonomic constraints 
+	constraints             = h-bonds   ; bonds involving H are constrained
+	lincs_iter              = 1         ; accuracy of LINCS
+	lincs_order             = 4         ; also related to accuracy
+	; Nonbonded settings 
+	cutoff-scheme           = Verlet    ; Buffered neighbor searching
+	ns_type                 = grid      ; search neighboring grid cells
+	nstlist                 = 10        ; 20 fs, largely irrelevant with Verlet
+	rcoulomb                = 1.0       ; short-range electrostatic cutoff (in nm)
+	rvdw                    = 1.0       ; short-range van der Waals cutoff (in nm)
+	DispCorr                = EnerPres  ; account for cut-off vdW scheme
+	; Electrostatics
+	coulombtype             = PME       ; Particle Mesh Ewald for long-range electrostatics
+	pme_order               = 4         ; cubic interpolation
+	fourierspacing          = 0.16      ; grid spacing for FFT
+	; Temperature coupling is on
+	tcoupl                  = V-rescale             ; modified Berendsen thermostat
+	tc-grps                 = Protein Non-Protein   ; two coupling groups - more accurate
+	tau_t                   = 0.1     0.1           ; time constant, in ps
+	ref_t                   = 300     300           ; reference temperature, one for each group, in K
+	; Pressure coupling is off
+	pcoupl                  = no        ; no pressure coupling in NVT
+	; Periodic boundary conditions
+	pbc                     = xyz       ; 3-D PBC
+	; Velocity generation
+	gen_vel                 = yes       ; assign velocities from Maxwell distribution
+	gen_temp                = 300       ; temperature for Maxwell distribution
+	gen_seed                = -1        ; generate a random seed
+	```
+
+	```
+	$ gmx grompp -f nvt.mdp -c em_50000.gro -r em_50000.gro -p topol.top -o nvt.tpr
+	$ gmx mdrun -deffnm nvt
+	```
+- NPT equilibrium
+	npt.mdp
+	```
+	title                   = OPLS Lysozyme NPT equilibration 
+	define                  = -DPOSRES  ; position restrain the protein
+	; Run parameters
+	integrator              = md        ; leap-frog integrator
+	nsteps                  = 50000     ; 2 * 50000 = 100 ps
+	dt                      = 0.002     ; 2 fs
+	; Output control
+	nstxout                 = 500       ; save coordinates every 1.0 ps
+	nstvout                 = 500       ; save velocities every 1.0 ps
+	nstenergy               = 500       ; save energies every 1.0 ps
+	nstlog                  = 500       ; update log file every 1.0 ps
+	; Bond parameters
+	continuation            = yes       ; Restarting after NVT 
+	constraint_algorithm    = lincs     ; holonomic constraints 
+	constraints             = h-bonds   ; bonds involving H are constrained
+	lincs_iter              = 1         ; accuracy of LINCS
+	lincs_order             = 4         ; also related to accuracy
+	; Nonbonded settings 
+	cutoff-scheme           = Verlet    ; Buffered neighbor searching
+	ns_type                 = grid      ; search neighboring grid cells
+	nstlist                 = 10        ; 20 fs, largely irrelevant with Verlet scheme
+	rcoulomb                = 1.0       ; short-range electrostatic cutoff (in nm)
+	rvdw                    = 1.0       ; short-range van der Waals cutoff (in nm)
+	DispCorr                = EnerPres  ; account for cut-off vdW scheme
+	; Electrostatics
+	coulombtype             = PME       ; Particle Mesh Ewald for long-range electrostatics
+	pme_order               = 4         ; cubic interpolation
+	fourierspacing          = 0.16      ; grid spacing for FFT
+	; Temperature coupling is on
+	tcoupl                  = V-rescale             ; modified Berendsen thermostat
+	tc-grps                 = Protein Non-Protein   ; two coupling groups - more accurate
+	tau_t                   = 0.1     0.1           ; time constant, in ps
+	ref_t                   = 300     300           ; reference temperature, one for each group, in K
+	; Pressure coupling is on
+	pcoupl                  = Parrinello-Rahman     ; Pressure coupling on in NPT
+	pcoupltype              = isotropic             ; uniform scaling of box vectors
+	tau_p                   = 2.0                   ; time constant, in ps
+	ref_p                   = 1.0                   ; reference pressure, in bar
+	compressibility         = 4.5e-5                ; isothermal compressibility of water, bar^-1
+	refcoord_scaling        = com
+	; Periodic boundary conditions
+	pbc                     = xyz       ; 3-D PBC
+	; Velocity generation
+	gen_vel                 = no        ; Velocity generation is off 
+	```
+	
+	```
+	$ gmx energy -f nvt.edr -o temperature.xvg
+	$ gmx grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr
+	$ gmx mdrun -deffnm npt -nb gpu
+	```
+## Production MD
+md.mdp
+```
+title                   = NARS2
+; Run parameters
+integrator              = md        ; leap-frog integrator
+nsteps                  = 500000    ; 2 * 500000 = 1000 ps (1 ns)
+dt                      = 0.002     ; 2 fs
+; Output control
+nstxout                 = 0         ; suppress bulky .trr file by specifying 
+nstvout                 = 0         ; 0 for output frequency of nstxout,
+nstfout                 = 0         ; nstvout, and nstfout
+nstenergy               = 5000      ; save energies every 10.0 ps
+nstlog                  = 5000      ; update log file every 10.0 ps
+nstxout-compressed      = 5000      ; save compressed coordinates every 10.0 ps
+compressed-x-grps       = System    ; save the whole system
+; Bond parameters
+continuation            = yes       ; Restarting after NPT 
+constraint_algorithm    = lincs     ; holonomic constraints 
+constraints             = h-bonds   ; bonds involving H are constrained
+lincs_iter              = 1         ; accuracy of LINCS
+lincs_order             = 4         ; also related to accuracy
+; Neighborsearching
+cutoff-scheme           = Verlet    ; Buffered neighbor searching
+ns_type                 = grid      ; search neighboring grid cells
+nstlist                 = 10        ; 20 fs, largely irrelevant with Verlet scheme
+rcoulomb                = 1.0       ; short-range electrostatic cutoff (in nm)
+rvdw                    = 1.0       ; short-range van der Waals cutoff (in nm)
+; Electrostatics
+coulombtype             = PME       ; Particle Mesh Ewald for long-range electrostatics
+pme_order               = 4         ; cubic interpolation
+fourierspacing          = 0.16      ; grid spacing for FFT
+; Temperature coupling is on
+tcoupl                  = V-rescale             ; modified Berendsen thermostat
+tc-grps                 = Protein Non-Protein   ; two coupling groups - more accurate
+tau_t                   = 0.1     0.1           ; time constant, in ps
+ref_t                   = 300     300           ; reference temperature, one for each group, in K
+; Pressure coupling is on
+pcoupl                  = Parrinello-Rahman     ; Pressure coupling on in NPT
+pcoupltype              = isotropic             ; uniform scaling of box vectors
+tau_p                   = 2.0                   ; time constant, in ps
+ref_p                   = 1.0                   ; reference pressure, in bar
+compressibility         = 4.5e-5                ; isothermal compressibility of water, bar^-1
+; Periodic boundary conditions
+pbc                     = xyz       ; 3-D PBC
+; Dispersion correction
+DispCorr                = EnerPres  ; account for cut-off vdW scheme
+; Velocity generation
+gen_vel                 = no        ; Velocity generation is off 
+```
+```
+	$ gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr
+	$ gmx mdrun -deffnm md_0_1 -nb gpu
+```
 # Practice
 ```
 # To remove water molecules in PDB file
