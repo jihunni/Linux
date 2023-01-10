@@ -382,8 +382,9 @@ DispCorr                = EnerPres  ; account for cut-off vdW scheme
 gen_vel                 = no        ; Velocity generation is off 
 ```
 ```
-	$ gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr
-	$ gmx mdrun -deffnm md_0_1 -nb gpu
+$ gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr
+$ gmx mdrun -deffnm md_0_1 -nb gpu -gpu_id 0
+	> Starts gmx mdrun with 1 GPU with id 0
 ```
 - thread control
 Ref: https://manual.gromacs.org/documentation/current/user-guide/mdrun-performance.html
