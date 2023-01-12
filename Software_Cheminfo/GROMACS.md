@@ -431,6 +431,13 @@ Plotted together, results look something like:
 
 Both time series show the RMSD levels off to ~0.1 nm (1 Å), indicating that the structure is very stable. Subtle differences between the plots indicate that the structure at t = 0 ns is slightly different from this crystal structure. This is to be expected, since it has been energy-minimized, and because the position restraints are not 100% perfect, as discussed previously.
 
+- RMSF
+	Ref: https://manual.gromacs.org/archive/4.6.5/online/g_rmsf.html  
+	```
+	gmx rmsf -s md_0_1.tpr -f md_0_1_noPBC.xtc -o rmsf.xvg
+	```
+- 
+
 # Practice
 ```
 # To remove water molecules in PDB file
