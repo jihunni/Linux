@@ -434,7 +434,7 @@ Both time series show the RMSD levels off to ~0.1 nm (1 Å), indicating that the
 - RMSF
 	Ref: https://manual.gromacs.org/archive/4.6.5/online/g_rmsf.html  
 	```
-	gmx rmsf -s md_0_1.tpr -f md_0_1_noPBC.xtc -o rmsf.xvg
+	gmx rmsf -s md_0_1.tpr -f md_0_1_noPBC.xtc -res yes -o rmsf.xvg
 	```
 - 
 
