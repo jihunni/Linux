@@ -13,6 +13,8 @@ set nocp
 set hlsearch
 set showmatch
 ```
+- host name
+
 # Install program
 - c++
 	```
