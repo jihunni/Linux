@@ -410,6 +410,24 @@ PME tasks will do all aspects on the GPU
 Using 1 MPI thread
 Using 24 OpenMP threads
 
+- extension
+	Ref (tutorial): https://www.compchems.com/extend-or-continue-a-gromacs-simulation/#example  
+	Ref (offical documentation / Managing long simulations): https://manual.gromacs.org/current/user-guide/managing-simulations.html  
+	Ref (offical documentation / mdrun) : https://manual.gromacs.org/current/onlinehelp/gmx-mdrun.html?highlight=mdrun  
+	Ref (official documentation / convert-tpr) : https://manual.gromacs.org/current/onlinehelp/gmx-convert-tpr.html  
+	  
+	  
+	```
+	# Let’s say you finished a 10 ns simulation from a tpr file (md_10.tpr) but then you realized you would like to simulate your system for an additional 10 ns.
+	gmx_mpi convert-tpr -s md_10.tpr -extend 10000 [unit in ps] -o md_20.tpr (-nsteps) (-until)
+	
+	# Now we can run the new tpr file (md_20.tpr) starting from the last checkpoint.
+	gmx mdrun -v -deffnm md_20 -cpi md_10.cpt -noappend
+	
+	# You can finally proceed to concatenate the new trajectory to the previous one using the gmx trjcat module as shown here.
+	gmx trjcat -f md_10.xtc md_20.part0002.xtc -o final.xtc
+	```
+	
 # Result analysis
 The first is trjconv, which is used as a post-processing tool to strip out coordinates, correct for periodicity, or manually alter the trajectory (time units, frame frequency, etc). For this exercise, we will use trjconv to account for any periodicity in the system. The protein will diffuse through the unit cell, and may appear "broken" or may "jump" across to the other side of the box. To account for such behaviors, issue the following:
 ```
