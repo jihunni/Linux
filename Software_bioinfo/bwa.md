@@ -43,3 +43,9 @@ Ref: http://bio-bwa.sourceforge.net/bwa.shtml
     echo 'samtools sort and isolation are done.'
   done
   ```
+
+# bwa-mem2
+- Indexing
+  ```
+  bwa-mem2 index /data/ref_genome/Homo_sapiens.GRCh38.dna.primary_assembly.fa ./Homo_sapiens.GRCh38_BWA-MEM2_index.fa
+  ```
