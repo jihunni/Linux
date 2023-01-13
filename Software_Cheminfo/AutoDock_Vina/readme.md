@@ -1,9 +1,10 @@
 ```
 0. split_sdf structure  
-split_sdf_slurm.sh  
-	└split_sdf_assign_taskID.sh  
-		└python check_conda.py  
-		└python split_sdf.py ${SLURM_ARRAY_TASK_ID}  
+slurm_array_control.sh
+	└split_sdf_slurm.sh  
+		└split_sdf_assign_taskID.sh  
+			└python check_conda.py  
+			└python split_sdf.py ${SLURM_ARRAY_TASK_ID}  
 
 0. run_vina structure  
 run_vina_slurm.sh  
