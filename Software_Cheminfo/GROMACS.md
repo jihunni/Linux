@@ -454,7 +454,10 @@ Both time series show the RMSD levels off to ~0.1 nm (1 Å), indicating that the
 	```
 	gmx rmsf -s md_0_1.tpr -f md_0_1_noPBC.xtc -res yes -o rmsf.xvg
 	```
-- 
+- gyration
+	```
+	gmx gyrate -s md_0_1.tpr -f md_0_1.xtc -o gyrate.xvg
+	```
 
 # Practice
 ```
