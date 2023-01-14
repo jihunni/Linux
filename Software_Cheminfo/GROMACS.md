@@ -429,25 +429,29 @@ Using 24 OpenMP threads
 	```
 	
 # Result analysis
+Ref (tutorial pdf1): http://www.drugdesign.gr/uploads/7/6/0/2/7602318/lecture_mdanalysis.pdf  
+Ref (tutorial pdf2): https://hpc-forge.cineca.it/files/CoursesDev/public/2015/High_Performance_Molecular_Dynamics/Rome/February/Tutorial4_Analysis.pdf   
 The first is trjconv, which is used as a post-processing tool to strip out coordinates, correct for periodicity, or manually alter the trajectory (time units, frame frequency, etc). For this exercise, we will use trjconv to account for any periodicity in the system. The protein will diffuse through the unit cell, and may appear "broken" or may "jump" across to the other side of the box. To account for such behaviors, issue the following:
 ```
 gmx trjconv -s md_0_1.tpr -f md_0_1.xtc -o md_0_1_noPBC.xtc -pbc mol -center
 ```
-Select 1 ("Protein") as the group to be centered and 0 ("System") for output. We will conduct all our analyses on this "corrected" trajectory. Let's look at structural stability first. GROMACS has a built-in utility for RMSD calculations called rms. To use rms, issue this command:
+Select 1 ("Protein") as the group to be centered and 0 ("System") for output. We will conduct all our analyses on this "corrected" trajectory. 
+- RMSD
+	Let's look at structural stability first. GROMACS has a built-in utility for RMSD calculations called rms. To use rms, issue this command:
 
-```
-gmx rms -s md_0_1.tpr -f md_0_1_noPBC.xtc -o rmsd.xvg -tu ns
-```
-Choose 4 ("Backbone") for both the least-squares fit and the group for RMSD calculation. The -tu flag will output the results in terms of ns, even though the trajectory was written in ps. This is done for clarity of the output (especially if you have a long simulation - 1e+05 ps does not look as nice as 100 ns). The output plot will show the RMSD relative to the structure present in the minimized, equilibrated system:
+	```
+	gmx rms -s md_0_1.tpr -f md_0_1_noPBC.xtc -o rmsd.xvg -tu ns
+	```
+	Choose 4 ("Backbone") for both the least-squares fit and the group for RMSD calculation. The -tu flag will output the results in terms of ns, even though the trajectory was written in ps. This is done for clarity of the output (especially if you have a long simulation - 1e+05 ps does not look as nice as 100 ns). The output plot will show the RMSD relative to the structure present in the minimized, equilibrated system:
 
-If we wish to calculate RMSD relative to the crystal structure, we could issue the following:
-```
-gmx rms -s em.tpr -f md_0_1_noPBC.xtc -o rmsd_xtal.xvg -tu ns
-```
-Plotted together, results look something like:
+	If we wish to calculate RMSD relative to the crystal structure, we could issue the following:
+	```
+	gmx rms -s em.tpr -f md_0_1_noPBC.xtc -o rmsd_xtal.xvg -tu ns
+	```
+	Plotted together, results look something like:
 
 
-Both time series show the RMSD levels off to ~0.1 nm (1 Å), indicating that the structure is very stable. Subtle differences between the plots indicate that the structure at t = 0 ns is slightly different from this crystal structure. This is to be expected, since it has been energy-minimized, and because the position restraints are not 100% perfect, as discussed previously.
+	Both time series show the RMSD levels off to ~0.1 nm (1 Å), indicating that the structure is very stable. Subtle differences between the plots indicate that the structure at t = 0 ns is slightly different from this crystal structure. This is to be expected, since it has been energy-minimized, and because the position restraints are not 100% perfect, as discussed previously.
 
 - RMSF
 	Ref: https://manual.gromacs.org/archive/4.6.5/online/g_rmsf.html  
