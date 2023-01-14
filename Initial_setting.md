@@ -1,18 +1,19 @@
 # Initial Setting for Ubuntu
-# Terminal setting (Ubuntu, Bash shell)
-~/.exrc
-```
-set autoindent
-set ai 
-set number
-set bs=2
-set ts=4
-set sts=4
-set shiftwidth=4
-set nocp
-set hlsearch
-set showmatch
-```
+# Basic setting (Ubuntu, Bash shell)
+- Terminal setting
+	~/.exrc
+	```
+	set autoindent
+	set ai 
+	set number
+	set bs=2
+	set ts=4
+	set sts=4
+	set shiftwidth=4
+	set nocp
+	set hlsearch
+	set showmatch
+	```
 - host name
 
 # Install program
@@ -29,3 +30,4 @@ set showmatch
 	$ sudo apt-get install pip3
   ```
 - nvidia-driver
+- screen : https://github.com/jihunni/Linux/blob/master/Software/screen.md
