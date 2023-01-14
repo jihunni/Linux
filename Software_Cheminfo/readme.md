@@ -86,3 +86,5 @@
   make -j12
   ```
 - 
+- MD simulation softwares
+  Ref: https://www.researchgate.net/publication/298333608_Available_Instruments_for_Analyzing_Molecular_Dynamics_Trajectories?enrichId=rgreq-9d64b28d1d1003d54f514e118227c7ca-XXX&enrichSource=Y292ZXJQYWdlOzI5ODMzMzYwODtBUzozNzM1NzQ5MDU5NDIwMjFAMTQ2NjA3ODYwNjcxOQ%3D%3D&el=1_x_3&_esc=publicationCoverPdf
