@@ -99,14 +99,18 @@ The purpose of pdb2gmx is to generate three files:
 
 an input pdb file should contain all atoms
 ```
-gmx pdb2gmx -f 1AKI_clean.pdb -o 1AKI_processed.gro -water spce
+gmx pdb2gmx -f 1AKI_clean.pdb -o model.gro -water spce
+gmx pdb2gmx -f 1AKI_clean.pdb -o model.gro -water tip3p
 ```
-> -f : input file
-> -ignh :  Ignore H atoms in the PDB file; especially useful for NMR structures. Otherwise, if H atoms are present, they must be in the named exactly how the force fields in GROMACS expect them to be. Different conventions exist, so dealing with H atoms can occasionally be a headache! If you need to preserve the initial H coordinates, but renaming is required, then the Linux sed command is your friend.
-> -ter: Interactively assign charge states for N- and C-termini.
-> -inter: Interactively assign charge states for Glu, Asp, Lys, Arg, and His; choose which Cys are involved in disulfide bonds.
+> -f : input file  
+> -ignh :  Ignore H atoms in the PDB file; especially useful for NMR structures. Otherwise, if H atoms are present, they must be in the named exactly how the force fields in GROMACS expect them to be. Different conventions exist, so dealing with H atoms can occasionally be a headache! If you need to preserve the initial H coordinates, but renaming is required, then the Linux sed command is your friend.  
+> -ter: Interactively assign charge states for N- and C-termini.  
+> -inter: Interactively assign charge states for Glu, Asp, Lys, Arg, and His; choose which Cys are involved in disulfide bonds.  
+> - Water model to use: select, none, spc, spce, tip3p, tip4p, tip5p, tips3p
+> 
+  
+To select the Force Field (The force field will contain the information that will be written to the topology. This is a very important choice! You should always read thoroughly about each force field and decide which is most applicable to your situation.) Depends on the force field you're trying to use. For example, with Gromos force fields (which were parameterized for use with SPC), using SPC or SPC/E gives very good results in light of the original theory behind the force field and the parameterization.
 
-To select the Force Field (The force field will contain the information that will be written to the topology. This is a very important choice! You should always read thoroughly about each force field and decide which is most applicable to your situation.)
 ```
 Select the Force Field:
 From '/usr/local/gromacs/share/gromacs/top':
@@ -152,16 +156,25 @@ Output :
 
 To generate a box for simulation (`box.gro`)
 ```
-gmx editconf -f file.gro -o box.gro -c -d 1.0 -bt cubic 
+gmx editconf -f model.gro -o box.gro -c -d 1.0 -bt cubic 
+gmx editconf -f model.gro -o box.gro -c -d 1.5 -bt cubic  # for publication
+gmx editconf -f model.gro -o box.gro -center 9.207  9.207  9.207-3 -d 1.5 -bt cubic
+gmx editconf -f model.gro -o box.gro -c -bt cubic -box 5 5 5 
 ```
 > -d : distance from cubic box
-> -  the box size does not significantly affect the mobility of protein atoms on a relatively short trajectory, while the effect of the precipitant concentration on this trajectory is noticeable. (Ref: Kordonskaya, Y.V., Timofeev, V.I., Dyakova, Y.A. et al. Effect of the Simulation Box Size and Precipitant Concentration on the Behavior of Tetragonal Lysozyme Dimer. Crystallogr. Rep. 66, 525–528 (2021). https://doi.org/10.1134/S106377452103010X)
+> -box (x,y,z) : the size of box in the unit of nm
+> - the box size does not significantly affect the mobility of protein atoms on a relatively short trajectory, while the effect of the precipitant concentration on this trajectory is noticeable. (Ref: Kordonskaya, Y.V., Timofeev, V.I., Dyakova, Y.A. et al. Effect of the Simulation Box Size and Precipitant Concentration on the Behavior of Tetragonal Lysozyme Dimer. Crystallogr. Rep. 66, 525–528 (2021). https://doi.org/10.1134/S106377452103010X)  > - 5 nm = 50 angstrom  
+> - for simulations you want to publish this number should be 1.2…1.5 nm so that the electrostatic interactions between copies of the protein across periodic boundaries are sufficiently screened.
+> - `Know-how` (1) `-c` `-d 1.5` options suggests the automatic selection for a water box. Check the position of water box after the solvation process. If all of protein was not covered thoroughly, then modify the protein position in this step.
 ```
-gmx solvate -cp box.gro -cs configuration_of_solvent_from_library.gro -o water_box.gro -p file.top
+gmx solvate -cp box.gro -cs [configuration_of_solvent_from_library.gro] -o model_solv.gro -p topol.top
+gmx solvate -cp box.gro -cs spc216.gro -o model_solv.gro -p topol.top
 ```
+> - spc216.gro is a pre-equilibrated box of 216 SPC water molecules. It can be used as the source of water coordinates for any 3-point water model because they all only vary slightly. After minimization and equilibration using the desired water force field, you’ll recover the proper behavior of TIP3P, SPC/E, etc. tip4p.gro for four-points water models. tip5p for five-points water models. (ref: https://gromacs.bioexcel.eu/t/relation-between-water-spce-and-cs-spc216-gro/1106)
+>  
 Assemble tpr file
 ```
-gmx grompp -f inos.mdp -c water_box.gro -p file.top -o ions.tpr
+gmx grompp -f ions.mdp -c model_solv.gro -p topol.top -o ions.tpr
 ```
 
 To add ion
@@ -185,7 +198,8 @@ pbc             = xyz       ; Periodic Boundary Conditions in all 3 dimensions
 ```
 
 ```
-gmx genioin -s ions.tpr -o water_ions.gro -p file.top -pname NA -nname CL -neutral 
+gmx genioin -s ions.tpr -o model_solv_ions.gro -p topol.top -pname NA -nname CL -neutral 
+-> Group    13 (            SOL)
 ```
 
 
@@ -210,8 +224,9 @@ pbc             = xyz       ; Periodic Boundary Conditions in all 3 dimensions
 ```
 ```
 $ gmx grompp -f minim.mdp -c water_ions.gro -p topol.top -o em.tpr
-$ gmx mdrun -v -deffnm em
+$ gmx mdrun -v -deffnm em -nb gpu -gpu_id 0
 $ gmx energy -f em.edr -o potential.xvg
+--> 10 0
 $ xmgrace potential.xvg
 ```
 
@@ -270,8 +285,9 @@ Output:
 
 	```
 	$ gmx grompp -f nvt.mdp -c em_50000.gro -r em_50000.gro -p topol.top -o nvt.tpr
-	$ gmx mdrun -deffnm nvt
+	$ gmx mdrun -v -deffnm nvt -nb gpu -gpu_id 0
 	$ gmx energy -f nvt.edr -o temperature.xvg
+		--> 16 0
 	$ xmgrace potential.xvg
 	```
 - NPT equilibrium
@@ -327,8 +343,9 @@ Output:
 	$ gmx grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr
 			> -t (time check point): the checkpoint file from the NVT equilibration, containing all the necessary state variables to continue our simulation.
 			> -c (coordinate file): the final output of the NVT simulation 
-	$ gmx mdrun -deffnm npt -nb gpu
+	$ gmx mdrun -v -deffnm npt -nb gpu -gpu_id 0
 	$ gmx energy -f npt.edr -o pressure.xvg
+		--> 18 0
 	$ xmgrace pressure.xvg
 	```
 ## Production MD
@@ -383,7 +400,7 @@ gen_vel                 = no        ; Velocity generation is off
 ```
 ```
 $ gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr
-$ gmx mdrun -deffnm md_0_1 -nb gpu -gpu_id 0
+$ gmx mdrun -v -deffnm md_0_1 -nb gpu -gpu_id 0
 	> Starts gmx mdrun with 1 GPU with id 0
 ```
 - thread control
@@ -662,4 +679,8 @@ xmgrace [file_name].xvg
 # Analysis
 - Solvent Accessible Surface Area (SASA)
 Ref: https://www.compchems.com/how-to-compute-the-solvent-accessible-surface-areas-sasa-with-gromacs/#solvent-accessible-surface-area-sasa
+- 
+
+# Materials
+- https://computecanada.github.io/molmodsim-md-theory-lesson-novice/
 - 
