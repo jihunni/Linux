@@ -63,7 +63,9 @@ shutdown -h +210 # after 210 minuite, system shut downs
 `Ctrl` + `Alt` + `F1`
 
 # File transfer
+Ref: https://devconnected.com/4-ways-to-transfer-files-and-directories-on-linux/
 ## FTP -> Local
 ```
-wget -r --user="USER_ID" --password="PASSWORD"  ftp://ftp.example.com/subdirectory/*
+$ wget -r --user="USER_ID" --password="PASSWORD"  ftp://ftp.example.com/subdirectory/*
+$ scp -r -v host@xxx.xx.xx.xx:/home/jihun/data host@xxx.xx.xx.xx:/home/jihun/server_backup/
 ```
