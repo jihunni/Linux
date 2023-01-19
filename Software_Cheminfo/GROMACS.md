@@ -479,7 +479,12 @@ Select 1 ("Protein") as the group to be centered and 0 ("System") for output. We
 	```
 	gmx gyrate -s md_0_1.tpr -f md_0_1.xtc -o gyrate.xvg
 	```
+- SASA
+	Ref: https://www.compchems.com/how-to-compute-the-solvent-accessible-surface-areas-sasa-with-gromacs/#how-to-compute-sasa-for-a-protein-structure
+	```
+ 	gmx sasa -s md_0_1.tpr -f md_0_1_noPBC.xtc -o sasa.xvg -tu ns
 
+ 	```
 # Practice
 ```
 # To remove water molecules in PDB file
