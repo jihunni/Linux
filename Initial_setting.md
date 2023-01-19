@@ -1,3 +1,9 @@
+# Ubuntu Installation
+## USB format (Window 10)
+Ref: https://taktak2.tistory.com/entry/USB-%ED%8F%AC%EB%A7%B7%EB%B0%A9%EB%B2%95-%EC%99%84%EB%B2%BD%EC%A0%95%EB%A6%AC
+- 
+## Ubuntu booting usb
+
 # Initial Setting for Ubuntu
 # Basic setting (Ubuntu, Bash shell)
 - Terminal setting
