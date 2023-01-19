@@ -483,8 +483,17 @@ Select 1 ("Protein") as the group to be centered and 0 ("System") for output. We
 	Ref: https://www.compchems.com/how-to-compute-the-solvent-accessible-surface-areas-sasa-with-gromacs/#how-to-compute-sasa-for-a-protein-structure
 	```
  	gmx sasa -s md_0_1.tpr -f md_0_1_noPBC.xtc -o sasa.xvg -tu ns
-
  	```
+- Hydrogen bond
+	Ref: https://www.compchems.com/how-to-study-hydrogen-bonds-using-gromacs/#how-to-compute-the-hydrogen-bonds-between-two-groups
+	```
+	 gmx hbond -f md_0_1_noPBC.xtc -s md_0_1.tpr -num hbnum.xvg
+	```
+- `xvg` to python
+	Ref: https://www.compchems.com/how-to-extract-and-plot-thermodynamic-properties-from-a-gromacs-simulation/#example
+	```
+	```
+- 	
 # Practice
 ```
 # To remove water molecules in PDB file
