@@ -104,13 +104,14 @@ export Variable='contents'
   ```
   
   example ${mutant}.resfile:
+  Ref: https://www.rosettacommons.org/docs/latest/rosetta_basics/file_types/resfiles
   ```
   # These commands will be applied to all residue positions that lack a specified behavior in the body:
   AUTO # add the behavior 'AUTO'
   NATAA # allow only the native amino acid; repack without design; NATive Amino Acid
   start #
   #... the body would continue here.
-  412 Y PIKAA C # allow only the specified amino acids;
+  412 A PIKAA C # allow only the specified amino acids; In this case, allow only cystein at residue 412 on chain A
   ```
 ## Interface scoring: 
 The interfacial energy was computed for all relaxed structures of each variant using the rosetta_scripts application with the InterfaceAnalyzerMover. This mover calculates the total interaction energy between all residues in chain A (nTEV) with residues in chain B (cTEV). 
