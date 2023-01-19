@@ -15,7 +15,12 @@
 	set showmatch
 	```
 - host name
-
+	REF: https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/
+	```
+	sudo vi /etc/hostname
+	sudo vi /etc/hosts
+	reboot
+	```
 # Install program
 - c++
 	```
