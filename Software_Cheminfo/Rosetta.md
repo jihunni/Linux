@@ -70,17 +70,24 @@ export Variable='contents'
   Ref (option description): https://new.rosettacommons.org/docs/latest/full-options-list#1-relax  
   
   Commands:
+  
+  relax.sh
   ```
-  ${path_to_Rosetta}/main/source/bin/relax.linuxgccrelease
+  export mutant='mutation_Y412C'
+  ${path_to_Rosetta}/main/source/bin/relax.linuxgccrelease @relax.flag
+  ```
+  relax.flag      
+  ```
   -database ${path_to_Rosetta}/main/database
-  -relax::sequence_file always_constrained_relax.script
-  -constrain_relax_to_start_coords
-  -relax::coord_cst_width 0.25 -relax::coord_cst_stdev 0.25
+  #-relax::sequence_file always_constrained_relax.script
+  -constrain_relax_to_start_coords # to disfavor output that is structually dissimilar to the input
+  -relax::coord_cst_width 0.25 -relax::coord_cst_stdev 0.25 # Width on coordinate constraints from constrain_relax_* options 
+  -relax:coord_cst_stdev 0.25  # Stdev on coordinate constraints from constrain_relax_* options
   -s 1LVM.pdb
   -in::file::fullatom
-  -no_optH false
-  -flip_HNQ
-  -nstruct 100
+  -no_optH false # Do not optimize hydrogen placement at the time of a PDB load
+  -flip_HNQ # Consider flipping HIS, ASN, and GLN during hydrogen placement optimization (must turn off -no_optimizeH)
+  -nstruct 100 # 100 iterations of packer and minimizer
   -packing:resfile ${mutant}.resfile
   -relax:respect_resfile 
   ```
@@ -98,10 +105,12 @@ export Variable='contents'
   
   example ${mutant}.resfile:
   ```
-  AUTO
-  NATAA
-  start
-  75 A PIKAA A
+  # These commands will be applied to all residue positions that lack a specified behavior in the body:
+  AUTO # add the behavior 'AUTO'
+  NATAA # allow only the native amino acid; repack without design; NATive Amino Acid
+  start #
+  #... the body would continue here.
+  412 Y PIKAA C # allow only the specified amino acids;
   ```
 ## Interface scoring: 
 The interfacial energy was computed for all relaxed structures of each variant using the rosetta_scripts application with the InterfaceAnalyzerMover. This mover calculates the total interaction energy between all residues in chain A (nTEV) with residues in chain B (cTEV). 
