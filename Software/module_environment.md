@@ -1,3 +1,5 @@
+# Installation
+Ref: https://modules.readthedocs.io/en/latest/INSTALL.html
 # module environment
 - setting variable  
 	set : assign variable
