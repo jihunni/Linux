@@ -78,7 +78,10 @@ Ref: https://bioinformaticsreview.com/20220206/how-to-install-gromacs-on-apple-m
 gmx help (module)
 gmx (module) -h
 ```
-Online Reference : https://manual.gromacs.org/archive/4.6.5/online.html  
+- Unit : https://manual.gromacs.org/documentation/2019/reference-manual/definitions.html
+- Online Reference : https://manual.gromacs.org/archive/4.6.5/online.html  
+
+
 # Lysozyme Tutorial
 Ref: http://www.mdtutorials.com/gmx/lysozyme/index.html
 ![image](https://user-images.githubusercontent.com/48517782/172881380-7c7b5c8e-adb2-446b-a686-7adc91012dcb.png)
@@ -184,7 +187,7 @@ To add ion
 ; Parameters describing what to do, when to stop and what to save
 integrator  = steep         ; Algorithm (steep = steepest descent minimization)
 emtol       = 1000.0        ; Stop minimization when the maximum force < 1000.0 kJ/mol/nm
-emstep      = 0.01          ; Minimization step size
+emstep      = 0.01          ; Minimization step size [nm]
 nsteps      = 50000         ; Maximum number of (minimization) steps to perform
 
 ; Parameters describing how to find the neighbors of each atom and how to calculate the interactions
@@ -198,7 +201,7 @@ pbc             = xyz       ; Periodic Boundary Conditions in all 3 dimensions
 ```
 
 ```
-gmx genioin -s ions.tpr -o model_solv_ions.gro -p topol.top -pname NA -nname CL -neutral 
+gmx genion -s ions.tpr -o model_solv_ions.gro -p topol.top -pname NA -nname CL -neutral 
 -> Group    13 (            SOL)
 ```
 
@@ -210,7 +213,7 @@ gmx genioin -s ions.tpr -o model_solv_ions.gro -p topol.top -pname NA -nname CL 
 ; Parameters describing what to do, when to stop and what to save
 integrator  = steep         ; Algorithm (steep = steepest descent minimization)
 emtol       = 1000.0        ; Stop minimization when the maximum force < 1000.0 kJ/mol/nm
-emstep      = 0.01          ; Minimization step size
+emstep      = 0.01          ; Minimization step size [nm]
 nsteps      = 50000         ; Maximum number of (minimization) steps to perform
 
 ; Parameters describing how to find the neighbors of each atom and how to calculate the interactions
@@ -223,7 +226,7 @@ rvdw            = 1.0       ; Short-range Van der Waals cut-off
 pbc             = xyz       ; Periodic Boundary Conditions in all 3 dimensions
 ```
 ```
-$ gmx grompp -f minim.mdp -c water_ions.gro -p topol.top -o em.tpr
+$ gmx grompp -f minim.mdp -c model_solv_ions.gro -p topol.top -o em.tpr
 $ gmx mdrun -v -deffnm em -nb gpu -gpu_id 0
 $ gmx energy -f em.edr -o potential.xvg
 --> 10 0
