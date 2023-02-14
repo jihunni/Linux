@@ -192,8 +192,8 @@ nstlist         = 1         ; Frequency to update the neighbor list and long ran
 cutoff-scheme	= Verlet    ; Buffered neighbor searching 
 ns_type         = grid      ; Method to determine neighbor list (simple, grid)
 coulombtype     = cutoff    ; Treatment of long range electrostatic interactions
-rcoulomb        = 1.0       ; Short-range electrostatic cut-off
-rvdw            = 1.0       ; Short-range Van der Waals cut-off
+rcoulomb        = 1.0       ; Short-range electrostatic cut-off (nm) ; 1 nm = 10 Angstrom
+rvdw            = 1.0       ; Short-range Van der Waals cut-off (nm) ; 1 nm = 10 Angstrom
 pbc             = xyz       ; Periodic Boundary Conditions in all 3 dimensions
 ```
 
