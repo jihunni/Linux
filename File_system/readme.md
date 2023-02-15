@@ -152,6 +152,25 @@ Comment
 
 # mount
 Ref : https://bluexmas.tistory.com/632
+- Permanent mount
+	Ref: https://devconnected.com/how-to-mount-and-unmount-drives-on-linux/
+	To list up the partition
+	```
+	$ sudo fdisk -l
+	```
+	
+	```
+	$ sudo nano /etc/fstab
+
+	# <file system>              <mount point>              <type>  <options>   <dump>  <pass>
+	UUID=0935df16-40b0-48      /home/user/mountpoint      ext4    defaults    0       0 
+	```
+	- Filesystem : you can either specify a UUID (for universal unique identifier), a label (if you chose a label for your disk), a network ID or a device name (which is not recommended at all);
+	- Mountpoint : the directory on the filesystem that you are going to use in order to access data stored on the disk;
+	- Filesystem type : the type of filesystem you use to format your disk;
+	- Options : some options that you can specify in order to tune your mount (“ro” for a read-only mount or “noexec” to prevent binary execution);
+	- Dump : in order to enable to disable filesystem dumping on the system (using the dump command);
+	- Pass Num : sets the order used in order for the “fsck” utility to check your filesystem. If you are not mounting the root device, you should set this option to “2” or “0” as “1” is reserved for the root device.
 
 # Samba
 Prepare an environment to install Samba
