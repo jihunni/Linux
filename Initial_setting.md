@@ -51,6 +51,9 @@ Ref: https://taktak2.tistory.com/entry/USB-%ED%8F%AC%EB%A7%B7%EB%B0%A9%EB%B2%95-
 	ssh-keygen -R xxx.xx.xx.xx
 	```
 
+- remove nouveau 커널 드라이버 (Ubuntu Server, for NVIDIA driver installation)
+	Ref https://blog.boxcorea.com/wp/archives/3323
+
 # Install program
 - c++
 	```
