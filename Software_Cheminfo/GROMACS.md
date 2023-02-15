@@ -23,6 +23,13 @@ video : https://www.youtube.com/watch?v=kCKYkNygc9I
 		Automatic installation: https://ralpioxxcs.github.io/post/etc/llvm_install/   
 - installation w/ GPU
 	```
+	apt install gcc
+	apt install cmake
+	apt-get install build-essential
+	apt-get install libfftw3-dev
+  
+	tar xfz gromacs-2023.tar.gz
+	cd gromacs-2023
 	mkdir build
 	cd build
 	cmake .. -DGMX_GPU=CUDA -DGMX_OPENMP=ON -DGMX_BUILD_OWN_FFTW=ON -CUDA_TOOLKIT_ROOT_DIT=/usr/local/cuda -DCMAKE_INSTALL_PREFIX=/opt/gromacs/2022.2/ -> not work
