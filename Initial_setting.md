@@ -55,7 +55,14 @@ Ref: https://taktak2.tistory.com/entry/USB-%ED%8F%AC%EB%A7%B7%EB%B0%A9%EB%B2%95-
 
 - remove nouveau 커널 드라이버 (Ubuntu Server, for NVIDIA driver installation)
 	Ref https://blog.boxcorea.com/wp/archives/3323
-
+- [trial_error] apt update error
+	Ref: https://phoenixnap.com/kb/temporary-failure-in-name-
+	```
+	$ sudo vi /etc/resolv.conf
+	
+	nameserver 8.8.8.8
+	```
+- 
 ## Install program
 - c++
 	```
