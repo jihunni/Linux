@@ -6,7 +6,9 @@ Ref: https://taktak2.tistory.com/entry/USB-%ED%8F%AC%EB%A7%B7%EB%B0%A9%EB%B2%95-
 
 
 # Initial Setting for Ubuntu
-# Basic setting (Ubuntu, Bash shell)
+## File system
+
+## Basic setting (Ubuntu, Bash shell)
 - Terminal setting
 	~/.exrc
 	```
@@ -54,7 +56,7 @@ Ref: https://taktak2.tistory.com/entry/USB-%ED%8F%AC%EB%A7%B7%EB%B0%A9%EB%B2%95-
 - remove nouveau 커널 드라이버 (Ubuntu Server, for NVIDIA driver installation)
 	Ref https://blog.boxcorea.com/wp/archives/3323
 
-# Install program
+## Install program
 - c++
 	```
 	apt install gcc
