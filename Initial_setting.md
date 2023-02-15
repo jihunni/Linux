@@ -4,6 +4,7 @@ Ref: https://taktak2.tistory.com/entry/USB-%ED%8F%AC%EB%A7%B7%EB%B0%A9%EB%B2%95-
 - 
 ## Ubuntu booting usb
 
+
 # Initial Setting for Ubuntu
 # Basic setting (Ubuntu, Bash shell)
 - Terminal setting
@@ -27,6 +28,29 @@ Ref: https://taktak2.tistory.com/entry/USB-%ED%8F%AC%EB%A7%B7%EB%B0%A9%EB%B2%95-
 	sudo vi /etc/hosts
 	reboot
 	```
+- ssh remote connection
+	Ref: https://visu4l.tistory.com/entry/ssh-%EC%9B%90%EA%B2%A9-%EC%A0%91%EC%86%8D-%EC%97%90%EB%9F%ACWARNING-REMOTE-HOST-IDENTIFICATION-HAS-CHANGED
+	```
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+	Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+	It is also possible that a host key has just been changed.
+	The fingerprint for the ED25519 key sent by the remote host is
+	SHA256:xxxxxxxxx/xxxxxxxxxxxxxxxxx/xxxxxxxxxxxxxxx.
+	Please contact your system administrator.
+	Add correct host key in /home/jihun/.ssh/known_hosts to get rid of this message.
+	Offending ED25519 key in /home/jihun/.ssh/known_hosts:14
+	  remove with:
+	  ssh-keygen -f "/home/jihun/.ssh/known_hosts" -R "xxx.xx.xx.xx"
+	Host key for xxx.xx.xx.xx has changed and you have requested strict checking.
+	Host key verification failed.
+	```
+	```
+	ssh-keygen -R xxx.xx.xx.xx
+	```
+
 # Install program
 - c++
 	```
