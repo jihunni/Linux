@@ -74,51 +74,61 @@ jupyter notebook list
 ```
 
 # Trouble shooting
-```
-$ conda activate example_env
-CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
-To initialize your shell, run
+- CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+	```
+	$ conda activate example_env
+	CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+	To initialize your shell, run
 
-    $ conda init <SHELL_NAME>
+			$ conda init <SHELL_NAME>
 
-Currently supported shells are:
-  - bash
-  - fish
-  - tcsh
-  - xonsh
-  - zsh
-  - powershell
+	Currently supported shells are:
+		- bash
+		- fish
+		- tcsh
+		- xonsh
+		- zsh
+		- powershell
 
-See 'conda init --help' for more information and options.
+	See 'conda init --help' for more information and options.
 
-IMPORTANT: You may need to close and restart your shell after running 'conda init'.
-```
+	IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+	```
+	Method1:
+	Ref:
+		-https://technical-support.tistory.com/112  
+		- https://velog.io/@zxxzx1515/%EC%98%A4%EB%A5%98-%EB%85%B8%ED%8A%B8-CommandNotFoundError-Your-shell-has-not-been-properly-configured-to-use-conda-activate
 
-Method1:   
-Then, Try 'conda init bash' with sudo
-Then, Try `source conda activate example_env`
+  ```
+	$ source ~/anaconda3/etc/profile.d/conda.sh
+	```
+	
+	Method2:   
+	Ref:
+	- https://hamonikr.org/board_bFBk25/78585
+	- https://willbesoon.tistory.com/119  
+	Then, Try 'conda init bash' with sudo
+	Then, Try `source conda activate example_env`
 
-Ref:
-- https://hamonikr.org/board_bFBk25/78585
-- https://willbesoon.tistory.com/119
 
 
-Method2 : 
-Run bashrc again (it may be updated after the installation of anaconda3)
-```
-. ~/.bashrc
-```
+	Method3 : 
+	Ref:  
+	- https://askubuntu.com/questions/1143142/conda-init-gives-me-no-action-taken. 
+	- https://stackoverflow.com/questions/65196475/conda-init-doesnt-initialize-shell  
+	Run bashrc again (it may be updated after the installation of anaconda3)  
+	```
+	. ~/.bashrc
+	```
 
-If there is no bashrc,
-```
-$ cp /etc/skel/.bashrc ~
-$ chmod 755 .bashrc
-$ vi  ~/.profile
-	> source ~/.bashrc
-```
-Ref:  
-- https://askubuntu.com/questions/1143142/conda-init-gives-me-no-action-taken. 
-- https://stackoverflow.com/questions/65196475/conda-init-doesnt-initialize-shell
+	If there is no bashrc,
+	```
+	$ cp /etc/skel/.bashrc ~
+	$ chmod 755 .bashrc
+	$ vi  ~/.profile
+		> source ~/.bashrc
+	```
+
 
 # install library in conda env
 Ref : https://docs.conda.io/projects/conda/en/latest/commands/install.html
