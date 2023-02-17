@@ -7,7 +7,25 @@ Ref: https://ambermd.org/index.php
 Ref: http://ambermd.org/antechamber/antechamber.html  
 Ref: http://ambermd.org/antechamber/ac.html  
 Tutorial : http://ambermd.org/tutorials/basic/tutorial4b/  
+```
+To add all hydrogen atoms to the pdb file
+$ reduce sustiva.pdb > sustiva_h.pdb  
 
+To create the "mol2" file, required to define a new unit in LEaP
+$ antechamber -i sustiva_new.pdb -fi pdb -o sustiva.mol2 -fo mol2 -c bcc -s 2
+
+To test if all the parameters we require are available
+$ parmchk2 -i sustiva.mol2 -f mol2 -o sustiva.frcmod
+
+$tleap -f oldff/leaprc.ff99SB
+  > source leaprc.gaff
+  > SUS = loadmol2 sustiva.mol2 
+  > check SUS
+  > loadamberparams sustiva.frcmod
+  > saveoff SUS sus.lib 
+  > saveamberparm SUS sustiva.prmtop sustiva.rst7
+  > quit
+```
 ## Using Amber force fields in GROMACS and CHARMM (ParmEd)
 It might be also a part of AmberTool22  
 Ref: https://ambermd.org/parmed_gromacs.html   
