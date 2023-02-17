@@ -1,3 +1,5 @@
+# IP
+## IP address check
 Ref: https://it-serial.tistory.com/7
 ```
 ifconfig
@@ -6,6 +8,23 @@ vi /etc/sysconfig/network-scripts/ifcfg-eth1
 ping [ip_address]
 ```
 
+## static IP address setting on Ubuntu
+Ref: https://www.manualfactory.net/13079
+- `yaml` file on `/etc/netplan`
+  ```
+  # This is the network config written by 'subiquity'
+  network:
+    ethernets:
+      enp0s3:
+        addresses: [192.168.0.136/24]
+        gateway4: 192.168.0.1
+        nameservers:
+          addresses: [8.8.8.8,8.8.4.4]
+    version: 2
+  ```
+  ```
+  $ netplan apply
+  ```
 # firewall (CentOS7) : https://www.server-world.info/en/note?os=CentOS_7&p=firewalld
 
 ## Intro to filewall
