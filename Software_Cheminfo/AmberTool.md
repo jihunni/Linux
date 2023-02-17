@@ -4,8 +4,10 @@ Ref: https://ambermd.org/index.php
 - Conda (w/o GPU or multi-parallelization)
 - Binary ()
 ## ANTECHAMBER & GAFF : they became a part of AmberTool22
-Ref: http://ambermd.org/antechamber/antechamber.html
-Ref: http://ambermd.org/antechamber/ac.html
+Ref: http://ambermd.org/antechamber/antechamber.html  
+Ref: http://ambermd.org/antechamber/ac.html  
+Tutorial : http://ambermd.org/tutorials/basic/tutorial4b/  
+
 ## Using Amber force fields in GROMACS and CHARMM (ParmEd)
 It might be also a part of AmberTool22  
 Ref: https://ambermd.org/parmed_gromacs.html   
