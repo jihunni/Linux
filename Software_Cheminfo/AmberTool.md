@@ -119,7 +119,8 @@ Ref: https://github.com/ParmEd/ParmEd
 Jason Swails' parmed program can make this an easy task. The first thing you need to do is create your prmtop and inpcrd files using tleap. After that, run amber.python with the following code:
 ```
 import parmed as pmd
-parm = pmd.load_file('name-of-your.prmtop', 'name-of-your.inpcrd')
+parm = pmd.load_file('name-of-your.prmtop', 'name-of-your.rst7') 
+    OR parm = pmd.load_file('name-of-your.prmtop', 'name-of-your.inpcrd')
 parm.save('gromacs.top', format='gromacs')
 parm.save('gromacs.gro')
 ```
