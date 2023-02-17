@@ -8,3 +8,6 @@ Ref: http://ambermd.org/antechamber/antechamber.html
 
 # ACPYPE
 Ref: https://github.com/alanwilter/acpype
+
+# mmtools
+Ref: https://github.com/choderalab/mmtools
