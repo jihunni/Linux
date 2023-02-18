@@ -79,6 +79,9 @@ Ref: https://bioinformaticsreview.com/20220206/how-to-install-gromacs-on-apple-m
 	% cmake .. -DGMX_BUILD_OWN_FFTW=ON -DREGRESSIONTEST_DOWNLOAD=OFF -DCMAKE_C_COMPILER=gcc -DREGRESSIONTEST_PATH=/Users/jihun/Downloads/software/regressiontests-2022.2
 	% sudo make check
 	```
+## Force Field
+- name setting : /opt/gromacs/2022.4/share/gromacs/top/charmm36-jul2022.ff/forcefield.doc
+- 
 
 # Basics
 ```
@@ -89,9 +92,35 @@ gmx (module) -h
 - Online Reference : https://manual.gromacs.org/archive/4.6.5/online.html  
 
 
-# Lysozyme Tutorial
+# Tutorial
 Ref: http://www.mdtutorials.com/gmx/lysozyme/index.html
 ![image](https://user-images.githubusercontent.com/48517782/172881380-7c7b5c8e-adb2-446b-a686-7adc91012dcb.png)
+
+## Protein-Ligand complex preparation with Charm36 all-atomic FF on Gromacs
+### Protien model preparation
+loop reconstruction by PDBFixer > remove solvent & PO4 (from crystal) by Pymol > change from O1- to O by manual edition > change OXT to O (gromacs cannot recognize OXT) by manual edition
+
+### Ligand model preparation
+- Installation of `networkx 2.3` whose is compatible with `python 3.7`
+	```
+	$ conda activate md_py37
+	$ conda install networkx==2.3
+	$ conda install numpy
+	```
+- Prepare the input for CGENFF
+	```
+	$ obabel 6kqy-Leu2-model_h.pdb -O 6kqy-Leu2-model_h.mol2 -h # to convert pdb file into mol2 file
+	$ pymol 6kqy-Leu2-model_h.mol2 # to sanity check
+	$ perl sort_mol2_bonds.pl 6kqy-Leu2-model_h_edit.mol2 6kqy-Leu2-model_h_fixed.mol2 # to change bond order at @<TRIPOS>BOND section
+	```
+- Run CGenFF
+- To convert into gmx format
+	```
+	$ python3 cgenff_charmm2gmx_py3_nx2.py Leu2.pdb 6kqy-Leu2-model_h.mol2 6kqy-Leu2-model_h.str charmm36-jul2022.ff
+	```
+	>> Tiral & Error
+	>> Error : CGenff Error: specified residue name does not match between str and mol2 files
+	>> Sol: to change search residue name (Ref: https://gromacs.bioexcel.eu/t/cgenff-error-specified-residue-name-does-not-match-between-str-and-mol2-files/1190)
 
 ## Generate Topology
 To strip out the crystal waters (Note that such a procedure is not universally appropriate)
