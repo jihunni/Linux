@@ -12,6 +12,8 @@ running code
 
 
 # substitution
+reference:
+- https://twpower.github.io/205-substitute-or-replace-string-in-vi-or-vim
 ```
 :%s/[원래문자열]/[바꿀문자열]/[옵션]
 ```
@@ -29,5 +31,13 @@ tHIS is second string.
 :%s/This/tHIS/g
 ```
 
-reference:
-- https://twpower.github.io/205-substitute-or-replace-string-in-vi-or-vim
+# macro
+Ref: 
+- http://aboutmadlife.blogspot.com/2014/09/linux-vi-macro.html
+- https://coldmater.tistory.com/226
+
+`q{레지스터}` 로 매크로 기록 시작  
+`q` 로 매크로 기록 종료  
+`@{레지스터}` 로 저장된 매크로 실행  
+`@@` 로 직전에 실행한 매크로 재실행  
+`{반복횟수}@{레지스터}` 또는 `{반복횟수}@@` 로 저장된 매크로를 '반복횟수' 만큼 재실행  
