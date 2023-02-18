@@ -538,37 +538,39 @@ $ gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top (-n index.ndx) -o md_0
 $ gmx mdrun -v -deffnm md_0_1 -nb gpu -gpu_id 0
 	> Starts gmx mdrun with 1 GPU with id 0
 ```
-- thread control
-Ref: https://manual.gromacs.org/documentation/current/user-guide/mdrun-performance.html
-```
-Reading file md_0_1.tpr, VERSION 2022.4 (single precision)
-Changing nstlist from 10 to 80, rlist from 1 to 1.147
+- thread control  
+	Ref: https://manual.gromacs.org/documentation/current/user-guide/mdrun-performance.html  
+	- nt <int> (0): The total number of threads to use. The default, 0, will start as many threads as available cores. Whether the threads are thread-MPI ranks, and/or OpenMP threads within such ranks depends on other settings.
+	```
+	Reading file md_0_1.tpr, VERSION 2022.4 (single precision)
+	Changing nstlist from 10 to 80, rlist from 1 to 1.147
 
-On host gpu1 2 GPUs selected for this run.
-Mapping of GPU IDs to the 4 GPU tasks in the 4 ranks on this node:
-  PP:0,PP:0,PP:1,PP:1
-PP tasks will do (non-perturbed) short-ranged and most bonded interactions on the GPU
-PP task will update and constrain coordinates on the CPU
-Using 4 MPI threads
-Using 6 OpenMP threads per tMPI thread
+	On host gpu1 2 GPUs selected for this run.
+	Mapping of GPU IDs to the 4 GPU tasks in the 4 ranks on this node:
+		PP:0,PP:0,PP:1,PP:1
+	PP tasks will do (non-perturbed) short-ranged and most bonded interactions on the GPU
+	PP task will update and constrain coordinates on the CPU
+	Using 4 MPI threads
+	Using 6 OpenMP threads per tMPI thread
 
-```
-1 GPU selected for this run.
-Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:
-  PP:0,PME:0
-PP tasks will do (non-perturbed) short-ranged interactions on the GPU
-PP task will update and constrain coordinates on the CPU
-PME tasks will do all aspects on the GPU
-Using 1 MPI thread
-Using 24 OpenMP threads
-
-- extension
+	```
+	```
+	1 GPU selected for this run.  
+	Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:  
+		PP:0,PME:0  
+	PP tasks will do (non-perturbed) short-ranged interactions on the GPU  
+	PP task will update and constrain coordinates on the CPU  
+	PME tasks will do all aspects on the GPU  
+	Using 1 MPI thread  
+	Using 24 OpenMP threads  
+	```
+	
+- extension  
 	Ref (tutorial): https://www.compchems.com/extend-or-continue-a-gromacs-simulation/#example  
 	Ref (offical documentation / Managing long simulations): https://manual.gromacs.org/current/user-guide/managing-simulations.html  
 	Ref (offical documentation / mdrun) : https://manual.gromacs.org/current/onlinehelp/gmx-mdrun.html?highlight=mdrun  
 	Ref (official documentation / convert-tpr) : https://manual.gromacs.org/current/onlinehelp/gmx-convert-tpr.html  
-	  
-	  
+
 	```
 	# Let’s say you finished a 10 ns simulation from a tpr file (md_10.tpr) but then you realized you would like to simulate your system for an additional 10 ns.
 	gmx_mpi convert-tpr -s md_10.tpr -extend 10000 [unit in ps] -o md_20.tpr (-nsteps) (-until)
