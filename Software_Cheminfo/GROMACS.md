@@ -122,6 +122,8 @@ loop reconstruction by PDBFixer > remove solvent & PO4 (from crystal) by Pymol >
 
 ### Ligand model preparation
 - Installation of `networkx 2.3` whose is compatible with `python 3.7`
+	Ref: https://networkx.org/documentation/networkx-2.3/
+	Ref: https://pypi.org/project/networkx/2.3/
 	```
 	$ conda activate md_py37
 	$ conda install networkx==2.3
@@ -188,14 +190,13 @@ From '/usr/local/gromacs/share/gromacs/top':
 14: GROMOS96 54a7 force field (Eur. Biophys. J. (2011), 40,, 843-856, DOI: 10.1007/s00249-011-0700-9)
 15: OPLS-AA/L all-atom force field (2001 aminoacid dihedrals)
 ```
-Output :
 - Trial and Error:
 	- the input structure to pdb2gmx has hydrogen atoms whose naming differs from that given in the .rtp file of the force field.
 		Ref: https://www.researchgate.net/post/How-can-I-rectify-the-following-GROMACS-error-Fatal-error-Atom-HB3-in-residue-SER-3-was-not-found-in-rtp-entry-SER-with-8-atoms-while-sorting-atoms   
 	- `Protein-ligand complex.gro` with multiple ligands should have consistent indentation. Otherwise, only one ligand is properly recognized.
 	- [Charm FF] Fatal error: atom C not found in buiding block 8FUC while combining tdb and rtp
 	 	use `-ter` option and select `NH3+` and `COO-` for N-terminal and C-terminal residue for a protein
-		(REF: https://gromacs.bioexcel.eu/t/help-on-how-to-solve-atom-n-not-found-in-building-block-1ade-while-combining-tdb-and-rtp/2298)
+		(Ref1: https://gromacs.bioexcel.eu/t/help-on-how-to-solve-atom-n-not-found-in-building-block-1ade-while-combining-tdb-and-rtp/2298)(REF2: https://gromacs.bioexcel.eu/t/help-on-how-to-solve-atom-n-not-found-in-building-block-1ade-while-combining-tdb-and-rtp/2298)
 	- 
 To generate a box for simulation (`box.gro`)
 ```
@@ -241,9 +242,16 @@ pbc             = xyz       ; Periodic Boundary Conditions in all 3 dimensions
 ```
 
 ```
-gmx genion -s ions.tpr -o model_solv_ions.gro -p topol.top -pname NA -nname CL -neutral 
--> Group    13 (            SOL)
+$ gmx genion -s ions.tpr -o model_solv_ions.gro -p topol.top -pname NA -nname CL -neutral 
+>> Group    13 (            SOL)
+> umber of (3-atomic) solvent molecules: 110719
+	Processing topology
+	Replacing 5 solute molecules in topology file (topol.top)  by 5 NA and 0 CL ions. 	
+
+$ vi topol.top
+	Change topology : remove 5 water molecule and add 5 NA inorder to match the number of atoms in topol and gro
 ```
+
 
 ## Energy minimization (EM) : EM ensured that we have a reasonable starting structure, in terms of geometry and solvent orientation. The purpose of energy minimization is not to find the global or local minimum, but to escape from the force in high gradient and avoid protein collapse.
 `nunu.mdp` file
@@ -312,7 +320,6 @@ Output:
 			Group     2 (           Leu2) has    23 elements
 			Group     3 (   System_&_!H*) has     9 elements
 			Select a group: 
-
 		>>	3
 
 	$ vi topol.top
@@ -320,6 +327,47 @@ Output:
 		# ifdef POSES
 		#include "posre_leu2.itp"
 		#endif
+	
+	```
+- Thermostats for protein-ligand complex
+	```
+	$ gmx make_ndx -f em.gro -o index.ndx
+	>	Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+		0 System              : 349235 atoms
+		1 Protein             : 17065 atoms
+		2 Protein-H           :  8539 atoms
+		3 C-alpha             :  1061 atoms
+		4 Backbone            :  3183 atoms
+		5 MainChain           :  4243 atoms
+		6 MainChain+Cb        :  5241 atoms
+		7 MainChain+H         :  5253 atoms
+		8 SideChain           : 11812 atoms
+		9 SideChain-H         :  4296 atoms
+	 10 Prot-Masses         : 17065 atoms
+	 11 non-Protein         : 332170 atoms
+	 12 Other               :    23 atoms
+	 13 Leu2                :    23 atoms
+	 14 NA                  :     5 atoms
+	 15 Water               : 332142 atoms
+	 16 SOL                 : 332142 atoms
+	 17 non-Water           : 17093 atoms
+	 18 Ion                 :     5 atoms
+	 19 Water_and_ions      : 332147 atoms
+
+	 nr : group      '!': not  'name' nr name   'splitch' nr    Enter: list groups
+	 'a': atom       '&': and  'del' nr         'splitres' nr   'l': list residues
+	 't': atom type  '|': or   'keep' nr        'splitat' nr    'h': help
+	 'r': residue              'res' nr         'chain' char
+	 "name": group             'case': case sensitive           'q': save and quit
+	 'ri': residue index
+	>> 1 | 13
+	> Copied index group 1 'Protein'
+		Copied index group 13 'Leu2'
+		Merged two groups with OR: 17065 23 -> 17088
+
+		 20 Protein_Leu2        : 17088 atoms
+	>> q
+	
 	
 	```
 - NVT equilibrium
@@ -369,7 +417,7 @@ Output:
 	```
 
 	```
-	$ gmx grompp -f nvt.mdp -c em_50000.gro -r em_50000.gro -p topol.top -o nvt.tpr
+	$ gmx grompp -f nvt.mdp -c em_50000.gro -r em_50000.gro -p topol.top (-n index.ndx) -o nvt.tpr
 	$ gmx mdrun -v -deffnm nvt -nb gpu -gpu_id 0
 	$ gmx energy -f nvt.edr -o temperature.xvg
 		--> 16 0
@@ -425,7 +473,7 @@ Output:
 	```
 	
 	```
-	$ gmx grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr
+	$ gmx grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top (-n index.ndx) -o npt.tpr
 			> -t (time check point): the checkpoint file from the NVT equilibration, containing all the necessary state variables to continue our simulation.
 			> -c (coordinate file): the final output of the NVT simulation 
 	$ gmx mdrun -v -deffnm npt -nb gpu -gpu_id 0
@@ -484,7 +532,7 @@ DispCorr                = EnerPres  ; account for cut-off vdW scheme
 gen_vel                 = no        ; Velocity generation is off 
 ```
 ```
-$ gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr
+$ gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top (-n index.ndx) -o md_0_1.tpr
 $ gmx mdrun -v -deffnm md_0_1 -nb gpu -gpu_id 0
 	> Starts gmx mdrun with 1 GPU with id 0
 ```
