@@ -162,7 +162,7 @@ Output :
 - Trial and Error:
 	- the input structure to pdb2gmx has hydrogen atoms whose naming differs from that given in the .rtp file of the force field.
 		Ref: https://www.researchgate.net/post/How-can-I-rectify-the-following-GROMACS-error-Fatal-error-Atom-HB3-in-residue-SER-3-was-not-found-in-rtp-entry-SER-with-8-atoms-while-sorting-atoms   
-
+	- `Protein-ligand complex.gro` with multiple ligands should have consistent indentation. Otherwise, only one ligand is properly recognized.
 
 To generate a box for simulation (`box.gro`)
 ```
