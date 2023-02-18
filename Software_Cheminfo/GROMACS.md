@@ -82,6 +82,26 @@ Ref: https://bioinformaticsreview.com/20220206/how-to-install-gromacs-on-apple-m
 ## Force Field
 - name setting : /opt/gromacs/2022.4/share/gromacs/top/charmm36-jul2022.ff/forcefield.doc
 - 
+## File format
+- gro : 
+	- "A model cannot have more than 99,999 atoms. Where the entry does not contain an ensemble of models, then the entry cannot have more than 99,999 atoms. Entries that go beyond this atom limit must be split into multiple entries, each containing no more than the limits specified above." (REF: https://mailman-1.sys.kth.se/pipermail/gromacs.org_gmx-users/2017-November/117061.html)
+	- 1AKI_processed.gro is a GROMACS-formatted structure file that contains all the atoms defined within the force field (i.e., H atoms have been added to the amino acids in the protein).
+- The topol.top file is the system topology
+  The interpretation of this information is as follows:
+  nr: Atom number
+  type: Atom type
+  resnr: Amino acid residue number
+  residue: The amino acid residue name
+  Note that this residue was "LYS" in the PDB file; the use of .rtp entry "LYSH" indicates that the residue is protonated (the predominant state at neutral pH).
+  atom: Atom name
+  cgnr: Charge group number
+  Charge groups define units of integer charge; they aid in speeding up calculations
+  charge: Self-explanatory
+  The "qtot" descriptor is a running total of the charge on the molecule
+  mass: Also self-explanatory
+  typeB, chargeB, massB: Used for free energy perturbation (not discussed here)
+
+- The posre.itp file contains information used to restrain the positions of heavy atoms (more on this later).
 
 # Basics
 ```
@@ -138,16 +158,15 @@ The purpose of pdb2gmx is to generate three files:
 
 an input pdb file should contain all atoms
 ```
-gmx pdb2gmx -f 1AKI_clean.pdb -o model.gro -water spce
-gmx pdb2gmx -f 1AKI_clean.pdb -o model.gro -water tip3p
+gmx pdb2gmx -f 1AKI_clean.pdb -o model.gro -water spce (-ter)
+gmx pdb2gmx -f 1AKI_clean.pdb -o model.gro -water tip3p (-ter)
 ```
 > -f : input file  
 > -ignh :  Ignore H atoms in the PDB file; especially useful for NMR structures. Otherwise, if H atoms are present, they must be in the named exactly how the force fields in GROMACS expect them to be. Different conventions exist, so dealing with H atoms can occasionally be a headache! If you need to preserve the initial H coordinates, but renaming is required, then the Linux sed command is your friend.  
 > -ter: Interactively assign charge states for N- and C-termini.  
 > -inter: Interactively assign charge states for Glu, Asp, Lys, Arg, and His; choose which Cys are involved in disulfide bonds.  
 > - Water model to use: select, none, spc, spce, tip3p, tip4p, tip5p, tips3p
-> 
-  
+> - ter : for charm FF  
 To select the Force Field (The force field will contain the information that will be written to the topology. This is a very important choice! You should always read thoroughly about each force field and decide which is most applicable to your situation.) Depends on the force field you're trying to use. For example, with Gromos force fields (which were parameterized for use with SPC), using SPC or SPC/E gives very good results in light of the original theory behind the force field and the parameterization.
 
 ```
@@ -170,29 +189,14 @@ From '/usr/local/gromacs/share/gromacs/top':
 15: OPLS-AA/L all-atom force field (2001 aminoacid dihedrals)
 ```
 Output :
-- 1AKI_processed.gro is a GROMACS-formatted structure file that contains all the atoms defined within the force field (i.e., H atoms have been added to the amino acids in the protein).
-- The topol.top file is the system topology
-  
-  The interpretation of this information is as follows:
-  nr: Atom number
-  type: Atom type
-  resnr: Amino acid residue number
-  residue: The amino acid residue name
-  Note that this residue was "LYS" in the PDB file; the use of .rtp entry "LYSH" indicates that the residue is protonated (the predominant state at neutral pH).
-  atom: Atom name
-  cgnr: Charge group number
-  Charge groups define units of integer charge; they aid in speeding up calculations
-  charge: Self-explanatory
-  The "qtot" descriptor is a running total of the charge on the molecule
-  mass: Also self-explanatory
-  typeB, chargeB, massB: Used for free energy perturbation (not discussed here)
-
-- The posre.itp file contains information used to restrain the positions of heavy atoms (more on this later).
 - Trial and Error:
 	- the input structure to pdb2gmx has hydrogen atoms whose naming differs from that given in the .rtp file of the force field.
 		Ref: https://www.researchgate.net/post/How-can-I-rectify-the-following-GROMACS-error-Fatal-error-Atom-HB3-in-residue-SER-3-was-not-found-in-rtp-entry-SER-with-8-atoms-while-sorting-atoms   
 	- `Protein-ligand complex.gro` with multiple ligands should have consistent indentation. Otherwise, only one ligand is properly recognized.
-
+	- [Charm FF] Fatal error: atom C not found in buiding block 8FUC while combining tdb and rtp
+	 	use `-ter` option and select `NH3+` and `COO-` for N-terminal and C-terminal residue for a protein
+		(REF: https://gromacs.bioexcel.eu/t/help-on-how-to-solve-atom-n-not-found-in-building-block-1ade-while-combining-tdb-and-rtp/2298)
+	- 
 To generate a box for simulation (`box.gro`)
 ```
 gmx editconf -f model.gro -o box.gro -c -d 1.0 -bt cubic 
@@ -241,7 +245,6 @@ gmx genion -s ions.tpr -o model_solv_ions.gro -p topol.top -pname NA -nname CL -
 -> Group    13 (            SOL)
 ```
 
-
 ## Energy minimization (EM) : EM ensured that we have a reasonable starting structure, in terms of geometry and solvent orientation. The purpose of energy minimization is not to find the global or local minimum, but to escape from the force in high gradient and avoid protein collapse.
 `nunu.mdp` file
 ```
@@ -276,6 +279,49 @@ Output:
 - em.gro: Energy-minimized structure
 
 ### Equilibration
+- Restraining the ligand at equilibration
+	Ref: https://mattermodeling.stackexchange.com/questions/8336/why-are-ligands-restrained-when-simulating-a-protein-ligand-complex-with-md
+	- The cause to use restrains is due to a previous knowledge (i.e. experimental) of system behavior/characteristics that you want to include/retain/reproduce in your simulations. In the case of protein-ligand complex simulations, they encode specifically prior knowledge about the macromolecular system to be simulated and is built of several components. These include the following: 
+		- Stereochemical information (e.g. bond distances, angles) about the constituent blocks (e.g. amino acids, nucleic acids) of macromolecules and the covalent links between them.
+		- The internal consistency of macromolecules (e.g. non-crystallographic symmetry, if present).
+		- Additional structural knowledge (similarity to known structures, current interatomic distances or secondary-structure elements etc.).
+		- The process of generating a set of restraints, or ‘dictionary’, for a small molecule involves (i) taking a description of the molecule as an input, (ii) processing its description to derive atom energy types and connectivities, and finally (iii) using this information to generate an idealized set of coordinates to allow fitting of the ligand to electron density and a list of geometric restraints with associated weights to allow the fitted ligand to be refined.
+
+	Ref: https://www.researchgate.net/post/should_i_restraint_protein_and_ligand_in_md_production
+	- Normally, the restraints should be gradually released during the equilibration MD simulation; the final part of the equilibration MD simulation should be performed without any restraints and the simulation parameters should be identical to those subsequently applied in the production MD simulation.
+
+	```
+	$ gmx make_ndx -f leu2.gro -o index_leu2.ndx
+		> Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+			0 System              :    23 atoms
+			1 Other               :    23 atoms
+			2 Leu2                :    23 atoms
+
+		 nr : group      '!': not  'name' nr name   'splitch' nr    Enter: list groups
+		 'a': atom       '&': and  'del' nr         'splitres' nr   'l': list residues
+		 't': atom type  '|': or   'keep' nr        'splitat' nr    'h': help
+		 'r': residue              'res' nr         'chain' char
+		 "name": group             'case': case sensitive           'q': save and quit
+		 'ri': residue index
+		>> 0 & ! a H*  # to select only non-hydrogen atoms in a ligand
+	
+	$ gmx genrestr -f leu2.gro -n index_leu2.ndx -o posre_leu2.itp -fc 1000 1000 1000
+		> Select group to position restrain
+			Group     0 (         System) has    23 elements
+			Group     1 (          Other) has    23 elements
+			Group     2 (           Leu2) has    23 elements
+			Group     3 (   System_&_!H*) has     9 elements
+			Select a group: 
+
+		>>	3
+
+	$ vi topol.top
+		; Ligand position restraints
+		# ifdef POSES
+		#include "posre_leu2.itp"
+		#endif
+	
+	```
 - NVT equilibrium
 	nvt.mdp
 	```
