@@ -1,4 +1,4 @@
-# install and initial setting
+# install and initial setting (Centos)
 ```
 [root@life1 02_ENCSR600ZHS]# yum install lm_sensors
 
@@ -103,4 +103,12 @@ Core 4:        +75.0°C  (high = +92.0°C, crit = +102.0°C)
 Core 5:        +76.0°C  (high = +92.0°C, crit = +102.0°C)
 Core 6:        +77.0°C  (high = +92.0°C, crit = +102.0°C)
 Core 7:        +74.0°C  (high = +92.0°C, crit = +102.0°C)
+```
+
+# Installation on Ubuntu
+Ref: https://www.cyberciti.biz/faq/how-to-check-cpu-temperature-on-ubuntu-linux/
+```
+$ sudo apt install lm-sensors
+$ sudo sensors-detect
+$ sensors
 ```
