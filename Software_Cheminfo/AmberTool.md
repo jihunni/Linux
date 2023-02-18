@@ -142,3 +142,6 @@ Ref: https://github.com/alanwilter/acpype
 # mmtools
 Ref: https://github.com/choderalab/mmtools
 
+# ffAmber
+Ref: http://ffamber.cnsm.csulb.edu/ffamber.php
+- Warning! AMBER conventions have been maintained where possible. However, due to specific GROMACS functionality this was not always feasible. 
