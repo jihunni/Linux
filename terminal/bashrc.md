@@ -1,4 +1,5 @@
 # bashrc
+- reference : https://askubuntu.com/questions/466198/how-do-i-change-the-color-for-directories-with-ls-in-the-console
 How do I change the color for directories with ls in the console?
 '''
 nano ~/.bashrc
@@ -70,4 +71,40 @@ These can even be combined, so that a parameter like:
 ```
 di=1;4;31;42
 ```
-- reference : https://askubuntu.com/questions/466198/how-do-i-change-the-color-for-directories-with-ls-in-the-console
+
+# Tiral and errors
+- bashrc is not initialized (Ubuntu)
+  Ref: https://askubuntu.com/questions/161249/bashrc-not-executed-when-opening-new-terminal
+  - check `~/.profile`
+    ```
+    # ~/.profile: executed by the command interpreter for login shells. 
+    # This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
+    # exists. 
+    # see /usr/share/doc/bash/examples/startup-files for examples.
+    # the files are located in the bash-doc package.
+
+    # the default umask is set in /etc/profile; for setting the umask
+    # for ssh logins, install and configure the libpam-umask package.
+    #umask 022
+
+    # if running bash
+    if [ -n "$BASH_VERSION" ]; then 
+        # include .bashrc if it exists
+        if [ -f "$HOME/.bashrc" ]; then 
+        . "$HOME/.bashrc"
+        fi  
+    fi
+
+    # set PATH so it includes user's private bin if it exists
+    if [ -d "$HOME/bin" ] ; then
+        PATH="$HOME/bin:$PATH"
+    fi
+
+    # set PATH so it includes user's private bin if it exists
+    if [ -d "$HOME/.local/bin" ] ; then
+        PATH="$HOME/.local/bin:$PATH"
+    fi
+
+    ```
+  - 
+- 
