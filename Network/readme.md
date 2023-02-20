@@ -10,7 +10,8 @@ ping [ip_address]
 
 ## static IP address setting on Ubuntu
 Ref: https://www.manualfactory.net/13079
-- `yaml` file on `/etc/netplan`
+- `/etc/resolv.conf` (instantaneous IP address setting)
+- `yaml` file on `/etc/netplan` (permanent IP address setting)
   ```
   # This is the network config written by 'subiquity'
   network:
