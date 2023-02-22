@@ -243,6 +243,10 @@
 	```
 	module load cplex_studio/22.1.0	```
 	```
-	
+- GSEA
+	```
+	$ module load gsea/4.3.2
+	$ gsea.sh
+	```
 # database system
 ## PostgreSQL (version 13)
