@@ -51,6 +51,33 @@
   
   # systemctl restart rstudio-server.service
   ```
+# Trial and error in R
+```
+Package harfbuzz was not found in the pkg-config search path.
+Perhaps you should add the directory containing `harfbuzz.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'harfbuzz' found
+Package fribidi was not found in the pkg-config search path.
+Perhaps you should add the directory containing `fribidi.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'fribidi' found
+Using PKG_CFLAGS=
+Using PKG_LIBS=-lfreetype -lharfbuzz -lfribidi -lpng
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed to find the harfbuzz freetype2 fribidi library. Try installing:
+ * deb: libharfbuzz-dev libfribidi-dev (Debian, Ubuntu, etc)
+ * rpm: harfbuzz-devel fribidi-devel (Fedora, EPEL)
+ * csw: libharfbuzz_dev libfribidi_dev (Solaris)
+ * brew: harfbuzz fribidi (OSX)
+If harfbuzz freetype2 fribidi is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a harfbuzz freetype2 fribidi.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: hb-ft.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------
+```
 # Rstudio
 ## systemctl
 ```
