@@ -128,7 +128,8 @@ jupyter notebook list
 	$ vi  ~/.profile
 		> source ~/.bashrc
 	```
-
+	Method4: to set a module environment for anaconda3. when `conda` was called in bash shell, anaconda3 should be able to respond on it.
+	
 
 # install library in conda env
 Ref : https://docs.conda.io/projects/conda/en/latest/commands/install.html
