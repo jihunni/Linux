@@ -596,6 +596,10 @@ Select 1 ("Protein") as the group to be centered and 0 ("System") for output. We
 	```
 	gmx trjconv -s md_0_1.tpr -f md_0_1_center.xtc -o md_0_1_fit.xtc -fit rot+trans
 	```
+- to extract a specific frame (here, t=0 ns) of a trajectory
+	```
+	gmx trjconv -s md_0_1.tpr -f md_0_1_center.xtc -o start.pdb -dump 0
+	```
 - RMSD  
 	Let's look at structural stability first. GROMACS has a built-in utility for RMSD calculations called rms. To use rms, issue this command:
 
