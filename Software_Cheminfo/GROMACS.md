@@ -631,11 +631,18 @@ Select 1 ("Protein") as the group to be centered and 0 ("System") for output. We
 	```
  	gmx sasa -s md_0_1.tpr -f md_0_1_noPBC.xtc -o sasa.xvg -tu ns
  	```
+- distance
+	e.g. distance between OXT in Leu2 and NH2 in 295
+	```
+	gmx distance -s md_0_200ns.tpr -f md_0_200ns_fit.xtc -select 'resname "Leu2" and name OXT plus resid 295 and name NH2' -oall
+	```
 - Hydrogen bond  
 	Ref: https://www.compchems.com/how-to-study-hydrogen-bonds-using-gromacs/#how-to-compute-the-hydrogen-bonds-between-two-groups
 	```
-	 gmx hbond -f md_0_1_noPBC.xtc -s md_0_1.tpr -num hbnum.xvg
+	gmx hbond -f md_0_1_noPBC.xtc -s md_0_1.tpr -num hbnum.xvg
 	```
+	
+
 - `xvg` to python  
 	Ref: https://www.compchems.com/how-to-extract-and-plot-thermodynamic-properties-from-a-gromacs-simulation/#example
 	```
