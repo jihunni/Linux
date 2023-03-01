@@ -1,3 +1,10 @@
+# Pymol installation on Linux
+Ref: https://pymolwiki.org/index.php/Linux_Install
+- ubuntu
+	```
+	apt-get install pymol
+	```
+
 # Pymol Install on Mac
 Ref: https://pymolwiki.org/index.php/MAC_Install
 ```
