@@ -847,7 +847,8 @@ xmgrace [file_name].xvg
 # Analysis
 - Solvent Accessible Surface Area (SASA)
 Ref: https://www.compchems.com/how-to-compute-the-solvent-accessible-surface-areas-sasa-with-gromacs/#solvent-accessible-surface-area-sasa
-- 
+-  The ligand stays intact till 80ns simulaiton but is found far away from protein after 80ns. Suggestions?  
+	Ref: https://www.researchgate.net/post/I-am-performing-MD-simulation-after-docking-The-ligand-stays-intact-till-80ns-simulaiton-but-is-found-far-away-from-protein-after-80ns-Suggestions
 
 # Materials
 - https://computecanada.github.io/molmodsim-md-theory-lesson-novice/
