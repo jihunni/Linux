@@ -31,6 +31,18 @@ which tcsh
 	```
 
 ## File management
+- print file tree
+	Ref: https://www.cyberciti.biz/faq/linux-show-directory-structure-command-line/
+	```
+	Install in Ubuntu
+	$ sudo apt-get install tree
+	
+	Print a file tree
+	$ tree
+	$ tree /path/to/directory
+	$ tree [options] tree [options] /path/to/directory
+	```
+- 
 ### File transfer
 Ref: https://devconnected.com/4-ways-to-transfer-files-and-directories-on-linux/
 ### FTP -> Local
