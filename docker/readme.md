@@ -1,7 +1,7 @@
 # virtual machine and docker
-
-
-## install
+## install (with GPU support)
+Ref: https://docs.docker.com/desktop/install/ubuntu/
+Ref: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html
 ```
  $ sudo apt-get update
  $ sudo apt-get install \
@@ -87,15 +87,29 @@ Server: Docker Engine - Community
 docker -v
 ```
 ```
-# download container
-docker pull {image_name}:{tag}
+# download images
+$ docker pull {image_name}:{tag}
+$ docker images
+$ docker ps -a # to check the executing containers
+$ docker rmi [images_name]
 
 # execute container
-docker run -i -t 
+$ docker run (-i) (-t) --name [container_name] -p host_port:conatiner_port (-v host_filesystem:container_filesystem) [image_names] 
+$ docker stasrt/stop [container_name]```
+$ docker rm (--force) [container_nanme] # to remove a container
+$ docker rmi [images_name]
+$ docker logs
+$ docker exec [containter_name] [command] # execute
+$ docker exec -i -t ws /bin/bash 
+	-i: interactive
+	-p : putty
 ```
 
-```
-docker images
+## basic setting in a container
+ ```
+ $ apt install vim
+ ```
+# docker images
 ```
 
 # Reference
