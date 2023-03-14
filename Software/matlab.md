@@ -25,7 +25,12 @@
 		```
 		$ /opt/gurobi/gurobi912/linux64/bin/grbgetkey
 		```
-	
+## to execute matlab
+- check whether the shell environment support X-window system (ssh -X option)
+- to execute matlab
+	```
+	$ matlab (-nodisplay)
+	```
 ## Module environment
 ```
 #%Module1.0#####################################################################
