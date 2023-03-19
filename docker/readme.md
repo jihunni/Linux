@@ -94,7 +94,8 @@ $ docker ps -a # to check the executing containers
 $ docker rmi [images_name]
 
 # execute container
-$ docker run (-i) (-t) --name [container_name] -p host_port:conatiner_port (-v host_filesystem:container_filesystem) [image_names] 
+$ docker run (-i) (-t) (-d) --name [container_name] -p host_port:conatiner_port (-v host_filesystem:container_filesystem) [image_names] 
+	-d : background execution
 $ docker stasrt/stop [container_name]```
 $ docker rm (--force) [container_nanme] # to remove a container
 $ docker rmi [images_name]
@@ -107,11 +108,20 @@ $ docker exec -i -t ws /bin/bash
 
 ## basic setting in a container
  ```
+ $ apt-get update # to configure (update) the channel information
+ $ apt-get install python 	#install python 2.7
+ $ apt-get install python-pip	#install PyPI of python 2.7 
+ $ apt-get install python3
  $ apt install vim
  ```
-# docker images
-```
-
+ 
+## the additional setting for installing Rosetta
+	```
+	# docker pull ubuntu:18.04
+	# docker run -i -t -d --name ubuntu_18.04 -v /home/jihun/rosetta/rosetta_src_2018.09.60072_bundle/:/opt/rosetta/ ubuntu:18.04
+	# pip install scons==3.1.2
+	```
+	- scons: https://scons.org/scons-312-is-available.html
 # Reference
 - https://docs.docker.com/engine/install/
 - https://www.yalco.kr/36_docker/
