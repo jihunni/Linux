@@ -18,14 +18,14 @@ e.g. $./scons.py -j 20 mode=release bin extra=hdf5
 ```
 
 
-# Trial and error
+# Trial and error in installation
 - error while loading shared libraries: libcppdb.s
   ```
   ./score_jd2.linuxgccrelease: error while loading shared libraries: libcppdb.so: cannot open shared object file: No such file or directory
   ```
   Ref: https://www.rosettacommons.org/node/10175  
   Sol : Do not move the directory of Rosetta. Recompile.  
-- `Comiler` 
+- `Comiler` Ubuntu 20.04 installation
   Ref: https://www.rosettacommons.org/node/11709
   ```
   Running versioning script ... Release package detected, using rosetta/main/.release.json to acquire version information...
@@ -381,3 +381,22 @@ packstat="false" interface_sc="true" ligandchain="B"/>
 </PROTOCOLS>
 </ROSETTASCRIPTS>
 ```
+
+## Trial and Error
+- XML script with relative path
+  ```
+  ERROR: Unable to open RosettaScripts XML file: "~/minibinder/scripts_and_main_pdbs/supplemental_files/cao_2021_protocol/paper_coord_relax.xml".
+  ERROR:: Exit from: src/protocols/rosetta_scripts/RosettaScriptsParser.cc line: 597
+  Error: [ ERROR ] ERROR: Exception caught by JobDistributor while trying to get pose from job '3mjg_PDGFR_0001'
+  Error: [ ERROR ] Treating failure as bad input; canceling similar jobs
+
+  [ ERROR ]: Caught exception:
+
+
+  File: src/protocols/rosetta_scripts/RosettaScriptsParser.cc:597
+  [ ERROR ] UtilityExitException
+  ERROR: Unable to open RosettaScripts XML file: "~/minibinder/scripts_and_main_pdbs/supplemental_files/cao_2021_protocol/paper_coord_relax.xml".
+
+
+  ```
+- 
