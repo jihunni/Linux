@@ -111,7 +111,7 @@ $ docker exec -i -t ws /bin/bash
  $ apt-get update # to configure (update) the channel information
  $ apt-get install python 	#install python 2.7
  $ apt-get install python-pip	#install PyPI of python 2.7 
- $ apt-get install python3
+ $ apt-get install python3 
  $ apt install vim
  ```
  
@@ -120,6 +120,7 @@ $ docker exec -i -t ws /bin/bash
 	# docker pull ubuntu:18.04
 	# docker run -i -t -d --name ubuntu_18.04 -v /home/jihun/rosetta/rosetta_src_2018.09.60072_bundle/:/opt/rosetta/ ubuntu:18.04
 	# pip install scons==3.1.2
+	# sudo apt-get install boost # install boost
 	```
 	- scons: https://scons.org/scons-312-is-available.html
 # Reference
