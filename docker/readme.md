@@ -127,6 +127,7 @@ $ docker exec -i -t ws /bin/bash
 	# pip install scons==3.1.2
 	# sudo apt-get install boost # install boost
 	# sudo apt-get install sudo
+	# sudo apt-get -y install libsqlite3-0 libsqlite3-dev
 	
 	To install gcc version 6
 	# sudo apt update && \
