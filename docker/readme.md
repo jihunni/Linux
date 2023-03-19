@@ -115,7 +115,7 @@ $ docker exec -i -t ws /bin/bash
  $ apt install vim
  ```
  
-## the setting for installing Rosetta 3.7 (Python 2.7, GCC 6, SCONS 3.1.2)
+## the setting for installing Rosetta 3.7 (Ubuntu 18.04, Python 2.7, GCC 6, SCONS 3.1.2)
 	```
 	To set the Ubuntu environment in a container
 	# docker pull ubuntu:18.04
