@@ -106,7 +106,7 @@ $ docker exec -i -t ws /bin/bash
 	-p : putty
 ```
 
-## basic setting in a container
+## general setting in a container
  ```
  $ apt-get update # to configure (update) the channel information
  $ apt-get install python 	#install python 2.7
@@ -115,12 +115,30 @@ $ docker exec -i -t ws /bin/bash
  $ apt install vim
  ```
  
-## the additional setting for installing Rosetta
+## the setting for installing Rosetta 3.7 (Python 2.7, GCC 6, SCONS 3.1.2)
 	```
+	To set the Ubuntu environment in a container
 	# docker pull ubuntu:18.04
 	# docker run -i -t -d --name ubuntu_18.04 -v /home/jihun/rosetta/rosetta_src_2018.09.60072_bundle/:/opt/rosetta/ ubuntu:18.04
+	
+	To set the installation environment in a container
+	# apt-get install python 	#install python 2.7
+ 	# apt-get install python-pip	#install PyPI of python 2.7 
 	# pip install scons==3.1.2
 	# sudo apt-get install boost # install boost
+	# sudo apt-get install sudo
+	
+	To install gcc version 6
+	# sudo apt update && \
+	# sudo apt install build-essential software-properties-common -y && \
+	# sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y && \
+	# sudo apt update && \
+	# sudo apt install gcc-6 g++-6 -y && \
+	# sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-6 && \
+	# gcc -v
+	
+	To install Rosetta 3.9
+	# ./scons.py -j 25 mode=release bin 
 	```
 	- scons: https://scons.org/scons-312-is-available.html
 # Reference
