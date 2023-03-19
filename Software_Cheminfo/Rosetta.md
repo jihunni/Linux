@@ -25,6 +25,241 @@ e.g. $./scons.py -j 20 mode=release bin extra=hdf5
   ```
   Ref: https://www.rosettacommons.org/node/10175  
   Sol : Do not move the directory of Rosetta. Recompile.  
+- `Comiler` 
+  Ref: https://www.rosettacommons.org/node/11709
+  ```
+  Running versioning script ... Release package detected, using rosetta/main/.release.json to acquire version information...
+  Done. (0.0 seconds)
+  file ./options.dox being updated
+  file ./full-options-list.md being updated
+  Number of option files updated: 2
+  Total 4580 options.
+  Finished updating ResidueProperty code
+  -- no changes needed
+  Finished updating VariantType code
+  -- no changes needed
+  scons: done reading SConscript files.
+  scons: Building targets ...
+  g++ -o build/src/release/linux/5.19/64/x86/gcc/11/default/apps/public/AbinitioRelax.o -c -std=c++0x -ffor-scope -isystem external/boost_submod/ -isystem external/ -isystem external/include/ -isystem external/dbio/ -isystem external/libxml2/include -isystem external/rdkit -pipe -Wall -Wextra -pedantic -Wno-long-long -Wno-strict-aliasing -march=core2 -mtune=generic -O3 -ffast-math -fno-finite-math-only -funroll-loops -finline-functions -finline-limit=20000 -s -Wno-unused-variable -Wno-unused-parameter -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS -DBOOST_DISABLE_THREADS -DPTR_STD -DNDEBUG -Isrc -Iexternal/include -Isrc/platform/linux/64/gcc/11 -Isrc/platform/linux/64/gcc -Isrc/platform/linux/64 -Isrc/platform/linux src/apps/public/AbinitioRelax.cc
+  g++: warning: switch '-ffor-scope' is no longer supported
+  g++ -o build/src/release/linux/5.19/64/x86/gcc/11/default/devel/init.os -c -std=c++0x -ffor-scope -isystem external/boost_submod/ -isystem external/ -isystem external/include/ -isystem external/dbio/ -isystem external/libxml2/include -isystem external/rdkit -pipe -Wall -Wextra -pedantic -Wno-long-long -Wno-strict-aliasing -march=core2 -mtune=generic -O3 -ffast-math -fno-finite-math-only -funroll-loops -finline-functions -finline-limit=20000 -s -Wno-unused-variable -Wno-unused-parameter -fPIC -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS -DBOOST_DISABLE_THREADS -DPTR_STD -DNDEBUG -Isrc -Iexternal/include -Isrc/platform/linux/64/gcc/11 -Isrc/platform/linux/64/gcc -Isrc/platform/linux/64 -Isrc/platform/linux src/devel/init.cc
+  g++: warning: switch '-ffor-scope' is no longer supported
+  g++ -o build/src/release/linux/5.19/64/x86/gcc/11/default/protocols/init/init.os -c -std=c++0x -ffor-scope -isystem external/boost_submod/ -isystem external/ -isystem external/include/ -isystem external/dbio/ -isystem external/libxml2/include -isystem external/rdkit -pipe -Wall -Wextra -pedantic -Wno-long-long -Wno-strict-aliasing -march=core2 -mtune=generic -O3 -ffast-math -fno-finite-math-only -funroll-loops -finline-functions -finline-limit=20000 -s -Wno-unused-variable -Wno-unused-parameter -fPIC -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS -DBOOST_DISABLE_THREADS -DPTR_STD -DNDEBUG -Isrc -Iexternal/include -Isrc/platform/linux/64/gcc/11 -Isrc/platform/linux/64/gcc -Isrc/platform/linux/64 -Isrc/platform/linux src/protocols/init/init.cc
+  g++: warning: switch '-ffor-scope' is no longer supported
+  g++ -o build/src/release/linux/5.19/64/x86/gcc/11/default/protocols/init/register1.os -c -std=c++0x -ffor-scope -isystem external/boost_submod/ -isystem external/ -isystem external/include/ -isystem external/dbio/ -isystem external/libxml2/include -isystem external/rdkit -pipe -Wall -Wextra -pedantic -Wno-long-long -Wno-strict-aliasing -march=core2 -mtune=generic -O3 -ffast-math -fno-finite-math-only -funroll-loops -finline-functions -finline-limit=20000 -s -Wno-unused-variable -Wno-unused-parameter -fPIC -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS -DBOOST_DISABLE_THREADS -DPTR_STD -DNDEBUG -Isrc -Iexternal/include -Isrc/platform/linux/64/gcc/11 -Isrc/platform/linux/64/gcc -Isrc/platform/linux/64 -Isrc/platform/linux src/protocols/init/register1.cc
+  g++: warning: switch '-ffor-scope' is no longer supported
+  g++ -o build/src/release/linux/5.19/64/x86/gcc/11/default/protocols/init/register2.os -c -std=c++0x -ffor-scope -isystem external/boost_submod/ -isystem external/ -isystem external/include/ -isystem external/dbio/ -isystem external/libxml2/include -isystem external/rdkit -pipe -Wall -Wextra -pedantic -Wno-long-long -Wno-strict-aliasing -march=core2 -mtune=generic -O3 -ffast-math -fno-finite-math-only -funroll-loops -finline-functions -finline-limit=20000 -s -Wno-unused-variable -Wno-unused-parameter -fPIC -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS -DBOOST_DISABLE_THREADS -DPTR_STD -DNDEBUG -Isrc -Iexternal/include -Isrc/platform/linux/64/gcc/11 -Isrc/platform/linux/64/gcc -Isrc/platform/linux/64 -Isrc/platform/linux src/protocols/init/register2.cc
+  g++: warning: switch '-ffor-scope' is no longer supported
+  g++ -o build/src/release/linux/5.19/64/x86/gcc/11/default/protocols/init/register3.os -c -std=c++0x -ffor-scope -isystem external/boost_submod/ -isystem external/ -isystem external/include/ -isystem external/dbio/ -isystem external/libxml2/include -isystem external/rdkit -pipe -Wall -Wextra -pedantic -Wno-long-long -Wno-strict-aliasing -march=core2 -mtune=generic -O3 -ffast-math -fno-finite-math-only -funroll-loops -finline-functions -finline-limit=20000 -s -Wno-unused-variable -Wno-unused-parameter -fPIC -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS -DBOOST_DISABLE_THREADS -DPTR_STD -DNDEBUG -Isrc -Iexternal/include -Isrc/platform/linux/64/gcc/11 -Isrc/platform/linux/64/gcc -Isrc/platform/linux/64 -Isrc/platform/linux src/protocols/init/register3.cc
+  g++: warning: switch '-ffor-scope' is no longer supported
+  g++ -o build/src/release/linux/5.19/64/x86/gcc/11/default/protocols/init/register4.os -c -std=c++0x -ffor-scope -isystem external/boost_submod/ -isystem external/ -isystem external/include/ -isystem external/dbio/ -isystem external/libxml2/include -isystem external/rdkit -pipe -Wall -Wextra -pedantic -Wno-long-long -Wno-strict-aliasing -march=core2 -mtune=generic -O3 -ffast-math -fno-finite-math-only -funroll-loops -finline-functions -finline-limit=20000 -s -Wno-unused-variable -Wno-unused-parameter -fPIC -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS -DBOOST_DISABLE_THREADS -DPTR_STD -DNDEBUG -Isrc -Iexternal/include -Isrc/platform/linux/64/gcc/11 -Isrc/platform/linux/64/gcc -Isrc/platform/linux/64 -Isrc/platform/linux src/protocols/init/register4.cc
+  g++: warning: switch '-ffor-scope' is no longer supported
+  g++ -o build/src/release/linux/5.19/64/x86/gcc/11/default/protocols/antibody_legacy/AntibodyClass.os -c -std=c++0x -ffor-scope -isystem external/boost_submod/ -isystem external/ -isystem external/include/ -isystem external/dbio/ -isystem external/libxml2/include -isystem external/rdkit -pipe -Wall -Wextra -pedantic -Wno-long-long -Wno-strict-aliasing -march=core2 -mtune=generic -O3 -ffast-math -fno-finite-math-only -funroll-loops -finline-functions -finline-limit=20000 -s -Wno-unused-variable -Wno-unused-parameter -fPIC -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS -DBOOST_DISABLE_THREADS -DPTR_STD -DNDEBUG -Isrc -Iexternal/include -Isrc/platform/linux/64/gcc/11 -Isrc/platform/linux/64/gcc -Isrc/platform/linux/64 -Isrc/platform/linux src/protocols/antibody_legacy/AntibodyClass.cc
+  g++: warning: switch '-ffor-scope' is no longer supported
+  g++ -o build/src/release/linux/5.19/64/x86/gcc/11/default/protocols/antibody_legacy/AntibodyModeler.os -c -std=c++0x -ffor-scope -isystem external/boost_submod/ -isystem external/ -isystem external/include/ -isystem external/dbio/ -isystem external/libxml2/include -isystem external/rdkit -pipe -Wall -Wextra -pedantic -Wno-long-long -Wno-strict-aliasing -march=core2 -mtune=generic -O3 -ffast-math -fno-finite-math-only -funroll-loops -finline-functions -finline-limit=20000 -s -Wno-unused-variable -Wno-unused-parameter -fPIC -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS -DBOOST_DISABLE_THREADS -DPTR_STD -DNDEBUG -Isrc -Iexternal/include -Isrc/platform/linux/64/gcc/11 -Isrc/platform/linux/64/gcc -Isrc/platform/linux/64 -Isrc/platform/linux src/protocols/antibody_legacy/AntibodyModeler.cc
+  g++: warning: switch '-ffor-scope' is no longer supported
+  g++ -o build/src/release/linux/5.19/64/x86/gcc/11/default/protocols/antibody_legacy/CDRH3Modeler.os -c -std=c++0x -ffor-scope -isystem external/boost_submod/ -isystem external/ -isystem external/include/ -isystem external/dbio/ -isystem external/libxml2/include -isystem external/rdkit -pipe -Wall -Wextra -pedantic -Wno-long-long -Wno-strict-aliasing -march=core2 -mtune=generic -O3 -ffast-math -fno-finite-math-only -funroll-loops -finline-functions -finline-limit=20000 -s -Wno-unused-variable -Wno-unused-parameter -fPIC -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS -DBOOST_DISABLE_THREADS -DPTR_STD -DNDEBUG -Isrc -Iexternal/include -Isrc/platform/linux/64/gcc/11 -Isrc/platform/linux/64/gcc -Isrc/platform/linux/64 -Isrc/platform/linux src/protocols/antibody_legacy/CDRH3Modeler.cc
+  g++: warning: switch '-ffor-scope' is no longer supported
+  g++ -o build/src/release/linux/5.19/64/x86/gcc/11/default/protocols/antibody_legacy/LHRepulsiveRampLegacy.os -c -std=c++0x -ffor-scope -isystem external/boost_submod/ -isystem external/ -isystem external/include/ -isystem external/dbio/ -isystem external/libxml2/include -isystem external/rdkit -pipe -Wall -Wextra -pedantic -Wno-long-long -Wno-strict-aliasing -march=core2 -mtune=generic -O3 -ffast-math -fno-finite-math-only -funroll-loops -finline-functions -finline-limit=20000 -s -Wno-unused-variable -Wno-unused-parameter -fPIC -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS -DBOOST_DISABLE_THREADS -DPTR_STD -DNDEBUG -Isrc -Iexternal/include -Isrc/platform/linux/64/gcc/11 -Isrc/platform/linux/64/gcc -Isrc/platform/linux/64 -Isrc/platform/linux src/protocols/antibody_legacy/LHRepulsiveRampLegacy.cc
+  g++: warning: switch '-ffor-scope' is no longer supported
+  g++ -o build/src/release/linux/5.19/64/x86/gcc/11/default/protocols/antibody_legacy/LHSnugFitLegacy.os -c -std=c++0x -ffor-scope -isystem external/boost_submod/ -isystem external/ -isystem external/include/ -isystem external/dbio/ -isystem external/libxml2/include -isystem external/rdkit -pipe -Wall -Wextra -pedantic -Wno-long-long -Wno-strict-aliasing -march=core2 -mtune=generic -O3 -ffast-math -fno-finite-math-only -funroll-loops -finline-functions -finline-limit=20000 -s -Wno-unused-variable -Wno-unused-parameter -fPIC -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS -DBOOST_DISABLE_THREADS -DPTR_STD -DNDEBUG -Isrc -Iexternal/include -Isrc/platform/linux/64/gcc/11 -Isrc/platform/linux/64/gcc -Isrc/platform/linux/64 -Isrc/platform/linux src/protocols/antibody_legacy/LHSnugFitLegacy.cc
+  g++: warning: switch '-ffor-scope' is no longer supported
+  g++ -o build/src/release/linux/5.19/64/x86/gcc/11/default/protocols/antibody_legacy/GraftMover.os -c -std=c++0x -ffor-scope -isystem external/boost_submod/ -isystem external/ -isystem external/include/ -isystem external/dbio/ -isystem external/libxml2/include -isystem external/rdkit -pipe -Wall -Wextra -pedantic -Wno-long-long -Wno-strict-aliasing -march=core2 -mtune=generic -O3 -ffast-math -fno-finite-math-only -funroll-loops -finline-functions -finline-limit=20000 -s -Wno-unused-variable -Wno-unused-parameter -fPIC -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS -DBOOST_DISABLE_THREADS -DPTR_STD -DNDEBUG -Isrc -Iexternal/include -Isrc/platform/linux/64/gcc/11 -Isrc/platform/linux/64/gcc -Isrc/platform/linux/64 -Isrc/platform/linux src/protocols/antibody_legacy/GraftMover.cc
+  g++: warning: switch '-ffor-scope' is no longer supported
+  g++ -o build/src/release/linux/5.19/64/x86/gcc/11/default/protocols/antibody_legacy/Ubiquitin_E2C_Modeler.os -c -std=c++0x -ffor-scope -isystem external/boost_submod/ -isystem external/ -isystem external/include/ -isystem external/dbio/ -isystem external/libxml2/include -isystem external/rdkit -pipe -Wall -Wextra -pedantic -Wno-long-long -Wno-strict-aliasing -march=core2 -mtune=generic -O3 -ffast-math -fno-finite-math-only -funroll-loops -finline-functions -finline-limit=20000 -s -Wno-unused-variable -Wno-unused-parameter -fPIC -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS -DBOOST_DISABLE_THREADS -DPTR_STD -DNDEBUG -Isrc -Iexternal/include -Isrc/platform/linux/64/gcc/11 -Isrc/platform/linux/64/gcc -Isrc/platform/linux/64 -Isrc/platform/linux src/protocols/antibody_legacy/Ubiquitin_E2C_Modeler.cc
+  g++: warning: switch '-ffor-scope' is no longer supported
+  g++ -o build/src/release/linux/5.19/64/x86/gcc/11/default/protocols/antibody/Ab_TemplateInfo.os -c -std=c++0x -ffor-scope -isystem external/boost_submod/ -isystem external/ -isystem external/include/ -isystem external/dbio/ -isystem external/libxml2/include -isystem external/rdkit -pipe -Wall -Wextra -pedantic -Wno-long-long -Wno-strict-aliasing -march=core2 -mtune=generic -O3 -ffast-math -fno-finite-math-only -funroll-loops -finline-functions -finline-limit=20000 -s -Wno-unused-variable -Wno-unused-parameter -fPIC -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS -DBOOST_DISABLE_THREADS -DPTR_STD -DNDEBUG -Isrc -Iexternal/include -Isrc/platform/linux/64/gcc/11 -Isrc/platform/linux/64/gcc -Isrc/platform/linux/64 -Isrc/platform/linux src/protocols/antibody/Ab_TemplateInfo.cc
+  g++: warning: switch '-ffor-scope' is no longer supported
+  g++ -o build/src/release/linux/5.19/64/x86/gcc/11/default/protocols/antibody/AntibodyCDRGrafter.os -c -std=c++0x -ffor-scope -isystem external/boost_submod/ -isystem external/ -isystem external/include/ -isystem external/dbio/ -isystem external/libxml2/include -isystem external/rdkit -pipe -Wall -Wextra -pedantic -Wno-long-long -Wno-strict-aliasing -march=core2 -mtune=generic -O3 -ffast-math -fno-finite-math-only -funroll-loops -finline-functions -finline-limit=20000 -s -Wno-unused-variable -Wno-unused-parameter -fPIC -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS -DBOOST_DISABLE_THREADS -DPTR_STD -DNDEBUG -Isrc -Iexternal/include -Isrc/platform/linux/64/gcc/11 -Isrc/platform/linux/64/gcc -Isrc/platform/linux/64 -Isrc/platform/linux src/protocols/antibody/AntibodyCDRGrafter.cc
+  g++: warning: switch '-ffor-scope' is no longer supported
+  g++ -o build/src/release/linux/5.19/64/x86/gcc/11/default/protocols/antibody/AntibodyEnumManager.os -c -std=c++0x -ffor-scope -isystem external/boost_submod/ -isystem external/ -isystem external/include/ -isystem external/dbio/ -isystem external/libxml2/include -isystem external/rdkit -pipe -Wall -Wextra -pedantic -Wno-long-long -Wno-strict-aliasing -march=core2 -mtune=generic -O3 -ffast-math -fno-finite-math-only -funroll-loops -finline-functions -finline-limit=20000 -s -Wno-unused-variable -Wno-unused-parameter -fPIC -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS -DBOOST_DISABLE_THREADS -DPTR_STD -DNDEBUG -Isrc -Iexternal/include -Isrc/platform/linux/64/gcc/11 -Isrc/platform/linux/64/gcc -Isrc/platform/linux/64 -Isrc/platform/linux src/protocols/antibody/AntibodyEnumManager.cc
+  g++: warning: switch '-ffor-scope' is no longer supported
+  g++ -o build/src/release/linux/5.19/64/x86/gcc/11/default/protocols/antibody/AntibodyInfo.os -c -std=c++0x -ffor-scope -isystem external/boost_submod/ -isystem external/ -isystem external/include/ -isystem external/dbio/ -isystem external/libxml2/include -isystem external/rdkit -pipe -Wall -Wextra -pedantic -Wno-long-long -Wno-strict-aliasing -march=core2 -mtune=generic -O3 -ffast-math -fno-finite-math-only -funroll-loops -finline-functions -finline-limit=20000 -s -Wno-unused-variable -Wno-unused-parameter -fPIC -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS -DBOOST_DISABLE_THREADS -DPTR_STD -DNDEBUG -Isrc -Iexternal/include -Isrc/platform/linux/64/gcc/11 -Isrc/platform/linux/64/gcc -Isrc/platform/linux/64 -Isrc/platform/linux src/protocols/antibody/AntibodyInfo.cc
+  g++: warning: switch '-ffor-scope' is no longer supported
+  g++ -o build/src/release/linux/5.19/64/x86/gcc/11/default/protocols/antibody/AntibodyFeatures.os -c -std=c++0x -ffor-scope -isystem external/boost_submod/ -isystem external/ -isystem external/include/ -isystem external/dbio/ -isystem external/libxml2/include -isystem external/rdkit -pipe -Wall -Wextra -pedantic -Wno-long-long -Wno-strict-aliasing -march=core2 -mtune=generic -O3 -ffast-math -fno-finite-math-only -funroll-loops -finline-functions -finline-limit=20000 -s -Wno-unused-variable -Wno-unused-parameter -fPIC -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS -DBOOST_DISABLE_THREADS -DPTR_STD -DNDEBUG -Isrc -Iexternal/include -Isrc/platform/linux/64/gcc/11 -Isrc/platform/linux/64/gcc -Isrc/platform/linux/64 -Isrc/platform/linux src/protocols/antibody/AntibodyFeatures.cc
+  g++: warning: switch '-ffor-scope' is no longer supported
+  g++ -o build/src/release/linux/5.19/64/x86/gcc/11/default/protocols/antibody/AntibodyFeaturesCreator.os -c -std=c++0x -ffor-scope -isystem external/boost_submod/ -isystem external/ -isystem external/include/ -isystem external/dbio/ -isystem external/libxml2/include -isystem external/rdkit -pipe -Wall -Wextra -pedantic -Wno-long-long -Wno-strict-aliasing -march=core2 -mtune=generic -O3 -ffast-math -fno-finite-math-only -funroll-loops -finline-functions -finline-limit=20000 -s -Wno-unused-variable -Wno-unused-parameter -fPIC -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS -DBOOST_DISABLE_THREADS -DPTR_STD -DNDEBUG -Isrc -Iexternal/include -Isrc/platform/linux/64/gcc/11 -Isrc/platform/linux/64/gcc -Isrc/platform/linux/64 -Isrc/platform/linux src/protocols/antibody/AntibodyFeaturesCreator.cc
+  g++: warning: switch '-ffor-scope' is no longer supported
+  g++ -o build/src/release/linux/5.19/64/x86/gcc/11/default/protocols/antibody/AntibodyModelerProtocol.os -c -std=c++0x -ffor-scope -isystem external/boost_submod/ -isystem external/ -isystem external/include/ -isystem external/dbio/ -isystem external/libxml2/include -isystem external/rdkit -pipe -Wall -Wextra -pedantic -Wno-long-long -Wno-strict-aliasing -march=core2 -mtune=generic -O3 -ffast-math -fno-finite-math-only -funroll-loops -finline-functions -finline-limit=20000 -s -Wno-unused-variable -Wno-unused-parameter -fPIC -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS -DBOOST_DISABLE_THREADS -DPTR_STD -DNDEBUG -Isrc -Iexternal/include -Isrc/platform/linux/64/gcc/11 -Isrc/platform/linux/64/gcc -Isrc/platform/linux/64 -Isrc/platform/linux src/protocols/antibody/AntibodyModelerProtocol.cc
+  g++: warning: switch '-ffor-scope' is no longer supported
+  In file included from src/protocols/features/FeaturesReporterCreator.hh:21,
+                   from src/protocols/antibody/AntibodyFeaturesCreator.hh:18,
+                   from src/protocols/antibody/AntibodyFeaturesCreator.cc:15:
+  src/protocols/features/FeaturesReporter.fwd.hh:27:14: error: 'uint64_t' in namespace 'std' does not name a type; did you mean 'wint_t'?
+     27 | typedef std::uint64_t StructureID;
+        |              ^~~~~~~~
+        |              wint_t
+  In file included from src/protocols/features/InterfaceFeatures.hh:18,
+                   from src/protocols/antibody/AntibodyFeatures.hh:18,
+                   from src/protocols/antibody/AntibodyFeaturesCreator.cc:21:
+  src/protocols/features/FeaturesReporter.hh:99:17: error: 'StructureID' has not been declared
+     99 |                 StructureID /*parent id*/,
+        |                 ^~~~~~~~~~~
+  src/protocols/features/FeaturesReporter.hh:109:17: error: 'StructureID' has not been declared
+    109 |                 StructureID /*parent id*/,
+        |                 ^~~~~~~~~~~
+  src/protocols/features/FeaturesReporter.hh:124:17: error: 'StructureID' has not been declared
+    124 |                 StructureID,
+        |                 ^~~~~~~~~~~
+  src/protocols/features/FeaturesReporter.hh:130:17: error: 'StructureID' has not been declared
+    130 |                 StructureID,
+        |                 ^~~~~~~~~~~
+  In file included from src/protocols/features/InterfaceFeatures.hh:18,
+                   from src/protocols/antibody/AntibodyFeatures.hh:18,
+                   from src/protocols/antibody/AntibodyFeaturesCreator.cc:21:
+  src/protocols/features/FeaturesReporter.hh:185:17: error: 'StructureID' has not been declared
+    185 |                 StructureID struct_id,
+        |                 ^~~~~~~~~~~
+  g++ -o build/src/release/linux/5.19/64/x86/gcc/11/default/protocols/antibody/AntibodyNumberingParser.os -c -std=c++0x -ffor-scope -isystem external/boost_submod/ -isystem external/ -isystem external/include/ -isystem external/dbio/ -isystem external/libxml2/include -isystem external/rdkit -pipe -Wall -Wextra -pedantic -Wno-long-long -Wno-strict-aliasing -march=core2 -mtune=generic -O3 -ffast-math -fno-finite-math-only -funroll-loops -finline-functions -finline-limit=20000 -s -Wno-unused-variable -Wno-unused-parameter -fPIC -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS -DBOOST_DISABLE_THREADS -DPTR_STD -DNDEBUG -Isrc -Iexternal/include -Isrc/platform/linux/64/gcc/11 -Isrc/platform/linux/64/gcc -Isrc/platform/linux/64 -Isrc/platform/linux src/protocols/antibody/AntibodyNumberingParser.cc
+  g++: warning: switch '-ffor-scope' is no longer supported
+  In file included from src/protocols/features/FeaturesReporter.hh:19,
+                   from src/protocols/features/InterfaceFeatures.hh:18,
+                   from src/protocols/antibody/AntibodyFeatures.hh:18,
+                   from src/protocols/antibody/AntibodyFeatures.cc:14:
+  src/protocols/features/FeaturesReporter.fwd.hh:27:14: error: 'uint64_t' in namespace 'std' does not name a type; did you mean 'wint_t'?
+     27 | typedef std::uint64_t StructureID;
+        |              ^~~~~~~~
+        |              wint_t
+  In file included from src/protocols/antibody/AntibodyFeatures.hh:18,
+                   from src/protocols/antibody/AntibodyFeaturesCreator.cc:21:
+  src/protocols/features/InterfaceFeatures.hh:71:17: error: 'StructureID' has not been declared
+     71 |                 StructureID struct_id,
+        |                 ^~~~~~~~~~~
+  src/protocols/features/InterfaceFeatures.hh:126:17: error: 'StructureID' has not been declared
+    126 |                 StructureID struct_id,
+        |                 ^~~~~~~~~~~
+  src/protocols/features/InterfaceFeatures.hh:135:17: error: 'StructureID' has not been declared
+    135 |                 StructureID struct_id,
+        |                 ^~~~~~~~~~~
+  src/protocols/features/InterfaceFeatures.hh:144:17: error: 'StructureID' has not been declared
+    144 |                 StructureID struct_id,
+        |                 ^~~~~~~~~~~
+  src/protocols/features/InterfaceFeatures.hh:156:17: error: 'StructureID' has not been declared
+    156 |                 StructureID struct_id,
+        |                 ^~~~~~~~~~~
+  src/protocols/features/InterfaceFeatures.hh:181:17: error: 'StructureID' has not been declared
+    181 |                 StructureID struct_id,
+        |                 ^~~~~~~~~~~
+  In file included from src/protocols/features/InterfaceFeatures.hh:18,
+                   from src/protocols/antibody/AntibodyFeatures.hh:18,
+                   from src/protocols/antibody/AntibodyFeatures.cc:14:
+  src/protocols/features/FeaturesReporter.hh:99:17: error: 'StructureID' has not been declared
+     99 |                 StructureID /*parent id*/,
+        |                 ^~~~~~~~~~~
+  src/protocols/features/FeaturesReporter.hh:109:17: error: 'StructureID' has not been declared
+    109 |                 StructureID /*parent id*/,
+        |                 ^~~~~~~~~~~
+  src/protocols/features/FeaturesReporter.hh:124:17: error: 'StructureID' has not been declared
+    124 |                 StructureID,
+        |                 ^~~~~~~~~~~
+  src/protocols/features/FeaturesReporter.hh:130:17: error: 'StructureID' has not been declared
+    130 |                 StructureID,
+        |                 ^~~~~~~~~~~
+  In file included from src/protocols/features/InterfaceFeatures.hh:18,
+                   from src/protocols/antibody/AntibodyFeatures.hh:18,
+                   from src/protocols/antibody/AntibodyFeatures.cc:14:
+  src/protocols/features/FeaturesReporter.hh:185:17: error: 'StructureID' has not been declared
+    185 |                 StructureID struct_id,
+        |                 ^~~~~~~~~~~
+  In file included from src/protocols/antibody/AntibodyFeatures.hh:18,
+                   from src/protocols/antibody/AntibodyFeatures.cc:14:
+  src/protocols/features/InterfaceFeatures.hh:71:17: error: 'StructureID' has not been declared
+     71 |                 StructureID struct_id,
+        |                 ^~~~~~~~~~~
+  src/protocols/features/InterfaceFeatures.hh:126:17: error: 'StructureID' has not been declared
+    126 |                 StructureID struct_id,
+        |                 ^~~~~~~~~~~
+  src/protocols/features/InterfaceFeatures.hh:135:17: error: 'StructureID' has not been declared
+    135 |                 StructureID struct_id,
+        |                 ^~~~~~~~~~~
+  src/protocols/features/InterfaceFeatures.hh:144:17: error: 'StructureID' has not been declared
+    144 |                 StructureID struct_id,
+        |                 ^~~~~~~~~~~
+  src/protocols/features/InterfaceFeatures.hh:156:17: error: 'StructureID' has not been declared
+    156 |                 StructureID struct_id,
+        |                 ^~~~~~~~~~~
+  src/protocols/features/InterfaceFeatures.hh:181:17: error: 'StructureID' has not been declared
+    181 |                 StructureID struct_id,
+        |                 ^~~~~~~~~~~
+  In file included from src/protocols/antibody/AntibodyFeaturesCreator.cc:21:
+  src/protocols/antibody/AntibodyFeatures.hh:84:27: error: 'protocols::features::StructureID' has not been declared
+     84 |                 features::StructureID struct_id,
+        |                           ^~~~~~~~~~~
+  src/protocols/antibody/AntibodyFeatures.hh:92:27: error: 'protocols::features::StructureID' has not been declared
+     92 |                 features::StructureID struct_id,
+        |                           ^~~~~~~~~~~
+  src/protocols/antibody/AntibodyFeatures.hh:98:27: error: 'protocols::features::StructureID' has not been declared
+     98 |                 features::StructureID struct_id,
+        |                           ^~~~~~~~~~~
+  src/protocols/antibody/AntibodyFeatures.hh:104:27: error: 'protocols::features::StructureID' has not been declared
+    104 |                 features::StructureID struct_id,
+        |                           ^~~~~~~~~~~
+  src/protocols/antibody/AntibodyFeatures.hh:111:27: error: 'protocols::features::StructureID' has not been declared
+    111 |                 features::StructureID struct_id,
+        |                           ^~~~~~~~~~~
+  src/protocols/antibody/AntibodyFeatures.hh:119:27: error: 'protocols::features::StructureID' has not been declared
+    119 |                 features::StructureID struct_id,
+        |                           ^~~~~~~~~~~
+  g++ -o build/src/release/linux/5.19/64/x86/gcc/11/default/protocols/antibody/AntibodyNumberingConverterMover.os -c -std=c++0x -ffor-scope -isystem external/boost_submod/ -isystem external/ -isystem external/include/ -isystem external/dbio/ -isystem external/libxml2/include -isystem external/rdkit -pipe -Wall -Wextra -pedantic -Wno-long-long -Wno-strict-aliasing -march=core2 -mtune=generic -O3 -ffast-math -fno-finite-math-only -funroll-loops -finline-functions -finline-limit=20000 -s -Wno-unused-variable -Wno-unused-parameter -fPIC -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS -DBOOST_DISABLE_THREADS -DPTR_STD -DNDEBUG -Isrc -Iexternal/include -Isrc/platform/linux/64/gcc/11 -Isrc/platform/linux/64/gcc -Isrc/platform/linux/64 -Isrc/platform/linux src/protocols/antibody/AntibodyNumberingConverterMover.cc
+  g++: warning: switch '-ffor-scope' is no longer supported
+  scons: *** [build/src/release/linux/5.19/64/x86/gcc/11/default/protocols/antibody/AntibodyFeaturesCreator.os] Error 1
+  In file included from src/protocols/antibody/AntibodyFeatures.cc:14:
+  src/protocols/antibody/AntibodyFeatures.hh:84:27: error: 'protocols::features::StructureID' has not been declared
+     84 |                 features::StructureID struct_id,
+        |                           ^~~~~~~~~~~
+  src/protocols/antibody/AntibodyFeatures.hh:92:27: error: 'protocols::features::StructureID' has not been declared
+     92 |                 features::StructureID struct_id,
+        |                           ^~~~~~~~~~~
+  src/protocols/antibody/AntibodyFeatures.hh:98:27: error: 'protocols::features::StructureID' has not been declared
+     98 |                 features::StructureID struct_id,
+        |                           ^~~~~~~~~~~
+  src/protocols/antibody/AntibodyFeatures.hh:104:27: error: 'protocols::features::StructureID' has not been declared
+    104 |                 features::StructureID struct_id,
+        |                           ^~~~~~~~~~~
+  src/protocols/antibody/AntibodyFeatures.hh:111:27: error: 'protocols::features::StructureID' has not been declared
+    111 |                 features::StructureID struct_id,
+        |                           ^~~~~~~~~~~
+  src/protocols/antibody/AntibodyFeatures.hh:119:27: error: 'protocols::features::StructureID' has not been declared
+    119 |                 features::StructureID struct_id,
+        |                           ^~~~~~~~~~~
+  In file included from src/protocols/antibody/AntibodyFeatures.cc:30:
+  src/protocols/features/util.hh:79:9: error: 'StructureID' was not declared in this scope
+     79 |         StructureID struct_id,
+        |         ^~~~~~~~~~~
+  src/protocols/features/util.hh:80:42: error: expected primary-expression before 'db_session'
+     80 |         utility::sql_database::sessionOP db_session
+        |                                          ^~~~~~~~~~
+  src/protocols/features/util.hh:81:1: error: expression list treated as compound expression in initializer [-fpermissive]
+     81 | );
+        | ^
+  src/protocols/features/util.hh:83:18: error: 'StructureID' was not declared in this scope
+     83 | utility::vector1<StructureID>
+        |                  ^~~~~~~~~~~
+  src/protocols/features/util.hh:83:29: error: template argument 1 is invalid
+     83 | utility::vector1<StructureID>
+        |                             ^
+  src/protocols/features/util.hh:83:29: error: template argument 2 is invalid
+  src/protocols/antibody/AntibodyFeatures.cc:118:9: error: 'StructureID' has not been declared
+    118 |         StructureID struct_id,
+        |         ^~~~~~~~~~~
+  src/protocols/antibody/AntibodyFeatures.cc:321:9: error: 'StructureID' has not been declared
+    321 |         StructureID struct_id,
+        |         ^~~~~~~~~~~
+  src/protocols/antibody/AntibodyFeatures.cc:443:9: error: 'StructureID' has not been declared
+    443 |         StructureID struct_id,
+        |         ^~~~~~~~~~~
+  src/protocols/antibody/AntibodyFeatures.cc:540:9: error: 'StructureID' has not been declared
+    540 |         StructureID struct_id,
+        |         ^~~~~~~~~~~
+  src/protocols/antibody/AntibodyFeatures.cc:557:9: error: 'StructureID' has not been declared
+    557 |         StructureID struct_id,
+        |         ^~~~~~~~~~~
+  src/protocols/antibody/AntibodyFeatures.cc:623:9: error: 'StructureID' has not been declared
+    623 |         StructureID struct_id,
+        |         ^~~~~~~~~~~
+  scons: *** [build/src/release/linux/5.19/64/x86/gcc/11/default/protocols/antibody/AntibodyFeatures.os] Error 1
+  ```
+- 
 
 # Rosetta
 ## Architecture
