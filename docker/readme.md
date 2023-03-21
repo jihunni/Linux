@@ -101,13 +101,14 @@ $ docker rm (--force) [container_nanme] # to remove a container
 $ docker rmi [images_name]
 $ docker logs
 $ docker exec [containter_name] [command] # execute
-$ docker exec -i -t ws /bin/bash 
+$ docker exec -i -t [container_name] /bin/bash 
 	-i: interactive
 	-p : putty
 ```
 
 ## general setting in a container
  ```
+ # docker exec -i -t ubuntu_18.04 /bin/bash 
  $ apt-get update # to configure (update) the channel information
  $ apt-get install python 	#install python 2.7
  $ apt-get install python-pip	#install PyPI of python 2.7 
@@ -122,11 +123,13 @@ $ docker exec -i -t ws /bin/bash
 	# docker run -i -t -d --name ubuntu_18.04 -v /home/jihun/rosetta/rosetta_src_2018.09.60072_bundle/:/opt/rosetta/ ubuntu:18.04
 	
 	To set the installation environment in a container
+	# docker exec -i -t ubuntu_18.04 /bin/bash 
+	# apt-get update # to configure (update) the channel information
 	# apt-get install python 	#install python 2.7
  	# apt-get install python-pip	#install PyPI of python 2.7 
 	# pip install scons==3.1.2
+	# apt-get install sudo
 	# sudo apt-get install boost # install boost
-	# sudo apt-get install sudo
 	# sudo apt-get -y install libsqlite3-0 libsqlite3-dev
 	
 	To install gcc version 6
