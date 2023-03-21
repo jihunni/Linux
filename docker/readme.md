@@ -142,7 +142,7 @@ $ docker exec -i -t [container_name] /bin/bash
 	gcc -v
 	
 	To install Rosetta 3.9
-	# ./scons.py -j 25 mode=release bin 
+	# ./scons.py -j 25 mode=release bin extra=static
 	```
 	- scons: https://scons.org/scons-312-is-available.html
 # Reference
