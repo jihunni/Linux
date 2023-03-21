@@ -146,6 +146,11 @@ $ docker exec -i -t [container_name] /bin/bash
 	# ./scons.py -j 25 mode=release bin extra=static
 	```
 	- scons: https://scons.org/scons-312-is-available.html
+
+### Rifdock
+```
+sudo apt-get install libxmu-dev libxmu-headers freeglut3-dev libxext-dev libxi-dev
+```
 # Reference
 - https://docs.docker.com/engine/install/
 - https://www.yalco.kr/36_docker/
