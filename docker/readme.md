@@ -134,12 +134,12 @@ $ docker exec -i -t [container_name] /bin/bash
 	
 	To install gcc version 6
 	# sudo apt update && \
-	# sudo apt install build-essential software-properties-common -y && \
-	# sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y && \
-	# sudo apt update && \
-	# sudo apt install gcc-6 g++-6 -y && \
-	# sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-6 && \
-	# gcc -v
+	sudo apt install build-essential software-properties-common -y && \
+	sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y && \
+	sudo apt update && \
+	sudo apt install gcc-6 g++-6 -y && \
+	sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-6 && \
+	gcc -v
 	
 	To install Rosetta 3.9
 	# ./scons.py -j 25 mode=release bin 
