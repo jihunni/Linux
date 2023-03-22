@@ -114,14 +114,17 @@ $ docker exec -i -t [container_name] /bin/bash
 ```
 
 ## general setting in a container
- ```
- # docker exec -i -t ubuntu_18.04 /bin/bash 
- $ apt-get update # to configure (update) the channel information
- $ apt-get install python 	#install python 2.7
- $ apt-get install python-pip	#install PyPI of python 2.7 
- $ apt-get install python3 
- $ apt install vim
- ```
+```
+# docker exec -i -t ubuntu_18.04 /bin/bash 
+$ apt-get update # to configure (update) the channel information
+$ apt-get install python 	#install python 2.7
+$ apt-get install python-pip	#install PyPI of python 2.7 
+$ apt-get install python3 
+$ apt install vim
+
+$ sudo apt-get install openjdk-8-jdk
+$ sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev libgl1-mesa-dev libxml2-utils xsltproc unzip bc wget
+```
  
 ## the setting for installing Rosetta 3.7 (Ubuntu 18.04, Python 2.7, GCC 6, SCONS 3.1.2)
 	```
