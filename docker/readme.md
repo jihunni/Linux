@@ -127,7 +127,7 @@ $ docker exec -i -t [container_name] /bin/bash
 	```
 	To set the Ubuntu environment in a container
 	# docker pull ubuntu:18.04
-	# docker run -i -t -d --name ubuntu_18.04 -v /home/jihun/rosetta/rosetta_src_2018.09.60072_bundle/:/opt/rosetta/ ubuntu:18.04
+	# docker run -i -t -d --name ubuntu_18.04 -v /home/jihun/rosetta/:/opt/rosetta/ ubuntu:18.04
 	
 	To set the installation environment in a container
 	# docker exec -i -t ubuntu_18.04 /bin/bash 
