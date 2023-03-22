@@ -86,6 +86,13 @@ Server: Docker Engine - Community
 ```
 docker -v
 ```
+
+## sudo authorization
+```	
+$ sudo usermod -aG docker $USER # 현재 접속중인 사용자에게 권한주기
+$ sudo usermod -aG docker your-user # your-user 사용자에게 권한주기
+```
+## Basic usage
 ```
 # download images
 $ docker pull {image_name}:{tag}
