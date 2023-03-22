@@ -153,6 +153,8 @@ $ sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl 
 	gcc -v
 	
 	To install Rosetta 3.9
+	apt-get install ninja-build
+	
 	# ./scons.py -j 25 mode=release bin extra=static
 	```
 	- scons: https://scons.org/scons-312-is-available.html
@@ -160,6 +162,7 @@ $ sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl 
 ### Rifdock
 ```
 sudo apt-get install libxmu-dev libxmu-headers freeglut3-dev libxext-dev libxi-dev
+sudo apt-get install libpthread-stubs0-dev
 ```
 # Reference
 - https://docs.docker.com/engine/install/
