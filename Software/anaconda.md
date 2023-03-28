@@ -149,9 +149,11 @@ install with conda-forge
 conda install --channel=conda-forge physics-tenpy
 ```
 
-## Basic installation
+## Basic installation for Data science
 	```
 	conda install -c anaconda pandas
+	conda install -c conda-forge matplotlib
+	conda install -c anaconda scikit-learn
 	```
 ## ML/DL library
 - pytorch : https://pytorch.org/get-started/locally/ 
