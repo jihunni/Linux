@@ -54,21 +54,25 @@ which tcsh
 
 ## File transfer
 Ref: https://devconnected.com/4-ways-to-transfer-files-and-directories-on-linux/
-	### rsync
-	Ref: 
-	```
-	rsync -av rsync://data.sbgrid.org/10.15785/SBGRID/843 . -v --exclude='843/exp1_classification/*'
-	```
-	```
-	rsync -r -v --dry-run                       \
-    --include='/'                           \
-    --include='/company*/'                  \
-    --include='/company*/unique_folder1/'   \
-    --include='/company*/unique_folder1/**' \
-    --exclude='*'
-	```
-	### scp
-	### FTP -> Local
+### rsync
+Ref:   
+
+```
+rsync -av rsync://data.sbgrid.org/10.15785/SBGRID/843 . -v --exclude='843/exp1_classification/*'
+```
+
+```
+rsync -r -v --dry-run                       \
+	--include='/'                           \
+	--include='/company*/'                  \
+	--include='/company*/unique_folder1/'   \
+	--include='/company*/unique_folder1/**' \
+	--exclude='*'
+```
+	
+### scp
+### FTP -> Local  
+	
 	```
 	$ wget -r --user="USER_ID" --password="PASSWORD"  ftp://ftp.example.com/subdirectory/*
 	$ scp -r -v host@xxx.xx.xx.xx:/home/jihun/data host@xxx.xx.xx.xx:/home/jihun/server_backup/
