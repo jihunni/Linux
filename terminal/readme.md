@@ -55,7 +55,7 @@ which tcsh
 ## File transfer
 Ref: https://devconnected.com/4-ways-to-transfer-files-and-directories-on-linux/
 ### rsync
-Ref:   
+Ref: https://stackoverflow.com/questions/15687755/how-to-use-rsync-to-copy-only-specific-subdirectories-same-names-in-several-dir
 
 ```
 rsync -av rsync://data.sbgrid.org/10.15785/SBGRID/843 . -v --exclude='843/exp1_classification/*'
