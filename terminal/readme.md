@@ -15,8 +15,7 @@ which tcsh
 - /etc/motd : 로컬접속, 원격접속 모두에 해당하며 로그인 성공 후 보여줄 메시지파일
 
 
-# basic command
-## System management
+# System management
 - top  
 	Ref : https://zzsza.github.io/development/2018/07/18/linux-top/
 - check GPU
@@ -29,8 +28,18 @@ which tcsh
 	$ shutdown -h now
 	$ shutdown -h +210 # after 210 minuite, system shut downs
 	```
+- GPU - NVIDIA
+	GPU memory release : check PID and kill the PID
+	```
+	$ lshw -C video
+	$ lspci | grep VGA
 
-## File management
+	$ nvidia-smi
+	# nvidia-smi --query | fgrep 'Product Name'
+			Product Name                          : NVIDIA GeForce RTX 3090
+	```
+
+# File management
 - print file tree
 	Ref: https://www.cyberciti.biz/faq/linux-show-directory-structure-command-line/
 	```
@@ -42,14 +51,28 @@ which tcsh
 	$ tree /path/to/directory
 	$ tree [options] tree [options] /path/to/directory
 	```
-- 
-### File transfer
+
+## File transfer
 Ref: https://devconnected.com/4-ways-to-transfer-files-and-directories-on-linux/
-### FTP -> Local
-```
-$ wget -r --user="USER_ID" --password="PASSWORD"  ftp://ftp.example.com/subdirectory/*
-$ scp -r -v host@xxx.xx.xx.xx:/home/jihun/data host@xxx.xx.xx.xx:/home/jihun/server_backup/
-```
+	### rsync
+	Ref: 
+	```
+	rsync -av rsync://data.sbgrid.org/10.15785/SBGRID/843 . -v --exclude='843/exp1_classification/*'
+	```
+	```
+	rsync -r -v --dry-run                       \
+    --include='/'                           \
+    --include='/company*/'                  \
+    --include='/company*/unique_folder1/'   \
+    --include='/company*/unique_folder1/**' \
+    --exclude='*'
+	```
+	### scp
+	### FTP -> Local
+	```
+	$ wget -r --user="USER_ID" --password="PASSWORD"  ftp://ftp.example.com/subdirectory/*
+	$ scp -r -v host@xxx.xx.xx.xx:/home/jihun/data host@xxx.xx.xx.xx:/home/jihun/server_backup/
+	```
 ### File integrity check
 - md5sum
 	reference: https://bio-info.tistory.com/47  
@@ -66,16 +89,7 @@ $ scp -r -v host@xxx.xx.xx.xx:/home/jihun/data host@xxx.xx.xx.xx:/home/jihun/ser
 	$ sum [filename]
 	```
 
-# GPU - NVIDIA
-GPU memory release : check PID and kill the PID
-```
-$ lshw -C video
-$ lspci | grep VGA
 
-$ nvidia-smi
-# nvidia-smi --query | fgrep 'Product Name'
-    Product Name                          : NVIDIA GeForce RTX 3090
-```
 
 
 ## tty1 shell screen
