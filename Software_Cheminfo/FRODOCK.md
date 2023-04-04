@@ -10,7 +10,7 @@ Ref: https://chaconlab.org/modeling/frodock/frodock-intro
   ```
   $ sudo apt-get install libmkl-intel-lp64
   ```
--case
+- case
   Error
   ```
   /opt/frodock/3.1.2/bin//frodock: error while loading shared libraries: libmkl_intel_thread.so: cannot open shared object file: No such file or directory
