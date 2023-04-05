@@ -8,7 +8,7 @@ Ref : https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=native
 ![image](https://user-images.githubusercontent.com/48517782/141683666-641e4467-5aa0-4a6c-8161-ef667e408c06.png)  
 
 - general
-  ``'
+  ```
   awk [OPTION...] 'pattern { action1 ; action2 ; action ... ; }' [ARGUMENT...]
   awk -F [input_field_separator] 'BEGIN {first_action} {action1 ; actopn2; ,,, } END {final_action}' input_file
   OPTION
