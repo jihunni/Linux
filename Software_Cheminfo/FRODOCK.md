@@ -1,5 +1,10 @@
 # FRODOCK
 Ref: https://chaconlab.org/modeling/frodock/frodock-intro  
+## Pre-requisite
+```
+$ source /opt/intel/oneapi/setvars.sh
+```
+
 # Trial and Error
 - case
   Error
