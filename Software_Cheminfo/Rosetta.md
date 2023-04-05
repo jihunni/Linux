@@ -400,3 +400,18 @@ packstat="false" interface_sc="true" ligandchain="B"/>
 
   ```
 - 
+
+# RIFdock installation (Ubuntu 20.04)
+Ref: https://github.com/rifdock/rifdock/blob/master/help/ubuntu_rifdock_compilation_extra.pdf
+```
+sudo vi /etc/apt/sources.list.d/xenial.list
+sudo apt-get update
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4EB27DB2A3B88B8B
+```
+
+```
+CXXFLAGS="-isystem /home/jihun/rosetta/rosetta_2022.42/rosetta.source.release-332/boost_1_65_0"
+CMAKE_ROSETTA_PATH=/home/jihun/rosetta/rosetta_src_2018.09.60072_bundle/main
+CMAKE_FINAL_ROSETTA_PATH=/home/jihun/rosetta/rosetta_src_2018.09.60072_bundle/main/source/cmake/build_cxx11_omp 
+cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=/home/jihun/rosetta/rosetta_2022.42/boost_1_65_0/stage/lib
+```
