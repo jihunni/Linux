@@ -1,9 +1,13 @@
 # FRODOCK
 Ref: https://chaconlab.org/modeling/frodock/frodock-intro  
 ## Pre-requisite
-```
-$ source /opt/intel/oneapi/setvars.sh
-```
+- Get Intel® oneAPI Math Kernel Library (oneMKL)
+  Ref: https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl-download.html?operatingsystem=linux&distributions=online
+  ```
+  $ wget https://registrationcenter-download.intel.com/akdlm/IRC_NAS/cd17b7fe-500e-4305-a89b-bd5b42bfd9f8/l_onemkl_p_2023.1.0.46342.sh
+  $ sudo sh ./l_onemkl_p_2023.1.0.46342.sh
+  $ source /opt/intel/oneapi/setvars.sh
+  ```
 
 # Trial and Error
 - case
