@@ -1,7 +1,7 @@
 # apt
-- PUBKEY error during apt-get update
-  Ref: https://www.dante2k.com/512
-  Solution : regenerate the public keys that trigger errors.
+- PUBKEY error during apt-get update  
+  Ref: https://www.dante2k.com/512  
+  Solution : regenerate the public keys that trigger errors.  
   ```
   $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0856F197B892ACEA 591B856E37964957 C5E6A5ED249AD24C 20221AFD63E0C3B9 D834D91FA49CCDDB 83FBA1751378B444 531EE72F4C9D234C D530E028F59EAE4D 52B709720F164EEB 857F87147B9B74AA A7E13D78E4A4F4F4 FC6D7D9D009ED615 B5B116B72D0F61F0 799A5FD5D1C5997F C2518248EEA14886
   ```
