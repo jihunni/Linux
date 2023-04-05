@@ -1,5 +1,6 @@
 # Install (on Ubuntu)
 Ref (Youtube): https://www.youtube.com/watch?v=UEaFmUMEL9c&ab_channel=SariSabban
+Ref: https://www.pyrosetta.org/downloads#h.6vttn15ac69d  
 ```
 $ tar -vjxf [pyrosetta.tar.bz2]
 $ mv [pyrosetta] [directory_name] # change the directory name before compiling
