@@ -1,5 +1,10 @@
 # install matlab and environment setting
-## matlab license manger (Life1 server)
+## matlab license manger (Life1/Life3 server)
+- activate the license and download `license.lic` file
+- [Ubuntu 22.04] install lsb_compat package 
+	```
+	apt-get install lsb
+	```
 - download the installer in matlab homepage (link : https://kr.mathworks.com/downloads/web_downloads)
 - execute the installer and select the option `install license manger`
 - run the license mamager
@@ -16,6 +21,7 @@
 - https://kr.mathworks.com/support/bugreports/581959
 - symbolic link in `/usr/local/bin`
 - install with installer - login - select the version - install
+- license file : /opt/matlab/R2023b_license/etc/license.dat
 ## install gurobi optimizer
 - install Gurobi
 	/opt/gurobi
