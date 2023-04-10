@@ -1,11 +1,11 @@
 # install matlab and environment setting
 ## matlab license manger (Life1/Life3 server)
-- activate the license and download `license.lic` file
+- activate the license and download `license.lic` file from the matlab personal account page
 - [Ubuntu 22.04] install lsb_compat package 
 	```
 	apt-get install lsb
 	```
-- download the installer in matlab homepage (link : https://kr.mathworks.com/downloads/web_downloads)
+- download the installer from the matlab homepage (link : https://kr.mathworks.com/downloads/web_downloads)
 - execute the installer and select the option `install license manger`
 - run the license mamager
 	```
