@@ -382,7 +382,7 @@ packstat="false" interface_sc="true" ligandchain="B"/>
 </ROSETTASCRIPTS>
 ```
 
-## Trial and Error
+## Trial and Error in XML script
 - XML script with relative path
   ```
   ERROR: Unable to open RosettaScripts XML file: "~/minibinder/scripts_and_main_pdbs/supplemental_files/cao_2021_protocol/paper_coord_relax.xml".
@@ -396,11 +396,34 @@ packstat="false" interface_sc="true" ligandchain="B"/>
   File: src/protocols/rosetta_scripts/RosettaScriptsParser.cc:597
   [ ERROR ] UtilityExitException
   ERROR: Unable to open RosettaScripts XML file: "~/minibinder/scripts_and_main_pdbs/supplemental_files/cao_2021_protocol/paper_coord_relax.xml".
-
-
   ```
-- 
+- Wrong data type on tag attributes.
+  ```
+  [FILE]: src/protocols/rosetta_scripts/RosettaScriptsParser.cc
+  [LINE]: 1207
+  [START_MESSAGE]
+  Input rosetta scripts XML file "/home/jihun/minibinder/run_example/cao_2021_protocol/jihun_interface_design.xml" failed to validate agai
+  nst the rosetta scripts schema. Use the option -parser::output_schema <output filename> to output the schema to a file to see all valid 
+  options.
+  Your XML has failed validation.  The error message below will tell you where in your XML file the error occurred.  Here's how to fix it:
 
+  1) If the validation fails on something obvious, like an illegal attribute due to a spelling error (perhaps you used scorefnction instea
+  d of scorefunction), then you need to fix your XML file.
+  2) If you haven't run the XML rewriter script and this might be pre-2017 Rosetta XML, run the rewriter script (tools/xsd_xrw/rewrite_ros
+  etta_script.py) on your input XML first.  The attribute values not being in quotes (scorefunction=talaris2014 instead of scorefunction="
+  talaris2014") is a good indicator that this is your problem.
+  3) If you are a developer and neither 1 nor 2 worked - email the developer's mailing list or try Slack.
+  4) If you are an academic or commercial user - try the Rosetta Forums https://www.rosettacommons.org/forum
+
+
+  Error messages were:
+  Error: attributes construct error
+  ```
+- ERROR: Failed to run the psipred command, which was "/opt/PsiPred/4.02/runpsipred_single DVEELLEEAV_J8UHX0CO.fasta > /dev/null". Something went wrong. Make sure you specified the full path to the psipred command in your XML file. Return code=32512  
+  Solution : to specify the full dirctory of output on Filter `SSPrediction`
+- Error : Value of inactive option accessed: -indexed_structure_store:fragment_store
+  `-indexed_structure_store:fragment_store` is required to be specified, but it is not provided.
+- 
 # RIFdock installation (Ubuntu 20.04)
 Ref: https://github.com/rifdock/rifdock/blob/master/help/ubuntu_rifdock_compilation_extra.pdf
 ```
