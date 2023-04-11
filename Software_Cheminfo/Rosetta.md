@@ -423,6 +423,24 @@ packstat="false" interface_sc="true" ligandchain="B"/>
   Solution : to specify the full dirctory of output on Filter `SSPrediction`
 - Error : Value of inactive option accessed: -indexed_structure_store:fragment_store
   `-indexed_structure_store:fragment_store` is required to be specified, but it is not provided.
+- Error: no csh, no tsch in the environment  
+  Error message  
+  ```
+  [FILE]: src/core/io/external/PsiPredInterface.cc
+  [LINE]: 342
+  [START_MESSAGE]
+  [ ERROR ] UtilityExitException
+  ERROR: Failed to run the psipred command, which was "cd /home/jihun/minibinder/TAP1/jihun_interface_design_production/00000/ && /opt/PsiPred/4.02/runpsipred_single DVEELLEEAV_I0FTHRCD.fasta > /dev/null". Something went wrong. Make sure you specified the full path to the psipred command in your XML file. Return code=32512
+  ```
+  ```
+  $ /opt/PsiPred/4.02/runpsipred_single DVEELLEEAV_J8UHX0CO.fasta
+  -bash: /opt/PsiPred/4.02/runpsipred_single: /bin/tcsh: bad interpreter: No such file or directory
+  ```
+    
+  solution: to install csh and tcsh  
+  ```
+  $ sudo apt-get install csh tcsh
+  ```
 - 
 # RIFdock installation (Ubuntu 20.04)
 Ref: https://github.com/rifdock/rifdock/blob/master/help/ubuntu_rifdock_compilation_extra.pdf
