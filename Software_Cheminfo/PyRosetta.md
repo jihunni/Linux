@@ -18,3 +18,9 @@ vi test.py
 from pyrosetta import *
 init()
 ```
+
+To install dependent packages,
+```
+conda install numpy
+pip install biopython
+```
