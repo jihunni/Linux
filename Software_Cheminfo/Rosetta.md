@@ -381,7 +381,11 @@ packstat="false" interface_sc="true" ligandchain="B"/>
 </PROTOCOLS>
 </ROSETTASCRIPTS>
 ```
-
+# External extension
+- runpsipred requirement in Ubuntu 22.04
+  ```
+  $ sudo apt-get install csh tcsh
+  ```
 ## Trial and Error in XML script
 - XML script with relative path
   ```
