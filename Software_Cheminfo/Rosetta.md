@@ -288,6 +288,17 @@ e.g. $./scons.py -j 20 mode=release bin extra=hdf5
 - resfile  
   Ref: https://www.rosettacommons.org/docs/latest/rosetta_basics/file_types/resfiles  
 
+# Rosetta Script
+General
+```
+${ROSETTA}/rosetta_scripts parser:protocol [protocol.xml] -beta_nov16 -l pdb.list -mute protocols.rosetta_scripts.ParsedProtocol.REPORT -parser:script_vars string_var=something -out:prefix [str prefix_name] 
+```
+
+Example
+```
+/opt/rosetta/rosetta_src_2021.16.61629_bundle/main/source//bin/rosetta_scripts.linuxgccrelease -parser:protocol /home/jihun/minibinder/run_example/cao_2021_protocol/paper_motif_graft.xml -beta_nov16 -l pdb.list -mute protocols.rosetta_scripts.ParsedProtocol.REPORT -parser:script_vars CAO_2021_PROTOCOL=/home/jihun/minibinder/run_example/cao_2021_protocol @/home/jihun/minibinder/TAP1/grafting.flag -parser:script_vars motifpdb=/home/jihun/minibinder/TAP1/motifing/motifs/mot_1jj7_0001_docking_renum_revert_2_13_14_L.pdb.gz hotspots=1:2 -out:prefix mot_1jj7_0001_docking_renum_revert_2_13_14_L_ 
+```
+
 ## General
 Ref (general run) : https://www.rosettacommons.org/docs/latest/rosetta_basics/running-rosetta-with-options  
 Ref (input option): https://new.rosettacommons.org/docs/latest/rosetta_basics/options/input-options  
