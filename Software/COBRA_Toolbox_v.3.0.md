@@ -1,4 +1,30 @@
 # Installation on Ubuntu
+  - git configuration setting
+  Error :
+  ```
+  >> initCobraToolbox
+
+
+        _____   _____   _____   _____     _____     |
+       /  ___| /  _  \ |  _  \ |  _  \   / ___ \    |   COnstraint-Based Reconstruction and Analysis
+       | |     | | | | | |_| | | |_| |  | |___| |   |   The COBRA Toolbox - 2023
+       | |     | | | | |  _  { |  _  /  |  ___  |   |
+       | |___  | |_| | | |_| | | | \ \  | |   | |   |   Documentation:
+       \_____| \_____/ |_____/ |_|  \_\ |_|   |_|   |   http://opencobra.github.io/cobratoolbox
+                                                    | 
+
+   > Checking if git is installed ...  Done (version: 2.34.1).
+   > Checking if the repository is tracked using git ...  Done.
+   > Checking if curl is installed ...  Done.
+   > Checking if remote can be reached ...  Done.
+   > Initializing and updating submodules (this may take a while)...fatal: detected dubious ownership in repository at '/opt/cobra_toolbox/cobratoolbox'
+  To add an exception for this directory, call:
+
+    git config --global --add safe.directory /opt/cobra_toolbox/cobratoolbox
+  Error using initCobraToolbox
+  The submodules could not be initialized.
+  ```
+  solution
   ```
   # git config --system --add safe.directory /opt/cobra_toolbox/cobratoolbox
   ```
