@@ -22,5 +22,6 @@ init()
 To install dependent packages,
 ```
 conda install numpy
+conda install pandas
 pip install biopython
 ```
