@@ -1,3 +1,7 @@
+# Installation on Ubuntu
+  ```
+  # git config --system --add safe.directory /opt/cobra_toolbox/cobratoolbox
+  ```
 # I/O
 ## Reading a model (timing: 1 second to a few minutes)
 ```
