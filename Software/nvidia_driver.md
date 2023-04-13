@@ -1,4 +1,4 @@
-# Personal workstation
+# Personal workstation (NVIDIA GeForce GT 730 GPU)
 ```
 sudo apt install nvidia-driver-470
 ```
