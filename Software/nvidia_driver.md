@@ -1,4 +1,4 @@
-
+# Personal workstation
 ```
 sudo apt install nvidia-driver-470
 ```
