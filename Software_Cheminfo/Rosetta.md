@@ -497,3 +497,11 @@ CMAKE_ROSETTA_PATH=/home/jihun/rosetta/rosetta_src_2018.09.60072_bundle/main
 CMAKE_FINAL_ROSETTA_PATH=/home/jihun/rosetta/rosetta_src_2018.09.60072_bundle/main/source/cmake/build_cxx11_omp 
 cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=/home/jihun/rosetta/rosetta_2022.42/boost_1_65_0/stage/lib
 ```
+
+# RFdiffusion
+Ref: 
+```
+pip install omegaconf
+pip install hydra-core --upgrade
+pip install pyrsistent
+```
