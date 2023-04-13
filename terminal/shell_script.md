@@ -262,7 +262,17 @@ do
 		
 	/program -x ${triming_seq} -o ${output_directory}/${output_filename} $input_directory/${input1} $input_directory/${input2}
 ```
-
+# file full path
+Ref: https://www.howtouselinux.com/post/linux-command-get-file-path
+```
+pwd
+readlink -f file
+find / -type f -name “file”
+import os;os.path.abspath(“file”)
+find / -type f -name *.mp3 -size +10M
+find . -type f -name “*.txt” 
+find . -type f -not -name “*.html” 
+```
 ## merge fastq
 Ref : https://shlee1990.tistory.com/585 : `cat` 명령어   
 Ref: https://do-study.tistory.com/75 : `cat` arguemnt처리  
