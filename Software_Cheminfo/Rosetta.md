@@ -298,6 +298,8 @@ Example
 ```
 /opt/rosetta/rosetta_src_2021.16.61629_bundle/main/source//bin/rosetta_scripts.linuxgccrelease -parser:protocol /home/jihun/minibinder/run_example/cao_2021_protocol/paper_motif_graft.xml -beta_nov16 -l pdb.list -mute protocols.rosetta_scripts.ParsedProtocol.REPORT -parser:script_vars CAO_2021_PROTOCOL=/home/jihun/minibinder/run_example/cao_2021_protocol @/home/jihun/minibinder/TAP1/grafting.flag -parser:script_vars motifpdb=/home/jihun/minibinder/TAP1/motifing/motifs/mot_1jj7_0001_docking_renum_revert_2_13_14_L.pdb.gz hotspots=1:2 -out:prefix mot_1jj7_0001_docking_renum_revert_2_13_14_L_ 
 ```
+- computational alanine scanning   
+Ref: https://www.rosettacommons.org/node/10610
 
 ## General
 Ref (general run) : https://www.rosettacommons.org/docs/latest/rosetta_basics/running-rosetta-with-options  
