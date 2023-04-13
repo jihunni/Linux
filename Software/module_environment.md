@@ -1,5 +1,11 @@
 # Installation
 Ref: https://modules.readthedocs.io/en/latest/INSTALL.html
+- to add additional modulefiles path, add this line to the following file.
+	```
+	$ vi cd /usr/local/Modules/etc/initrc
+	
+	module use --append /opt/Modules/modulefiles
+	```
 # module environment
 - setting variable  
 	set : assign variable
