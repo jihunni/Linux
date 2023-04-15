@@ -152,3 +152,11 @@ To uninstall the NVIDIA Driver, run nvidia-uninstall:
 ```
 sudo /usr/bin/nvidia-uninstall
 ```
+
+# GPU selection
+Ref: https://artiiicy.tistory.com/61
+```
+nvidia-smi
+export CUDA_VISIBLE_DEVICES=0
+export CUDA_VISIBLE_DEVICES=1
+```
