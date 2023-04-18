@@ -99,3 +99,5 @@ rsync -r -v --dry-run                       \
 ## tty1 shell screen
 `Ctrl` + `Alt` + `F1`
 
+# etc
+-gedit [fileName]
