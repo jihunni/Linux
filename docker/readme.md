@@ -1,5 +1,5 @@
-# virtual machine and docker
-## install (with GPU support)
+# install (with GPU support)
+## Ubuntu
 Ref: https://docs.docker.com/desktop/install/ubuntu/  
 Ref: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html  
 ```
@@ -19,7 +19,7 @@ curl -fsSL https://get.docker.com/ | sudo sh
 ## install (CentOS)
 https://docs.docker.com/engine/install/centos/
 
-## 
+
 To run Docker as a non-privileged user, consider setting up the Docker daemon in rootless mode for your user:
 ```
 dockerd-rootless-setuptool.sh install
@@ -30,6 +30,31 @@ To run the Docker daemon as a fully privileged service, but granting non-root us
 
 WARNING: Access to the remote API on a privileged Docker daemon is equivalent to root access on the host. Refer to the 'Docker daemon attack surface' documentation for details: https://docs.docker.com/go/attack-surface/
 
+## nvidia-container-toolkit (for RTX 4090)
+Ref: 
+- https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html  
+- https://dongle94.github.io/docker/docker-nvidia-docker-install/  
+- https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/user-guide.html  
+- https://keyog.tistory.com/43  
+```
+$ wget https://nvidia.github.io/nvidia-docker/gpgkey --no-check-certificate
+$ sudo apt-key add gpgkey
+$ distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+$ curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+$sudo apt-get update
+
+$sudo apt-get install -y nvidia-container-toolkit
+$sudo nvidia-ctk runtime configure --runtime=docker
+$sudo systemctl restart docker
+$sudo docker run --rm --runtime=nvidia --gpus all nvidia/cuda:11.6.2-base-ubuntu20.04 nvidia-smi
+```
+
+To install Pytorch,
+```
+docker pull pytorch/pytorch
+docker run -it --ipc host --gpus all (-v host_filesystem:container_filesystem) pytorch/pytorch
+```
+# Docker basics
 ## docker execution and service
 ```
 # 부팅시에 실행하도록 systemctl에 등록
