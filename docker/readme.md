@@ -1,7 +1,7 @@
 # virtual machine and docker
 ## install (with GPU support)
-Ref: https://docs.docker.com/desktop/install/ubuntu/
-Ref: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html
+Ref: https://docs.docker.com/desktop/install/ubuntu/  
+Ref: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html  
 ```
  $ sudo apt-get update
  $ sudo apt-get install \
@@ -18,6 +18,17 @@ curl -fsSL https://get.docker.com/ | sudo sh
 ```
 ## install (CentOS)
 https://docs.docker.com/engine/install/centos/
+
+## 
+To run Docker as a non-privileged user, consider setting up the Docker daemon in rootless mode for your user:
+```
+dockerd-rootless-setuptool.sh install
+```
+Visit https://docs.docker.com/go/rootless/ to learn about rootless mode.  
+  
+To run the Docker daemon as a fully privileged service, but granting non-root users access, refer to https://docs.docker.com/go/daemon-access/
+
+WARNING: Access to the remote API on a privileged Docker daemon is equivalent to root access on the host. Refer to the 'Docker daemon attack surface' documentation for details: https://docs.docker.com/go/attack-surface/
 
 ## docker execution and service
 ```
