@@ -30,7 +30,10 @@ To run the Docker daemon as a fully privileged service, but granting non-root us
 
 WARNING: Access to the remote API on a privileged Docker daemon is equivalent to root access on the host. Refer to the 'Docker daemon attack surface' documentation for details: https://docs.docker.com/go/attack-surface/
 
-## nvidia-container-toolkit (for RTX 4090)
+## nvidia-container-toolkit 
+Purpose:  
+- (for RTX 4090) RuntimeError: nvrtc: error: invalid value for --gpu-architecture (-arch)  
+
 Ref: 
 - https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html  
 - https://dongle94.github.io/docker/docker-nvidia-docker-install/  
