@@ -147,6 +147,7 @@ $ docker exec [containter_name] [command] # execute
 $ docker exec -i -t [container_name] /bin/bash 
 	-i: interactive
 	-p : putty
+Control + P + S : to detach the current session without exit (without stoppting the container)
 ```
 
 ## general setting in a container
