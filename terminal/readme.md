@@ -94,7 +94,20 @@ rsync -r -v --dry-run                       \
 	```
 
 
+# Parallel 
+Ref: https://www.cyberciti.biz/faq/how-to-run-command-or-code-in-parallel-in-bash-shell-under-linux-or-unix/
+```
+$ vi parallel_commands.list
 
+command_1
+command_2
+command_3
+...
+```
+```
+$ parallel -j [threads] --bar {} < parallel_commands.list
+e.g. $ parallel -j 27 --bar {} < 14_jihun_interface_design_production_commands.list
+```
 
 ## tty1 shell screen
 `Ctrl` + `Alt` + `F1`
