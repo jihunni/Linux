@@ -95,7 +95,17 @@ rsync -r -v --dry-run                       \
 
 
 # Parallel 
-Ref: https://www.cyberciti.biz/faq/how-to-run-command-or-code-in-parallel-in-bash-shell-under-linux-or-unix/
+Ref: 
+- https://manpages.ubuntu.com/manpages/xenial/en/man1/scontrol.1.html
+- https://www.cyberciti.biz/faq/how-to-run-command-or-code-in-parallel-in-bash-shell-under-linux-or-unix/
+To install,
+```
+[ubuntu]$ sudo apt install parallel
+[RHEL/CentOS]$ sudo yum install parallel
+[Fedora]$ sudo dnf install parallel
+```
+
+To prepare the script to parallely run
 ```
 $ vi parallel_commands.list
 
@@ -104,6 +114,7 @@ command_2
 command_3
 ...
 ```
+To run the scirpt parallely, 
 ```
 $ parallel -j [threads] --bar {} < parallel_commands.list
 e.g. $ parallel -j 27 --bar {} < 14_jihun_interface_design_production_commands.list
