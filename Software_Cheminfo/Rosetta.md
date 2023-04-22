@@ -25,8 +25,10 @@ e.g. $./scons.py -j 20 mode=release bin extra=hdf5
   ```
   Ref: https://www.rosettacommons.org/node/10175  
   Sol : Do not move the directory of Rosetta. Recompile.  
-- `Comiler` Ubuntu 20.04 installation
-  Ref: https://www.rosettacommons.org/node/11709
+- `Comiler` Ubuntu 20.04 installation  (src_3.13 version)
+  Ref: https://www.rosettacommons.org/node/11709  
+  
+  Problems: 
   ```
   Running versioning script ... Release package detected, using rosetta/main/.release.json to acquire version information...
   Done. (0.0 seconds)
@@ -259,6 +261,10 @@ e.g. $./scons.py -j 20 mode=release bin extra=hdf5
         |         ^~~~~~~~~~~
   scons: *** [build/src/release/linux/5.19/64/x86/gcc/11/default/protocols/antibody/AntibodyFeatures.os] Error 1
   ```
+  
+  Solution
+  `vi $ROSTTA/main/source/src/protocols/features/FeaturesReporter.fwd.hh` and add `#include <cstdint>`
+  
 - 
 
 # Rosetta
