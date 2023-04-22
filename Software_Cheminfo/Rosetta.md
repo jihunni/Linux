@@ -3,7 +3,7 @@ Ref: https://new.rosettacommons.org/demos/latest/tutorials/install_build/install
 
 Set-up for installation
 ```
-sudo apt-get install build-essential.
+sudo apt-get install build-essential
 ```
 Installation
 ```
