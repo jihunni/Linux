@@ -120,6 +120,11 @@ $ parallel -j [threads] --bar {} < parallel_commands.list
 e.g. $ parallel -j 27 --bar {} < 14_jihun_interface_design_production_commands.list
 ```
 
+To run the specific line on a given bash script file of multiple lines,
+```
+bash <(sed -n '5p' script.sh) # to run 5th line on script.sh 
+```
+
 ## tty1 shell screen
 `Ctrl` + `Alt` + `F1`
 
