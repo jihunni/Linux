@@ -17,6 +17,32 @@ $ ./scons.py -j <number_of_cores_to_use> mode=release bin extra=hdf5
 e.g. $./scons.py -j 20 mode=release bin extra=hdf5
 ```
 
+## PsiPred
+```
+$ sudo apt-get install csh tcsh
+$ tar -xvzf psipred.4.02.tar.gz
+$ mv psipred 4.02; cd 4.02
+tcsh% cd to-wherever-you-untarred-PSIPRED
+tcsh% cd src
+tcsh% make
+tcsh% make install
+```
+To set the proper directory, 
+```
+$ vi /opt/PsiPred/4.02/runpsipred_single
+
+# Where the PSIPRED V4 programs have been installed
+set execdir = /opt/PsiPred/4.02/bin
+
+# Where the PSIPRED V4 data files have been installed
+set datadir = /opt/PsiPred/4.02/data
+
+```
+To test,
+```
+$ /opt/PsiPred/4.02/runpsipred_single jihun_interface_design_production/00000/SEEEARRWEK_LUKER17O.fasta > /dev/null
+```
+
 
 # Trial and error in installation
 - error while loading shared libraries: libcppdb.s
