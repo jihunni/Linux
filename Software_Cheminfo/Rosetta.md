@@ -23,7 +23,6 @@ $ sudo apt-get install csh tcsh
 $ mkdir /opt/PsiPred; cd /opt/PsiPred
 $ tar -xvzf psipred.4.02.tar.gz
 $ mv psipred 4.02; cd 4.02
-tcsh% cd to-wherever-you-untarred-PSIPRED
 tcsh% cd src
 tcsh% make
 tcsh% make install
