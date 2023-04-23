@@ -21,6 +21,7 @@ e.g. $./scons.py -j 20 mode=release bin extra=hdf5
 ```
 $ sudo apt-get install csh tcsh
 $ mkdir /opt/PsiPred; cd /opt/PsiPred
+$ cp /home/jihun/Downloads/psipred.4.02.tar.gz  .
 $ tar -xvzf psipred.4.02.tar.gz
 $ mv psipred 4.02; cd 4.02
 tcsh% cd src
