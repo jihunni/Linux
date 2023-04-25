@@ -165,6 +165,8 @@ an input pdb file should contain all atoms
 ```
 gmx pdb2gmx -f 1AKI_clean.pdb -o model.gro -water spce (-ter)
 gmx pdb2gmx -f 1AKI_clean.pdb -o model.gro -water tip3p (-ter)
+gmx pdb2gmx -f ${PROTEIN}.pdb -o model.gro -water tip3p -ff charmm27 -ignh
+
 ```
 > -f : input file  
 > -ignh :  Ignore H atoms in the PDB file; especially useful for NMR structures. Otherwise, if H atoms are present, they must be in the named exactly how the force fields in GROMACS expect them to be. Different conventions exist, so dealing with H atoms can occasionally be a headache! If you need to preserve the initial H coordinates, but renaming is required, then the Linux sed command is your friend.  
