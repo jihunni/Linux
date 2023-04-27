@@ -518,6 +518,9 @@ packstat="false" interface_sc="true" ligandchain="B"/>
     set datadir = /opt/PsiPred/4.02/data
     ```
 - 
+# Ab Initio protein folding
+Ref: https://labnotes.readthedocs.io/en/latest/doc/fragment_picking.html  
+
 # RIFdock installation (Ubuntu 20.04)
 Ref: https://github.com/rifdock/rifdock/blob/master/help/ubuntu_rifdock_compilation_extra.pdf
 ```
