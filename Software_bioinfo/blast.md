@@ -5,6 +5,7 @@ Ref :
 # To download Blast database
 Ref : https://www.ncbi.nlm.nih.gov/books/NBK569850/  
 ```
+# apt-get install perl-doc
 $ cd [directory_to_download]
 $ ${blast}/bin/update_blastdb.pl --showall 
 $ {blast}/bin/update_blastdb.pl --decompress [database] (--num_threads [num_threads])
