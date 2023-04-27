@@ -113,3 +113,10 @@ Ref: http://chopra-modules.science.purdue.edu/class/chm579/spring2019/public/pag
     e.g. mol delete 0
   ```
 - 
+# Visualization
+## Movie : `Extensions` - `Visualization` - `Movie Maker`
+[Youtube Video](https://www.youtube.com/watch?v=lueqjpjo3yY&ab_channel=Mohamedshehata)  
+- Movie Settings : select `Trajaectory`  
+- set `working directory`  
+- set `Name of movie`  
+- click `Make Movie`  
