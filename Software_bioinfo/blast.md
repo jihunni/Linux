@@ -2,6 +2,15 @@
 Ref :   
 - https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html#blast-executables  
 - https://www.ncbi.nlm.nih.gov/books/NBK569861/#intro_Installation.RedHat_Linux  
+# To download Blast database
+Ref : https://www.ncbi.nlm.nih.gov/books/NBK569850/  
+```
+$ cd [directory_to_download]
+$ ${blast}/bin/update_blastdb.pl --showall 
+$ {blast}/bin/update_blastdb.pl --decompress [database]
+e.g. $ update_blastdb.pl --decompress nr
+```
+
 # Building a BLAST database
 Ref : https://www.ncbi.nlm.nih.gov/books/NBK569841/
 general
