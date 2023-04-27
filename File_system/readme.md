@@ -172,6 +172,24 @@ Ref : https://bluexmas.tistory.com/632
 	- Dump : in order to enable to disable filesystem dumping on the system (using the dump command);
 	- Pass Num : sets the order used in order for the “fsck” utility to check your filesystem. If you are not mounting the root device, you should set this option to “2” or “0” as “1” is reserved for the root device.
 
+## sshfs to mount remote file systems
+Ref: https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh
+```
+$ sshfs jihun@xxx.xx.xx.xx:/home/jihun/ ~/mnt/life3/ # to mount
+$ uount ~/mnt/life3/ # to unmount
+```
+### Trial and error
+- ssh key problem  
+	Prolem : 
+	```
+	$ sshfs jihun@xxx.xx.xx.xx:/home/jihun/ ~/mnt/life3/
+	read: Connection reset by peer
+	```
+	Solution: log-in via ssh (it will add key fingerprint permanently and automatically)
+	```
+	$ ssh jihun@xxx.xx.xx.xx
+	```
+	
 # Samba
 Prepare an environment to install Samba
 ```
