@@ -1,5 +1,7 @@
 # Install (RedHat Linux)
-Ref : https://www.ncbi.nlm.nih.gov/books/NBK569861/#intro_Installation.RedHat_Linux
+Ref :   
+- https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html#blast-executables  
+- https://www.ncbi.nlm.nih.gov/books/NBK569861/#intro_Installation.RedHat_Linux  
 # Building a BLAST database
 Ref : https://www.ncbi.nlm.nih.gov/books/NBK569841/
 general
