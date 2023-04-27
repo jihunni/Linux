@@ -7,8 +7,9 @@ Ref : https://www.ncbi.nlm.nih.gov/books/NBK569850/
 ```
 $ cd [directory_to_download]
 $ ${blast}/bin/update_blastdb.pl --showall 
-$ {blast}/bin/update_blastdb.pl --decompress [database]
+$ {blast}/bin/update_blastdb.pl --decompress [database] (--num_threads [num_threads])
 e.g. $ update_blastdb.pl --decompress nr
+e.g. $ perl /opt/blast/2.13.0/bin/update_blastdb.pl --decompress refseq_protein --num_threads 20
 ```
 
 # Building a BLAST database
