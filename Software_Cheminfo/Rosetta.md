@@ -519,7 +519,20 @@ packstat="false" interface_sc="true" ligandchain="B"/>
     ```
 - 
 # Ab Initio protein folding
-Ref: https://labnotes.readthedocs.io/en/latest/doc/fragment_picking.html  
+Ref: https://labnotes.readthedocs.io/en/latest/doc/fragment_picking.html   
+Robetta old server: http://old.robetta.org/   
+```
+$ grep SCORE score.fsc | awk {'print $2 "\t" $27'} | sort -nk 1 > score_rms.dat
+$ vi score_rms.dat
+  > remove header
+
+For visualization in Ubuntu,
+$sudo apt install gunplot
+$sudo apt install plotutils
+$ gnuplot
+gnuplot> plot 'score_rms.dat'
+
+```
 
 # RIFdock installation (Ubuntu 20.04)
 Ref: https://github.com/rifdock/rifdock/blob/master/help/ubuntu_rifdock_compilation_extra.pdf
