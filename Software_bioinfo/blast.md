@@ -12,6 +12,7 @@ $ {blast}/bin/update_blastdb.pl --decompress [database] (--num_threads [num_thre
 e.g. $ update_blastdb.pl --decompress nr
 e.g. $ perl /opt/blast/2.13.0/bin/update_blastdb.pl --decompress refseq_protein --num_threads 20
 ```
+Note that the output files from `update_bastdb` is the format of database. Therefore, building process is not required.
 
 # Building a BLAST database
 Ref : https://www.ncbi.nlm.nih.gov/books/NBK569841/
@@ -29,18 +30,41 @@ makeblastdb -in /home/data/MIBig_2.0/mibig_prot_seqs_2.0.fasta -title "MIBig_2.0
 Note that fasta file and index file sholud be located in same direction.
 
 # Run
-general
-```
-blastn -h # manual
-blastn –db [DB_title] –query nt.fsa -perc_identity [0~100] -outfmt 6 -out results.out  
-blastp –db [DB_title] –query nt.fsa -outfmt 6 -num_threads [num_threads] -out results.out  
+- blastn and blastp
+  ```
+  blastn -h # manual
+  blastn –db [DB_title] –query nt.fsa -perc_identity [0~100] -outfmt 6 -out results.out  
+  blastp –db [DB_title] –query nt.fsa -outfmt 6 -num_threads [num_threads] -out results.out  
 
-```
+  ```
 
-running code
-```
-blastn -db mibig_2.0.fasta -query GCF_000005845.2_ASM584v2_genomic.fna -perc_identity 1  -outfmt 6 -out GCF_000005845.2_ASM584v2_genomic.out
-$ blastp -db ~/data/blastDB_mibig2.0_prot/mibig_prot_seqs.fasta -query ~/data/prodigal/Escherichia_coli.faa -outfmt 7 -num_threads 12 -out ~/data/prodigal/Escherichia_coli.blast_7
-```
+  running code
+  ```
+  blastn -db mibig_2.0.fasta -query GCF_000005845.2_ASM584v2_genomic.fna -perc_identity 1  -outfmt 6 -out GCF_000005845.2_ASM584v2_genomic.out
+  $ blastp -db ~/data/blastDB_mibig2.0_prot/mibig_prot_seqs.fasta -query ~/data/prodigal/Escherichia_coli.faa -outfmt 7 -num_threads 12 -out ~/data/prodigal/Escherichia_coli.blast_7
+  ```
+- psiblast
+  ```
+  # the script to run in GPU1 workstation
+  DATABASE="/home/data/blastDB/refseq_protein/refseq_protein"
+  JOB_ID="input_structure/5u1d_1126_0001_chainA"
 
-Note that generally filtering in blast is not recommended. Filtering in post-processing is prefered.
+  module load blast
+
+  psiblast -num_iterations 5 \
+  -num_alignments 100000 \
+  -num_descriptions 100000 \
+  -max_hsps 100000 \
+  -inclusion_ethresh 0.000001 \
+  -evalue 0.000001 \
+  -db $DATABASE \
+  -query $JOB_ID.fasta \
+  -show_gis  -outfmt 6 \
+  -num_threads 1 \
+  -out $JOB_ID.psi \
+  -out_pssm $JOB_ID.asn1 \
+  -out_ascii_pssm $JOB_ID.mat
+  ```
+ 
+
+  Note that generally filtering in blast is not recommended. Filtering in post-processing is prefered.
