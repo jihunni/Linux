@@ -575,6 +575,9 @@ $ gmx mdrun -v -deffnm md_0_1 -nb gpu -gpu_id 0
 	Ref (official documentation / convert-tpr) : https://manual.gromacs.org/current/onlinehelp/gmx-convert-tpr.html  
 
 	```
+	# to continue the previously interrupted simulation
+	gmx mdrun -v -deffnm md_0_1 -cpi md_0_1.cpt
+	
 	# Let’s say you finished a 10 ns simulation from a tpr file (md_10.tpr) but then you realized you would like to simulate your system for an additional 10 ns.
 	gmx_mpi convert-tpr -s md_10.tpr (-extend 10000 [unit in ps]) (-nsteps [final_steps]) (-until [a certain ending time in ps] ) -o md_20.tpr 
 	
