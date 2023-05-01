@@ -1,0 +1,19 @@
+-in:file:fasta ./input_structure/5u1d_1126_0001_chainA.fasta
+-in:file:frag3 ./input_structure/aat000_03_05.200_v1_3
+-in:file:frag9 ./input_structure/aat000_09_05.200_v1_3
+
+-in:file:native ./input_structure/5u1d_1126_0001_chainA.pdb
+
+-abinitio:relax
+-nstruct 25
+-out:pdb
+-out:path ./output/
+#-out:prefix something
+
+-use_filters true
+-psipred_ss2 ./input_structure/t000_.psipred_ss2
+-abinitio::increase_cycles 10
+-abinitio::rg_reweight 0.5 
+-abinitio::rsd_wt_helix 0.5 
+-abinitio::rsd_wt_loop 0.5 
+-relax::fast
