@@ -100,6 +100,16 @@ Ref : https://www.postgresqltutorial.com/postgresql-roles/
    postgres=# ALTER USER postgres PASSWORD 'myPassword';
    ALTER ROLE
    ```
+-  allow an user `app_readon` to have a read-only role  
+   [Youtube video](https://www.youtube.com/watch?v=-2kYJ0gZmCo&ab_channel=E-MultiSkillsDatabaseTutorials)
+   ```
+   CREATE USER app_user WITH PASSWORD 'user';
+   CREATE ROLE app_readonly;
+   GRANT app_readonly To app_user;
+   GRANT USAGE ON SCHEMA transfac To app_readonly;
+   GRANT SELECT ON ALL TABLES in SCHEMA transfac To app_readonly;
+   ```
+
 # 21. Database Roles
 PostgreSQL manages database access permissions using the concept of roles. A role can be thought of
 as either a database user, or a group of database users, depending on how the role is set up. Roles can
