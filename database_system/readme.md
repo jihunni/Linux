@@ -9,6 +9,7 @@ ref : https://dbrang.tistory.com/749
   ```
   $ psql -d pubchem_vina -U jihun
   $ psql -d pubchem_vina -U pubchem_vina
+  $ psql -d transfac_db -U user
   ```
 - 
 
