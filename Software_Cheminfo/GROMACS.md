@@ -591,7 +591,8 @@ $ gmx mdrun -v -deffnm md_0_1 -nb gpu -gpu_id 0
 # Result analysis
 ## Index
 Ref (Protein protein complex simulation index) : 	https://gromacs.bioexcel.eu/t/protein-protein-complex-simulation/4231/4
-	To build the an index file `index.ndx` in case of two protein chain A and B, (Note that protein chain information is only contained in `pdb`, not in `gro` or `tpr`.
+	To build the an index file `index.ndx` in case of two protein chain A and B, (Note that protein chain information is only contained in `pdb`, not in `gro` or `tpr`.   
+	
 	```
 	printf "del 0\n del 0\n del 0\n del 0\n del 0\n del 0\n del 0\n del 0\n del 0\n del 0\n del 0\n chainA \n chainB \n q \n" | gmx make_ndx -f ${file_name} -o index_chain.ndx
 	printf "q \n" | gmx make_ndx -f md_0_1.tpr -o index_default.ndx
