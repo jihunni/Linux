@@ -659,6 +659,11 @@ Select 1 ("Protein") as the group to be centered and 0 ("System") for output. We
 	```
 	gmx distance -s md_0_200ns.tpr -f md_0_200ns_fit.xtc -select 'resname "Leu2" and name OXT plus resid 295 and name NH2' -oall
 	```
+	
+	e.g. center of mass of ChainA and chainB (with an external index file) (Note that `"chA"`, not `'chA'`)
+	```
+	gmx distance -s md_0_1.tpr -f md_0_1_fit.xtc -select "com of group "chA" plus com of group "chB"" -oav distance_chA_chB_centroid.xvg -oall distance_chA_chB.xvg -n index.ndx
+	```
 - Hydrogen bond  
 	Ref: https://www.compchems.com/how-to-study-hydrogen-bonds-using-gromacs/#how-to-compute-the-hydrogen-bonds-between-two-groups
 	```
