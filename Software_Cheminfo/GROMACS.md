@@ -589,6 +589,18 @@ $ gmx mdrun -v -deffnm md_0_1 -nb gpu -gpu_id 0
 	```
 	
 # Result analysis
+## Index
+Ref (Protein protein complex simulation index) : 	https://gromacs.bioexcel.eu/t/protein-protein-complex-simulation/4231/4
+	To build the an index file `index.ndx` in case of two protein chain A and B, (Note that protein chain information is only contained in `pdb`, not in `gro` or `tpr`.
+	```
+	printf "del 0\n del 0\n del 0\n del 0\n del 0\n del 0\n del 0\n del 0\n del 0\n del 0\n del 0\n chainA \n chainB \n q \n" | gmx make_ndx -f ${file_name} -o index_chain.ndx
+	printf "q \n" | gmx make_ndx -f md_0_1.tpr -o index_default.ndx
+	rm index.ndx
+	cat index_default.ndx > index.ndx
+	cat index_chain.ndx >> index.ndx
+	```
+	
+## Result analysis
 Ref (tutorial pdf1): http://www.drugdesign.gr/uploads/7/6/0/2/7602318/lecture_mdanalysis.pdf  
 Ref (tutorial pdf2): https://hpc-forge.cineca.it/files/CoursesDev/public/2015/High_Performance_Molecular_Dynamics/Rome/February/Tutorial4_Analysis.pdf   
 - to recenter the protein and rewrap the molecules within the unit cell  
@@ -597,6 +609,11 @@ Ref (tutorial pdf2): https://hpc-forge.cineca.it/files/CoursesDev/public/2015/Hi
 	gmx trjconv -s md_0_1.tpr -f md_0_1.xtc -o md_0_1_center.xtc -pbc mol -center
 	```
 Select 1 ("Protein") as the group to be centered and 0 ("System") for output. We will conduct all our analyses on this "corrected" trajectory. 
+- [In case of protein complex, the adjustment in terms of monomer is required]  
+	Ref: https://gromacs.bioexcel.eu/t/protein-protein-complex-simulation/4231/4  
+	```
+	printf "chA\n System\n" | gmx trjconv -f md_0_1_center.xtc -s md_0_1.tpr -o md_0_1_center_chA.xtc -center -pbc mol -n index.ndx
+	```
 - rotational and translational fitting
 	```
 	gmx trjconv -s md_0_1.tpr -f md_0_1_center.xtc -o md_0_1_fit.xtc -fit rot+trans
