@@ -95,29 +95,42 @@ rsync -r -v --dry-run                       \
 
 
 # Parallel 
-Ref: 
-- https://manpages.ubuntu.com/manpages/xenial/en/man1/scontrol.1.html
-- https://www.cyberciti.biz/faq/how-to-run-command-or-code-in-parallel-in-bash-shell-under-linux-or-unix/
-To install,
-```
-[ubuntu]$ sudo apt install parallel
-[RHEL/CentOS]$ sudo yum install parallel
-[Fedora]$ sudo dnf install parallel
-```
+Ref: https://unix.stackexchange.com/questions/103920/parallelize-a-bash-for-loop  
+- asynchronous 
+	```
+	function run_code {
+		some code
+	}
+	
+	for file_name in $(cat $INPUT_PDB_LIST_FILE); do
+    run_code &
+	done
 
-To prepare the script to parallely run
-```
-$ vi parallel_commands.list
+	```
+- parallel
+	Ref: 
+	- https://manpages.ubuntu.com/manpages/xenial/en/man1/scontrol.1.html
+	- https://www.cyberciti.biz/faq/how-to-run-command-or-code-in-parallel-in-bash-shell-under-linux-or-unix/
+	To install,
+	```
+	[ubuntu]$ sudo apt install parallel
+	[RHEL/CentOS]$ sudo yum install parallel
+	[Fedora]$ sudo dnf install parallel
+	```
 
-command_1
-command_2
-command_3
-...
-```
-To run the scirpt parallely, 
-```
-$ parallel -j [threads] --bar {} < parallel_commands.list
-e.g. $ parallel -j 27 --bar {} < 14_jihun_interface_design_production_commands.list
+	To prepare the script to parallely run
+	```
+	$ vi parallel_commands.list
+
+	command_1
+	command_2
+	command_3
+	...
+	```
+	To run the scirpt parallely, 
+	```
+	$ parallel -j [threads] --bar {} < parallel_commands.list
+	e.g. $ parallel -j 27 --bar {} < 14_jihun_interface_design_production_commands.list
 ```
 
 To run the specific line on a given bash script file of multiple lines,
