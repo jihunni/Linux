@@ -151,6 +151,11 @@ $ ssh username@ip_address
 
 # Trouble shooting
 ## Running a Network Path Trace
-Ref : https://player.support.brightcove.com/troubleshooting/running-network-path-trace.html
+  Ref : https://player.support.brightcove.com/troubleshooting/running-network-path-trace.html
 ## The collision between private network (172.27.xxx.xxx) and Docker network (172.17.xxx.xxx)
-Ref: https://waspro.tistory.com/635  
+  Ref: https://waspro.tistory.com/635  
+  - Cause : Installation of Docker and the collision of network configuration
+    - Our lab use 172.27.xxx.xxx for private network (eth0 or eth1)
+    - Docker network uses 172.17.xxx.xxx (docker0)
+    - The collision between eth0 and docker0 triggers out bound traffic and prevent the proper connection to Life3 server outside of the lab.
+  - Solution : changing the network configuration of Docker from 172.17.xxx.xxx to 10.10.10.0
