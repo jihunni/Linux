@@ -152,3 +152,5 @@ $ ssh username@ip_address
 # Trouble shooting
 ## Running a Network Path Trace
 Ref : https://player.support.brightcove.com/troubleshooting/running-network-path-trace.html
+## The collision between private network (172.27.xxx.xxx) and Docker network (172.17.xxx.xxx)
+Ref: https://waspro.tistory.com/635  
