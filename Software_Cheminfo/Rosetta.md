@@ -531,8 +531,11 @@ $sudo apt install gunplot
 $sudo apt install plotutils
 $ gnuplot
 gnuplot> plot 'score_rms.dat'
-
 ```
+## Error
+- St12out_of_range  
+  Solution : check whether the input files are corrects (3-mer and 9-mer)
+- 
 
 # RIFdock installation (Ubuntu 20.04)
 Ref: https://github.com/rifdock/rifdock/blob/master/help/ubuntu_rifdock_compilation_extra.pdf
