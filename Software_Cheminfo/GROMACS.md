@@ -676,6 +676,10 @@ Select 1 ("Protein") as the group to be centered and 0 ("System") for output. We
 	```
 	```
 - 	
+## Trial and error
+- Magic Number Error in XTC file (read 0, should be 1995)  
+	A header of xtc file is incorrect, owing to disk IO problem
+	
 # Practice
 ```
 # To remove water molecules in PDB file
@@ -708,6 +712,7 @@ Check for bad contacts and/or reduce the timestep if appropriate.
 $ gmx grompp -f nvt.mdp -c em_50000.gro -r em_50000.gro -p topol.top -o nvt.tpr
 $ gmx mdrun -deffnm nvt
 ```
+
 ```
 Dynamic load balancing report:
  DLB got disabled because it was unsuitable to use.
@@ -724,6 +729,7 @@ Dynamic load balancing report:
                  (ns/day)    (hour/ns)
 Performance:        1.872       12.819
 ```
+
 ```
 $ gmx energy -f nvt.edr -o temperature.xvg
 $ gmx grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr
@@ -731,6 +737,7 @@ $ gmx mdrun -deffnm npt
 $ gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr
 $ gmx mdrun -deffnm md_0_1
 ```
+
 ```
 GROMACS:      gmx mdrun, version 2021.4-Ubuntu-2021.4-2
 Executable:   /usr/bin/gmx
