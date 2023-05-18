@@ -103,7 +103,7 @@ Ref: https://unix.stackexchange.com/questions/103920/parallelize-a-bash-for-loop
 	}
 	
 	for file_name in $(cat $INPUT_PDB_LIST_FILE); do
-    run_code &
+		run_code &
 	done
 
 	```
