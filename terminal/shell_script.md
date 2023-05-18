@@ -309,3 +309,25 @@ StartTime=$(date +%s)
 EndTime=$(date +%s)
 echo "It takes $(($EndTime - $StartTime)) seconds to complete this task."
 ```
+# PDB file
+- to exttract Chain A from pdb file
+	```
+	for file_name in $(ls $input_dir_for_iteration/*.pdb); do
+		file_name="${file_name##*/}" # to get fileName with extension (to remove path)
+    file_name="${file_name%.*}" # to remove file extenstion
+    echo ${file_name} ;
+
+    cd $output_dir
+
+    echo -e "To extract chain A from the input pdb file"
+    cat ${input_dir_for_iteration}/${file_name}.pdb | grep '^ATOM' | grep -v OXT | awk ' $5 == "A" { print $0 }' > ${file_name}_chainA.pdb
+    chmod 755 ${file_name}_chainA.pdb
+
+    echo -e "To extract chain B from the input pdb file"
+    cat ${input_dir_for_iteration}/${file_name}.pdb | grep '^ATOM' | grep -v OXT | awk ' $5 == "B" { print $0 }' > ${file_name}_chainB.pdb
+    chmod 755 ${file_name}_chainB.pdb
+    
+    receptor=${file_name}_chainB  # Receptor ID without .pdb extension
+    ligand=${file_name}_chainA    # Ligand ID without .pdb extension
+	done
+	```
