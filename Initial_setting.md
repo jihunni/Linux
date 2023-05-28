@@ -82,3 +82,8 @@ Ref: https://taktak2.tistory.com/entry/USB-%ED%8F%AC%EB%A7%B7%EB%B0%A9%EB%B2%95-
 	- bash environment setting
 - module environment : https://github.com/jihunni/Linux/blob/master/Software/module_environment.md
 - lm_sensors: https://github.com/jihunni/Linux/blob/master/Software/lm_sensors.md
+- network : 
+	```
+	apt-get install net-tools
+	```
+- 
