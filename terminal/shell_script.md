@@ -59,6 +59,7 @@ reference :
 - https://wiki.bash-hackers.org/syntax/expansion/brace
 - 
 ## if else
+- reference : https://devhints.io/bash
 ```
 if [command]
 then
@@ -72,9 +73,20 @@ else
 	[command]
 fi
 ```
+In order to set the directory differently by hostname,
+```
+echo -e "hostname : $HOSTNAME"
+if [ $HOSTNAME = 'life3' ]
+then
+    echo -e "Life3 Server"
+	NUM_CORE=27
+else
+    echo -e "Not Life3 Server"
+	NUM_CORE=30
+    echo -e ""
+fi
+```
 
-reference : 
-- https://devhints.io/bash. 
 
 case
 ref : https://hbase.tistory.com/23. 
