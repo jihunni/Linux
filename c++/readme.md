@@ -1,3 +1,13 @@
+# Makefile 
+```
+CC=<compiler>
+CFLAGS=<options for compiler>
+LDFLAGS=<options for linker?
+LDLIBS=<a list of library to link>
+OBJS=<a list of object file>
+TARGET=<build target name>
+```
+
 # c++ conditional compilation
 Ref: https://gyong0.tistory.com/128
 if       -> #if  
