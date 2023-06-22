@@ -42,6 +42,7 @@ Note that fasta file and index file sholud be located in same direction.
   ```
   blastn -db mibig_2.0.fasta -query GCF_000005845.2_ASM584v2_genomic.fna -perc_identity 1  -outfmt 6 -out GCF_000005845.2_ASM584v2_genomic.out
   $ blastp -db ~/data/blastDB_mibig2.0_prot/mibig_prot_seqs.fasta -query ~/data/prodigal/Escherichia_coli.faa -outfmt 7 -num_threads 12 -out ~/data/prodigal/Escherichia_coli.blast_7
+  $ blastp -db ~/data/blastDB_mibig2.0_prot/mibig_prot_seqs -query ~/data/prodigal/Escherichia_coli.faa -outfmt 7 -num_threads 12 -out ~/data/prodigal/Escherichia_coli.blast_7
   ```
 - psiblast
   ```
