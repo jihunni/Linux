@@ -33,6 +33,9 @@ passwd -l [AccountID]
 ```
 usermod -u [UID] -o -g [GID] -G [GID] -d [directory] -s [shell] -c [description] -f [inactive date] -e [expire date]
 ```
+```
+chsh -s /bin/bash [user_id]
+```
 
 # `CentOS7` Disk Quota
 ```
