@@ -69,7 +69,13 @@ rsync -r -v --dry-run                       \
 	--include='/company*/unique_folder1/**' \
 	--exclude='*'
 ```
-	
+- For back-up
+	Ref: https://twpower.github.io/153-copy-file-or-directory-using-rsync-command  
+  ```
+	rsync --progress -rvzhP [Directory_name] [Target_directory]
+  ```
+- 	
+ 
 ### scp
 ### FTP -> Local  
 	
