@@ -204,6 +204,18 @@ $ sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl 
 sudo apt-get install libxmu-dev libxmu-headers freeglut3-dev libxext-dev libxi-dev
 sudo apt-get install libpthread-stubs0-dev
 ```
+```
+CC=gcc-6
+CXX=g++-6
+./ninja_build.py omp -t rosetta_scripts -remake
+./scons.py -j 20 mode=release bin extra=omp
+
+
+CXXFLAGS="/opt/rosetta/rosetta_src_2018.09.60072_bundle/boost_1_65_0/"
+CMAKE_ROSETTA_PATH=/opt/rosetta/rosetta_src_2018.09.60072_bundle/main
+cmake .. -DCMAKE_BUILD_TYPE=Release
+make -j3 rif_dock_test rifgen
+```
 # Reference
 - https://docs.docker.com/engine/install/
 - https://www.yalco.kr/36_docker/
