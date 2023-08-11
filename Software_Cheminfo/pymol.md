@@ -8,7 +8,8 @@ Ref: https://pymolwiki.org/index.php/Linux_Install
 # Pymol Install on Mac
 Ref: https://pymolwiki.org/index.php/MAC_Install
 ```
-brew install brewsci/bio/pymol
+brew install brewsci/bio/pymol # old
+brew install pymol # new
 ```
 ```
 ==> Caveats
