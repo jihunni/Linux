@@ -99,6 +99,8 @@ rsync -r -v --dry-run                       \
 	$ sum [filename]
 	```
 
+# File editor, vi
+- `:[page_number]`
 
 # Parallel 
 Ref: https://unix.stackexchange.com/questions/103920/parallelize-a-bash-for-loop  
