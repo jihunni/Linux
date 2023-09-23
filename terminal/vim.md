@@ -10,8 +10,11 @@ running code
 /찾을문자열
 ```
 
-
-# substitution
+# edit
+## delete
+- to delete buttom 10 lines : `10dd`
+  ref: https://linuxhandbook.com/delete-multiple-lines-vim/#:~:text=You%20type%20dd%20and%20it,that%20the%20cursor%20is%20at).
+## substitution
 reference:
 - https://twpower.github.io/205-substitute-or-replace-string-in-vi-or-vim
 ```
