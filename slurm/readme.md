@@ -77,6 +77,8 @@ sbatch
 surn --pty bash #to access head node
 exit # to exit the head node
 
+- to run slurm interactively
+srun -p cpu -q interactive --pty -N 1 -n 1 -I300 $* $SHELL -l
 
 ## the others:
 salloc
