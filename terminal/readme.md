@@ -139,7 +139,7 @@ Ref: https://unix.stackexchange.com/questions/103920/parallelize-a-bash-for-loop
 	```
 	$ parallel -j [threads] --bar {} < parallel_commands.list
 	e.g. $ parallel -j 27 --bar {} < 14_jihun_interface_design_production_commands.list
-```
+	```
 
 To run the specific line on a given bash script file of multiple lines,
 ```
