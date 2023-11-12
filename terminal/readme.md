@@ -151,3 +151,6 @@ bash <(sed -n '5p' script.sh) # to run 5th line on script.sh
 
 # etc
 -gedit [fileName]
+
+# Terminal
+- Tilix
