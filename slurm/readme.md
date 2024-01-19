@@ -96,7 +96,8 @@ Ref : https://help.rc.ufl.edu/doc/Sample_SLURM_Scripts
 Ref : https://repository.kisti.re.kr/bitstream/10580/6542/1/2014-147%20Slurm%20%EA%B4%80%EB%A6%AC%EC%9E%90%20%EC%9D%B4%EC%9A%A9%EC%9E%90%20%EA%B0%80%EC%9D%B4%EB%93%9C.pdf  
 Ref (ntask vs cpu-per-task) : https://stackoverflow.com/questions/51139711/hpc-cluster-select-the-number-of-cpus-and-threads-in-slurm-sbatch  
 video : 
-- https://www.youtube.com/watch?v=8N8gb4BSu_4
+- https://www.youtube.com/watch?v=8N8gb4BSu_4  
+
 
 ## general_execution.sh
 ```
@@ -223,6 +224,8 @@ $SLURM_JOB_ID
 Shell$ sbatch submit.sh
 sbatch: Submitted batch job [jobID]
 ```
+
+- ntask : https://stackoverflow.com/questions/39186698/what-does-the-ntasks-or-n-tasks-does-in-slurm
 
 ## example
 ```
