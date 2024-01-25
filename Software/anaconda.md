@@ -58,6 +58,7 @@ pip install [library_name]
 # new environment
 ```
 # Jupyter에 새 kernel 등록하기
+$ conda install -c anaconda ipykernel  
 (pytorch)$ python -m ipykernel install --user --name pytorch --display-name "PyTorch"
 ```
 ![image](https://user-images.githubusercontent.com/48517782/143440794-56d4a630-762c-44ef-a65d-b3b16c377a2e.png)
