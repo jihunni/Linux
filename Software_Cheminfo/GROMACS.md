@@ -683,16 +683,17 @@ Select 1 ("Protein") as the group to be centered and 0 ("System") for output. We
 # Practice
 ```
 # To remove water molecules in PDB file
-$ grep -v HOH 1aki.pdb > 1AKI_clean.pdb
+$ file_name="1aki"
+$ grep -v HOH ${file_name}.pdb > 1AKI_clean.pdb
 
 # To prepare gro file
-$ gmx pdb2gmx -f AF-Q96I59-F1-model_v4.pdb -o AF-Q96I59-F1-model_v4.gro -water tip4p
+$ gmx pdb2gmx -f ${file_name}.pdb -o ${file_name}.gro -water tip4p (-missing) (-ignh)
 
 To create box
-$ gmx editconf -f AF-Q96I59-F1-model_v4.gro -o AF-Q96I59-F1-model_v4_newbox.gro -c -d 1.0 -bt cubic
+$ gmx editconf -f ${file_name}.gro -o ${file_name}_newbox.gro -c -d 1.5 -bt cubic
 
 To add solvate
-$ gmx solvate -cp AF-Q96I59-F1-model_v4_newbox.gro -cs tip4p.gro -o AF-Q96I59-F1-model_v4_solv.gro -p topol.top
+$ gmx solvate -cp ${file_name}_newbox.gro -cs tip3p.gro -o ${file_name}_solv.gro -p topol.top
 
 To assemble tpr file
 $ gmx grompp -f ions.mdp -c AF-Q96I59-F1-model_v4_solv.gro -p topol.top -o ions.tpr
@@ -798,4 +799,4 @@ Ref: https://www.compchems.com/how-to-compute-the-solvent-accessible-surface-are
 
 # Materials
 - https://computecanada.github.io/molmodsim-md-theory-lesson-novice/
-- 
+
