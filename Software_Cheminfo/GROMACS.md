@@ -607,7 +607,7 @@ Ref (tutorial pdf2): https://hpc-forge.cineca.it/files/CoursesDev/public/2015/Hi
 - to recenter the protein and rewrap the molecules within the unit cell  
 	The first is trjconv, which is used as a post-processing tool to strip out coordinates, correct for periodicity, or manually alter the trajectory (time units, frame frequency, etc). For this exercise, we will use trjconv to account for any periodicity in the system. The protein will diffuse through the unit cell, and may appear "broken" or may "jump" across to the other side of the box. To account for such behaviors, issue the following:
 	```
-	gmx trjconv -s md_0_1.tpr -f md_0_1.xtc -o md_0_1_center.xtc -pbc mol -center
+	printf "Protein\n System\n" | gmx trjconv -s md_0_1.tpr -f md_0_1.xtc -o md_0_1_center.xtc -pbc mol -center
   printf "Protein\n0System\n" | gmx trjconv -f md_0_1.xtc -s md_0_1.gro -o md_0_1_nojump.xtc -center -pbc nojump
  		# if multimer jumps across periodic box
 	```
@@ -629,13 +629,13 @@ Select 1 ("Protein") as the group to be centered and 0 ("System") for output. We
 	Let's look at structural stability first. GROMACS has a built-in utility for RMSD calculations called rms. To use rms, issue this command:
 
 	```
-	gmx rms -s md_0_1.tpr -f md_0_1_noPBC.xtc -o rmsd.xvg -tu ns
+	printf "Backbone\n Backbone\n" | gmx rms -s md_0_1.tpr -f md_0_1_fit.xtc -o rmsd.xvg -tu ns
 	```
 	Choose 4 ("Backbone") for both the least-squares fit and the group for RMSD calculation. The -tu flag will output the results in terms of ns, even though the trajectory was written in ps. This is done for clarity of the output (especially if you have a long simulation - 1e+05 ps does not look as nice as 100 ns). The output plot will show the RMSD relative to the structure present in the minimized, equilibrated system:
 
 	If we wish to calculate RMSD relative to the crystal structure, we could issue the following:
 	```
-	gmx rms -s em.tpr -f md_0_1_noPBC.xtc -o rmsd_xtal.xvg -tu ns
+	printf "Backbone\n Backbone\n" | gmx rms -s em.tpr -f md_0_1_fit.xtc -o rmsd_xtal.xvg -tu ns
 	```
 	Plotted together, results look something like:
 
@@ -645,21 +645,21 @@ Select 1 ("Protein") as the group to be centered and 0 ("System") for output. We
 - RMSF  
 	Ref: https://manual.gromacs.org/archive/4.6.5/online/g_rmsf.html  
 	```
-	gmx rmsf -s md_0_1.tpr -f md_0_1_noPBC.xtc -res yes -o rmsf.xvg
+	gmx rmsf -s md_0_1.tpr -f md_0_1_fit.xtc -res yes -o rmsf.xvg
 	```
 - gyration  
 	```
-	gmx gyrate -s md_0_1.tpr -f md_0_1.xtc -o gyrate.xvg
+	printf "Protein\n" | gmx gyrate -s md_0_1.tpr -f md_0_1_fit.xtc -o gyrate.xvg
 	```
 - SASA  
 	Ref: https://www.compchems.com/how-to-compute-the-solvent-accessible-surface-areas-sasa-with-gromacs/#how-to-compute-sasa-for-a-protein-structure
 	```
- 	gmx sasa -s md_0_1.tpr -f md_0_1_noPBC.xtc -o sasa.xvg -tu ns
+ 	printf "Protein\n" | gmx sasa -s md_0_1.tpr -f md_0_1_fit.xtc -o sasa.xvg -tu ns
  	```
 - distance
 	e.g. distance between OXT in Leu2 and NH2 in 295
 	```
-	gmx distance -s md_0_200ns.tpr -f md_0_200ns_fit.xtc -select 'resname "Leu2" and name OXT plus resid 295 and name NH2' -oall
+	gmx distance -s md_0_200ns.tpr -f md_0_1_fit.xtc -select 'resname "Leu2" and name OXT plus resid 295 and name NH2' -oall
 	```
 	
 	e.g. center of mass of ChainA and chainB (with an external index file) (Note that `"chA"`, not `'chA'`)
@@ -669,15 +669,13 @@ Select 1 ("Protein") as the group to be centered and 0 ("System") for output. We
 - Hydrogen bond  
 	Ref: https://www.compchems.com/how-to-study-hydrogen-bonds-using-gromacs/#how-to-compute-the-hydrogen-bonds-between-two-groups
 	```
-	gmx hbond -f md_0_1_noPBC.xtc -s md_0_1.tpr -num hbnum.xvg
+	printf "Protein\n Protein\n" |gmx hbond -f md_0_1_fit.xtc -s md_0_1.tpr -num hbnum.xvg
 	```
 	
 
 - `xvg` to python  
 	Ref: https://www.compchems.com/how-to-extract-and-plot-thermodynamic-properties-from-a-gromacs-simulation/#example
-	```
-	```
-- 	
+
 ## Trial and error
 - Magic Number Error in XTC file (read 0, should be 1995)  
 	A header of xtc file is incorrect, owing to disk IO problem
