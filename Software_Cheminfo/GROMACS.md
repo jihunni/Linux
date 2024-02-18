@@ -608,6 +608,8 @@ Ref (tutorial pdf2): https://hpc-forge.cineca.it/files/CoursesDev/public/2015/Hi
 	The first is trjconv, which is used as a post-processing tool to strip out coordinates, correct for periodicity, or manually alter the trajectory (time units, frame frequency, etc). For this exercise, we will use trjconv to account for any periodicity in the system. The protein will diffuse through the unit cell, and may appear "broken" or may "jump" across to the other side of the box. To account for such behaviors, issue the following:
 	```
 	gmx trjconv -s md_0_1.tpr -f md_0_1.xtc -o md_0_1_center.xtc -pbc mol -center
+  printf "Protein\n0System\n" | gmx trjconv -f md_0_1.xtc -s md_0_1.gro -o md_0_1_nojump.xtc -center -pbc nojump
+ 		# if multimer jumps across periodic box
 	```
 Select 1 ("Protein") as the group to be centered and 0 ("System") for output. We will conduct all our analyses on this "corrected" trajectory. 
 - [In case of protein complex, the adjustment in terms of monomer is required]  
@@ -782,7 +784,7 @@ GROMACS reminds you: "Your Shopping Techniques are Amazing" (Gogol Bordello)
 	
 ```
 Note that the trajectory of receptor-binder should be adjusted for visualization
-$ printf "Protein\n0System\n" | gmx trjconv -f md_0_1.xtc -s md_0_1.gro -o md_0_1_nojump.xtc -center -pdb nojump
+$ printf "Protein\n0System\n" | gmx trjconv -f md_0_1.xtc -s md_0_1.gro -o md_0_1_nojump.xtc -center -pbc nojump
 $ printf "Protein\nSystem\n" | gmx trjconv -f md_0_1.xtc -s md_0_1.tpr -o md_center.xtc -center -pbc mol -ur compact
 ```
 
