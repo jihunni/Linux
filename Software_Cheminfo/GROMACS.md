@@ -732,7 +732,7 @@ Performance:        1.872       12.819
 ```
 
 ```
-$ gmx energy -f nvt.edr -o temperature.xvg
+$ printf "Temperature\n\n" | gmx energy -f nvt.edr -o temperature.xvg
 $ gmx grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr
 $ gmx mdrun -deffnm npt
 $ gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr
