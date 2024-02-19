@@ -693,24 +693,24 @@ To create box
 $ gmx editconf -f ${file_name}.gro -o ${file_name}_newbox.gro -c -d 1.5 -bt cubic
 
 To add solvate
-$ gmx solvate -cp ${file_name}_newbox.gro -cs tip3p.gro -o ${file_name}_solv.gro -p topol.top
+$ gmx solvate -cp ${file_name}_newbox.gro -cs spc216.gro -o ${file_name}_solv.gro -p topol.top
 
 To assemble tpr file
-$ gmx grompp -f ions.mdp -c AF-Q96I59-F1-model_v4_solv.gro -p topol.top -o ions.tpr
+$ gmx grompp -f ions.mdp -c ${file_name}_solv.gro -p topol.top -o ions.tpr
 
 To generate ion
-$ gmx genion -s ions.tpr -o AF-Q96I59-F1-model_v4_ions.gro -p topol.top -pname NA -nname CL -neutral
+$ printf "SOL\n" | gmx genion -s ions.tpr -o ${file_name}_ions.gro -p topol.top -pname NA -nname CL -neutral
 
 For gromacs preprocessor (Energy Minimization)
-$ gmx grompp -f minim.mdp -c AF-Q96I59-F1-model_v4_ions.gro -p topol.top -o em.tpr
-$ gmx mdrun -v -deffnm em
+$ gmx grompp -f minim.mdp -c ${file_name}_ions.gro -p topol.top -o em.tpr
+$ gmx mdrun -v -deffnm em (-nt 0)
 
 
 step 25: One or more water molecules can not be settled.
 Check for bad contacts and/or reduce the timestep if appropriate.
 
 # Equilibration of solvent and ions around the protein
-$ gmx grompp -f nvt.mdp -c em_50000.gro -r em_50000.gro -p topol.top -o nvt.tpr
+$ gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr
 $ gmx mdrun -deffnm nvt
 ```
 
