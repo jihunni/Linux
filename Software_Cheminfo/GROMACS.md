@@ -82,9 +82,10 @@ Ref: https://bioinformaticsreview.com/20220206/how-to-install-gromacs-on-apple-m
 	```
 ## Force Field
 - name setting : /opt/gromacs/2022.4/share/gromacs/top/charmm36-jul2022.ff/forcefield.doc
-- CHARMM FF for gromacs
+- CHARMM FF for gromacs (Download link)
 	Ref: http://mackerell.umaryland.edu/charmm_ff.shtml#gromacs
-
+	- `mdp` file for CHARMM36ff should be modified   
+   	Ref : https://manual.gromacs.org/current/user-guide/force-fields.html
 ## File format
 - gro : 
 	- "A model cannot have more than 99,999 atoms. Where the entry does not contain an ensemble of models, then the entry cannot have more than 99,999 atoms. Entries that go beyond this atom limit must be split into multiple entries, each containing no more than the limits specified above." (REF: https://mailman-1.sys.kth.se/pipermail/gromacs.org_gmx-users/2017-November/117061.html)
