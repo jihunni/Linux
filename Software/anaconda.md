@@ -77,6 +77,7 @@ Ref: https://gentlesark.tistory.com/29
 	install jupter lab
 	$ conda install -c conda-forge jupyterlab --> may not work
 	$ conda install jupyterlab # work on MacOs
+ 	$ conda install jupyter
  	$ pip install jupyterlab
 	
 	execute jupyter lab
