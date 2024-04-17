@@ -43,8 +43,14 @@ Insert public key into Github account setting
 
 ```
 # creating a personal access token
-https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token
-
+https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token  
+For `~/.ssh/config` 
+```
+Host *
+  IgnoreUnknown AddKeysToAgent,UseKeychain
+  AddKeysToAgent yes
+  UseKeychain yes
+```
 # Git 
 Ref : https://www.youtube.com/watch?v=1I3hMwQU6GU&ab_channel=%EC%96%84%ED%8C%8D%ED%95%9C%EC%BD%94%EB%94%A9%EC%82%AC%EC%A0%84
 ## Git 설정
