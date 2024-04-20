@@ -123,6 +123,7 @@ git clone [REPO_URL] [DIR]
 
 git fetch
 git pull origin master
+git checkout [branch_name]
 
 git add . #전체파일 스테이징
 git add (파일명) #파일명 스테이징
