@@ -17,7 +17,7 @@ $ vi ~/.bashrc
   export OPENBABEL_DIR="/opt/homebrew/Cellar/open-babel/3.1.1_2/"
 
 # openbabel binding to python interpretator
-$ pip install --global-option=build_ext --global-option="-I$OPENBABEL_DIR/include/openbabel3" --global-option="-L$OPENBABEL_DIR/lib" openbabel
+$ python -c pip install --global-option=build_ext --global-option="-I$OPENBABEL_DIR/include/openbabel3" --global-option="-L$OPENBABEL_DIR/lib" openbabel
 ```
 - Installation location : `/opt/homebrew/Cellar/open-babel/3.1.1_2/include/openbabel3/openbabel`
 - Default binding python interpretator : `/opt/homebrew/Cellar/python@3.12/3.12.3/bin/python3`
