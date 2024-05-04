@@ -119,7 +119,7 @@ $ git diff
 
 ## Git basics
 ```
-git clone [REPO_URL] [DIR]
+git clone (-b [branch_name])[REPO_URL] [DIR]
 
 git fetch
 git pull origin master
