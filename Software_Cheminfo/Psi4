@@ -1,0 +1,8 @@
+# Psi4
+# basics
+- environment variable setup
+  `PSI_SCRATCH` on locally attached disk (for coupled-cluster computations)
+- to execute
+  ```
+  psi4 input-file -n [# cores] [output-files]
+  ```
