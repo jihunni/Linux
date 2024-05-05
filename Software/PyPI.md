@@ -1,4 +1,10 @@
 # PyPI
+# basic
+```
+pip install (--user) [library_name]
+```
+
+
 # Distribution
 ## setuptools : to build a setup file
 Ref : https://pythonhosted.org/an_example_pypi_project/setuptools.html  
