@@ -1,8 +1,18 @@
 # Amber
 Ref: https://ambermd.org/index.php
-## Installation of AmberTool22 
+# Amber simulation
+![image](https://github.com/jihunni/Linux/assets/48517782/f4a171d8-a5c0-43f7-81ca-e762143ba9a4)
+
+## preparation
+```
+pdb4amber -i 7o1r.pdb -o 7o1r.amber.pdb --dry --reduce
+```
+# Installation of AmberTool22 
 - Conda (w/o GPU or multi-parallelization)
 - Binary ()
+
+ 
+
 ## ANTECHAMBER & GAFF : they became a part of AmberTool22
 Ref: http://ambermd.org/antechamber/antechamber.html  
 Ref: http://ambermd.org/antechamber/ac.html  
