@@ -91,4 +91,7 @@ Ref: https://taktak2.tistory.com/entry/USB-%ED%8F%AC%EB%A7%B7%EB%B0%A9%EB%B2%95-
 - visual studio code
 	- Lunach visual studio code from bash command line [link](https://code.visualstudio.com/docs/setup/mac#:~:text=Use%20double%2Dclick%20for%20some,by%20double%20clicking%20the%20icon.)
    		- Launch VS Code.
-		- Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shell Command: Install 'code' command in PATH command. ([link](https://stackoverflow.com/questions/63013813/vs-code-how-to-open-a-file-by-its-full-path-in-the-command-palette))
+		- Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shell Command: Install 'code' command in PATH command. ([link](https://stackoverflow.com/questions/63013813/vs-code-how-to-open-a-file-by-its-full-path-in-the-command-palette)) : 
+		  ```
+			code [filename]
+   		```
