@@ -76,6 +76,7 @@ Ref: https://taktak2.tistory.com/entry/USB-%ED%8F%AC%EB%A7%B7%EB%B0%A9%EB%B2%95-
 	$ sudo apt-get update
 	$ sudo apt-get install pip3
   ```
+- anaconda
 - nvidia-driver
 - screen : https://github.com/jihunni/Linux/blob/master/Software/screen.md
 	- install
@@ -95,3 +96,10 @@ Ref: https://taktak2.tistory.com/entry/USB-%ED%8F%AC%EB%A7%B7%EB%B0%A9%EB%B2%95-
 		  ```
 			code [filename]
    		```
+ - Sublime Text
+ - Tilix
+
+## Structural biology
+ - Pymol
+ - Chimera
+
