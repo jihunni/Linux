@@ -22,3 +22,5 @@ H   0.441  -0.143   0.0
 
 
 ```
+
+In `ChemCraft`, [youtube](https://www.youtube.com/watch?v=plGKF0DBz9w&ab_channel=nicolasN)
