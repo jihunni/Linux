@@ -1,7 +1,7 @@
 # Gaussian
 # Gaussian input
 ## water
-To visualize H2O orbitals using `ChemCraft`,
+To visualize H2O orbitals using `ChemCraft`, note that "#P GFINPUT POP(FULL)" should be specified in an input file, so that the orbitals and basis set information are printed in the output file.
 h20.gjf
 ```
 %Chk=/home/jeung/Documents/gaussian/heavy.chk
