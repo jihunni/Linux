@@ -12,30 +12,6 @@ conda update --all
 source conda activate [env_name]
 source activate [env_name]
 ```
-
-yml file
-```
-name: SE3nv
-channels:
-  - defaults
-  - conda-forge
-  - pytorch
-  - dglteam
-  - nvidia
-dependencies:
-  - python=3.9
-  - pytorch=1.9
-  - torchaudio
-  - torchvision
-  - cudatoolkit=11.1
-  - dgl-cuda11.1
-  - icecream
-  - pip
-  - pip:
-    - hydra-core
-    - pyrsistent
-```
-
 running code
 ```
 conda init bash
@@ -89,7 +65,38 @@ Ref: https://gentlesark.tistory.com/29
 	# conda install nodejs
 	# conda install npm
 	```
-	
+
+## yml file
+- yml file format
+```
+		name: SE3nv
+		channels:
+			- defaults
+			- conda-forge
+			- pytorch
+			- dglteam
+			- nvidia
+		dependencies:
+			- python=3.9
+			- pytorch=1.9
+			- torchaudio
+			- torchvision
+			- cudatoolkit=11.1
+			- dgl-cuda11.1
+			- icecream
+			- pip
+			- pip:
+				- hydra-core
+				- pyrsistent
+```
+- To export yml file,
+ ```
+ conda env export | grep -v "^prefix: " > environment.yml
+ ```
+- To install conda environment from yml file,
+	```
+	conda env create -f environment.yml
+	```
 # Jupyter Environmental setting
 Ref : https://bioinfoblog.tistory.com/13
 ```
