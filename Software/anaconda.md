@@ -67,6 +67,7 @@ Ref: https://gentlesark.tistory.com/29
 	```
 
 ## yml file
+Ref: https://stackoverflow.com/questions/41274007/anaconda-export-environment-file
 - yml file format
 ```
 		name: SE3nv
