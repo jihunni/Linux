@@ -1,4 +1,6 @@
 # Gaussian
+# Gaussian input preparation using Avogadro 2
+
 # Gaussian input
 - gaussian input collection : [link](https://www.cup.uni-muenchen.de/ch/compchem/testindex.html)
 - Orbital visualizaiton
@@ -23,5 +25,19 @@
   
   
   ```
+
+  For additional basis set,
+  ```
+  # opt freq Gen Pseudo=Read
+
+  (xyz)
+
+  H C N O S
+  B3LYP/6-31G(d)
   
+  *****
+  Fe 0
+  LanL2DZ
+  *****
+  ```
   - In `ChemCraft`, [youtube](https://www.youtube.com/watch?v=plGKF0DBz9w&ab_channel=nicolasN)
