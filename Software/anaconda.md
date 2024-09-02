@@ -1,4 +1,4 @@
-general code
+# General code
 ```
 conda info --envs
 conda env list
@@ -31,40 +31,24 @@ conda update [library_name]
 conda update --all #
 pip install [library_name]
 ```
-# new environment
+## install library in conda env
+Ref : https://docs.conda.io/projects/conda/en/latest/commands/install.html
 ```
-# Jupyter에 새 kernel 등록하기
-$ conda install -c anaconda ipykernel  
-(pytorch)$ python -m ipykernel install --user --name pytorch --display-name "PyTorch"
-```
-![image](https://user-images.githubusercontent.com/48517782/143440794-56d4a630-762c-44ef-a65d-b3b16c377a2e.png)
-> python -m ipykernel : ipykernel 모듈을 파이썬 스크립트로 실행합니다.  
-> —name pytorch : Jupyter 내부적으로 쓰이는 kernel의 이름을 지정합니다. 같은 이름을 쓰면 덮어쓰기가 됩니다.  
-> --display-name "PyTorch" : Jupyter Notebook 위에서 사용자에게 보이는 kernel의 이름을 정합니다. 내부적으로 쓰이는 이름과 상관없이 띄어쓰기 등 특수문자도 포함하여 자유롭게 지을 수 있습니다.  
+# Anaconda Prompt
+pip install package-name
 
-# install basic library
-Ref: https://gentlesark.tistory.com/29
-- Jupyter notebook
-	```
-	$ pip install notebook
-	```
-- Jupyter Lab
-	```
-	install jupter lab
-	$ conda install -c conda-forge jupyterlab --> may not work
-	$ conda install jupyterlab # work on MacOs
- 	$ conda install jupyter
- 	$ pip install jupyterlab
-	
-	execute jupyter lab
-	$ jupyter lab
-	```
-	
-	To install add-on
-	```
-	# conda install nodejs
-	# conda install npm
-	```
+# general in shell
+conda install -c [channel] -n [environment_name] [package-name]
+
+# example
+conda install -c bioconda pyfasta
+conda install -n pytorch -c conda-forge rdkit
+```
+install with conda-forge
+```
+conda install --channel=conda-forge physics-tenpy
+```
+
 
 ## yml file
 Ref: https://stackoverflow.com/questions/41274007/anaconda-export-environment-file
@@ -98,17 +82,59 @@ Ref: https://stackoverflow.com/questions/41274007/anaconda-export-environment-fi
 	```
 	conda env create -f environment.yml
 	```
-# Jupyter Environmental setting
-Ref : https://bioinfoblog.tistory.com/13
-```
-jupyter notebook --generate-config
-vi ~/.jupyter/jupyter_notebook_config.py
-jupyter lab --no-browser
-```
-```
-jupyter server list
-jupyter notebook list
-```
+ 
+
+# Jupyter
+- install
+  Ref: https://gentlesark.tistory.com/29
+	- Jupyter notebook
+		```
+		$ pip install notebook
+		```
+	- Jupyter Lab
+		```
+		install jupter lab
+		$ conda install jupyterlab # work on MacOs
+	 	$ conda install jupyter
+	 	$ pip install jupyterlab
+		
+		execute jupyter lab
+		$ jupyter lab
+		```
+		
+		To install add-on
+		```
+		# conda install nodejs
+		# conda install npm
+		```
+
+- Jupyter Environmental setting
+	Ref : https://bioinfoblog.tistory.com/13
+	```
+	jupyter notebook --generate-config
+	vi ~/.jupyter/jupyter_notebook_config.py
+	```
+- To run Jupyter
+	```
+  jupyter lab --no-browser
+	```
+	To check running jupyter server
+	```
+	jupyter server list
+	jupyter notebook list
+	```
+ 
+- To add new kernel
+	```
+	# Jupyter에 새 kernel 등록하기
+	$ conda install -c anaconda ipykernel  
+	(pytorch)$ python -m ipykernel install --user --name pytorch --display-name "PyTorch"
+	```
+	![image](https://user-images.githubusercontent.com/48517782/143440794-56d4a630-762c-44ef-a65d-b3b16c377a2e.png)
+	> python -m ipykernel : ipykernel 모듈을 파이썬 스크립트로 실행합니다.  
+	> —name pytorch : Jupyter 내부적으로 쓰이는 kernel의 이름을 지정합니다. 같은 이름을 쓰면 덮어쓰기가 됩니다.  
+	> --display-name "PyTorch" : Jupyter Notebook 위에서 사용자에게 보이는 kernel의 이름을 정합니다. 내부적으로 쓰이는 이름과 상관없이 띄어쓰기 등 특수문자도 포함하여 자유롭게 지을 수 있습니다.  
+
 
 # Trouble shooting
 - CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
@@ -168,23 +194,7 @@ jupyter notebook list
 	Method4: to set a module environment for anaconda3. when `conda` was called in bash shell, anaconda3 should be able to respond on it.
 	
 
-# install library in conda env
-Ref : https://docs.conda.io/projects/conda/en/latest/commands/install.html
-```
-# Anaconda Prompt
-pip install package-name
 
-# general in shell
-conda install -c [channel] -n [environment_name] [package-name]
-
-# example
-conda install -c bioconda pyfasta
-conda install -n pytorch -c conda-forge rdkit
-```
-install with conda-forge
-```
-conda install --channel=conda-forge physics-tenpy
-```
 
 ## Basic installation for Data science
 	```
