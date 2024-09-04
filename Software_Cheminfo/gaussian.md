@@ -43,7 +43,7 @@
   - In `ChemCraft`, [youtube](https://www.youtube.com/watch?v=plGKF0DBz9w&ab_channel=nicolasN)
 # Gaussian output
 ## Visualization
-- Avogardro 2
+- Avogardro 2   
   To convert `.chk` file into `.fchk` that is compatible to Avogardro 2,
   ```
   formchk [options] chkpt-file [formatted-file]
