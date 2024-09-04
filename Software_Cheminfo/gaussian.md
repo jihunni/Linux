@@ -1,7 +1,22 @@
 # Gaussian
-# Gaussian input preparation using Avogadro 2
-
-# Gaussian input
+# Gaussian input preparation using Pymol and Avogadro 2
+- Extract active site from native enzyme using `pymol`
+  - Fetch a native enzyme and identify catalytic residues. 
+  - Select the catalytic residues
+  - Create the new molecule containing only the catalytic residues.
+  - Export the molecule as a mol2 file.
+- Prepare `Gaussian` input file using Avogardro 2
+  - Load a mol2 file from Pymol
+  - (optional) Change a pre-existing native ligand into a target ligand
+    - Select the pre-existing ligand
+    - Create a layer containing the pre-existing ligand : `Select` - `Create a new layer from selection`
+    - Import the new target ligand and overlap it to the pre-existing ligand using `Layer` function
+    - When the new target ligand is located on proper site correctly, then remove the native pre-existing ligand.
+  - Add hydrogen : `build` - `hydrogens` - `add hydrogens`
+    - Consider the hypothetical reaction mechanism.
+  - Export a molecule in Gaussian input format : `Input` - `Gaussian`
+    
+# Run Gaussian
 - gaussian input collection : [link](https://www.cup.uni-muenchen.de/ch/compchem/testindex.html)
 - Orbital visualizaiton
   To visualize H2O orbitals using `ChemCraft`, note that "#P GFINPUT POP(FULL)" should be specified in an input file, so that the orbitals and basis set information are printed in the output file.
