@@ -41,3 +41,12 @@
   *****
   ```
   - In `ChemCraft`, [youtube](https://www.youtube.com/watch?v=plGKF0DBz9w&ab_channel=nicolasN)
+# Gaussian output
+## Visualization
+- Avogardro 2
+  To convert `.chk` file into `.fchk` that is compatible to Avogardro 2,
+  ```
+  formchk [options] chkpt-file [formatted-file]
+  e.g. formchk propell.chk propell.fchk
+  ```
+  where `chkpt-file` is the name of the binary checkpoint file to be formatted and `formatted-file` is the name for the resultant output file. If the name of the formatted file is omitted, it defaults to the base name of the checkpoint file with `.fchk`.
