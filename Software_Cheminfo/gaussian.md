@@ -56,6 +56,15 @@
   *****
   ```
   - In `ChemCraft`, [youtube](https://www.youtube.com/watch?v=plGKF0DBz9w&ab_channel=nicolasN)
+## Trial and error
+- No convergence (Ref : https://www.researchgate.net/post/How-can-I-resolve-the-convergence-failure-error-in-Gaussian-09) 
+  - Edit the bad initial geometry
+  - Use QM/MM method (ONIOM method)
+  - increasing the number of scf cycles; scf=maxcycle = 1000
+  - using quadratically convergent method; scf = qc
+  - refining your starting structure (initial geometry)
+  - trying the optimization at HF level, then using optimized structure as initial guess for B3LYP...
+- 
 # Gaussian output
 ## Visualization
 - Avogardro 2   
