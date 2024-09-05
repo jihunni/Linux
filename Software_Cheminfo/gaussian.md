@@ -62,7 +62,9 @@
   - In `ChemCraft`, [youtube](https://www.youtube.com/watch?v=plGKF0DBz9w&ab_channel=nicolasN)
 ## Geometry optimization
 ## Trial and error
-- No convergence (Ref : https://www.researchgate.net/post/How-can-I-resolve-the-convergence-failure-error-in-Gaussian-09) 
+- No convergence   
+  Ref : https://www.researchgate.net/post/How-can-I-resolve-the-convergence-failure-error-in-Gaussian-09
+  Ref : https://wongzit.github.io/method-to-solve-the-scf-not-converged/   
   - Edit the bad initial geometry
   - Use QM/MM method (ONIOM method)
   - increasing the number of scf cycles; scf=maxcycle = 1000
