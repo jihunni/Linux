@@ -18,6 +18,10 @@
     
 # Run Gaussian
 - gaussian input collection : [link](https://www.cup.uni-muenchen.de/ch/compchem/testindex.html)
+- Take a previous checkpoint file
+  ```
+  Geom=Checkpoint
+  ```
 - Orbital visualizaiton
   To visualize H2O orbitals using `ChemCraft`, note that "#P GFINPUT POP(FULL)" should be specified in an input file, so that the orbitals and basis set information are printed in the output file.
   h20.gjf
@@ -56,6 +60,7 @@
   *****
   ```
   - In `ChemCraft`, [youtube](https://www.youtube.com/watch?v=plGKF0DBz9w&ab_channel=nicolasN)
+## Geometry optimization
 ## Trial and error
 - No convergence (Ref : https://www.researchgate.net/post/How-can-I-resolve-the-convergence-failure-error-in-Gaussian-09) 
   - Edit the bad initial geometry
