@@ -63,7 +63,7 @@
 ## Geometry optimization
 ## Trial and error
 - No convergence   
-  Ref : https://www.researchgate.net/post/How-can-I-resolve-the-convergence-failure-error-in-Gaussian-09
+  Ref : https://www.researchgate.net/post/How-can-I-resolve-the-convergence-failure-error-in-Gaussian-09   
   Ref : https://wongzit.github.io/method-to-solve-the-scf-not-converged/   
   - Edit the bad initial geometry
   - Use QM/MM method (ONIOM method)
