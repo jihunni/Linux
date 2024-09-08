@@ -1,4 +1,7 @@
 # Gaussian
+- Ref
+  - https://math.nist.gov/mcsd/savg/tutorial/ex.html
+  - https://docs.alliancecan.ca/wiki/Gaussian_error_messages  
 # Gaussian input preparation using Pymol and Avogadro 2
 - Extract active site from native enzyme using `pymol`
   - Fetch a native enzyme and identify catalytic residues. 
@@ -18,12 +21,20 @@
     
 # Run Gaussian
 - gaussian input collection : [link](https://www.cup.uni-muenchen.de/ch/compchem/testindex.html)
-- Take a previous checkpoint file
-  ```
-  Geom=Checkpoint
-  ```
-- Orbital visualizaiton
-  To visualize H2O orbitals using `ChemCraft`, note that "#P GFINPUT POP(FULL)" should be specified in an input file, so that the orbitals and basis set information are printed in the output file.
+- keyword
+  - Geometry optimization and frequency calculation : `Opt Freq`
+    - `freq=noraman`
+  - pseudopotential : `genECP`
+  - Convergence : `SCF=XQC`
+  - solvent : `SCRF=(CPCM,solvent=water)`
+  - Take a previous checkpoint file : `Geom=Checkpoint`
+  - Orbital visualizaiton : `GFINPUT POP(FULL)`
+    To visualize H2O orbitals using `ChemCraft`, note that "#P GFINPUT POP(FULL)" should be specified in an input file, so that the orbitals and basis set information are printed in the output file.
+- Synteax
+  - Use `!` for comment line
+  - Total charge and spin multiplicity should be written accurately
+  - Always add a few number of blank line at the end of job script.     
+- Example
   h20.gjf
   ```
   %Chk=/home/jeung/Documents/gaussian/heavy.chk
@@ -53,11 +64,14 @@
 
   H C N O S
   B3LYP/6-31G(d)
-  
   *****
   Fe 0
   LanL2DZ
   *****
+
+  Fe 0
+
+  
   ```
   - In `ChemCraft`, [youtube](https://www.youtube.com/watch?v=plGKF0DBz9w&ab_channel=nicolasN)
 ## Geometry optimization
