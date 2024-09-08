@@ -1,0 +1,2 @@
+set cartoon_side_chain_helper, 1
+run ~/.pymol/base.py
