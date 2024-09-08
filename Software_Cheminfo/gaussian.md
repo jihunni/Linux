@@ -66,11 +66,11 @@
   B3LYP/6-31G(d)
   *****
   Fe 0
-  LanL2DZ
+  SDD
   *****
 
   Fe 0
-
+  LanL2DZ
   
   ```
   - In `ChemCraft`, [youtube](https://www.youtube.com/watch?v=plGKF0DBz9w&ab_channel=nicolasN)
