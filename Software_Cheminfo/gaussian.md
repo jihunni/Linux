@@ -27,7 +27,7 @@
   - pseudopotential : `genECP`
   - Convergence : `SCF=XQC`
   - solvent : `SCRF=(CPCM,solvent=water)`
-  - Take a previous checkpoint file : `Geom=Checkpoint`
+  - Take a previous checkpoint file : `Geom=Checkpoint Guess=Read`
   - Orbital visualizaiton : `GFINPUT POP(FULL)`
     To visualize H2O orbitals using `ChemCraft`, note that "#P GFINPUT POP(FULL)" should be specified in an input file, so that the orbitals and basis set information are printed in the output file.
 - Synteax
@@ -58,18 +58,20 @@
 
   For additional basis set,
   ```
-  # opt freq Gen Pseudo=Read
+  # Opt Freq genECP
 
-  (xyz)
+  ! xyz coordination [skipped]
 
   H C N O S
   B3LYP/6-31G(d)
   *****
+  ! pseudopotential
   Fe 0
   SDD
   *****
 
-  Fe 0
+  ! Basis set
+  Fe 0  
   LanL2DZ
   
   ```
