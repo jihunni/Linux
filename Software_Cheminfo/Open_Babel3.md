@@ -21,3 +21,8 @@ $ python -m pip install --global-option=build_ext --global-option="-I$OPENBABEL_
 ```
 - Installation location : `/opt/homebrew/Cellar/open-babel/3.1.1_2/include/openbabel3/openbabel`
 - Default binding python interpretator : `/opt/homebrew/Cellar/python@3.12/3.12.3/bin/python3`
+
+# Trial and Error
+- Failed to kekulize aromatic bonds in OBMol::PerceiveBondOrders
+  Ref : https://sourceforge.net/p/openbabel/mailman/openbabel-discuss/thread/A9E7F432-E248-4AE4-A289-AA8BA93A8B85@ebi.ac.uk/  
+-  
