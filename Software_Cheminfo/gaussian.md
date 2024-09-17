@@ -87,7 +87,9 @@
   - using quadratically convergent method; scf = qc
   - refining your starting structure (initial geometry)
   - trying the optimization at HF level, then using optimized structure as initial guess for B3LYP...
-- 
+- error in internal coordinate
+  Ref : https://www.researchgate.net/post/How_to_solve_the_error_in_internal_coordinate_in_Gaussian_09
+  - Use cartesian coordinate, instead of internal coordinate, by specifying `opt=cartesian`
 # Gaussian output
 ## Visualization
 - Avogardro 2   
