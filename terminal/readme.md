@@ -51,6 +51,14 @@ which tcsh
 	$ tree /path/to/directory
 	$ tree [options] tree [options] /path/to/directory
 	```
+- To update the last modified date
+  Ref : https://askubuntu.com/questions/62492/how-can-i-change-the-date-modified-created-of-a-file  
+  ```
+  find $PWD -print | while read filename; do
+    # do whatever you want with the file
+    touch -d "$(date -R -r "$filename") - 2 hours" "$filename"
+	done
+  ```
 
 ## File transfer
 Ref: https://devconnected.com/4-ways-to-transfer-files-and-directories-on-linux/
