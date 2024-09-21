@@ -135,7 +135,7 @@ Ref: https://stackoverflow.com/questions/41274007/anaconda-export-environment-fi
 	> —name pytorch : Jupyter 내부적으로 쓰이는 kernel의 이름을 지정합니다. 같은 이름을 쓰면 덮어쓰기가 됩니다.  
 	> --display-name "PyTorch" : Jupyter Notebook 위에서 사용자에게 보이는 kernel의 이름을 정합니다. 내부적으로 쓰이는 이름과 상관없이 띄어쓰기 등 특수문자도 포함하여 자유롭게 지을 수 있습니다.  
 
-- To manage jupyter kernel
+- To manage jupyter kernel   
   Ref : https://jupyter-client.readthedocs.io/en/latest/kernels.html  
   `{sys.prefix}/share/jupyter/kernels`, `/home/$USER/.conda/envs/jupyter_py310/share/jupyter/kernels/`
 
