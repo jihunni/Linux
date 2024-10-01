@@ -1,3 +1,13 @@
+# Install
+- conda
+  ```
+  conda install -c conda-forge -c schrodinger pymol-bundle
+  ```
+- pymol remote
+  ```
+  pip install pymol-remote
+  ```
+
 # Pymol function
 - renumber
   Ref: https://pymolwiki.org/index.php/Renumber   
