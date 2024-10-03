@@ -9,6 +9,8 @@ Ref: https://taktak2.tistory.com/entry/USB-%ED%8F%AC%EB%A7%B7%EB%B0%A9%EB%B2%95-
 ## File system
 
 ## Basic setting (Ubuntu, Bash shell)
+- Initial configuration setting : `/etc/profile.d/`
+  
 - Terminal setting
 	~/.exrc
 	```
