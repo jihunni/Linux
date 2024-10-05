@@ -78,6 +78,21 @@
   ```
   - In `ChemCraft`, [youtube](https://www.youtube.com/watch?v=plGKF0DBz9w&ab_channel=nicolasN)
 ## Geometry optimization
+- Basic reference : https://www.cup.uni-muenchen.de/ch/compchem/geom/basic.html
+  - Using the opt keyword
+    - `opt` without any additional information sets the RMS force criterion to 3*10-4
+    - `opt=tight` will set the RMS force criterion to 1*10-5 and scale the other three criteria accordingly
+    - `opt=verytight` will set the RMS force criterion to 1*10-6 and scale the other three criteria accordingly
+    
+  - Using the IOP keyword (Internal Option)
+    - iop(1/7=x) will set the RMS force criterion to x*10-6 and scale the other three criteria accordingly. Thus, using iop(1/7=10) one can obtain the same final result as with `opt=tight`.
+  
+    - Choosing tighter convergence criteria will, of course, give improved results, but will also need more computer time. The default settings are appropriate for small systems. Especially for large structures, however, convergence of the last two criteria can be very slow and it is sometimes advisable to stop optimizations before all four criteria are fulfilled. The maximum number of optimization cycles depends on the size of the system and is automatically adjusted by Gaussian. If a particular setting of optimization cycles is desired, however, this can be specified using `opt=(maxcycles=n)`. The default optimization algorithm included in Gaussian is the "Berny algorithm" developed by Bernhard Schlegel. This algorithm uses the forces acting on the atoms of a given structure together with the second derivative matrix (called the Hessian matrix) to predict energetically more favorable structures and thus optimize the molecular structure towards the next local minimum on the potential energy surface. As explicit calculation of the second derivative matrix is quite costly, the Berny algorithm constructs an approximate Hessian at the beginning of the optimization procedure through application of a simple valence force field, and then uses the energies and first derivatives calculated along the optimization pathway to update this approximate Hessian matrix. The success of the optimization procedure therefore depends to some degree on how well the approximate Hessian represents the true situation at a given point. For many "normal" systems, the approximate Hessians work quite well, but in a few cases a better Hessian has to be used. Often it is sufficient to calculate the Hessian matrix explicitly once at the beginning of the calculation and then use the standard updating scheme of the Berny algorithm. This is specified using the `opt=calcfc` keyword. In some very rare cases, the Hessian changes considerably between optimization steps and must then be recomputed after each optimization step using the `opt=calcall` keyword.
+  
+## Scanning Potential Energy Surface
+Ref : http://www.jamberoo.org/gaussian/ts/scanning-pes.html
+
+
 ## Trial and error
 - No convergence   
   Ref : https://www.researchgate.net/post/How-can-I-resolve-the-convergence-failure-error-in-Gaussian-09   
