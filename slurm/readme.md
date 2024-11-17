@@ -69,17 +69,21 @@ PID      JOBID    STEPID LOCALID GLOBALID
 ```
 
 ## run slurm
-sbatch
-> option :  
-> - %A_%a.out", "%A" is replaced by the job ID and 
-> - "%a" is replaced by the array index.
-> "%j" is replaced by the job ID
-surn --pty bash #to access head node
-exit # to exit the head node
+- sbatch
+  > option :  
+  > - %A_%a.out", "%A" is replaced by the job ID and 
+  > - "%a" is replaced by the array index.
+  > "%j" is replaced by the job ID
+  surn --pty bash #to access head node
+  exit # to exit the head node
 
 - to run slurm interactively
-srun -p cpu -q interactive --pty -N 1 -n 1 -I300 $* $SHELL -l
-
+  srun -p cpu -q interactive --pty -N 1 -n 1 -I300 $* $SHELL -l
+- scancel
+  To remove a pending job, 
+  ```
+  scancel --state=PENDING [job_ID]
+  ```
 ## the others:
 salloc
 sattach
