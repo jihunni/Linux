@@ -165,6 +165,7 @@ git revert (--no-commit) [commit_hash]
 
 ## branch
 ```
+git checkout [branch_name] #to switch into a branch
 git branch # to check a list of branch
 git branch [new_branch_name]
 git switch (-c) [branch_name] 
