@@ -21,5 +21,6 @@
   # To run a job in current cmd
   [apptainer_sif] [arguemnt]
   (e.g.) /path/to/image.sif myscript.py [argument]
+  apptainer exec –nv /path/to/image.sif program [arguments]
   ```
 - 
