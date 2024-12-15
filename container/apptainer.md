@@ -1,5 +1,26 @@
 # Apptainer
-- build container
+- To build from an image cached by the Docker daemon in a definition file
+  Ref : https://apptainer.org/docs/user/main/definition_files.html
+  ```
+  Bootstrap: docker
+  From: some-image-that-uses-root-and-opt
+  
+  %post
+      mkdir -p /global/path/directories/my/script/uses
+      chmod -R 775 /opt
+      chmod -R 775 /root
+      chmod -R 775 /
+      touch /bin/nvidia-smi #these commands and below have to do with using Nvidia drivers
+      touch /usr/bin/nvidia-smi
+      touch /usr/bin/nvidia-debugdump
+      touch /usr/bin/nvidia-persistenced
+      touch /usr/bin/nvidia-cuda-mps-control
+      touch /usr/bin/nvidia-cuda-mps-server
+      mkdir /etc/dcv
+      mkdir /var/lib/dcv-gl
+      mkdir /usr/lib64
+  ```
+- build a image (sif file)
   ```
   apptainer build [container_name.sif] [continaer_spec.spec]
   ```
@@ -13,6 +34,7 @@
   $ apptainer pull [docker_image_address]
   
   ```
+
 - Run container
   ```
   # To access a shell
