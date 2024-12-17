@@ -45,4 +45,9 @@
   (e.g.) /path/to/image.sif myscript.py [argument]
   apptainer exec –nv /path/to/image.sif program [arguments]
   ```
-- 
+- Error handling
+  - `/.singularity.d/libs/faked: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.34' not found`
+    Ref : https://github.com/apptainer/apptainer/issues/2103   
+    ```
+    sudo apptainer config fakeroot --add $USER
+    ```
