@@ -159,6 +159,12 @@ bash <(sed -n '5p' script.sh) # to run 5th line on script.sh
 
 # etc
 -gedit [fileName]
+- shell set
+  ref : https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html
+  ```
+  set -x
+  set +x
+  ```
 
 # Terminal
 - Tilix
