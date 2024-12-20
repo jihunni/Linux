@@ -58,7 +58,7 @@ abcdef ghijk
 reference : 
 - https://wiki.bash-hackers.org/syntax/expansion/brace
 - 
-## if else
+## conditional statement : if else
 - reference : https://devhints.io/bash
 ```
 if [command]
@@ -73,19 +73,56 @@ else
 	[command]
 fi
 ```
-In order to set the directory differently by hostname,
-```
-echo -e "hostname : $HOSTNAME"
-if [ $HOSTNAME = 'life3' ]
-then
-    echo -e "Life3 Server"
-	NUM_CORE=27
-else
-    echo -e "Not Life3 Server"
-	NUM_CORE=30
-    echo -e ""
-fi
-```
+
+- `[]` is equal to `test`
+
+### Example
+- Based on the existance of an arbitrary variable `string`, 
+    ```
+    if [ -z "$string" ]; then
+    # commands to execute if string is empty
+    else
+    # commands to execute if string is not empty
+    fi
+    ```
+- Based on the existance of an arbitrary folder, 
+    ```
+    if [ -d "folder_path" ]; then
+    # commands to execute if a given folder exists
+    else
+    # commands to execute if a given folder does not exist
+    fi
+    ```
+- Based on the existance of an arbitrary file, 
+    ```
+    if [ -f "file_path" ]; then
+    # commands to execute if a given file exists
+    else
+    # commands to execute if a given file does not exist
+    fi
+    ```
+- Based on the existance of an arbitrary object (file, pipe, special device) 
+    ```
+    if [ -e "path" ]; then
+    # commands to execute if a given object exists
+    else
+    # commands to execute if a given object does not exist
+    fi
+    ```
+    The only condition where something may exist, and `-e` will return false is in the case of a broken symlink.   
+- Based on environmental variable `hostname`,
+    ```
+    echo -e "hostname : $HOSTNAME"
+    if [ $HOSTNAME = 'life3' ]
+    then
+        echo -e "Life3 Server"
+        NUM_CORE=27
+    else
+        echo -e "Not Life3 Server"
+        NUM_CORE=30
+        echo -e ""
+    fi
+    ```
 
 
 case
