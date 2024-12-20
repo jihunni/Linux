@@ -4,8 +4,23 @@
   ```
   Bootstrap: docker
   From: some-image-that-uses-root-and-opt
-  
+
+  %setup
+    # NOTE: This is executed on the host, not the container
+  %files
+     # Copy over files from the host to the container
+     # Copy over the timezone info
+     /etc/localtime
+     # Copy over the hosts file
+     /etc/hosts
+     # Copy over the apt sources list
+     /etc/apt/sources.list
+     /archive/software/Miniconda3-latest-Linux-x86_64.sh /opt/miniconda.sh
+     environment.yaml /opt/environment.yaml
+
+
   %post
+    # Perform the bulk of the build steps within the container
       mkdir -p /global/path/directories/my/script/uses
       chmod -R 775 /opt
       chmod -R 775 /root
@@ -19,6 +34,24 @@
       mkdir /etc/dcv
       mkdir /var/lib/dcv-gl
       mkdir /usr/lib64
+    # General setup
+      # Switch shell to bash
+      ln -sf /bin/bash /bin/sh
+
+     # Install build essentials and other required packages (needed for compiling biotite cython files)
+
+     apt-get install -y build-essential gcc g++
+     # Install make (so we can run `make format`, `make clean`, etc.)
+     apt-get install -y make
+     # required X libs
+     apt-get install -y libx11-6 libxau6 libxext6 libxrender1
+
+     #  git
+     apt-get install -y git
+     apt-get install -y libaio-dev
+     apt-get clean
+
+
   ```
 - build a image (sif file)
   ```
