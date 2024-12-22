@@ -380,3 +380,7 @@ echo "It takes $(($EndTime - $StartTime)) seconds to complete this task."
     ligand=${file_name}_chainA    # Ligand ID without .pdb extension
 	done
 	```
+
+# command
+- echo
+	- `-e` : 
