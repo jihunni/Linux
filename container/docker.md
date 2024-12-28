@@ -57,6 +57,8 @@ To install Pytorch,
 docker pull pytorch/pytorch
 docker run -it --ipc host --gpus all (-v host_filesystem:container_filesystem) pytorch/pytorch
 ```
+## Install on Window 11
+Ref : https://www.youtube.com/watch?v=rATNU0Fr8zs&ab_channel=BretFisherCloudNativeDevOps  
 # Docker basics
 ## docker execution and service
 ```
@@ -216,6 +218,8 @@ CMAKE_ROSETTA_PATH=/opt/rosetta/rosetta_src_2018.09.60072_bundle/main
 cmake .. -DCMAKE_BUILD_TYPE=Release
 make -j3 rif_dock_test rifgen
 ```
+
+
 # Reference
 - https://docs.docker.com/engine/install/
 - https://www.yalco.kr/36_docker/
