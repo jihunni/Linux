@@ -121,9 +121,16 @@ $ git diff
 ```
 git clone (-b [branch_name])[REPO_URL] [DIR]
 
+git remote add upstream [git]]
+git remote -v
+
 git fetch
 git pull origin master
+git pull --rebase upstream master 
 git checkout [branch_name]
+
+git branch # to check my current branch
+git checkout -b [branch_name] # to switch a branch [branch_name]
 
 git add . #전체파일 스테이징
 git add (파일명) #파일명 스테이징
