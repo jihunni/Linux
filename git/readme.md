@@ -130,6 +130,7 @@ git pull --rebase upstream master
 git checkout [branch_name]
 
 git branch # to check my current branch
+git branch -d [branch_name] # to delete a branch
 git checkout -b [branch_name] # to switch a branch [branch_name]
 
 git add . #전체파일 스테이징
@@ -179,6 +180,8 @@ git switch (-c) [branch_name]
   # -c : to create a branch and move
 git branch -d [banch_name] # -d : to delete a branch
 git branch -d [banch_name] # -D : to delete a branch by force
+git push origin :[branch_name] # to synchronize the deleted branch
+
 git branch -m [old_name] [new_name] # to change a branch name
 git log --all --decorate --oneline --graph
 
