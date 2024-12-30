@@ -1,5 +1,7 @@
 # General code
 ```
+# To load anaconda
+source ~/.bashrc # conda init
 conda info --envs
 conda env list
 conda init [shell_Name]
@@ -11,6 +13,9 @@ conda remove --name [environment_name] --all
 conda update --all
 source conda activate [env_name]
 source activate [env_name]
+
+# To set environmental path
+conda env config vars set [variable_name]=[value]
 ```
 running code
 ```
