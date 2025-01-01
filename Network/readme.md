@@ -149,6 +149,32 @@ $ ip a
 $ ssh username@ip_address
 ```
 
+## SSH key
+Ref (Microsoft Visual Studio) : https://code.visualstudio.com/docs/remote/troubleshooting   
+Ref (Youtube video, outdated) : https://www.youtube.com/watch?v=vpk_1gldOAE    
+- Create your local SSH key pair, if there is no SSH key pair on local machine (usually, ` ~/.ssh/id_ed25519`).
+  ```
+  ssh-keygen -t ed25519 -b 4096
+  ```
+- Restrict the permissions on the private key file
+  ```
+  chmod 400 ~/.ssh/id_ed25519
+  ```
+- Authorize local machine to connect : Copy the public key of local machine to the authorized key list on host machine
+  Use `ssh-copy-id` command
+  ```
+  export USER_AT_HOST="your-user-name-on-host@hostname"
+  export PUBKEYPATH="$HOME/.ssh/id_ed25519.pub"
+  ssh-copy-id -i "$PUBKEYPATH" "$USER_AT_HOST"
+  ```
+  Or, copy and pase.
+  ```
+  $USER_AT_HOST="your-user-name-on-host@hostname"
+  $PUBKEYPATH="$HOME\.ssh\id_ed25519.pub"
+  $pubKey=(Get-Content "$PUBKEYPATH" | Out-String); ssh "$USER_AT_HOST" "mkdir -p ~/.ssh && chmod 700 ~/.ssh && echo '${pubKey}' >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
+  ```
+
+
 # Trouble shooting
 ## Running a Network Path Trace
   Ref : https://player.support.brightcove.com/troubleshooting/running-network-path-trace.html
