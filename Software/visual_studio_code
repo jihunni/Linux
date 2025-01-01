@@ -1,3 +1,18 @@
+# Remote SSH setting
+	```
+	{
+    "security.allowedUNCHosts": [
+        "samba.ipd"
+    ],
+    "remote.SSH.remotePlatform": {
+        "hostname": "OS_Platform", (e.g. "id.host": "linux")
+    },
+    "remote.SSH.enableRemoteCommand": true,
+    "remote.SSH.useLocalServer": true,
+    "security.workspace.trust.untrustedFiles": "open"
+	}
+	```
+# Extension
 - Python environments in VS Code
   ref : https://code.visualstudio.com/docs/python/environments   
 - Tensorboard inegration
