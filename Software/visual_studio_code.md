@@ -1,5 +1,6 @@
 # Remote development setting
 Ref : https://code.visualstudio.com/docs/remote/troubleshooting   
+REF : https://code.visualstudio.com/docs/remote/ssh-tutorial   
 ## Remote SSH setting
 	```
 	{
