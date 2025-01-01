@@ -160,7 +160,7 @@ Ref (Youtube video, outdated) : https://www.youtube.com/watch?v=vpk_1gldOAE
   ```
   chmod 400 ~/.ssh/id_ed25519
   ```
-- Authorize local machine to connect : Copy the public key of local machine to the authorized key list on host machine
+- Authorize local machine to connect : Copy the public key of local machine to the authorized key list on host machine (`~/.ssh/authorized_keys`)
   Use `ssh-copy-id` command
   ```
   export USER_AT_HOST="your-user-name-on-host@hostname"
