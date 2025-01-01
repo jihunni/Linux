@@ -121,7 +121,7 @@ Ref: https://stackoverflow.com/questions/41274007/anaconda-export-environment-fi
 	```
 - To run Jupyter
 	```
-  jupyter lab --no-browser
+ 	 jupyter lab --no-browser
 	```
 	To check running jupyter server
 	```
@@ -129,7 +129,7 @@ Ref: https://stackoverflow.com/questions/41274007/anaconda-export-environment-fi
 	jupyter notebook list
 	```
  
-- To add new kernel from anaconda environment
+- To add new kernel from anaconda environment    
 	```
 	# Jupyter에 새 kernel 등록하기
 	$ conda install -c anaconda ipykernel  
@@ -140,17 +140,17 @@ Ref: https://stackoverflow.com/questions/41274007/anaconda-export-environment-fi
 	> —name pytorch : Jupyter 내부적으로 쓰이는 kernel의 이름을 지정합니다. 같은 이름을 쓰면 덮어쓰기가 됩니다.  
 	> --display-name "PyTorch" : Jupyter Notebook 위에서 사용자에게 보이는 kernel의 이름을 정합니다. 내부적으로 쓰이는 이름과 상관없이 띄어쓰기 등 특수문자도 포함하여 자유롭게 지을 수 있습니다.  
 
-- To add new jupyter kernel from apptainer
-	Ref: https://gist.github.com/negin513/d3db7cc3e636d82ad2db09538b5d164c
-	- Create a Jupyter kernel configuration that points to the Python environment inside the Apptainer container.
+- To add new jupyter kernel from apptainer   
+	Ref: https://gist.github.com/negin513/d3db7cc3e636d82ad2db09538b5d164c   
+	- Create a Jupyter kernel configuration that points to the Python environment inside the Apptainer container.   
 		```
 		mkdir -p ~/.local/share/jupyter/kernels
 		cd ~/.local/share/jupyter/kernels
 		mkdir container_kernel
 		cd container_kernel
 		```
-	- In this directory (i.e. `~/.local/share/jupyter/kernels/container_kernel`) add a new file called kernel.json with the following content:
-	- In the same directory add the following file called `init_kernel.sh` that points to sif file of your container:
+	- In this directory (i.e. `~/.local/share/jupyter/kernels/container_kernel`) add a new file called kernel.json with the following content:   
+	- In the same directory add the following file called `init_kernel.sh` that points to sif file of your container:   
    	```
     {
 		 "argv": [
@@ -162,7 +162,7 @@ Ref: https://stackoverflow.com/questions/41274007/anaconda-export-environment-fi
 		 "language": "python"
 		}
     ```
-  - Make the script executable :
+  - Make the script executable :   
 		```
 		chmod +x init_kernel.sh
 		```
