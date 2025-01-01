@@ -1,4 +1,6 @@
-# Remote SSH setting
+# Remote development setting
+Ref : https://code.visualstudio.com/docs/remote/troubleshooting   
+## Remote SSH setting
 	```
 	{
     "security.allowedUNCHosts": [
