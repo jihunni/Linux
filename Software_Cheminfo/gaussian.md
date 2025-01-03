@@ -81,7 +81,7 @@
   
   ```
   - In `ChemCraft`, [youtube](https://www.youtube.com/watch?v=plGKF0DBz9w&ab_channel=nicolasN)
-## Geometry optimization (`Opt`)
+# Geometry optimization (`Opt`)
 - Basic reference : https://www.cup.uni-muenchen.de/ch/compchem/geom/basic.html
 - The optimization algorithm will vary the structure of the system until changes in the gradient and the structure on two successive iterations are smaller than prefixed values (convergence criteria). For each step of the geometry optimization, Gaussian will write to the output file a) the current structure of the system, b) the energy for this structure, c) the derivative of the energy with respect to the geometric variables (the gradients), and d) a summary of the convergence criteria.
 - Optimization option
@@ -105,11 +105,33 @@
     -  In some very rare cases, the Hessian changes considerably between optimization steps and must then be recomputed after each optimization step using the `opt=calcall` keyword.
   -  To set the multiple options, these options must be given in parenthesis : `opt=(Z-Matrix,calcfc,tight,maxcycles=25)`
 
-## Scanning Potential Energy Surface
-Ref : http://www.jamberoo.org/gaussian/ts/scanning-pes.html
+## Transition state searching
+The search for transition states is similar to searches for local minima in that an attempt is made to minimize the gradient of the energy with respect to structural coordinates. In contrast to minima, however, transition states are located on a hilltop with respect to one of the coordinates, while they are minima with respect to the others. Three different strategies exist to search for transition states, which will be discussed in the following:  
+  
+1) scanning the potential energy surface (a global approach)  
+2) walking uphill to the transition state (a local approach)  
+3) automated global search algorithms
+4) Intrinsic reaction coordainte (IRC) : the minimum energy reaction pathway (MERP) in mass-weighted cartesian coordinates between the transition state of a reaction and its reactants and products.
+  
+
+Before going into some more detail, a comment on the term transition state appears appropriate. States are typically defined through their thermodynamic properties and not through their structural characteristics. What will be described in the following is, strictly speaking, the search for a vibrationless structure corresponding to the idealized transition state at a temperature of 0K. Since "structures of transition states" is an awkward term to use, we will talk about transition states in the following.
+   
+### Scanning Potential Energy Surface (a global approach)  
+Ref : https://www.cup.uni-muenchen.de/ch/compchem/geom/scan.html   
+Ref : http://www.jamberoo.org/gaussian/ts/scanning-pes.html   
 
 
-## Trial and error
+# Population analysis : where really are these electrons?
+Ref: https://www.cup.uni-muenchen.de/ch/compchem/topics.html   
+- the Mulliken population analysis
+- the Natural Bond Orbital (NBO) Analysis
+- inspecting the molecular electrostatic potential
+- fitting the molecular electrostatic potential I: CHELPG
+- fitting the molecular electrostatic potential II: Merz-Singh-Kollman (MK)
+- the Atoms in Molecules analysis (AIM)
+- calculating the (Pauling bond order )
+
+# Trial and error
 - No convergence   
   Ref : https://www.researchgate.net/post/How-can-I-resolve-the-convergence-failure-error-in-Gaussian-09   
   Ref : https://wongzit.github.io/method-to-solve-the-scf-not-converged/   
