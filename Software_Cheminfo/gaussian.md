@@ -1,7 +1,7 @@
 # Gaussian
 - Ref
   - https://math.nist.gov/mcsd/savg/tutorial/ex.html
-  - https://www.cup.uni-muenchen.de/ch/compchem/topics.html
+  - https://www.cup.uni-muenchen.de/ch/compchem/topics.html (strongly recommended)
   - errir message handling : https://docs.alliancecan.ca/wiki/Gaussian_error_messages  
 # Gaussian input preparation using Pymol and Avogadro 2
 - Extract active site from native enzyme using `pymol`
