@@ -35,6 +35,7 @@ conda remove [library_name]
 conda update [library_name]
 conda update --all #
 pip install [library_name]
+pip install -r requirements.txt
 ```
 ## install library in conda env
 Ref : https://docs.conda.io/projects/conda/en/latest/commands/install.html
