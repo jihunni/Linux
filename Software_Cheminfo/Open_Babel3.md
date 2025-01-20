@@ -10,7 +10,7 @@ $ cmake ../openbabel-2.3.1  -DBUILD_GUI=ON #GUI
 $ make -j24    # parallel build across 24 processors
 ```
 
-## Conda
+## Conda (easiest)
 Ref : https://github.com/openbabel/conda-openbabel/issues/7
 ```
 conda create openbabel -c conda-forge -n openbabel
