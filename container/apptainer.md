@@ -78,11 +78,13 @@
 - Run container
   ```
   # To access a shell
-  apptainer [global options...] shell [shell options...] <container>
+  apptainer [global options...] shell [shell options...] <container> (--writable --fakeroot)
 
   # To run a job in current cmd
   [apptainer_sif] [arguemnt]
   (e.g.) /path/to/image.sif myscript.py [argument]
   apptainer exec –nv /path/to/image.sif program [arguments]
   ```
-
+- fakeroot feature
+  Ref : https://apptainer.org/docs/user/main/fakeroot.html   
+- Persistent Overlays
