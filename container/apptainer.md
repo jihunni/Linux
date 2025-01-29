@@ -51,6 +51,8 @@
      apt-get install -y libaio-dev
      apt-get clean
 
+     # install python library using PIP
+     pip install [package_name] --break-system-packages
 
   ```
 - build a image (sif file)
