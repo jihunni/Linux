@@ -187,7 +187,18 @@ git log --all --decorate --oneline --graph
 
 ```
 
-### merge and rebase
+## pull / fetch / merge
+[youtube video](https://www.youtube.com/watch?v=T13gDBXarj0)  
+- git fetch # to download remote commites
+- git merge # to merge local and remote commits
+- git pull origin master [--ff-only/--f/--rebase] 
+  > To fetch and merge changes the remote's 'master' branch into from the local 'origin'
+  > git fetch + merge combination (not recommended for collaborative project for merge conflict)
+  - `--rebase` : to update the checkpoint in order of remote - local
+  - `--ff` : standard merge for local and remote checkpoint
+  - `--ff-only` : if merge conflict happen, a user handles it.
+
+## merge and rebase
 - merge : 두 브랜치를 한 커밋에 이어붙입니다.
   - 브랜치 사용내역을 남길 필요가 있을 때 적합한 방식입니다.
   - 다른 형태의 merge에 대해서도 이후 다루게 될 것입니다.  
