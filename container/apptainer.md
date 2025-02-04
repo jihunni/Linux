@@ -77,15 +77,35 @@
   
   ```
 
-- Run container
+- Run commands overview
   ```
+  shell <container>
+  exec <container> <command>
+  run <container>
+  test
+  instance start <container> [name]
+  ```
+- global option
+  - `-nv` : nvidia-gpu
+  - `-s` : security
+  - `--env` : environmental variable   
+    (e.g.) `--env PYTHONPATH=$PYTHONPATH `
+- shell
+  ``` 
   # To access a shell
   apptainer [global options...] shell [shell options...] <container> (--writable --fakeroot)
-
-  # To run a job in current cmd
-  [apptainer_sif] [arguemnt]
-  (e.g.) /path/to/image.sif myscript.py [argument]
+  (e.g.) apptainer shell /path/to/image.sif myscript.py [argument]
+  ```
+- exec : to execute a command under container
+  ```
+  apptainer [global option] exec <container_cif> [exec option] <command> [arguments]
   apptainer exec –nv /path/to/image.sif program [arguments]
+  ```
+  exec option : 
+  - `--writeable`
+- run : to run a command defined on container
+  ```
+  apptainer [global option] run <container_cif> [run option] <command> [arguments]
   ```
 - fakeroot feature
   Ref : https://apptainer.org/docs/user/main/fakeroot.html   
