@@ -225,7 +225,8 @@ git log --all --decorate --oneline --graph
 - rebase : 브랜치를 다른 브랜치에 이어붙입니다.
   - 한 줄로 깔끔히 정리된 내역을 유지하기 원할 때 적합합니다.
   - 이미 팀원과 공유된 커밋들에 대해서는 사용하지 않는 것이 좋습니다.
-  
+
+
   To rebase `branch_B` into `main`
   ```
   git switch branch_B
@@ -243,6 +244,50 @@ git log --all --decorate --oneline --graph
   solve the collision part with >>>>>
   $ git rebase --continue
   ```
+# commit / push
+  - To edit `.gitignore`
+    ```
+    .vscode
+    slurm_logs/
+    **/output/
+    **/outputs/
+    */notebooks/
+    */models/
+    __pycache__/
+    */run_scripts/
+    unit_tests/
+    ruff.toml
+    */scratch/
+    */wandb/
+    *.csv
+    *.err
+    *.log
+    *.json
+    *.ipynb_checkpoints
+    ```
+  - To remove the file only from the Git repository and **not remove it from the filesystem**
+    ```
+    git rm --cached file1.txt
+    git commit -m "remove file1.txt"
+    ```
+  - To remove the file only from the Git repository and **remove it from the filesystem**
+    ```
+    git rm file1.txt
+    git commit -m "remove file1.txt"
+    ```
+  - to handle conflicts
+    ```
+    git show-ref # to list all remote refs 
+    git status
+    git pull origin <branch_name>  --rebase
+    ... do merge process using Visual Studio Code
+  
+    # to update a remote branch
+    git add .
+    git checkout -b <branch_name> # to switch to a new branch
+    commit -m <commit message>
+    push -u origin <branch_name>
+    ```
 # Reference
 - https://snwo.tistory.com/169
 - [Git] fatal: Authentication failed | https://eehoeskrap.tistory.com/319 : 
