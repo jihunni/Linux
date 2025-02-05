@@ -245,35 +245,43 @@ git log --all --decorate --oneline --graph
   $ git rebase --continue
   ```
 # commit / push
-  - To edit `.gitignore`
+  - To clean up the temporary file
+    - To edit `.gitignore`
+      ```
+      .vscode
+      slurm_logs/
+      **/output/
+      **/outputs/
+      */notebooks/
+      */models/
+      __pycache__/
+      */run_scripts/
+      unit_tests/
+      ruff.toml
+      */scratch/
+      */wandb/
+      *.csv
+      *.err
+      *.log
+      *.json
+      *.ipynb_checkpoints
+      ```
+    - To remove the file only from the Git repository and **not remove it from the filesystem**
+      ```
+      git rm --cached file1.txt
+      git commit -m "remove file1.txt"
+      ```
+    - To remove the file only from the Git repository and **remove it from the filesystem**
+      ```
+      git rm file1.txt
+      git commit -m "remove file1.txt"
+      ```
+  - to commit
     ```
-    .vscode
-    slurm_logs/
-    **/output/
-    **/outputs/
-    */notebooks/
-    */models/
-    __pycache__/
-    */run_scripts/
-    unit_tests/
-    ruff.toml
-    */scratch/
-    */wandb/
-    *.csv
-    *.err
-    *.log
-    *.json
-    *.ipynb_checkpoints
-    ```
-  - To remove the file only from the Git repository and **not remove it from the filesystem**
-    ```
-    git rm --cached file1.txt
-    git commit -m "remove file1.txt"
-    ```
-  - To remove the file only from the Git repository and **remove it from the filesystem**
-    ```
-    git rm file1.txt
-    git commit -m "remove file1.txt"
+    git checkout -b <branch_name> # to switch to a new branch
+    git add .
+    git commit -m 'commit message'
+    git push origin <branch_name>
     ```
   - to handle conflicts
     ```
@@ -285,8 +293,8 @@ git log --all --decorate --oneline --graph
     # to update a remote branch
     git add .
     git checkout -b <branch_name> # to switch to a new branch
-    commit -m <commit message>
-    push -u origin <branch_name>
+    git commit -m <commit message>
+    git push -u origin <branch_name>
     ```
 # Reference
 - https://snwo.tistory.com/169
