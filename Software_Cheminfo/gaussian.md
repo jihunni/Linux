@@ -48,7 +48,7 @@
   !# opt freq b3lyp/6-311++G(d,p) Pop=reg FormCheck integral=ultrafine scf=maxcyc=1024
   
   water energy
-  
+           ! make sure nothing on ths line. Otherwise, it will trigger non-integer error. `\n` will trigger error.
   0   1
   O  -0.464   0.177   0.0	 
   H  -0.464   1.137   0.0	 
