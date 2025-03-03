@@ -1,0 +1,11 @@
+#  install
+Ref : https://leetmaa.github.io/KMCLib/manual-v1.1/install.html   
+```
+# to set up python 2.7 on conda
+conda create --name py27 python=2.7
+export CPLUS_INCLUDE_PATH=/home/jihun/miniconda3/envs/py27/include/python2.7/:${CPLUS_INCLUDE_PATH}
+
+# make for KMCLib
+cmake ..
+make install
+```
