@@ -90,7 +90,7 @@
   - `-nv` : nvidia-gpu
   - `-s` : security
   - `--env` : environmental variable   
-    (e.g.) `--env PYTHONPATH=$PYTHONPATH `
+    (e.g.) `--env PYTHONPATH=$PYTHONPATH,ENV=$ENV `
 - shell
   ``` 
   # To access a shell
