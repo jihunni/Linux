@@ -117,6 +117,9 @@ The search for transition states is similar to searches for local minima in that
   
 
 Before going into some more detail, a comment on the term transition state appears appropriate. States are typically defined through their thermodynamic properties and not through their structural characteristics. What will be described in the following is, strictly speaking, the search for a vibrationless structure corresponding to the idealized transition state at a temperature of 0K. Since "structures of transition states" is an awkward term to use, we will talk about transition states in the following.
+
+## QST2/QST3
+Ref : https://joaquinbarroso.com/2013/11/27/qst2-qst3/   
    
 ### Scanning Potential Energy Surface (a global approach)  
 Ref : https://www.cup.uni-muenchen.de/ch/compchem/geom/scan.html   
