@@ -53,6 +53,8 @@ Host *
 ```
 # Git 
 Ref : https://www.youtube.com/watch?v=1I3hMwQU6GU&ab_channel=%EC%96%84%ED%8C%8D%ED%95%9C%EC%BD%94%EB%94%A9%EC%82%AC%EC%A0%84
+![image](https://github.com/user-attachments/assets/936e13b2-2aa4-47ad-81c9-574d85e3cabe)
+
 ## Git 설정
 ```
 git config --global user.email "~~@~~.com"
