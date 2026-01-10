@@ -149,6 +149,8 @@ Ref: https://www.cup.uni-muenchen.de/ch/compchem/topics.html
 - error in internal coordinate
   Ref : https://www.researchgate.net/post/How_to_solve_the_error_in_internal_coordinate_in_Gaussian_09
   - Use cartesian coordinate, instead of internal coordinate, by specifying `opt=cartesian`
+- gaussian IBType out of range in Bas631.
+  - Basis set is not specified using `GenECP` keyword.
 # Gaussian output
 - Unit : atomic units (au, *Hatree*)
   - 1 Hartree = 627.15 kcal/mol
