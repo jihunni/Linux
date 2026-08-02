@@ -65,7 +65,27 @@
       ```
       sudo apptainer config fakeroot --add $USER
       ```
-      
+- To build a image from conda environment.
+  ```
+  Bootstrap: docker
+  From: ubuntu
+  IncludeCmd: yes
+  
+  %setup
+  	mkdir -p $APPTAINER_ROOTFS/opt/conda/envs/env/
+  	rsync -a --no-o --no-g ~/.conda/envs/NAME/ $APPTAINER_ROOTFS/opt/conda/envs/env/
+  
+  %files
+          /etc/apt/sources.list
+          $Miniconda3_path/Miniconda3-latest-Linux-x86_64.sh /opt/miniconda.sh
+  
+  %post
+          bash /opt/miniconda.sh -b -p /opt/conda -u
+          rm /opt/miniconda.sh
+  
+  %runscript
+          /opt/conda/envs/env/bin/python "$@"
+  ```      
 - To fetch a docker image
   Ref : https://apptainer.org/docs/user/main/docker_and_oci.html
   ```
