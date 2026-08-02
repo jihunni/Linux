@@ -96,7 +96,14 @@
   $ apptainer pull [docker_image_address]
   
   ```
-
+- Debugging in an interactive shell mode
+  ```
+  apptainer shell --cleanenv --writable-tmpfs [apptainer_image].sif
+  ```
+  * `shell`: Launches an interactive shell (like /bin/bash) inside the target container rather than executing a single predefined script or binary.
+  * `--cleanenv` (or -e): Scrubs all environment variables from the host system before launching the shell. The container only inherits minimal, essential system variables, preventing path pollution or conflicting library configurations from the host.
+  * `--writable-tmpfs`: Allocates an in-memory temporary overlay (tmpfs) on top of the immutable container image. This allows you to run write-dependent commands (like apt-get install or pip install), but all changes are permanently discarded as soon as you exit the shell session
+  
 - Run commands overview
   Ref : https://apptainer.org/docs/user/main/cli/apptainer_run.html   
   ```
